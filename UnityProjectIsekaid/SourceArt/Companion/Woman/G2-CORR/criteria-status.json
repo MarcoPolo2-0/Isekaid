@@ -1,0 +1,136 @@
+{
+  "authority": "DEC-003",
+  "delivery": "G2-CORR first correction; G2 not accepted",
+  "criteria": [
+    {
+      "criterion": "AC01",
+      "state": "PASS",
+      "note": "G1 acceptance maintained; original hash and derived native/FBX reopening verified."
+    },
+    {
+      "criterion": "AC02",
+      "state": "PASS",
+      "note": "G1 acceptance maintained; original hash and derived native/FBX reopening verified."
+    },
+    {
+      "criterion": "AC03",
+      "state": "UNKNOWN",
+      "note": "Pending artistic or final delivery approval."
+    },
+    {
+      "criterion": "AC04",
+      "state": "UNKNOWN",
+      "note": "Technical region invariants and synchronized controls tested; visual range approval pending. Waist experimental."
+    },
+    {
+      "criterion": "AC05",
+      "state": "UNKNOWN",
+      "note": "Technical region invariants and synchronized controls tested; visual range approval pending. Waist experimental."
+    },
+    {
+      "criterion": "AC06",
+      "state": "UNKNOWN",
+      "note": "Technical region invariants and synchronized controls tested; visual range approval pending. Waist experimental."
+    },
+    {
+      "criterion": "AC07",
+      "state": "UNKNOWN",
+      "note": "27 combinations and 15 sampled sweeps; not exhaustive body self-collision or human artistic acceptance."
+    },
+    {
+      "criterion": "AC08",
+      "state": "FAIL",
+      "note": "Comparable 18 diagnostic cases repeated, residual intersections; full 162 and G3 not authorized."
+    },
+    {
+      "criterion": "AC09",
+      "state": "NOT_CHECKED",
+      "note": "Outside DEC-003 G2-CORR authorization."
+    },
+    {
+      "criterion": "AC10",
+      "state": "NOT_CHECKED",
+      "note": "Outside DEC-003 G2-CORR authorization."
+    },
+    {
+      "criterion": "AC11",
+      "state": "NOT_CHECKED",
+      "note": "Outside DEC-003 G2-CORR authorization."
+    },
+    {
+      "criterion": "AC12",
+      "state": "NOT_CHECKED",
+      "note": "Outside DEC-003 G2-CORR authorization."
+    },
+    {
+      "criterion": "AC13",
+      "state": "NOT_CHECKED",
+      "note": "Outside DEC-003 G2-CORR authorization."
+    },
+    {
+      "criterion": "AC14",
+      "state": "NOT_CHECKED",
+      "note": "Outside DEC-003 G2-CORR authorization."
+    },
+    {
+      "criterion": "AC15",
+      "state": "NOT_CHECKED",
+      "note": "Outside DEC-003 G2-CORR authorization."
+    },
+    {
+      "criterion": "AC16",
+      "state": "UNKNOWN",
+      "note": "Editable assets and reproducible tests delivered; exact license and production package pending."
+    },
+    {
+      "criterion": "AV01",
+      "state": "UNKNOWN",
+      "note": "Human visual approval pending; evidence in four views, matrices and sweeps."
+    },
+    {
+      "criterion": "AV02",
+      "state": "PASS",
+      "note": "Comparable four-view before/after with same camera, scale and lighting; no artistic acceptance implied."
+    },
+    {
+      "criterion": "AV03",
+      "state": "UNKNOWN",
+      "note": "Human visual approval pending; evidence in four views, matrices and sweeps."
+    },
+    {
+      "criterion": "AV04",
+      "state": "UNKNOWN",
+      "note": "Human visual approval pending; evidence in four views, matrices and sweeps."
+    },
+    {
+      "criterion": "AV05",
+      "state": "NOT_CHECKED",
+      "note": "Outside G2-CORR authorization; no final face, hair, clothing or runtime changes."
+    },
+    {
+      "criterion": "AV06",
+      "state": "NOT_CHECKED",
+      "note": "Outside G2-CORR authorization; no final face, hair, clothing or runtime changes."
+    },
+    {
+      "criterion": "AV07",
+      "state": "NOT_CHECKED",
+      "note": "Outside G2-CORR authorization; no final face, hair, clothing or runtime changes."
+    },
+    {
+      "criterion": "AV08",
+      "state": "NOT_CHECKED",
+      "note": "Outside G2-CORR authorization; no final face, hair, clothing or runtime changes."
+    },
+    {
+      "criterion": "AV09",
+      "state": "NOT_CHECKED",
+      "note": "Outside G2-CORR authorization; no final face, hair, clothing or runtime changes."
+    },
+    {
+      "criterion": "AV10",
+      "state": "NOT_CHECKED",
+      "note": "Outside G2-CORR authorization; no final face, hair, clothing or runtime changes."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+:root { color: rgb(235, 238, 231); font-size: 16px; }
+#header { position: absolute; left: 30px; top: 26px; width: 355px; padding: 22px; background-color: rgba(16, 29, 32, 0.91); border-left-width: 3px; border-left-color: rgb(209, 181, 114); border-top-right-radius: 12px; border-bottom-right-radius: 12px; }
+.brand { font-size: 31px; -unity-font-style: bold; letter-spacing: 7px; color: rgb(235, 220, 180); margin-bottom: 15px; }
+.eyebrow { font-size: 12px; letter-spacing: 2px; color: rgb(209, 181, 114); margin-bottom: 12px; }
+.objective { font-size: 17px; white-space: normal; margin-bottom: 16px; }
+.status { font-size: 13px; color: rgb(166, 208, 178); white-space: normal; }
+.timer { color: rgb(255, 177, 133); font-size: 26px; -unity-font-style: bold; margin-top: 8px; }
+.crosshair { position: absolute; left: 50%; top: 50%; width: 24px; height: 24px; margin-left: -12px; margin-top: -12px; -unity-text-align: middle-center; color: white; }
+.prompt { position: absolute; bottom: 160px; left: 50%; width: 640px; margin-left: -320px; -unity-text-align: middle-center; font-size: 16px; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(18, 25, 27); }
+.dialogue { position: absolute; left: 50%; bottom: 55px; width: 680px; margin-left: -340px; padding: 18px 24px; background-color: rgba(16, 29, 32, 0.95); border-top-width: 2px; border-top-color: rgb(209, 181, 114); white-space: normal; font-size: 17px; }
+.controls { position: absolute; bottom: 16px; left: 20px; right: 20px; -unity-text-align: middle-center; font-size: 13px; color: rgb(235, 238, 231); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(18, 25, 27); }
+#menu { position: absolute; top: 25px; bottom: 55px; right: 28px; width: 430px; padding: 25px; background-color: rgba(16, 29, 32, 0.97); border-top-width: 3px; border-top-color: rgb(209, 181, 114); border-bottom-left-radius: 14px; border-bottom-right-radius: 14px; }
+.menu-title { font-size: 36px; -unity-font-style: bold; white-space: normal; margin-bottom: 12px; }
+.subtitle { color: rgb(166, 208, 178); font-size: 13px; margin-bottom: 14px; white-space: normal; }
+.body { white-space: normal; font-size: 15px; margin-bottom: 14px; }
+.hint { white-space: normal; font-size: 12px; color: rgb(169, 183, 179); margin-top: 8px; margin-bottom: 10px; }
+.section-title { font-size: 12px; color: rgb(209, 181, 114); letter-spacing: 1px; margin-top: 18px; margin-bottom: 8px; }
+Button { background-color: rgb(40, 58, 60); color: rgb(235, 238, 231); border-width: 1px; border-color: rgb(72, 91, 90); border-radius: 5px; min-height: 36px; margin: 3px 0; padding: 7px 10px; font-size: 14px; white-space: normal; }
+Button:hover { background-color: rgb(59, 80, 78); }
+Button:focus { border-color: rgb(235, 220, 180); }
+Button:disabled { opacity: 0.4; }
+Button.primary { background-color: rgb(205, 180, 121); color: rgb(20, 34, 35); -unity-font-style: bold; min-height: 43px; }
+.palette { flex-direction: row; }
+.palette Button { flex-grow: 1; flex-basis: 0; margin-right: 4px; font-size: 12px; padding: 5px 3px; }
+.unity-base-popup-field__input { background-color: rgb(40, 58, 60); color: rgb(235, 238, 231); min-height: 32px; border-color: rgb(72, 91, 90); }
+#creation-header { position: absolute; left: 5%; top: 5%; width: 38%; }
+#creation-header .menu-title { font-size: 44px; margin-bottom: 14px; }
+#creation-header .body { font-size: 16px; color: rgb(185, 204, 197); }
+#creation-menu { position: absolute; right: 4%; top: 5%; bottom: 6%; width: 39%; max-width: 470px; padding: 25px; background-color: rgba(16, 29, 32, 0.97); border-top-width: 3px; border-top-color: rgb(209, 181, 114); border-radius: 12px; }
+.creation-title { font-size: 28px; -unity-font-style: bold; margin-bottom: 8px; white-space: normal; }
+#creation-menu .section-title { margin-top: 15px; }
+#creation-menu .body { margin-top: 12px; font-size: 14px; }
+#preview-controls { position: absolute; left: 4%; bottom: 6%; width: 20%; padding: 14px 20px; background-color: rgb(16, 29, 32); border-radius: 8px; }
+.feedback { white-space: normal; color: rgb(255, 191, 148); margin-top: 10px; }
+.palette Button.selected { border-left-color: rgb(235, 220, 180); border-right-color: rgb(235, 220, 180); border-top-color: rgb(235, 220, 180); background-color: rgb(70, 87, 79); -unity-font-style: bold; }

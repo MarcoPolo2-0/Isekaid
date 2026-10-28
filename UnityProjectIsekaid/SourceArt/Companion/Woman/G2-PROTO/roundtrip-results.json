@@ -1,0 +1,65 @@
+{
+  "blender": "5.2.3 LTS",
+  "source_sha256": "674c07ff612577a1a5b7e7ee124202722fa5eb0f68bdc01c820a875b5bef1d87",
+  "native_reopen": {
+    "body_vertices": 11022,
+    "body_shape_keys": [
+      "Basis",
+      "ChestMinus",
+      "ChestPlus",
+      "HipsMinus",
+      "HipsPlus",
+      "WaistMinus",
+      "WaistPlus"
+    ],
+    "armature_bones": 19
+  },
+  "fbx_reimport": [
+    {
+      "name": "G2_PROTO_LegShell",
+      "vertices": 4585,
+      "shape_keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ],
+      "vertex_groups": 8
+    },
+    {
+      "name": "G2_PROTO_WomanBody",
+      "vertices": 11022,
+      "shape_keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ],
+      "vertex_groups": 19
+    },
+    {
+      "name": "G2_PROTO_TorsoShell",
+      "vertices": 1986,
+      "shape_keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ],
+      "vertex_groups": 10
+    }
+  ],
+  "fbx_reimport_armature_bones": [
+    19
+  ],
+  "source_original_unchanged": true
+}

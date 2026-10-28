@@ -1,0 +1,5 @@
+{
+  "name": "Isekaid.Runtime",
+  "rootNamespace": "Isekaid",
+  "references": ["Unity.InputSystem"]
+}

@@ -1,0 +1,54 @@
+{
+  "package": "3d-anime-female-adventurer-version_1.2.zip",
+  "sha256": "32d41f629ef5d84c32c6fc88b48bd629c71ccf439255091ea1717d0bd9ec7359",
+  "author": "Dawn to Dusk Games",
+  "version": "1.2",
+  "source": "https://dawn-to-dusk-games.itch.io/3d-anime-female-adventurer",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "file": "Animations/Unarmed_Idle.fbx",
+      "sha256": "3c0f853eec6dc53ca91421e0bce7030b9845cf8af4ce6caa57e6b031e6ee5641"
+    },
+    {
+      "file": "Animations/Unarmed_Run.fbx",
+      "sha256": "256c5983eb3269e76d4f64117bc879a9bc482a80a6a308bc03abda72ef64365e"
+    },
+    {
+      "file": "Animations/Unarmed_Walk.fbx",
+      "sha256": "684204b10a407253dd038589ae8043747f5e69c1c5372158210064806dafd276"
+    },
+    {
+      "file": "Meshes/Character/AnimeFemaleAdventurer_Outfit_01.fbx",
+      "sha256": "cc6ba53668acfab34b47ea2a1a2390461523fc386d5da930f445be663e1c0bf6"
+    },
+    {
+      "file": "Meshes/Character/AnimeFemaleAdventurer_Outfit_02.fbx",
+      "sha256": "f8df19668318538c6399cdf41f8695307acd09cd617936b6176b2a4292c712ae"
+    },
+    {
+      "file": "Textures/Character/Body_Base.png",
+      "sha256": "101fff4568edb1dee9d3663d3dda9cfaf0d13c5e035b711ba1516148e036b8be"
+    },
+    {
+      "file": "Textures/Character/Eye_Base.png",
+      "sha256": "412417b666f27920a41ff6c8053c8f896576a17a2b9e6802efebaccd43477105"
+    },
+    {
+      "file": "Textures/Character/Hair_Base.png",
+      "sha256": "b431f759ccf9b067e3c2db727c9b7774339908a801d7c37383a566ae24806570"
+    },
+    {
+      "file": "Textures/Character/Head_Base.png",
+      "sha256": "abcef4572c24a09261a37bc6de9c5125bca90178eaa6b1a63708f1e60940a4e6"
+    },
+    {
+      "file": "Textures/Character/Outfit_01_Base.png",
+      "sha256": "4a47c1990ed2b2660aca7c9868aea0063d022e0fee188fbadf8a181cb7bffd3b"
+    },
+    {
+      "file": "Textures/Character/Outfit_02_Base.png",
+      "sha256": "60412119cfaa92b2d85e6b51b51aeeb493234572de3baec0ecba86630e9ca7f6"
+    }
+  ]
+}

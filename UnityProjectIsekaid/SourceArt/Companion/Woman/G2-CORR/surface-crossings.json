@@ -1,0 +1,1481 @@
+{
+  "method": "BVH candidate pairs followed by strict segment-triangle tests in both directions; excludes coplanar and endpoint-only contact; no continuous collision proof",
+  "cases": [
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        -1,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        -1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        0,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        0,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        1,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        -1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        -1,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        -1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        0,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        0,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        1,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        0,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        -1,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        -1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        0,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        0,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        1,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "rest",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 332,
+          "edge_triangle_crossings": 332,
+          "first_pairs": [
+            [
+              18293,
+              5343
+            ],
+            [
+              18294,
+              5337
+            ],
+            [
+              18294,
+              5343
+            ],
+            [
+              18294,
+              5336
+            ],
+            [
+              19361,
+              7329
+            ],
+            [
+              19361,
+              7324
+            ],
+            [
+              19361,
+              7328
+            ],
+            [
+              19360,
+              7324
+            ],
+            [
+              19360,
+              7328
+            ],
+            [
+              19100,
+              6507
+            ],
+            [
+              19100,
+              6502
+            ],
+            [
+              19444,
+              7333
+            ],
+            [
+              19445,
+              7332
+            ],
+            [
+              19445,
+              7333
+            ],
+            [
+              19442,
+              7333
+            ],
+            [
+              19442,
+              7334
+            ],
+            [
+              19442,
+              7338
+            ],
+            [
+              19443,
+              7333
+            ],
+            [
+              18850,
+              7393
+            ],
+            [
+              19439,
+              7324
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 532,
+          "edge_triangle_crossings": 532,
+          "first_pairs": [
+            [
+              19453,
+              6798
+            ],
+            [
+              19454,
+              6797
+            ],
+            [
+              19454,
+              6798
+            ],
+            [
+              19455,
+              6797
+            ],
+            [
+              19463,
+              6797
+            ],
+            [
+              19463,
+              6796
+            ],
+            [
+              19463,
+              6800
+            ],
+            [
+              19349,
+              6801
+            ],
+            [
+              19349,
+              6800
+            ],
+            [
+              19348,
+              6801
+            ],
+            [
+              19348,
+              7379
+            ],
+            [
+              19348,
+              7378
+            ],
+            [
+              17756,
+              7397
+            ],
+            [
+              19758,
+              5698
+            ],
+            [
+              19759,
+              5699
+            ],
+            [
+              19759,
+              5698
+            ],
+            [
+              19764,
+              5699
+            ],
+            [
+              19765,
+              5699
+            ],
+            [
+              19452,
+              6798
+            ],
+            [
+              19766,
+              5699
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values": [
+        0,
+        0,
+        0
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values": [
+        -1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values": [
+        -1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values": [
+        -1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values": [
+        -1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 332,
+          "edge_triangle_crossings": 332,
+          "first_pairs": [
+            [
+              18293,
+              5343
+            ],
+            [
+              18294,
+              5343
+            ],
+            [
+              18294,
+              5337
+            ],
+            [
+              18294,
+              5336
+            ],
+            [
+              19360,
+              7324
+            ],
+            [
+              19360,
+              7328
+            ],
+            [
+              19361,
+              7329
+            ],
+            [
+              19361,
+              7324
+            ],
+            [
+              19361,
+              7328
+            ],
+            [
+              19100,
+              6502
+            ],
+            [
+              19100,
+              6507
+            ],
+            [
+              19444,
+              7333
+            ],
+            [
+              19445,
+              7332
+            ],
+            [
+              19445,
+              7333
+            ],
+            [
+              18850,
+              7393
+            ],
+            [
+              19443,
+              7333
+            ],
+            [
+              19442,
+              7333
+            ],
+            [
+              19442,
+              7334
+            ],
+            [
+              19442,
+              7338
+            ],
+            [
+              18849,
+              7393
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values": [
+        -1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 532,
+          "edge_triangle_crossings": 532,
+          "first_pairs": [
+            [
+              19453,
+              6798
+            ],
+            [
+              19454,
+              6797
+            ],
+            [
+              19454,
+              6798
+            ],
+            [
+              19463,
+              6796
+            ],
+            [
+              19463,
+              6797
+            ],
+            [
+              19463,
+              6800
+            ],
+            [
+              19455,
+              6797
+            ],
+            [
+              19349,
+              6800
+            ],
+            [
+              19349,
+              6801
+            ],
+            [
+              19348,
+              7379
+            ],
+            [
+              19348,
+              6801
+            ],
+            [
+              19348,
+              7378
+            ],
+            [
+              17756,
+              7397
+            ],
+            [
+              19759,
+              5699
+            ],
+            [
+              19759,
+              5698
+            ],
+            [
+              19764,
+              5699
+            ],
+            [
+              19765,
+              5699
+            ],
+            [
+              19766,
+              5699
+            ],
+            [
+              19766,
+              6798
+            ],
+            [
+              19766,
+              6799
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values": [
+        -1,
+        -1,
+        -1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 332,
+          "edge_triangle_crossings": 332,
+          "first_pairs": [
+            [
+              18293,
+              5343
+            ],
+            [
+              18294,
+              5337
+            ],
+            [
+              18294,
+              5343
+            ],
+            [
+              18294,
+              5336
+            ],
+            [
+              19360,
+              7324
+            ],
+            [
+              19360,
+              7328
+            ],
+            [
+              19361,
+              7324
+            ],
+            [
+              19361,
+              7329
+            ],
+            [
+              19361,
+              7328
+            ],
+            [
+              19100,
+              6502
+            ],
+            [
+              19100,
+              6507
+            ],
+            [
+              19444,
+              7333
+            ],
+            [
+              19445,
+              7332
+            ],
+            [
+              19445,
+              7333
+            ],
+            [
+              19443,
+              7333
+            ],
+            [
+              19442,
+              7333
+            ],
+            [
+              19442,
+              7334
+            ],
+            [
+              19442,
+              7338
+            ],
+            [
+              18850,
+              7393
+            ],
+            [
+              18849,
+              7388
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 536,
+          "edge_triangle_crossings": 536,
+          "first_pairs": [
+            [
+              19453,
+              6798
+            ],
+            [
+              19454,
+              6797
+            ],
+            [
+              19454,
+              6798
+            ],
+            [
+              19463,
+              6797
+            ],
+            [
+              19463,
+              6796
+            ],
+            [
+              19463,
+              6800
+            ],
+            [
+              19455,
+              6797
+            ],
+            [
+              19348,
+              6801
+            ],
+            [
+              19348,
+              7379
+            ],
+            [
+              19348,
+              7378
+            ],
+            [
+              19349,
+              6801
+            ],
+            [
+              19349,
+              6800
+            ],
+            [
+              19758,
+              5698
+            ],
+            [
+              19759,
+              5699
+            ],
+            [
+              19759,
+              5698
+            ],
+            [
+              19764,
+              5699
+            ],
+            [
+              19765,
+              5699
+            ],
+            [
+              19452,
+              6798
+            ],
+            [
+              19766,
+              5699
+            ],
+            [
+              19766,
+              6798
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "cloth": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "candidate_triangle_pairs": 0,
+          "edge_triangle_crossings": 0,
+          "first_pairs": []
+        }
+      ]
+    }
+  ]
+}

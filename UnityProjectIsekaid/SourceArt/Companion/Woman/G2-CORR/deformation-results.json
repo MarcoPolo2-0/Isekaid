@@ -1,0 +1,1590 @@
+{
+  "source_sha256": "674c07ff612577a1a5b7e7ee124202722fa5eb0f68bdc01c820a875b5bef1d87",
+  "blender": "5.2.3 LTS",
+  "scope": "G2-CORR DEC-003; neutral and ranges pending artistic approval; diagnostic rig and shells only.",
+  "normalization": {
+    "uniform_factor": 0.01,
+    "height_m": 1.8941959142684937,
+    "ground_z_m": 0
+  },
+  "shape_probes": {
+    "Chest": {
+      "affected_vertices": 933,
+      "maximum_displacement_m": 0.02492587413024755,
+      "affected_z_range_m": [
+        1.3006584644317627,
+        1.5992239713668823
+      ],
+      "protected_head_hands_feet_unchanged": true
+    },
+    "Hips": {
+      "affected_vertices": 1140,
+      "maximum_displacement_m": 0.026985956921056407,
+      "affected_z_range_m": [
+        0.8204938769340515,
+        1.1190851926803589
+      ],
+      "protected_head_hands_feet_unchanged": true
+    },
+    "Waist": {
+      "affected_vertices": 871,
+      "maximum_displacement_m": 0.018485298331460783,
+      "affected_z_range_m": [
+        1.1211333274841309,
+        1.2996244430541992
+      ],
+      "protected_head_hands_feet_unchanged": true
+    }
+  },
+  "combinations": [
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1556140455684216,
+      "edge_stretch_p99": 1.041650246234424,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0313593944112305,
+      "edge_stretch_p99": 1.0090138770868982,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.153214499165906,
+      "edge_stretch_p99": 1.0872682779955556,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1556140455684216,
+      "edge_stretch_p99": 1.041650246234424,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.019087885665467,
+      "edge_stretch_p99": 1.0000036598289368,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.153214499165906,
+      "edge_stretch_p99": 1.0872682779955556,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3162911032208051,
+      "edge_stretch_p99": 1.1268797988515606,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3162911032208051,
+      "edge_stretch_p99": 1.1224405114535043,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3162911032208051,
+      "edge_stretch_p99": 1.1350467012551764,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1556140455684216,
+      "edge_stretch_p99": 1.041650246234424,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014429753537115175,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0313593944112305,
+      "edge_stretch_p99": 1.0088191696149074,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.153214499165906,
+      "edge_stretch_p99": 1.0872682779955556,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1556140455684216,
+      "edge_stretch_p99": 1.041650246234424,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014429755239689257,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0000175691681492,
+      "edge_stretch_p99": 1.0000035667976053,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.153214499165906,
+      "edge_stretch_p99": 1.0872682779955556,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3162911032208051,
+      "edge_stretch_p99": 1.1268797988515606,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.01442975864483742,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3162911032208051,
+      "edge_stretch_p99": 1.1224405114535043,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3162911032208051,
+      "edge_stretch_p99": 1.1350467012551764,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.098350721993445,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014429753537115175,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.0901002917371558,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0145555300405249,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.1117484319857658,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014653690333943814,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.098350721993445,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014429755239689257,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.0901002917371558,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0145555300405249,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.1117484319857658,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014653690333943814,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.1382015078772876,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.01442975864483742,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.1322840552674267,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0145555300405249,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.1417845672638247,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014653690333943814,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    }
+  ],
+  "poses": [
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2198273233161576,
+      "edge_stretch_p99": 1.0000217070032826,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.536821799939604,
+      "edge_stretch_p99": 1.2458907031850492,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4017065756670233,
+      "edge_stretch_p99": 1.2157124428041113,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.012574714608490467,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.581445506178038,
+      "edge_stretch_p99": 1.7455436682955172,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014282907883170992,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 8,
+          "minimum_signed_clearance_m": -0.002604104782221839,
+          "surface_overlap_face_pairs": 196
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.125049490989726,
+      "edge_stretch_p99": 1.6301774372086688,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 4,
+          "minimum_signed_clearance_m": -0.0040255419044115115,
+          "surface_overlap_face_pairs": 312
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.100641277922743,
+      "edge_stretch_p99": 1.2921326683812406,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014433419681154191,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023118286556069734,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2198273233161576,
+      "edge_stretch_p99": 1.0574928635206748,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.536821799939604,
+      "edge_stretch_p99": 1.2458907031850492,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.435455256698388,
+      "edge_stretch_p99": 1.2071718233691344,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013243613298982382,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.578536602765769,
+      "edge_stretch_p99": 1.7151124546428824,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 8,
+          "minimum_signed_clearance_m": -0.002604104782221839,
+          "surface_overlap_face_pairs": 196
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.122062853687773,
+      "edge_stretch_p99": 1.6034992781216146,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.01338406477952958,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 4,
+          "minimum_signed_clearance_m": -0.0040255419044115115,
+          "surface_overlap_face_pairs": 312
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.097508542138033,
+      "edge_stretch_p99": 1.2862193472383476,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.013936403279785736,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023118286556069734,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3823795892673147,
+      "edge_stretch_p99": 1.147681033242158,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014653690333943814,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.536821799939604,
+      "edge_stretch_p99": 1.3023285369649773,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014653690333943814,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4786762704798961,
+      "edge_stretch_p99": 1.2811076005424327,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.011821570340543985,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.003999976537670591,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.5843469543940225,
+      "edge_stretch_p99": 1.7901922615723413,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014085151953622699,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 8,
+          "minimum_signed_clearance_m": -0.002604104782221839,
+          "surface_overlap_face_pairs": 196
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.128028622660476,
+      "edge_stretch_p99": 1.6748878933649178,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014085151953622699,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 4,
+          "minimum_signed_clearance_m": -0.0040255419044115115,
+          "surface_overlap_face_pairs": 312
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.1037731910695268,
+      "edge_stretch_p99": 1.312227178951954,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 2027,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.014653690333943814,
+          "surface_overlap_face_pairs": 0
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4589,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023118286556069734,
+          "surface_overlap_face_pairs": 0
+        }
+      ]
+    }
+  ],
+  "neutral_width_sections_m": [
+    [
+      0.7,
+      0.15
+    ],
+    [
+      0.82,
+      0.175
+    ],
+    [
+      0.95,
+      0.195
+    ],
+    [
+      1.04,
+      0.185
+    ],
+    [
+      1.14,
+      0.155
+    ],
+    [
+      1.24,
+      0.14
+    ],
+    [
+      1.34,
+      0.16
+    ],
+    [
+      1.43,
+      0.187
+    ]
+  ],
+  "neutral_max_movement_m": 0.10253110952168011,
+  "mirror_symmetry": {
+    "maximum_distance_m": 2.5211161869265197e-07,
+    "mean_distance_m": 8.675080402900682e-09
+  },
+  "axis_amplitudes_m": {
+    "Chest": 0.0249258750681,
+    "Hips": 0.0269859563323,
+    "Waist": 0.018485297741
+  },
+  "cloth_samples": [
+    {
+      "name": "G2_PROTO_TorsoShell",
+      "vertices": 2027,
+      "faces": 1946,
+      "method": "Body-correspondent surface, 16 mm recalculated per-shape normal offset; intentionally open hems; no garment design or thickness."
+    },
+    {
+      "name": "G2_PROTO_LegShell",
+      "vertices": 4589,
+      "faces": 4512,
+      "method": "Body-correspondent surface, 16 mm recalculated per-shape normal offset; intentionally open hems; no garment design or thickness."
+    }
+  ],
+  "cloth_rest_fit_iterations": [
+    0.007049541612483608,
+    7.095882446038482e-07,
+    1.7672427930770507e-09,
+    2.1928281065952682e-10
+  ],
+  "automatic_weights": {
+    "operator_completed": true,
+    "bones": 19,
+    "vertex_groups": 19,
+    "unweighted_vertices": 0,
+    "minimum_total_weight": 0.9999999701976776,
+    "maximum_total_weight": 1.0000000298023224,
+    "maximum_influences": 2
+  },
+  "weight_method": "Explicit side-isolated joint blends; identical source-correspondent weights on shells; max two influences.",
+  "local_pose_fit_iterations": [
+    0.016188311477482786,
+    0.008260986348024744,
+    0.0063785622947325465,
+    0.006888395352281805,
+    0.006215089560602792,
+    0.006795251654286403
+  ],
+  "sweeps": [
+    {
+      "axis": "Chest",
+      "other_axes": [
+        1,
+        2
+      ],
+      "other_values": [
+        0,
+        0
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10089,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0004985183403909232
+    },
+    {
+      "axis": "Chest",
+      "other_axes": [
+        1,
+        2
+      ],
+      "other_values": [
+        -1,
+        -1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10089,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0004985183403909232
+    },
+    {
+      "axis": "Chest",
+      "other_axes": [
+        1,
+        2
+      ],
+      "other_values": [
+        1,
+        1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10089,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0004985183403909232
+    },
+    {
+      "axis": "Chest",
+      "other_axes": [
+        1,
+        2
+      ],
+      "other_values": [
+        -1,
+        1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10089,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0004985183403909232
+    },
+    {
+      "axis": "Chest",
+      "other_axes": [
+        1,
+        2
+      ],
+      "other_values": [
+        1,
+        -1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10089,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0004985183403909232
+    },
+    {
+      "axis": "Hips",
+      "other_axes": [
+        0,
+        2
+      ],
+      "other_values": [
+        0,
+        0
+      ],
+      "samples": 101,
+      "forbidden_vertices": 9880,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0005397409663822688
+    },
+    {
+      "axis": "Hips",
+      "other_axes": [
+        0,
+        2
+      ],
+      "other_values": [
+        -1,
+        -1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 9880,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0005397409663822688
+    },
+    {
+      "axis": "Hips",
+      "other_axes": [
+        0,
+        2
+      ],
+      "other_values": [
+        1,
+        1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 9880,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0005397409663822688
+    },
+    {
+      "axis": "Hips",
+      "other_axes": [
+        0,
+        2
+      ],
+      "other_values": [
+        -1,
+        1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 9880,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0005397409663822688
+    },
+    {
+      "axis": "Hips",
+      "other_axes": [
+        0,
+        2
+      ],
+      "other_values": [
+        1,
+        -1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 9880,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0005397409663822688
+    },
+    {
+      "axis": "Waist",
+      "other_axes": [
+        0,
+        1
+      ],
+      "other_values": [
+        0,
+        0
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10151,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0003697197056501145
+    },
+    {
+      "axis": "Waist",
+      "other_axes": [
+        0,
+        1
+      ],
+      "other_values": [
+        -1,
+        -1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10151,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0003697197056501145
+    },
+    {
+      "axis": "Waist",
+      "other_axes": [
+        0,
+        1
+      ],
+      "other_values": [
+        1,
+        1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10151,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0003697197056501145
+    },
+    {
+      "axis": "Waist",
+      "other_axes": [
+        0,
+        1
+      ],
+      "other_values": [
+        -1,
+        1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10151,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0003697197056501145
+    },
+    {
+      "axis": "Waist",
+      "other_axes": [
+        0,
+        1
+      ],
+      "other_values": [
+        1,
+        -1
+      ],
+      "samples": 101,
+      "forbidden_vertices": 10151,
+      "max_forbidden_displacement_m": 0,
+      "max_step_m": 0.0003697197056501145
+    }
+  ],
+  "original_hash_preserved": true,
+  "export": {
+    "file": "woman_g2_body.fbx",
+    "sha256": "5f829792e18c31dfeba90e4b510916e328968f89a67c024d787476c74b6ec689"
+  }
+}

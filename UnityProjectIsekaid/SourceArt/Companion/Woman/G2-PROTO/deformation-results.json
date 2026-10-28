@@ -1,0 +1,1225 @@
+{
+  "source_sha256": "674c07ff612577a1a5b7e7ee124202722fa5eb0f68bdc01c820a875b5bef1d87",
+  "blender": "5.2.3 LTS",
+  "scope": "G2-PROTO experimental neutral and ranges; visual approval pending; no game scene integration.",
+  "normalization": {
+    "uniform_factor": 0.01,
+    "height_m": 1.8941959142684937,
+    "ground_z_m": 0
+  },
+  "shape_probes": {
+    "Chest": {
+      "affected_vertices": 1094,
+      "maximum_displacement_m": 0.024925875068102545,
+      "affected_z_range_m": [
+        1.2314283847808838,
+        1.6142263412475586
+      ],
+      "protected_head_hands_feet_unchanged": true
+    },
+    "Hips": {
+      "affected_vertices": 1806,
+      "maximum_displacement_m": 0.026985956332315538,
+      "affected_z_range_m": [
+        0.766006588935852,
+        1.2390998601913452
+      ],
+      "protected_head_hands_feet_unchanged": true
+    },
+    "Waist": {
+      "affected_vertices": 1832,
+      "maximum_displacement_m": 0.018485297741049074,
+      "affected_z_range_m": [
+        1.0506216287612915,
+        1.4093035459518433
+      ],
+      "protected_head_hands_feet_unchanged": true
+    }
+  },
+  "combinations": [
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0945664099969865,
+      "edge_stretch_p99": 1.0174577696462013,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0945664099969865,
+      "edge_stretch_p99": 1.0213253447474853,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.144826005165039,
+      "edge_stretch_p99": 1.0820672635996622,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0945664099969865,
+      "edge_stretch_p99": 1.0234566732931065,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0945664099969865,
+      "edge_stretch_p99": 1.0159073153957519,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.144826005165039,
+      "edge_stretch_p99": 1.0820672635996622,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2713298176451326,
+      "edge_stretch_p99": 1.1089098858555193,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2713298176451326,
+      "edge_stretch_p99": 1.1089098858555193,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2713298176451326,
+      "edge_stretch_p99": 1.119726389049479,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839867389535357
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0349028534458131,
+      "edge_stretch_p99": 1.0108768854109884,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0307382829315848,
+      "edge_stretch_p99": 1.008818268319096,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1182434714087293,
+      "edge_stretch_p99": 1.0752312258152021,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0476506500628842,
+      "edge_stretch_p99": 1.0154337002116876,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0,
+      "edge_stretch_p99": 1.0,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1182434714087293,
+      "edge_stretch_p99": 1.0752312258152021,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2713298176451326,
+      "edge_stretch_p99": 1.1089098858555193,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2713298176451326,
+      "edge_stretch_p99": 1.1089098858555193,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2713298176451326,
+      "edge_stretch_p99": 1.1135143561901755,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584905532654
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.106780629888601,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.1087667616013503,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.116399531242174,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.106780629888601,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.1087667616013503,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.116399531242174,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.172461286634503,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.1730689524499838,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.1750232356203087,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554026474812417
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055829907567386
+        }
+      ]
+    }
+  ],
+  "poses": [
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1619312824153418,
+      "edge_stretch_p99": 1.0608708092413037,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296584300718678
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.7692798591733323,
+      "edge_stretch_p99": 1.1792715970104928,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019298705543633332
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.383840083802931,
+      "edge_stretch_p99": 1.1397617389307748,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0019296568498248234
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.9946771451678602,
+      "edge_stretch_p99": 1.485080866021495,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 10,
+          "minimum_signed_clearance_m": -0.005183138186112046
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 106,
+          "minimum_signed_clearance_m": -0.009123400319367647
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.086877220315904,
+      "edge_stretch_p99": 1.4105063416576873,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 2,
+          "minimum_signed_clearance_m": -0.002434121794067323
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 125,
+          "minimum_signed_clearance_m": -0.013703834445550456
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.578106716784299,
+      "edge_stretch_p99": 1.2713534424144453,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0013678165951205301
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 14,
+          "minimum_signed_clearance_m": -0.006226156547199935
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1619312824153418,
+      "edge_stretch_p99": 1.0614829338149918,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839866214013455
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.7692798591733323,
+      "edge_stretch_p99": 1.1792715970104928,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0016839866214013455
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3207992478163377,
+      "edge_stretch_p99": 1.1219543020766463,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.001683986272837501
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.9946771451678602,
+      "edge_stretch_p99": 1.4747549017249149,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 10,
+          "minimum_signed_clearance_m": -0.0047129178419709206
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 102,
+          "minimum_signed_clearance_m": -0.008705350221134722
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.086877220315904,
+      "edge_stretch_p99": 1.3911823502556242,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 2,
+          "minimum_signed_clearance_m": -0.001919770729728043
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 128,
+          "minimum_signed_clearance_m": -0.013703834445550456
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.578106716784299,
+      "edge_stretch_p99": 1.261975548146246,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0007177297862313026
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 14,
+          "minimum_signed_clearance_m": -0.006103428895585239
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.4775466180412085,
+      "edge_stretch_p99": 1.1750232356203087,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.002355402269586193
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.7692798591733323,
+      "edge_stretch_p99": 1.2253869553700758,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.002355402269586193
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0027055740773676007
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.477547048924829,
+      "edge_stretch_p99": 1.2273717809639797,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.0023554021609015763
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.002657234843354672
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.9946771451678602,
+      "edge_stretch_p99": 1.5093788311457494,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 16,
+          "minimum_signed_clearance_m": -0.005647863377816975
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 110,
+          "minimum_signed_clearance_m": -0.009935006499290466
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.086877220315904,
+      "edge_stretch_p99": 1.4452701233254055,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 4,
+          "minimum_signed_clearance_m": -0.00295406038640067
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 125,
+          "minimum_signed_clearance_m": -0.013703834445550456
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.578106716784299,
+      "edge_stretch_p99": 1.3183228855984488,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "G2_PROTO_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 0,
+          "minimum_signed_clearance_m": 0.00214548881558585
+        },
+        {
+          "name": "G2_PROTO_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 14,
+          "minimum_signed_clearance_m": -0.006341752974549308
+        }
+      ]
+    }
+  ],
+  "neutral_max_movement_m": 0.059988481023105195,
+  "mirror_symmetry": {
+    "maximum_distance_m": 0.0,
+    "mean_distance_m": 0.0
+  },
+  "cloth_samples": [
+    {
+      "name": "G2_PROTO_TorsoShell",
+      "vertices": 1986,
+      "faces": 1896,
+      "method": "Body-correspondent surface, 16 mm recalculated per-shape normal offset; intentionally open hems; no garment design or thickness."
+    },
+    {
+      "name": "G2_PROTO_LegShell",
+      "vertices": 4585,
+      "faces": 4508,
+      "method": "Body-correspondent surface, 16 mm recalculated per-shape normal offset; intentionally open hems; no garment design or thickness."
+    }
+  ],
+  "cloth_rest_fit_iterations": [
+    0.01476519931666553,
+    0.0037539397655117455,
+    0.0030950171675194725,
+    0.0026744028078646807
+  ],
+  "automatic_weights": {
+    "operator_completed": true,
+    "bones": 19,
+    "vertex_groups": 19,
+    "unweighted_vertices": 0,
+    "minimum_total_weight": 0.9999999552965164,
+    "maximum_total_weight": 1.0000000447034836,
+    "maximum_influences": 4
+  },
+  "original_hash_preserved": true,
+  "export": {
+    "file": "woman_g2_body.fbx",
+    "sha256": "e0c26e11dd347a054892c4df4b192cfb17331b14b9ae94c508e6a3b1863651c7"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "native": [
+    {
+      "name": "G2_PROTO_TorsoShell",
+      "vertices": 2027,
+      "basis_max_difference_m": 0.0,
+      "keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ]
+    },
+    {
+      "name": "G2_PROTO_LegShell",
+      "vertices": 4589,
+      "basis_max_difference_m": 0.0,
+      "keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ]
+    },
+    {
+      "name": "G2_PROTO_WomanBody",
+      "vertices": 11022,
+      "basis_max_difference_m": 0.0,
+      "keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ]
+    }
+  ],
+  "fbx": [
+    {
+      "name": "G2_PROTO_WomanBody",
+      "vertices": 11022,
+      "basis_max_difference_m": 0.0,
+      "keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ]
+    },
+    {
+      "name": "G2_PROTO_LegShell",
+      "vertices": 4589,
+      "basis_max_difference_m": 0.0,
+      "keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ]
+    },
+    {
+      "name": "G2_PROTO_TorsoShell",
+      "vertices": 2027,
+      "basis_max_difference_m": 0.0,
+      "keys": [
+        "Basis",
+        "ChestMinus",
+        "ChestPlus",
+        "HipsMinus",
+        "HipsPlus",
+        "WaistMinus",
+        "WaistPlus"
+      ]
+    }
+  ]
+}

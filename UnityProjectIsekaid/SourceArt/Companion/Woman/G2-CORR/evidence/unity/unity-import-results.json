@@ -1,0 +1,99 @@
+{
+    "unity": "6000.6.7f1",
+    "scope": "Isolated editor import of diagnostic FBX; no production integration, animation clips or Play Mode.",
+    "avatarValid": true,
+    "avatarHuman": true,
+    "meshes": [
+        {
+            "name": "G2_PROTO_LegShell",
+            "vertices": 4730,
+            "bones": 19,
+            "blendShapes": [
+                "ChestMinus",
+                "ChestPlus",
+                "HipsMinus",
+                "HipsPlus",
+                "WaistMinus",
+                "WaistPlus"
+            ],
+            "deformationMaxDistances": [
+                0.0,
+                0.0,
+                0.027025708928704262,
+                0.027000142261385918,
+                0.002137561794370413,
+                0.002201440976932645
+            ],
+            "rawBlendShapeMaxDistances": [
+                0.0,
+                0.0,
+                0.00027025718009099364,
+                0.0002700014447327703,
+                0.00002137580668204464,
+                0.000022014601199771278
+            ]
+        },
+        {
+            "name": "G2_PROTO_TorsoShell",
+            "vertices": 2046,
+            "bones": 19,
+            "blendShapes": [
+                "ChestMinus",
+                "ChestPlus",
+                "HipsMinus",
+                "HipsPlus",
+                "WaistMinus",
+                "WaistPlus"
+            ],
+            "deformationMaxDistances": [
+                0.02506212890148163,
+                0.025029297918081284,
+                0.0,
+                0.0,
+                0.01871458813548088,
+                0.01866246573626995
+            ],
+            "rawBlendShapeMaxDistances": [
+                0.0002506213786546141,
+                0.00025029300013557076,
+                0.0,
+                0.0,
+                0.00018714599718805403,
+                0.00018662480579223484
+            ]
+        },
+        {
+            "name": "G2_PROTO_WomanBody",
+            "vertices": 12016,
+            "bones": 19,
+            "blendShapes": [
+                "ChestMinus",
+                "ChestPlus",
+                "HipsMinus",
+                "HipsPlus",
+                "WaistMinus",
+                "WaistPlus"
+            ],
+            "deformationMaxDistances": [
+                0.02492585778236389,
+                0.024925880134105682,
+                0.026985974982380867,
+                0.026985960081219673,
+                0.0184852983802557,
+                0.018485283479094505
+            ],
+            "rawBlendShapeMaxDistances": [
+                0.00024925870820879936,
+                0.00024925870820879936,
+                0.0002698596508707851,
+                0.0002698596508707851,
+                0.00018485303735360503,
+                0.00018485290638636798
+            ]
+        }
+    ],
+    "verifiedBodyCombinations": 27,
+    "synchronizedMeshBakes": 4629,
+    "synchronizedSweepSamples": 1515,
+    "sourceSha256": "5f829792e18c31dfeba90e4b510916e328968f89a67c024d787476c74b6ec689"
+}
