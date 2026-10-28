@@ -11,6 +11,16 @@ assert len(source['file_preset_expressions'])==14
 assert all(c['available'] and c['maximumMorphWeight']>0 for c in r['faceTests'])
 baseline=read('baseline-results.json');assert all(baseline['before'].values()) and all(baseline['after'].values())
 assert not read('protected-files-check.json')['changed']
+stability=read('stability-results.json')
+assert not stability['error'] and stability['sourceSha256']==source['sha256']
+assert stability['faultCases']==5 and stability['replacementCycles']==6 and stability['unloadCycles']==6
+assert set(stability['faults'])=={'ValidatedBytes','Imported','Prepared','Activated','PreviousHidden'}
+assert stability['firstImportRollback'] and stability['concurrentLoadRejected'] and stability['unloadDuringLoadRejected'] and stability['ownerDestructionHandled']
+assert stability['releasedOwnedObjects']>0 and stability['maximumSettledGrowth']<=stability['settledToleranceBytes']
+assert len(stability['memory'])==8 and all(m['avatars']==0 for m in stability['memory'])
+revision=baseline['stability_revision']
+assert revision['layout_script_present'] and revision['layout_exit_code']==0
+assert all(revision['prototype_checks'].values()) and not revision['protected_changed']
 for name,sha in read('artifact-manifest.json').items():assert hashlib.sha256((p/name).read_bytes()).hexdigest()==sha,name
 model=repo/source['file']
 if model.exists():assert hashlib.sha256(model.read_bytes()).hexdigest()==source['sha256']

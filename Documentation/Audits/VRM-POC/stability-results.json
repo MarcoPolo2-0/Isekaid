@@ -1,0 +1,105 @@
+{
+    "unity": "6000.6.7f1",
+    "error": "",
+    "sourceSha256": "37eadcbaa4e240b691601daabcfa4ad4d5319793dff0cc0d128eff55f4de8736",
+    "faultCases": 5,
+    "replacementCycles": 6,
+    "unloadCycles": 6,
+    "releasedOwnedObjects": 1138,
+    "firstImportRollback": true,
+    "concurrentLoadRejected": true,
+    "unloadDuringLoadRejected": true,
+    "ownerDestructionHandled": true,
+    "maximumSettledGrowth": 261752,
+    "settledToleranceBytes": 16777216,
+    "peakAllocated": 807972607,
+    "faults": [
+        "ValidatedBytes",
+        "Imported",
+        "Prepared",
+        "Activated",
+        "PreviousHidden"
+    ],
+    "memory": [
+        {
+            "label": "warm-baseline",
+            "allocated": 519416134,
+            "reserved": 1838555136,
+            "managed": 22499328,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        },
+        {
+            "label": "cycle-0",
+            "allocated": 519420301,
+            "reserved": 1838555136,
+            "managed": 22573056,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        },
+        {
+            "label": "cycle-1",
+            "allocated": 519458369,
+            "reserved": 1838555136,
+            "managed": 22589440,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        },
+        {
+            "label": "cycle-2",
+            "allocated": 519465638,
+            "reserved": 1838555136,
+            "managed": 22601728,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        },
+        {
+            "label": "cycle-3",
+            "allocated": 519469627,
+            "reserved": 1838555136,
+            "managed": 22585344,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        },
+        {
+            "label": "cycle-4",
+            "allocated": 519540456,
+            "reserved": 1838555136,
+            "managed": 22593536,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        },
+        {
+            "label": "cycle-5",
+            "allocated": 519544557,
+            "reserved": 1838555136,
+            "managed": 22589440,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        },
+        {
+            "label": "owner-destroyed",
+            "allocated": 519677886,
+            "reserved": 1838555136,
+            "managed": 22544384,
+            "meshes": 7,
+            "textures": 384,
+            "materials": 71,
+            "avatars": 0
+        }
+    ]
+}

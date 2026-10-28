@@ -521,3 +521,12 @@ Proteccion y limites
 - Informe y hashes: Documentation/Audits/VRM-POC. Original, Woman, G2 y 803 archivos protegidos sin cambios.
 - Archivo VRM y capturas excluidos de Git por permisos; sin cambios de escenas/prefabs definitivos, perfil, gameplay o nuevo creador.
 - Viabilidad tecnica acotada: requiere revision de escala/locomocion, perfilado standalone y derechos de recursos antes de integrar. Sin fusion a main.
+
+28/10/2026 - VRM-POC / PR #4 - CORRECCION DE ESTABILIDAD
+- Rama actualizada con main 83553e9 mediante merge; cambios locales anteriores respaldados y preservados.
+- Reemplazo transaccional: candidato preparado y activado antes de publicar referencias y destruir el anterior; rollback de visibilidad y expresiones.
+- Descarga explicita e idempotente; rechazo de operaciones simultaneas y limpieza al destruir el presentador durante la carga.
+- Unity Play Mode: cinco fallos por etapa, rollback de primera carga, seis ciclos de carga/reemplazo/descarga y 1138 referencias a recursos comprobadas destruidas.
+- Memoria asentada: crecimiento maximo 0.25 MiB; conteos de mallas/texturas/materiales/avatars constantes. La reserva del allocator permanece, sin afirmar ausencia absoluta de fugas ni VRAM validada.
+- tools/verify_unified_layout.py y pruebas originales del creador/Game pasan. Informe, resultados y hashes actualizados en Documentation/Audits/VRM-POC.
+- 803 archivos protegidos intactos; VRM y capturas siguen privados. Sin fusion a main, nuevo creador ni integracion de produccion.

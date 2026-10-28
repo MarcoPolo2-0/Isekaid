@@ -24,21 +24,38 @@ namespace Isekaid.ExperimentalVrm
         public float ImportMilliseconds { get; private set; }
         public bool PreviewingMotion { get; set; }
         private bool loading;
-        private readonly Dictionary<string, ExpressionKey> keys = new Dictionary<string, ExpressionKey>(StringComparer.OrdinalIgnoreCase);
+        private bool destroyed;
+        private Dictionary<string, ExpressionKey> keys = new Dictionary<string, ExpressionKey>(StringComparer.OrdinalIgnoreCase);
+        private Dictionary<Renderer, bool> originalVisibility = new Dictionary<Renderer, bool>();
+#if UNITY_EDITOR
+        public Action<string, Vrm10Instance> ImportStageProbe;
+#endif
+
+        [System.Diagnostics.Conditional("UNITY_EDITOR")]
+        private void Checkpoint(string stage, Vrm10Instance candidate = null)
+        {
+#if UNITY_EDITOR
+            ImportStageProbe?.Invoke(stage, candidate);
+#endif
+        }
 
         public async Task LoadLocal(string path)
         {
             if (loading) throw new InvalidOperationException("Ya hay una importación en curso.");
             loading = true;
             Vrm10Instance candidate = null;
+            Vrm10Instance retired = null;
+            var visibility = new Dictionary<Renderer, bool>();
             try
             {
                 byte[] bytes = VrmFileGuard.ReadLocal(path);
+                Checkpoint("ValidatedBytes");
                 var timer = System.Diagnostics.Stopwatch.StartNew();
                 candidate = await Vrm10.LoadBytesAsync(bytes, canLoadVrm0X: false,
                     controlRigGenerationOption: ControlRigGenerationOption.Generate, showMeshes: false);
-                if (this == null) { if (candidate != null) Destroy(candidate.gameObject); return; }
+                if (destroyed || this == null) throw new OperationCanceledException("El presentador fue destruido durante la importación.");
                 if (candidate == null) throw new InvalidOperationException("UniVRM no devolvió un avatar.");
+                Checkpoint("Imported", candidate);
                 var animator = candidate.GetComponent<Animator>();
                 if (animator == null || animator.avatar == null || !animator.avatar.isValid || !animator.avatar.isHuman)
                     throw new InvalidOperationException("El avatar no tiene un Humanoid válido.");
@@ -57,21 +74,79 @@ namespace Isekaid.ExperimentalVrm
                 animator.runtimeAnimatorController = TrialAnimations;
                 animator.applyRootMotion = false;
                 animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
-                if (Avatar != null) Destroy(Avatar.gameObject);
-                Avatar = candidate; candidate = null;
-                keys.Clear();
-                foreach (var key in Avatar.Runtime.Expression.ExpressionKeys) keys[key.Name] = key;
-                Expressions = keys.Keys.ToArray();
-                var resources = Avatar.GetComponent<UniGLTF.RuntimeGltfInstance>();
-                resources.ShowMeshes();
-                resources.EnableUpdateWhenOffscreen();
+                var nextKeys = new Dictionary<string, ExpressionKey>(StringComparer.OrdinalIgnoreCase);
+                foreach (var key in candidate.Runtime.Expression.ExpressionKeys) nextKeys.Add(key.Name, key);
+                var nextExpressions = nextKeys.Keys.ToArray();
+                var resources = candidate.GetComponent<UniGLTF.RuntimeGltfInstance>();
+                if (resources == null || resources.VisibleRenderers.Count == 0)
+                    throw new InvalidOperationException("El candidato no posee recursos o renderers visibles.");
+                var nextOriginalVisibility = new Dictionary<Renderer, bool>(originalVisibility);
                 if (Anchor != null) foreach (var renderer in Anchor.GetComponentsInChildren<Renderer>())
-                    if (!renderer.transform.IsChildOf(Avatar.transform)) renderer.enabled = false;
+                {
+                    if (renderer.transform.IsChildOf(candidate.transform)) continue;
+                    visibility.Add(renderer, renderer.enabled);
+                    if ((Avatar == null || !renderer.transform.IsChildOf(Avatar.transform)) && !nextOriginalVisibility.ContainsKey(renderer))
+                        nextOriginalVisibility.Add(renderer, renderer.enabled);
+                }
+                Checkpoint("Prepared", candidate);
+                resources.EnableUpdateWhenOffscreen();
+                candidate.gameObject.SetActive(true);
+                resources.ShowMeshes();
+                animator.Update(0f);
+                if (resources.VisibleRenderers.Any(r => r == null || !r.enabled || !r.gameObject.activeInHierarchy))
+                    throw new InvalidOperationException("No se pudo activar la apariencia candidata.");
+                Checkpoint("Activated", candidate);
+                foreach (var renderer in visibility.Keys) renderer.enabled = false;
+                Checkpoint("PreviousHidden", candidate);
+
+                // Publish the prepared presentation only after every fallible activation step succeeds.
+                retired = Avatar;
+                Avatar = candidate;
+                keys = nextKeys;
+                Expressions = nextExpressions;
+                originalVisibility = nextOriginalVisibility;
+                candidate = null;
                 ImportMilliseconds = (float)timer.Elapsed.TotalMilliseconds;
                 Status = "VRM cargado localmente. Humanoid y materiales disponibles.";
             }
-            catch (Exception error) { if (this != null) Status = error.Message; throw; }
-            finally { if (candidate != null) Destroy(candidate.gameObject); loading = false; }
+            catch (Exception error)
+            {
+                RestoreVisibility(visibility);
+                if (this != null) Status = error.Message;
+                throw;
+            }
+            finally
+            {
+                if (candidate != null)
+                {
+                    candidate.gameObject.SetActive(false);
+                    Destroy(candidate.gameObject);
+                }
+                loading = false;
+            }
+            if (retired != null) Destroy(retired.gameObject);
+        }
+
+        private static void RestoreVisibility(Dictionary<Renderer, bool> values)
+        {
+            foreach (var pair in values) if (pair.Key != null) pair.Key.enabled = pair.Value;
+        }
+
+        public void Unload()
+        {
+            if (loading) throw new InvalidOperationException("Espera a que termine la importación antes de descargar.");
+            ReleaseAvatar();
+            Status = "Avatar descargado. Puedes importar otro archivo local.";
+        }
+
+        private void ReleaseAvatar()
+        {
+            if (Avatar != null) { Avatar.gameObject.SetActive(false); Destroy(Avatar.gameObject); }
+            Avatar = null;
+            keys.Clear();
+            Expressions = Array.Empty<string>();
+            RestoreVisibility(originalVisibility);
+            originalVisibility.Clear();
         }
 
         public bool RequestExpression(string name, float weight)
@@ -97,7 +172,7 @@ namespace Isekaid.ExperimentalVrm
             }
         }
 
-        private void OnDestroy() { if (Avatar != null) Destroy(Avatar.gameObject); }
+        private void OnDestroy() { destroyed = true; ReleaseAvatar(); }
 
         private void OnGUI()
         {
@@ -106,6 +181,7 @@ namespace Isekaid.ExperimentalVrm
             LocalPath = GUILayout.TextField(LocalPath);
             GUI.enabled = !loading;
             if (GUILayout.Button("Cargar VRM")) LoadFromButton();
+            if (Avatar != null && GUILayout.Button("Descargar avatar")) Unload();
             GUI.enabled = true;
             GUILayout.Label(Status);
             GUILayout.BeginHorizontal();
