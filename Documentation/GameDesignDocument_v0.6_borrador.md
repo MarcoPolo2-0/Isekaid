@@ -2,11 +2,11 @@
 
 **Versión:** 0.6 — borrador de revisión.  
 **Fecha:** 27/10/2026, Guatemala.  
-**Última actualización:** 28/10/2026 — trazabilidad de DEC-001 e ISEK-001.  
+**Última actualización:** 28/10/2026 — DEC-007, dirección VRM y contratos F2/F3.  
 **Estado:** PROPUESTA — pendiente de revisión del Chat 1, Dirección del proyecto (Cerebro); acuerdos previos conservados.  
-**Workflow vigente:** [Desarrollo v1.1](Workflow_Desarrollo_v1.1.md). El v1.0 documenta el proceso anterior.  
+**Workflow vigente:** [Desarrollo v1.2](Workflow_Desarrollo_v1.2.md). v1.0/v1.1 se conservan como historial.  
 **Responsable de esta revisión:** Chat 2 — Game Design.  
-**Tarea vinculada:** [ISEK-001](Specifications/ISEK-001.md), base corporal y visual conforme a [DEC-001](DECISIONS.md). La aprobación de esa dirección no aprueba este borrador completo.  
+**Seguimiento vigente:** [F2 / #5](https://github.com/MarcoPolo2-0/Isekaid/issues/5) y [estado ISEK-001](Specifications/ISEK-001_Estado_DEC007.md), bajo DEC-007. La aprobación de VRM no aprueba este borrador completo.  
 **Motor:** Unity 6; proyecto local inspeccionado: 6000.6.7f1.  
 **Dirección artística:** anime 3D con cel shading.  
 **Documento base:** [GameDesignDocument_v0.5.md](GameDesignDocument_v0.5.md).  
@@ -18,6 +18,8 @@ Esta revisión conserva literalmente el cuerpo de las secciones 1–16 y el regi
 **Actualización de dirección, 28/10/2026:** DEC-001 establece el modelo **Woman de Fly_jkey**, disponible como `assets/woman.fbx`, como base candidata principal para ISEK-001, con apariencia neutral equilibrada. Pecho y caderas son independientes; cintura está condicionada a evaluación técnica. La especificación [ISEK-001 v0.1](Specifications/ISEK-001.md) define cuatro puertas y 16 criterios, en estado PROPUESTA. La documentación técnica de la sección 18 describe la revisión del 27/10; no es una auditoría nueva del proyecto reubicado. La lámina v01 sigue siendo candidata y no representa una aprobación del modelo final.
 
 La copia de v0.5 se recuperó del texto íntegro de una lectura local anterior del 27/10/2026: su archivo de Downloads ya no estaba disponible al realizar esta revisión. Se conserva ese contenido, incluida su nota histórica de entrega. No se afirma identidad binaria con el archivo original desaparecido ni que dicha nota describa la ubicación actual.
+
+**Lectura vigente:** DEC-007 adopta VRM 1.0 + catálogo, autoriza F2 y pausa Woman/G2. Ver §22 para la enmienda explícita de personalización; las secciones heredadas y observaciones anteriores conservan su fecha y no ordenan reanudar el editor corporal. GDD v0.5 permanece intacto.
 
 ## 1. Visión general
 
@@ -484,3 +486,40 @@ La preparación documental no depende de resolverlos todos ahora. Cada punto blo
 **Revisión de trazabilidad 4, 28/10/2026:** [DEC-003](DECISIONS.md) mantiene G2 en correcciones y limita la autorización a G2-CORR. La [dirección artística v0.2](Specifications/ISEK-001_Direccion_Artistica_v0.2.md) compara renders reales y objetivos conceptuales, localiza correcciones corporales, revisa AV01–04 y corrige referencias de prendas/expresión. Las precisiones nuevas son propuestas; este GDD permanece en BORRADOR.
 
 **Sin ejecución de producto en esta revisión:** no se modifica código, escenas, prefabs, configuración, datos de partida ni assets dentro de Unity. No se realiza nueva compilación, Play Mode, medición de rendimiento ni build. No se afirma validación visual del juego a partir de la lámina.
+## 22. DEC-007 — Enmienda de personalización visual y preparación de gameplay
+
+**Estado:** dirección VRM + catálogo adoptada por Chat 1; este GDD v0.6 completo sigue BORRADOR. Las redacciones de sustitución y detalles nuevos se presentan para revisión; no se alteran los bytes del GDD v0.5 ni se reescribe su historia.
+
+### 22.1 Dirección adoptada y evidencia
+
+[DEC-007](DECISIONS.md) formaliza la instrucción del usuario. [PR #3](https://github.com/MarcoPolo2-0/Isekaid/pull/3) fusionó [VRM v0.2](Specifications/Sistema_Companera_VRM_v0.2.md); [PR #4](https://github.com/MarcoPolo2-0/Isekaid/pull/4) contiene una prueba técnica de carga local VRM 1.0, Humanoid, expresiones, seguimiento y reemplazo transaccional en Play Mode. El [informe](Audits/VRM-POC/INFORME.md) declara límites de seguridad, cancelación, recursos, derechos y builds; la fusión no demuestra F2 completa.
+
+Nueva dirección: elegir una apariencia incluida o importar archivo local; identidad, personalidad, memoria, relación, clase y progresión independientes del visual. Tres personalidades conservadas, sin reducir su profundidad a caras. Una apariencia incluida y una importada bastan para F2; tres incluidas siguen como objetivo F4. VRM 0.x pendiente.
+
+### 22.2 Sustitución explícita propuesta del texto de §3
+
+| Texto heredado de v0.5 | Dirección y redacción de revisión | Estado |
+|---|---|---|
+| Modelo compartido, controles de pecho/caderas y plan de Shape Keys corporales propios | Representación por catálogo local o importación VRM 1.0 validada. No desarrollar por ahora editor corporal propio; crear apariencias externamente | Dirección adoptada DEC-007; edición del nuevo GDD pendiente de revisión |
+| Colores de cabello/ojos/top/pantalón personalizables universalmente | No garantizar canales de tinte o prendas editables en archivos arbitrarios. Propuesta: apariencia preparada en herramienta externa y prueba de presentación | Detalle heredado de propuesta VRM, sin implementación universal aprobada |
+| Cabello largo suelto, top/pantalón y proporciones iniciales promedio | Referencia de catálogo adulto anime con silueta/identidad artística; importación respeta capacidades y límites. DEC-005 impide equiparar neutral con simplificación | Validación humana del catálogo pendiente; no fijar un nuevo asset sin derechos |
+| Misma geometría con perfiles expresivos por personalidad | Misma lógica semántica con adaptador de capacidades por avatar; expresiones VRM son salida visual | Separación adoptada; detalles F3 propuestos |
+| Sistema híbrido normal/cómico como requisito compartido | Mantener objetivo expresivo del catálogo completo y alternativas explícitas para importados limitados | No prometer atlas/rig cómico universal ni declarar ya logrado |
+
+**Texto candidato para próxima edición de §3:** “La compañera adulta de estilo anime se representa mediante una apariencia del catálogo incluido o un avatar VRM 1.0 local admitido. El formato visual no contiene su personalidad, recuerdos, relación, clase o progreso. El creador elige representación y plantilla inicial por separado; cambiar representación conserva a la misma compañera. La expresividad se adapta a capacidades comprobadas, conservando la intención emocional y narrativa. La creación corporal se realiza externamente; el juego prioriza importación, catálogo, convivencia y aventura offline.”
+
+Este texto es una propuesta de redacción; las decisiones adoptadas no aprueban automáticamente toda política técnica o visual que aparezca en esta sección.
+
+### 22.3 Alcance de fases y visión protegida
+
+- F2 autorizada: [contrato funcional](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md), selección/importación, previsualización, carga/error/cancelación, persistencia/migración y responsive. [Issue #5](https://github.com/MarcoPolo2-0/Isekaid/issues/5). Datos nuevos importantes marcados como propuestas; Chat 3 sigue con v0.2 sin bloqueo.
+- F3: [borrador de personalidad y expresión contextual](Specifications/VRM_Fase3_Personalidad_Contextual_v0.1_BORRADOR.md). Rescate, promesas, gratitud/desacuerdo/preocupación/alegría, interrupción por peligro, iniciativa segura y confianza; preparación, no código autorizado.
+- F4: catálogo completo de tres con derechos y expresividad revisados. Primera entrada también requiere autorización antes de distribuirla.
+- No cambia el prólogo, la trampa de bandidos, incapacidad de 30 s, autonomía, combate, hogar, clases, aprendizaje, memoria, amistad desarrollada o romance opcional. Los datos de apariencia no conceden confianza ni cambian clase.
+- Woman/G2 permanecen históricos y pausados. [ISEK-001 sigue abierta](Specifications/ISEK-001_Estado_DEC007.md); su alcance visual está siendo sustituido. G2 no se declara superada y el cambio de estrategia no cierra #1 o #2.
+
+### 22.4 Pendientes de aceptación
+
+Recurso de catálogo distribuible y revisión humana; seguridad y datos hostiles; guardado y recuperación reales; presupuesto/plataforma y builds; integración funcional creador/aventura; gameplay contextual y aprobación visual. Ver [matriz de trazabilidad](Specifications/VRM_F2_F3_Matriz_Trazabilidad_v0.1.md). No trasladar resultados del POC a estas casillas como PASS.
+
+**Registro de revisión:** DEC-007 incorporada como enmienda explícita; cuerpo heredado v0.5 y documentos históricos preservados. El borrador no se declara aprobado en su totalidad.
