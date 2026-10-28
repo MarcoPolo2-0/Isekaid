@@ -175,3 +175,44 @@ La primera entrega de esta iteración debe permitir revisar neutral/rangos antes
 - Próxima revisión: neutral/rangos corregidos, barridos e invariantes de AC03–07/AV01–04, y reporte explícito de las regresiones diagnósticas. Solo entonces decidir aceptación de G2 y alcance específico de G3.
 
 **Límites de la revisión:** no se recompiló ni se ejecutaron Blender, Unity, Play Mode o builds. Los resultados de importación/deformación son evidencia publicada por Desarrollo, contrastada con scripts, archivos, hashes e imágenes. La consulta de checks de GitHub devolvió 403 por permisos; no se afirma que CI haya pasado.
+
+
+## DEC-004 — Revisión documental de la primera corrección G2-CORR
+
+**Fecha:** 28/10/2026.  
+**Estado:** ENTREGA RECIBIDA, AVANCE TÉCNICO RECONOCIDO; **G2 AÚN NO APROBADA**.  
+**Referencia vigente:** DEC-003. **Alcance permitido:** únicamente correcciones G2-CORR en la rama de trabajo. **G3/G4 no autorizadas**.  
+**Tarea:** [ISEK-001](https://github.com/MarcoPolo2-0/Isekaid/issues/1).
+
+### Evidencia revisada
+
+- [PR privado #2 de Unity](https://github.com/MarcoPolo2-0/Isekaid-2026-10-27_13-09-18/pull/2), rama `feature/isek-001-g2-body`, encabezado de entrega `b329a3e510068ffef61c951143921cb3d9777d3b`. Continúa como **draft**, sin fusionar.
+- [Informe G2-CORR](https://github.com/MarcoPolo2-0/Isekaid-2026-10-27_13-09-18/blob/feature/isek-001-g2-body/SourceArt/Companion/Woman/G2-CORR/INFORME.md) y `criteria-status.json`: métricas y pruebas declaradas por Chat 3. Los datos aquí se atribuyen a esa entrega; no se han repetido las ejecuciones de Blender/Unity en esta revisión.
+- [Dirección artística v0.2](Specifications/ISEK-001_Direccion_Artistica_v0.2.md), commit `5e97e26ce362081fbc76bac95db8b9a0484017ba`: revisión sobre renders **G2-PROTO**, anterior a G2-CORR; por tanto, no constituye una evaluación visual de la nueva neutral.
+- Los archivos gráficos de evidencia del PR privado se encuentran almacenados mediante **Git LFS**; la lectura disponible devolvió punteros LFS, no los píxeles completos. Esta Dirección no afirma haber inspeccionado las nuevas imágenes ni aprobado la silueta.
+
+### Resultado de la segunda entrega
+
+1. **Avance documental/técnico aceptado como evidencia de trabajo, no como cierre de G2.** Chat 3 declara 11,022 vértices preservados, seis Shape Keys para tres ejes, 27 combinaciones, 15 barridos de 101 muestras, Avatar Humanoid válido y controles sincronizados en un proyecto Unity aislado. AC03–07/AV01,03–04 permanecen pendientes de aceptación visual y verificación completa. AV02 registra comparabilidad técnica.
+2. El diagnóstico de ropa mejora respecto de G2-PROTO: máxima penetración de **13.70 a 4.03 mm**, poses con penetración de **9/18 a 6/18**, vértices negativos acumulados **782 a 36**, pares de triángulos cruzados en 45 casos **3,927 a 2,596**. **No cumple todavía AC08**; el estiramiento máximo pasa de **3.578 a 3.584**, sin mejora.
+3. La nueva neutral también requiere inspección artística: el propio informe advierte que el pecho puede percibirse demasiado plano y que persisten transiciones susceptibles de corrección. No se aprueban aún las formas neutras, los extremos ni el rango de cintura como aspecto de producción.
+4. La importación aislada de Unity **no** acredita Play Mode, materiales finales, locomoción, prendas finales, persistencia o integración en escenas. AC09–15/AV05–10 siguen sin ejecutar y fuera de alcance.
+5. **Decisión:** conservar abierto el PR #2, no fusionar a `main`, no actualizar el puntero del submódulo y no sustituir el maniquí de producción. **No iniciar G3 ni G4**.
+
+### Instrucciones siguientes
+
+**Chat 2 — Revisión visual de la versión G2-CORR (no de G2-PROTO).**
+
+- Contrastar las cuatro vistas `G2-CORR/evidence/neutral-body-*.png`, `before-after.jpg`, los extremos y matrices actuales con la dirección A y R01–R03 de v0.2.
+- Entregar **dictamen por AV01–AV04** sobre la neutral y amplitudes reales: diferencias visibles, fallos localizados, correcciones concretas y referencias a los archivos exactos.
+- Si las vistas privadas no pueden evaluarse en el chat, solicitar al usuario que aporte una comparación exportada y accesible antes de decidir sobre la apariencia. No sustituir evidencia real por conceptos generados.
+- Registrar como revisión propuesta v0.3 o informe acotado, sin aprobar arte ni modificar Unity.
+
+**Chat 3 — Continuidad correctiva condicionada al dictamen visual.**
+
+- Mantener el estado recuperable de G2-PROTO y G2-CORR; no reescribir originales.
+- Antes de nuevas modificaciones anatómicas mayores, presentar las cuatro vistas y comparaciones actuales a Dirección/Chat 2. Una vez localizados defectos, corregir solo regiones concretas en la misma rama y PR.
+- Seguir reduciendo las intersecciones en el diagnóstico de pesos/ropa sin inflar globalmente las prendas ni reducir silenciosamente rangos. Registrar tendencias y límites de pruebas.
+- No implementar rostro, cabello, prendas finales, animaciones de producción, nuevos sistemas runtime o cambios de escenas, UI y perfil sin nueva autorización.
+
+**Próxima puerta:** validación visual humana de neutral/extremos G2-CORR, cruzada con barridos y reporte de cruces residuales. La aprobación del usuario de la apariencia final continúa siendo indispensable.
