@@ -472,3 +472,24 @@ Proteccion y limites
 - Cambio de control de versiones, sin modificaciones nuevas del producto.
 - Las verificaciones tecnicas de la auditoria constan en su informe.
   No se repiten compilacion, Play Mode ni builds por esta operacion.
+
+======================================================================
+28/10/2026 - ISEK-001 - PROPUESTA ARTISTICA V0.1 TRAS DEC-002
+======================================================================
+
+- Revisadas DEC-002 y auditoria tecnica Woman v1.0 publicadas por Direccion
+  y Desarrollo; G1 aceptada tecnicamente y G2-PROTO autorizado con limites.
+- Preparada Documentation/Specifications/ISEK-001_Direccion_Artistica_v0.1.md
+  en PROPUESTA, sin declarar cuerpo definitivo ni ampliar G3/G4.
+- Cuatro laminas conceptuales: alternativas A/B, neutral en cuatro vistas,
+  extremos de tres ejes y ocho muestras faciales; recomendada alternativa A.
+- Referencias guardadas en Documentation/references/ISEK-001-art-v0.1/,
+  con briefs completos, origen y limites frente a las evidencias reales.
+- Diez criterios visuales y cinco puntos de decision para Chat 1.
+- Vinculadas la propuesta y DEC-002 desde ISEK-001 y GDD v0.6 borrador.
+- Verificados 46 enlaces locales, cuatro briefs y conservacion del cuerpo
+  heredado del GDD v0.5; el hash original de woman.fbx sigue coincidiendo.
+- Registrados limites de las ilustraciones: costuras/escote a corregir,
+  diferencias discretas de caderas y expresiones pendientes en 3D real.
+- No se ejecutaron Blender, Unity, deformaciones, animaciones ni builds;
+  no se modificaron codigo, FBX, evidencias de auditoria ni submodulo.

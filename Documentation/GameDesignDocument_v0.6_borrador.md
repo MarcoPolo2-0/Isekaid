@@ -477,6 +477,8 @@ La preparación documental no depende de resolverlos todos ahora. Cada punto blo
 
 **Revisión de trazabilidad 2, 28/10/2026:** vinculadas DEC-001 e ISEK-001; actualizado el directorio documental tras la reorganización en repositorio principal y submódulo Unity. Creada la propuesta específica para `woman.fbx`. Se mantienen sin cambios el cuerpo aprobado de la v0.5 y las propuestas generales fuera de esta tarea.
 
+**Revisión de trazabilidad 3, 28/10/2026:** [DEC-002](DECISIONS.md) acepta la evaluación técnica G1 y autoriza G2-PROTO acotado; G3/G4 y aceptación artística siguen pendientes. La [dirección artística ISEK-001 v0.1](Specifications/ISEK-001_Direccion_Artistica_v0.1.md) añade cuatro láminas conceptuales, alternativas y criterios visuales en PROPUESTA. Las observaciones técnicas anteriores conservan su fecha; los resultados posteriores están en la [auditoría Woman](Audits/ISEK-001/INFORME.md). Este GDD continúa en BORRADOR.
+
 **Validación documental:** integridad del cuerpo heredado, enlaces locales, IDs de criterios y coherencia entre estados aprobados/propuestos. La comprobación final de estos puntos se registra en `readme.txt` al publicar el paquete.
 
 **Sin ejecución de producto en esta revisión:** no se modifica código, escenas, prefabs, configuración, datos de partida ni assets dentro de Unity. No se realiza nueva compilación, Play Mode, medición de rendimiento ni build. No se afirma validación visual del juego a partir de la lámina.
