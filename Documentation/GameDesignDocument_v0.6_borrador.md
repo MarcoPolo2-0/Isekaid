@@ -4,7 +4,7 @@
 **Fecha:** 27/10/2026, Guatemala.  
 **Última actualización:** 28/10/2026 — trazabilidad de DEC-001 e ISEK-001.  
 **Estado:** PROPUESTA — pendiente de revisión del Chat 1, Dirección del proyecto (Cerebro); acuerdos previos conservados.  
-**Workflow:** [Desarrollo v1.0](Workflow_Desarrollo_v1.0.md).  
+**Workflow vigente:** [Desarrollo v1.1](Workflow_Desarrollo_v1.1.md). El v1.0 documenta el proceso anterior.  
 **Responsable de esta revisión:** Chat 2 — Game Design.  
 **Tarea vinculada:** [ISEK-001](Specifications/ISEK-001.md), base corporal y visual conforme a [DEC-001](DECISIONS.md). La aprobación de esa dirección no aprueba este borrador completo.  
 **Motor:** Unity 6; proyecto local inspeccionado: 6000.6.7f1.  
@@ -399,7 +399,7 @@ No se ejecutó Unity durante esta revisión de diseño. Las pruebas de compilaci
 | Autonomía | `CompanionController` sigue mediante NavMesh, recibe esperar/seguir y consulta posición navegable | No demuestra evaluación completa de percepción, ruta inválida, decisiones sociales o tácticas | Navegación y órdenes como base para casos de recuperación |
 | Supervivencia | Estado Downed, contador 30 s y postura inclinada; pruebas de regresión existentes | Ensayo de incapacidad, no combate, reanimación animada ni checkpoint de aventura completo | Separación trampa/incapacidad y temporizador ya comprobado por desarrollo |
 
-Rutas de contraste: [CompanionState](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionState.cs), [CompanionProfile](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionProfile.cs), [CompanionController](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionController.cs), [CompanionAppearance](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionAppearance.cs), [CompanionProfileStore](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionProfileStore.cs), [CompanionPalette](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionPalette.cs), [constructor del prototipo](../Isekaidunity/Assets/_Project/Editor/PrototypeSceneBuilder.cs) y [pruebas existentes](../Isekaidunity/Assets/_Project/Editor/PrototypePlayModeChecks.cs).
+Rutas de contraste: [CompanionState](../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionState.cs), [CompanionProfile](../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionProfile.cs), [CompanionController](../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionController.cs), [CompanionAppearance](../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionAppearance.cs), [CompanionProfileStore](../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionProfileStore.cs), [CompanionPalette](../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionPalette.cs), [constructor del prototipo](../UnityProjectIsekaid/Assets/_Project/Editor/PrototypeSceneBuilder.cs) y [pruebas existentes](../UnityProjectIsekaid/Assets/_Project/Editor/PrototypePlayModeChecks.cs).
 
 Estas observaciones están acotadas al código propio revisado. No califican todos los paquetes de terceros ni afirman que los ZIP externos de personajes estén listos para integrarse.
 
@@ -434,7 +434,7 @@ No se propone reiniciar el proyecto ni imponer todos los nombres de componentes 
 
 ## 20. Revisión, aprobación y entrega a desarrollo
 
-Se aplica el [Workflow de desarrollo v1.0](Workflow_Desarrollo_v1.0.md) proporcionado por el usuario. Dirección asigna tareas, establece prioridades, aprueba especificaciones y acepta o rechaza entregas. Game Design prepara y mantiene las especificaciones; Unity Development implementa únicamente versiones aprobadas. H1/H2/H3 son una propuesta de secuencia, no IDs de tareas ni una autorización para desarrollar.
+Para entregas nuevas se aplica el [Workflow de desarrollo v1.1](Workflow_Desarrollo_v1.1.md), según DEC-006. La coordinación original se documentó en el [workflow v1.0](Workflow_Desarrollo_v1.0.md). Dirección asigna tareas, establece prioridades, aprueba especificaciones y acepta o rechaza entregas. Game Design prepara y mantiene las especificaciones; Unity Development implementa únicamente versiones aprobadas. H1/H2/H3 son una propuesta de secuencia, no IDs de tareas ni una autorización para desarrollar.
 
 ### 20.1 Regla de versiones
 

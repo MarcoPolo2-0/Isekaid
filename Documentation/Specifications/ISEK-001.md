@@ -7,7 +7,7 @@
 **Decisión vinculante:** [DEC-001](../DECISIONS.md).  
 **Base aprobada:** [GDD v0.5](../GameDesignDocument_v0.5.md).  
 **Referencia de aceptación general:** [Compañera v0.1](../Especificacion_Companera_v0.1.md), todavía PROPUESTA.  
-**Workflow:** [Desarrollo v1.0](../Workflow_Desarrollo_v1.0.md).
+**Workflow vigente:** [Desarrollo v1.1](../Workflow_Desarrollo_v1.1.md). El v1.0 se conserva como historial.
 
 **Estado posterior — DEC-003:** G2 requiere correcciones; solo G2-CORR está autorizada. A es referencia de trabajo, no arte final aceptado. La [revisión artística v0.2](ISEK-001_Direccion_Artistica_v0.2.md) localiza correcciones y revisa AV01–04 sobre la evidencia real de G2-PROTO; sus precisiones adicionales permanecen como propuestas. G3/G4 e integración siguen pendientes de Dirección.
 
@@ -201,7 +201,7 @@ Cada resultado debe identificar versión, controles, pose/clip, cámara, ilumina
 
 ## 10. Entrega y revisión
 
-Desarrollo entregará un informe de ISEK-001 con estado por puerta y por criterio, archivos creados/modificados, pruebas realizadas, capturas/clips, defectos y límites. Mantener los originales en `assets/` del principal y el recurso de trabajo/importado y código en el repositorio Unity privado, conforme al workflow. No duplicar todo Unity en el repositorio público.
+Desarrollo entregará un informe de ISEK-001 con estado por puerta y por criterio, archivos creados/modificados, pruebas realizadas, capturas/clips, defectos y límites. Conservar el original en `assets/` y el recurso editable/importado y el código en `UnityProjectIsekaid/` del mismo repositorio, según el workflow v1.1. Identificar el estado experimental, verificar licencias y evitar integrar en escenas hasta aprobación.
 
 Las fuentes editables y exportaciones deben indicar su versión y correspondencia. La evidencia compartida se ubicará según su contenido y permiso de publicación; no asumir que todos los recursos de terceros pueden copiarse al repositorio público. La atribución exacta de la base se resuelve antes de distribuir el derivado.
 
