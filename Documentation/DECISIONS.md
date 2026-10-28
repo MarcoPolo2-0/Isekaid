@@ -216,3 +216,16 @@ La primera entrega de esta iteración debe permitir revisar neutral/rangos antes
 - No implementar rostro, cabello, prendas finales, animaciones de producción, nuevos sistemas runtime o cambios de escenas, UI y perfil sin nueva autorización.
 
 **Próxima puerta:** validación visual humana de neutral/extremos G2-CORR, cruzada con barridos y reporte de cruces residuales. La aprobación del usuario de la apariencia final continúa siendo indispensable.
+
+
+## DEC-005 — Rechazo visual de G2-CORR por pérdida de silueta
+
+**Fecha:** 28/10/2026. **Origen:** evaluación directa del usuario. **Estado:** G2-CORR NO aprobada artísticamente.
+
+El usuario prefiere la silueta estilizada de G2-PROTO a la versión G2-CORR. La corrección redujo en exceso el volumen y contraste de formas del personaje. Se mantiene G2-PROTO como referencia de estilo, sin aprobar sus defectos geométricos anteriores. El objetivo es combinar la expresividad de la silueta previa con las mejoras de continuidad y deformación alcanzadas en G2-CORR. «Neutral» significa valor base de los controles, no simplificación de la silueta.
+
+**Chat 2:** actualizar la guía artística con comparación de las cuatro vistas y una propuesta intermedia, identificada como concepto cuando corresponda. Presentarla para validación visual del usuario.
+
+**Chat 3:** conservar los dos prototipos y la fuente original; elaborar una nueva neutral de cuatro vistas antes de ampliar el trabajo de skinning y ropa. Mantener el mismo PR sin fusionar y sin alterar escenas de producción. Recalcular controles y pruebas tras aprobación visual.
+
+**Estado de puertas:** G2 requiere correcciones; G3/G4 permanecen sin autorización. La aprobación técnica parcial no sustituye la aceptación artística del usuario.
