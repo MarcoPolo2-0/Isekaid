@@ -1,0 +1,20 @@
+{
+  "combinations": {
+    "count": 27,
+    "all_finite": true,
+    "collapsed_triangles": 0,
+    "maximum_edge_stretch": 1.515117088095449,
+    "maximum_p99_edge_stretch": 1.2780297845545037,
+    "cases_with_negative_signed_cloth_samples": 27,
+    "minimum_signed_cloth_clearance_m": -0.0047450996353290975
+  },
+  "poses": {
+    "count": 18,
+    "all_finite": true,
+    "collapsed_triangles": 0,
+    "maximum_edge_stretch": 3.578070001389885,
+    "maximum_p99_edge_stretch": 1.6201903713500676,
+    "cases_with_negative_signed_cloth_samples": 18,
+    "minimum_signed_cloth_clearance_m": -0.007196213293354958
+  }
+}

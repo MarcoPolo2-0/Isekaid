@@ -1,0 +1,90 @@
+{
+  "source": "assets\\woman.fbx",
+  "sha256": "674c07ff612577a1a5b7e7ee124202722fa5eb0f68bdc01c820a875b5bef1d87",
+  "blender": "5.2.3 LTS",
+  "scene_units": {
+    "system": "METRIC",
+    "scale_length": 1.0
+  },
+  "armatures": [],
+  "meshes": [
+    {
+      "name": "Mesh_0",
+      "vertices": 11022,
+      "edges": 22040,
+      "faces": 11020,
+      "triangles": 22040,
+      "face_sides": {
+        "4": 11020
+      },
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "wire_edges": 0,
+      "noncontiguous_edges": 0,
+      "degenerate_faces_below_1e-12_local_units_squared": 0,
+      "components_vertex_counts": [
+        11022
+      ],
+      "uv_layers": [
+        "UVMap"
+      ],
+      "shape_keys": [],
+      "vertex_groups": [],
+      "modifiers": [],
+      "materials": [
+        "Material.004"
+      ],
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler": [
+        1.570796251296997,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_min": [
+        -85.66776275634766,
+        -20.507925033569336,
+        -95.15415954589844
+      ],
+      "world_max": [
+        85.66776275634766,
+        20.251476287841797,
+        94.26543426513672
+      ]
+    }
+  ],
+  "actions": [],
+  "images": [
+    {
+      "name": "untitled8_DefaultMaterial_Normal.png",
+      "filepath": "C:\\Users\\PC\\Documents\\Game Idea\\Isekaid\\assets\\ntrcnehs\\untitled8_DefaultMaterial_Normal.png",
+      "packed": false,
+      "exists": false
+    }
+  ],
+  "world_bounds": {
+    "min": [
+      -85.66776275634766,
+      -20.507925033569336,
+      -95.15415954589844
+    ],
+    "max": [
+      85.66776275634766,
+      20.251476287841797,
+      94.26543426513672
+    ],
+    "dimensions": [
+      171.3355255126953,
+      40.7593994140625,
+      189.41958618164062
+    ]
+  }
+}

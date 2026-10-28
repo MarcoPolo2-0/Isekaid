@@ -1,0 +1,1216 @@
+{
+  "source_sha256": "674c07ff612577a1a5b7e7ee124202722fa5eb0f68bdc01c820a875b5bef1d87",
+  "blender": "5.2.3 LTS",
+  "scope": "Temporary diagnostic shapes, shell samples and automatic-weight rig. Not production assets or approved art ranges.",
+  "normalization": {
+    "uniform_factor": 0.01,
+    "height_m": 1.8941959142684937,
+    "ground_z_m": 0
+  },
+  "shape_probes": {
+    "Chest": {
+      "affected_vertices": 1007,
+      "maximum_displacement_m": 0.034993164297558506,
+      "affected_z_range_m": [
+        1.2605762481689453,
+        1.5989158153533936
+      ],
+      "protected_head_hands_feet_unchanged": true
+    },
+    "Hips": {
+      "affected_vertices": 1824,
+      "maximum_displacement_m": 0.03766341871424965,
+      "affected_z_range_m": [
+        0.766006588935852,
+        1.2390998601913452
+      ],
+      "protected_head_hands_feet_unchanged": true
+    },
+    "Waist": {
+      "affected_vertices": 1207,
+      "maximum_displacement_m": 0.02172337227393095,
+      "affected_z_range_m": [
+        1.1001546382904053,
+        1.3584343194961548
+      ],
+      "protected_head_hands_feet_unchanged": true
+    }
+  },
+  "combinations": [
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1234673565194646,
+      "edge_stretch_p99": 1.019305857563842,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1234673565194646,
+      "edge_stretch_p99": 1.0279475063963655,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1669447597829188,
+      "edge_stretch_p99": 1.104840618039346,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1234673565194646,
+      "edge_stretch_p99": 1.0536770019492527,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1234673565194646,
+      "edge_stretch_p99": 1.015916694776542,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1669447597829188,
+      "edge_stretch_p99": 1.1034762958494662,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2269290416937373,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2244136580988911,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        -1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2244136580988911,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0047450996353290975
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.064868708611085,
+      "edge_stretch_p99": 1.0038306908346988,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.064868708611085,
+      "edge_stretch_p99": 1.0037990441380644,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.158254834604943,
+      "edge_stretch_p99": 1.1000486648413197,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0881393132026809,
+      "edge_stretch_p99": 1.0458988036235595,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.0,
+      "edge_stretch_p99": 1.0,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.158254834604943,
+      "edge_stretch_p99": 1.0985062842136215,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2269290416937373,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2244136580988911,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        0,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2244136580988911,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732966998708434
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.489906064838569,
+      "edge_stretch_p99": 1.1243096455814514,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.489906064838569,
+      "edge_stretch_p99": 1.120986053011307,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        -1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.489906064838569,
+      "edge_stretch_p99": 1.132499709134366,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.489906064838569,
+      "edge_stretch_p99": 1.1243096455814514,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.489906064838569,
+      "edge_stretch_p99": 1.120986053011307,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        0,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.489906064838569,
+      "edge_stretch_p99": 1.132499709134366,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2780297845545037,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2780297845545037,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    },
+    {
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2780297845545037,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206191246339586
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691264298425267
+        }
+      ]
+    }
+  ],
+  "poses": [
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1437602293276783,
+      "edge_stretch_p99": 1.0596600721679004,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732983951689675
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.5505482733461204,
+      "edge_stretch_p99": 1.178457877120731,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.0044732983951689675
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.3808589873225272,
+      "edge_stretch_p99": 1.1219849296827187,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 32,
+          "minimum_signed_clearance_m": -0.004473294269701
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 15,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.9946732730401673,
+      "edge_stretch_p99": 1.5848583407060661,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 44,
+          "minimum_signed_clearance_m": -0.0044732983951689675
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 110,
+          "minimum_signed_clearance_m": -0.005943267373368144
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.0868768389576675,
+      "edge_stretch_p99": 1.4763489679455888,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.0044732983951689675
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 119,
+          "minimum_signed_clearance_m": -0.007196213293354958
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        0,
+        0,
+        0
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.578070001389885,
+      "edge_stretch_p99": 1.3066260845213382,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 33,
+          "minimum_signed_clearance_m": -0.0044732983951689675
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 25,
+          "minimum_signed_clearance_m": -0.004975048243068159
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.1437602293276783,
+      "edge_stretch_p99": 1.064891636470998,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.004745100552099757
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.5505482733461204,
+      "edge_stretch_p99": 1.178457877120731,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.004745100552099757
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.2357926672520243,
+      "edge_stretch_p99": 1.0911855942462074,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 34,
+          "minimum_signed_clearance_m": -0.004745098849525675
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 15,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.9946732730401673,
+      "edge_stretch_p99": 1.5476371116247114,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 46,
+          "minimum_signed_clearance_m": -0.004745100552099757
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 124,
+          "minimum_signed_clearance_m": -0.005943267373368144
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.0868768389576675,
+      "edge_stretch_p99": 1.442008807345046,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 36,
+          "minimum_signed_clearance_m": -0.004745100552099757
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 123,
+          "minimum_signed_clearance_m": -0.007196213293354958
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        -1,
+        -1,
+        -1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.578070001389885,
+      "edge_stretch_p99": 1.2890897419480016,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 35,
+          "minimum_signed_clearance_m": -0.004745100552099757
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 25,
+          "minimum_signed_clearance_m": -0.004975048243068159
+        }
+      ]
+    },
+    {
+      "pose": "arms_up",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.515117088095449,
+      "edge_stretch_p99": 1.2780297845545037,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.0042061918720719405
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "arms_forward",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.5505482733461204,
+      "edge_stretch_p99": 1.3136542743878505,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.0042061918720719405
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 12,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "torso_twist",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.5303323930715558,
+      "edge_stretch_p99": 1.3092551789752296,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.004206210338452365
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 15,
+          "minimum_signed_clearance_m": -0.0015691359733409627
+        }
+      ]
+    },
+    {
+      "pose": "seated",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 1.9946732730401673,
+      "edge_stretch_p99": 1.6201903713500676,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 38,
+          "minimum_signed_clearance_m": -0.0042061918720719405
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 110,
+          "minimum_signed_clearance_m": -0.005943267373368144
+        }
+      ]
+    },
+    {
+      "pose": "deep_knee",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 2.0868768389576675,
+      "edge_stretch_p99": 1.5274651586258539,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 28,
+          "minimum_signed_clearance_m": -0.0042061918720719405
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 116,
+          "minimum_signed_clearance_m": -0.007196213293354958
+        }
+      ]
+    },
+    {
+      "pose": "stride",
+      "values_minus1_to_plus1": [
+        1,
+        1,
+        1
+      ],
+      "finite_vertices": true,
+      "collapsed_triangles_below_1e-12_m2": 0,
+      "edge_stretch_max": 3.578070001389885,
+      "edge_stretch_p99": 1.4131014026039284,
+      "cloth_vertex_signed_clearance": [
+        {
+          "name": "AUDIT_ONLY_TorsoShell",
+          "sampled_vertices": 1986,
+          "negative_signed_clearance_below_minus_0_5mm": 26,
+          "minimum_signed_clearance_m": -0.0042061918720719405
+        },
+        {
+          "name": "AUDIT_ONLY_LegShell",
+          "sampled_vertices": 4585,
+          "negative_signed_clearance_below_minus_0_5mm": 25,
+          "minimum_signed_clearance_m": -0.004975048243068159
+        }
+      ]
+    }
+  ],
+  "mirror_symmetry": {
+    "maximum_distance_m": 0.0,
+    "mean_distance_m": 0.0
+  },
+  "cloth_samples": [
+    {
+      "name": "AUDIT_ONLY_TorsoShell",
+      "vertices": 1986,
+      "faces": 1896,
+      "method": "Body-correspondent surface, 9 mm rest normal offset; intentionally open hems; no garment design or thickness."
+    },
+    {
+      "name": "AUDIT_ONLY_LegShell",
+      "vertices": 4585,
+      "faces": 4508,
+      "method": "Body-correspondent surface, 9 mm rest normal offset; intentionally open hems; no garment design or thickness."
+    }
+  ],
+  "automatic_weights": {
+    "operator_completed": true,
+    "bones": 19,
+    "vertex_groups": 19,
+    "unweighted_vertices": 0,
+    "minimum_total_weight": 0.9026485867798328
+  },
+  "original_hash_preserved": true,
+  "export": {
+    "file": "woman_deformation_probe.fbx",
+    "sha256": "4d097efa35363b8c01da2c6ba627da6c87a7c17d38ff65f18259b5893f582f5a"
+  }
+}

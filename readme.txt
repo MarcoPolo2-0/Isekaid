@@ -401,3 +401,74 @@ Limites
   publicacion. Revision de Direccion y validacion tecnica pendientes.
 - No se modifican decisiones aprobadas, codigo ni puntero del submodulo.
 - No se ejecutaron Blender, Unity, pruebas de deformacion ni builds.
+
+======================================================================
+28/10/2026 - ISEK-001 - AUDITORIA TECNICA DE WOMAN
+======================================================================
+Alcance autorizado por Direccion: auditar assets/woman.fbx; no iniciar
+implementacion definitiva ni modificar los sistemas del proyecto Unity.
+
+Referencias consultadas
+- Documentation/DECISIONS.md, DEC-001, y workflow 1.0, contrastados con GitHub.
+- Issue ISEK-001 del principal: https://github.com/MarcoPolo2-0/Isekaid/issues/1.
+- Documentation/Specifications/ISEK-001.md, version 0.1 en estado PROPUESTA.
+
+Pruebas y resultados
+- Blender 5.2.3 LTS realmente ejecutado desde su alias de Microsoft Store.
+- Original: una malla conectada, 11022 vertices, 11020 caras cuadrilaterales,
+  22040 triangulos; sin bordes abiertos, aristas no manifold ni caras
+  degeneradas detectadas con los umbrales documentados.
+- El original no contiene rig, pesos, animaciones ni Shape Keys.
+- Se detectaron una textura normal ausente y una escala que requiere revision.
+- Copia diagnostica normalizada a 1.8942 m, sin fijar una altura de diseno.
+- Creadas seis Shape Keys locales de ensayo para pecho, caderas y cintura;
+  probadas 27 combinaciones en reposo, sin coordenadas invalidas o triangulos
+  colapsados bajo el umbral de la prueba.
+- Rig temporal de 19 huesos con pesos automaticos: cero vertices corporales
+  sin peso. Ensayadas seis poses en tres combinaciones de proporciones.
+- Las muestras abiertas de ropa presentan muestras de distancia negativa;
+  pesos automaticos y flexiones muestran estiramientos que necesitan correccion.
+  No se consideran prendas ni rig finales ni rangos artisticos aprobados.
+- Reapertura del .blend y reimportacion del FBX derivado en Blender comprobadas.
+- Prueba en un proyecto Unity aislado: Avatar valido y Humanoid, seis Blend
+  Shapes por malla y deformacion corporal no nula verificada mediante BakeMesh.
+- La importacion de prueba no equivale a Play Mode, animaciones finales,
+  materiales URP definitivos ni integracion en el creador/aventura reales.
+- El rostro original no tiene ojos ni boca modelados: requiere rediseno local,
+  nuevos recursos faciales y trabajo de expresiones antes de ser un rostro anime.
+
+Entrega
+- Documentation/Audits/ISEK-001/INFORME.md.
+- Inventario, resultados numericos por combinacion/pose y hashes de artefactos.
+- .blend original de inspeccion, .blend de ensayo y exportacion FBX diagnostica.
+- Vistas ortograficas y de topologia, 27 formas, 18 poses, laminas comparativas
+  etiquetadas y captura real de la importacion aislada en Unity.
+- Scripts reproducibles de auditoria y de la prueba de importacion.
+- Este readme.txt: entrada agregada conservando su historial anterior.
+
+Dictamen
+Woman es una base corporal editable viable con condiciones. Recomendado
+continuar con ella, revisar la neutral corporal y trabajar localmente el rostro,
+rig/pesos y ropa. Cintura puede continuar como candidata tecnica; no se declara
+aceptada. ISEK-001 sigue abierta y requiere revision de Chat 1 junto con Chat 2.
+
+Proteccion y limites
+- woman.fbx conserva SHA-256
+  674C07FF612577A1A5B7E7EE124202722FA5EB0F68BDC01C820A875B5BEF1D87.
+- No se modificaron archivos ni sistemas definitivos de Isekaidunity.
+- No se sustituyo Woman por otro recurso, ni se contrato un servicio de pago.
+- No se cambio el puntero del submodulo ni se publico en el Issue.
+- Licencia CC BY registrada segun DEC-001; version exacta pendiente antes
+  de distribuir derivados. Sin aceptacion artistica, build o rendimiento medido.
+
+======================================================================
+28/10/2026 - VERSIONADO DE LA AUDITORIA ISEK-001
+======================================================================
+- Por solicitud del usuario, preparado el lote de auditoria para git add .,
+  commit y push en el repositorio principal MarcoPolo2-0/Isekaid, rama main.
+- Alcance: Documentation/Audits/ISEK-001 y esta entrada de readme.txt.
+- Se conservan los cambios locales previos del submodulo Isekaidunity;
+  el versionado del repositorio principal no confirma sus archivos internos.
+- Cambio de control de versiones, sin modificaciones nuevas del producto.
+- Las verificaciones tecnicas de la auditoria constan en su informe.
+  No se repiten compilacion, Play Mode ni builds por esta operacion.

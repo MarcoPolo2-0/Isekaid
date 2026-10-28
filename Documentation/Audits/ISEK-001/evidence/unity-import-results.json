@@ -1,0 +1,71 @@
+{
+    "unity": "6000.6.7f1",
+    "scope": "Isolated editor import of diagnostic FBX; no production integration, animation clips or Play Mode.",
+    "avatarValid": true,
+    "avatarHuman": true,
+    "meshes": [
+        {
+            "name": "AUDIT_ONLY_LegShell",
+            "vertices": 4725,
+            "bones": 19,
+            "blendShapes": [
+                "ChestMinus",
+                "ChestPlus",
+                "HipsMinus",
+                "HipsPlus",
+                "WaistMinus",
+                "WaistPlus"
+            ],
+            "deformationMaxDistances": [
+                0.0,
+                0.0,
+                0.037663403898477554,
+                0.03766343742609024,
+                0.0044908709824085236,
+                0.0044908528216183186
+            ]
+        },
+        {
+            "name": "AUDIT_ONLY_TorsoShell",
+            "vertices": 2106,
+            "bones": 19,
+            "blendShapes": [
+                "ChestMinus",
+                "ChestPlus",
+                "HipsMinus",
+                "HipsPlus",
+                "WaistMinus",
+                "WaistPlus"
+            ],
+            "deformationMaxDistances": [
+                0.03499314934015274,
+                0.03499314934015274,
+                0.016772011294960976,
+                0.016772018745541573,
+                0.02172335609793663,
+                0.02172335609793663
+            ]
+        },
+        {
+            "name": "AUDIT_ONLY_WomanBody",
+            "vertices": 12052,
+            "bones": 19,
+            "blendShapes": [
+                "ChestMinus",
+                "ChestPlus",
+                "HipsMinus",
+                "HipsPlus",
+                "WaistMinus",
+                "WaistPlus"
+            ],
+            "deformationMaxDistances": [
+                0.03499315679073334,
+                0.034993141889572144,
+                0.037663426250219345,
+                0.037663426250219345,
+                0.02172335423529148,
+                0.021723365411162376
+            ]
+        }
+    ]
+}
