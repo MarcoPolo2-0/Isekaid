@@ -143,11 +143,33 @@ Si una nueva idea modifica un requisito aprobado, debe registrarse como cambio d
 9. Los documentos aprobados y los informes de implementación son la fuente de verdad entre chats.
 10. El chat principal decide qué tarea se realiza después.
 
-## Repositorio y fuente de verdad
+## Repositorios, submódulo y fuente de verdad
 
-- **Repositorio oficial vigente:** [MarcoPolo2-0/Isekaid](https://github.com/MarcoPolo2-0/Isekaid), rama `main`. No abrir nuevas tareas en el repositorio anterior `Isekaid-2026-10-27_13-09-18`.
-- **Carpeta documental:** `Documentation/`. Antes de trabajar, ambos chats deben leer `Documentation/DECISIONS.md`, este workflow y la especificación pertinente.
-- **Estado documental:** `GameDesignDocument_v0.5.md` es la base aprobada; `GameDesignDocument_v0.6_borrador.md` y `Especificacion_Companera_v0.1.md` son propuestas hasta revisión explícita del Chat 1.
-- **Seguimiento:** GitHub Issues `ISEK-###`. Los cambios técnicos deben incluir evidencia y commits o PR cuando corresponda.
-- **Sincronización:** cada chat debe consultar GitHub antes de iniciar. La carpeta local no recibe cambios automáticamente: actualizar con `git pull` tras verificar `git status`.
-- **Auditoría estructural pendiente:** la entrada `Isekaidunity` aparece en GitHub como submódulo Git sin URL configurada; se debe verificar que el proyecto Unity real tenga sus archivos `Assets/`, `Packages/`, `ProjectSettings/` versionados correctamente, antes de afirmar que el código está respaldado en el repositorio oficial.
+### Repositorio principal (público)
+- [`MarcoPolo2-0/Isekaid`](https://github.com/MarcoPolo2-0/Isekaid) — rama `main`.
+- Contiene `Documentation/` (GDD, especificaciones, decisiones y workflow), `assets/` (recursos originales), Issues `ISEK-###` y la referencia al submódulo `Isekaidunity/`.
+- Chat 1 registra decisiones y gestiona Issues; Chat 2 actualiza documentación y remite propuestas para aprobación.
+- **Antes de trabajar**, leer `Documentation/DECISIONS.md`, este workflow y la especificación aplicable.
+- `GameDesignDocument_v0.5.md` es la base aprobada; `GameDesignDocument_v0.6_borrador.md` y `Especificacion_Companera_v0.1.md` siguen en estado PROPUESTA hasta aprobación explícita del Chat 1.
+
+### Repositorio Unity (privado)
+- [`MarcoPolo2-0/Isekaid-2026-10-27_13-09-18`](https://github.com/MarcoPolo2-0/Isekaid-2026-10-27_13-09-18) — rama `main`.
+- Contiene el proyecto Unity real: `Assets/`, `Packages/`, `ProjectSettings/`.
+- **Chat 3 desarrolla aquí**; debe usar commits/ramas/PR y entregar evidencia de pruebas. No subir por duplicado toda la carpeta Unity al repositorio principal.
+- **No es un repositorio eliminado ni de documentación obsoleta**: es la fuente de verdad del código Unity.
+
+### Conexión entre repositorios
+- El principal registra el submódulo `Isekaidunity` en el archivo `.gitmodules`, con URL HTTPS del repositorio Unity privado y rama sugerida `main`.
+- El submódulo **apunta a un commit fijo** del repositorio Unity; hacer push en Unity **no** actualiza automáticamente ese puntero en el principal. Actualizar el puntero mediante un commit del repositorio principal solo cuando se quiera incorporar una nueva versión del juego.
+- Para inicializar una copia local desde cero: `git clone --recurse-submodules https://github.com/MarcoPolo2-0/Isekaid.git` (requiere acceso al repositorio privado).
+- Para una copia existente: primero comprobar `git status`; después `git pull origin main`, `git submodule sync --recursive` y `git submodule update --init --recursive`, **solo si no existen cambios locales del submódulo que deban conservarse**.
+- Trabajar normalmente en el código Unity desde su propio repositorio. Si el submódulo está en `detached HEAD` por estar fijado a un commit, cambiar a una rama de trabajo explícita antes de crear commits; no hacer cambios sin verificar estado, remoto y rama.
+- Si el Chat 3 actualiza la versión Unity que consumirá el principal, registrar su commit SHA, actualizar la referencia `Isekaidunity` y documentar la versión compatible.
+- El repositorio principal **es público**, mientras Unity es **privado**. Los usuarios sin acceso al privado no podrán inicializar el submódulo. No publicar secretos, assets privados, datos sensibles ni el código del juego en el repositorio principal.
+
+### Seguimiento y sincronización
+- Seguimiento global: GitHub Issues `ISEK-###` **en el repositorio principal**.
+- Documentación compartida: `Documentation/` del repositorio principal.
+- Entrega técnica: commits o PR en el repositorio Unity privado, enlazados al Issue del principal.
+- Ningún chat recibe automáticamente los mensajes de otro: consultar las versiones más recientes en GitHub al iniciar.
+- Los cambios publicados en GitHub no aparecen por sí solos en una carpeta local: actualizar desde Git después de revisar archivos sin confirmar.
