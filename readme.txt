@@ -1,0 +1,346 @@
+ISEKAID - REGISTRO DE CAMBIOS
+Proyecto: C:\Users\PC\Documents\Game Idea\Isekaid
+Guía de referencia: GameDesignDocument_v0.5.md
+
+REGLA DEL PROYECTO
+Desde el 27/10/2026, cada cambio del proyecto debe documentarse aquí.
+Agregar entradas cronológicas sin borrar el historial. Indicar fecha,
+qué cambió, archivos o áreas afectados, validaciones y pendientes.
+Distinguir lo implementado de lo propuesto y no dar por realizada una
+prueba que no se haya ejecutado.
+
+======================================================================
+27/10/2026 - COMPANION PROTOTYPE 0.1 - PRIMERA BASE FUNCIONAL
+======================================================================
+
+Objetivo
+Comenzar en Unity 6.6 (6000.6.7f1) una escena acotada para probar el
+primer encuentro y las interacciones con la compañera, según la guía v0.5.
+
+Implementado
+- Estructura Assets/_Project con código runtime y herramientas de editor
+  en ensamblados separados.
+- Escena CompanionPrototype: claro de prueba, obstáculos y NavMesh.
+- Movimiento en primera persona con el Input System existente.
+- Maniquí provisional con cabello largo, top, pantalón y ojos; colores
+  editables durante la sesión.
+- Personalidades tsundere, yandere y tímida con diálogos locales diferentes,
+  independientes de la apariencia.
+- Rescate inicial de una trampa de bandidos, sin temporizador de muerte.
+- Recuerdo único del primer rescate y confianza inicial moderada, sin
+  duplicarla al repetir interacciones ni activar romance automáticamente.
+- Órdenes de seguir y esperar; navegación alrededor de obstáculos.
+- Ensayo de incapacitación con 30 segundos de juego activo para reanimar.
+  La pausa detiene la cuenta. Agotar el tiempo provoca Game Over.
+- Reinicio del encuentro de prueba; no es un sistema de checkpoints.
+- Panel de pausa, personalización, estado e indicaciones de interacción.
+- Referencias conectadas en escena y prefabs.
+- Escena añadida al inicio de EditorBuildSettings, conservando SampleScene.
+
+Correcciones durante la construcción
+- Importación del tema de UI Toolkit.
+- Inicialización de la personalidad antes de crear la interfaz.
+- Detención inmediata al ordenar esperar, sin desplazamiento residual.
+- Collider vinculado a la postura del maniquí para que la interacción de
+  reanimación coincida con el cuerpo visible cuando está caído.
+
+Archivos y áreas principales (rutas relativas a Isekaid)
+- Assets/_Project/Scenes/CompanionPrototype.unity
+- Assets/_Project/Scripts/Companion/CompanionState.cs
+- Assets/_Project/Scripts/Companion/CompanionController.cs
+- Assets/_Project/Scripts/Companion/CompanionAppearance.cs
+- Assets/_Project/Scripts/Player/FirstPersonController.cs
+- Assets/_Project/Scripts/Prototype/CompanionPrototype.cs
+- Assets/_Project/Scripts/UI/PrototypeHud.cs
+- Assets/_Project/Scripts/Isekaid.Runtime.asmdef
+- Assets/_Project/Editor/PrototypeSceneBuilder.cs
+- Assets/_Project/Editor/PrototypeChecks.cs
+- Assets/_Project/Editor/PrototypePlayModeChecks.cs
+- Assets/_Project/Editor/Isekaid.Editor.asmdef
+- Assets/_Project/Prefabs/FirstPersonPlayer.prefab
+- Assets/_Project/Prefabs/Companion.prefab
+- Assets/_Project/UI/Prototype.uss
+- Assets/_Project/Settings/PrototypeTheme.tss
+- Assets/_Project/Settings/PrototypePanelSettings.asset
+- Assets/_Project/Settings/ClearingNavigation.asset
+- Assets/_Project/Materials/ y archivos .meta correspondientes.
+- ProjectSettings/EditorBuildSettings.asset
+
+Validación realizada
+- Compilación mediante Unity y comprobaciones de referencias de escena.
+- Comprobación del recuerdo único y de los estados de supervivencia.
+- Comprobación de una ruta completa alrededor del obstáculo central.
+- Pruebas automatizadas en Play Mode: rescate manteniendo E, seguimiento,
+  espera, pausa del temporizador, reanimación, Game Over y reinicio.
+- Comprobación de interacción sobre la postura de incapacitación.
+- Ejecución de las pruebas con renderizador gráfico habilitado.
+Resultados registrados:
+  ISEKAID_PROTOTYPE_CHECKS_PASSED
+  ISEKAID_PROTOTYPE_PLAYMODE_CHECKS_PASSED
+No se completó una revisión visual ni se obtuvo una captura utilizable.
+La ejecución con gráficos no demuestra por sí sola la calidad visual.
+No se generó un ejecutable de distribución.
+
+Pendientes y limitaciones
+- Revisión visual de escena e interfaz.
+- Modelo anime definitivo, rig, deformaciones, expresiones y animaciones.
+- Combate, clases funcionales, enemigos y alertas de peligro.
+- Secuestros, convivencia, progresión y desarrollo de la historia.
+- Guardado y checkpoints; los ajustes actuales duran esta sesión.
+- Investigar el aviso de limpieza de DataSaveManager_GO, relacionado con
+  UGameStudio, al cerrar la escena.
+
+Cómo probar
+Abrir Assets/_Project/Scenes/CompanionPrototype.unity y pulsar Play.
+WASD: moverse. Ratón: mirar. Shift: correr. Espacio: saltar.
+Mantener E: interactuar. F: alternar seguir/esperar.
+Tab o Esc: pausa y ajustes.
+
+======================================================================
+27/10/2026 - REGLA DE DOCUMENTACIÓN Y REGISTRO INICIAL
+======================================================================
+- Inicializado el readme.txt existente, que estaba vacío.
+- Registrada la primera versión, sus validaciones y sus limitaciones.
+- Establecida la regla de documentar cada cambio futuro en este archivo.
+- Cambio exclusivamente documental; no se modificó la jugabilidad.
+
+======================================================================
+27/10/2026 - COMPANION PROTOTYPE 0.2 - CREADOR Y AVENTURA SEPARADOS
+======================================================================
+
+Objetivo
+Separar la creación del personaje y la aventura en dos escenas conectadas,
+conservar la selección y reducir trabajo innecesario de interacción.
+
+Implementado
+- CharacterCreation.unity como escena inicial del proyecto.
+- Vista previa 3D de cuerpo completo, plataforma e iluminación propia.
+- Control de giro para inspeccionar el modelo sin iniciar la aventura.
+- Selección de personalidad y colores de cabello, ojos, top y pantalón.
+- Indicador visual de la opción de color seleccionada.
+- Perfil local versionado con validación de personalidad e índices de color.
+  Se guarda como JSON en PlayerPrefs mediante CompanionProfileStore.
+- Botón Guardar y comenzar aventura: guarda el diseño y carga Game.unity
+  de forma asíncrona, evitando envíos repetidos durante la transición.
+- Game.unity conserva el claro, el primer rescate, las conversaciones,
+  el seguimiento y el ensayo de supervivencia del prototipo anterior.
+- El juego aplica automáticamente la apariencia y personalidad guardadas.
+- La aventura comienza con el movimiento habilitado; Tab abre la pausa.
+- Menú de pausa simplificado: continuar, ensayo de incapacitación,
+  reiniciar encuentro y volver al creador.
+- Volver al creador recupera el diseño. Al continuar comienza un nuevo
+  encuentro; el progreso de la aventura todavía no se guarda.
+- Solo CharacterCreation y Game quedan habilitadas en Build Settings.
+  CompanionPrototype y SampleScene se conservan deshabilitadas.
+
+Optimización y ajustes
+- Retirada la personalización duplicada del menú de pausa.
+- Paletas y nombres centralizados para no duplicar los mismos valores.
+- La vista previa no ejecuta NavMeshAgent ni CompanionController.
+- El controlador de juego consulta el rayo de interacción cuando hay una
+  acción de interactuar u ordenar, en lugar de hacerlo cada fotograma.
+  El aviso del HUD conserva su actualización cada 0.1 segundos.
+- Se mantiene MaterialPropertyBlock para cambiar colores por personaje.
+- Reubicado el control de giro para no tapar los pies en la vista previa.
+No se midieron FPS, consumo de memoria ni una mejora porcentual de rendimiento.
+
+Archivos nuevos (rutas relativas a Isekaid)
+- Assets/_Project/Scenes/CharacterCreation.unity y su .meta
+- Assets/_Project/Scenes/Game.unity y su .meta
+- Assets/_Project/Prefabs/CompanionPreview.prefab y su .meta
+- Assets/_Project/Scripts/Companion/CompanionProfile.cs y su .meta
+- Assets/_Project/Scripts/Companion/CompanionPalette.cs y su .meta
+- Assets/_Project/Scripts/Companion/CompanionProfileStore.cs y su .meta
+- Assets/_Project/Scripts/UI/CharacterCreationController.cs y su .meta
+- Assets/_Project/Editor/TwoSceneBuilder.cs y su .meta
+
+Archivos modificados
+- Assets/_Project/Scripts/Companion/CompanionAppearance.cs
+- Assets/_Project/Scripts/Companion/CompanionController.cs
+- Assets/_Project/Scripts/Prototype/CompanionPrototype.cs
+- Assets/_Project/Scripts/UI/PrototypeHud.cs
+- Assets/_Project/UI/Prototype.uss
+- Assets/_Project/Editor/PrototypeSceneBuilder.cs
+- Assets/_Project/Editor/PrototypeChecks.cs
+- Assets/_Project/Editor/PrototypePlayModeChecks.cs
+- ProjectSettings/EditorBuildSettings.asset
+- Este readme.txt, agregando esta entrada sin borrar el historial.
+Las referencias del creador, cámara, modelo y UI quedaron conectadas.
+
+Validación realizada
+- Compilación de los scripts en Unity 6000.6.7f1.
+- Referencias serializadas y ausencia de scripts faltantes en ambas escenas.
+- Serialización del perfil y rechazo de índices o versiones no compatibles.
+- Pruebas automatizadas en Play Mode:
+  creación -> juego -> regreso al creador -> segundo inicio del juego.
+- Verificación de los cuatro colores y de la personalidad entre escenas,
+  después de reiniciar el encuentro y al volver a comenzar.
+- Regresión de rescate con E, seguimiento alrededor del obstáculo, espera,
+  pausa del temporizador, reanimación, Game Over y reinicio.
+- El runner automático restaura el perfil que existía antes de la prueba.
+Resultados registrados:
+  ISEKAID_PROTOTYPE_CHECKS_PASSED
+  ISEKAID_TWO_SCENES_CREATED_AND_VALIDATED
+  ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED
+- Revisión visual real en Game View, en formato 16:9: creador, cambio de
+  cabello mediante botones, giro, entrada al juego, pausa con Tab y regreso
+  al creador. Se revisó el ajuste final de posición del control de giro.
+
+Cómo probar esta versión
+Abrir Assets/_Project/Scenes/CharacterCreation.unity y pulsar Play.
+Elegir personalidad y colores. Usar Girar para inspeccionar el modelo.
+Pulsar Guardar y comenzar aventura.
+Dentro del juego, usar Tab para abrir la pausa y volver al creador.
+
+Pendientes y límites
+- El personaje continúa siendo un maniquí; no se creó un modelo anime,
+  rig, Blend Shapes ni nuevas animaciones en esta versión.
+- No se ha validado la interfaz en todas las resoluciones o dispositivos.
+- El guardado actual cubre la personalización, no el progreso de la aventura.
+- No se generó un ejecutable de distribución ni se midió rendimiento real.
+- Combate, secuestros, convivencia e historia completa siguen pendientes.
+
+======================================================================
+27/10/2026 - WORKFLOW DE DESARROLLO 1.0
+======================================================================
+Proyecto: Isekaid. Motor: Unity 6.
+Documento base: GameDesignDocument_v0.5.md.
+Workflow establecido por el usuario para coordinar tres chats especializados.
+
+Roles
+Chat 1 - Dirección del proyecto (Cerebro)
+- Recibe ideas, consulta el GDD y las decisiones existentes.
+- Establece prioridades, asigna IDs y define objetivo, alcance, restricciones
+  y resultado esperado de cada tarea.
+- Revisa especificaciones, aprueba el inicio del desarrollo y evalúa entregas.
+- Acepta o rechaza resultados y determina correcciones y la siguiente tarea.
+
+Chat 2 - Game Design
+- Transforma los requisitos en especificaciones técnicas y creativas.
+- Mantiene el GDD y registra las decisiones aprobadas.
+- Define comportamientos, referencias visuales, dependencias, casos especiales
+  y criterios verificables de aceptación.
+- Entrega especificaciones versionadas. No modifica código fuente.
+
+Chat 3 - Unity Development (función de este chat)
+- Implementa las especificaciones aprobadas en Unity 6.
+- Crea e integra assets y escribe código C# con arquitectura modular.
+- Conserva los sistemas existentes reutilizables y avanza por hitos pequeños.
+- Ejecuta pruebas y produce builds y evidencia visual cuando corresponda.
+- Registra resultados técnicos, archivos afectados y problemas conocidos.
+- Realiza commits y push a GitHub cuando corresponda a la tarea.
+- No modifica unilateralmente los requisitos de diseño.
+
+Flujo obligatorio
+1. Solicitud: Dirección crea una tarea con ID, objetivo, alcance, prioridad,
+   restricciones y resultado esperado.
+2. Diseño: Game Design prepara la especificación versionada, incluyendo
+   comportamiento, requisitos visuales, dependencias, casos especiales y
+   criterios verificables de aceptación.
+3. Aprobación: Dirección asigna PROPUESTA, APROBADA o REQUIERE CAMBIOS.
+   Solo una especificación APROBADA pasa a desarrollo.
+4. Implementación: Unity Development ejecuta la especificación aprobada,
+   reutiliza sistemas existentes y trabaja por hitos pequeños.
+5. Pruebas: entrega funciones implementadas, archivos modificados, pruebas
+   y resultados, evidencia visual real cuando corresponda, problemas conocidos
+   y commit asociado si existe.
+6. Validación: Dirección compara la entrega con los criterios y asigna
+   ACEPTADO, REQUIERE CORRECCIONES, BLOQUEADO o REDISEÑO NECESARIO.
+7. Cierre: una tarea ACEPTADA se documenta y se marca como completada.
+   Una idea que cambie un requisito aprobado se registra como cambio de alcance.
+
+Reglas generales
+- Mantener la visión aprobada; una simplificación necesita consentimiento.
+- Identificar los assets provisionales como tales.
+- No declarar terminada una funcionalidad que no haya sido verificada.
+- No implementar simultáneamente múltiples sistemas grandes.
+- No introducir dependencias de APIs generativas de pago dentro del juego.
+- Mantener Unity compilable y una versión estable del proyecto.
+- Evitar que dos chats modifiquen el mismo archivo simultáneamente.
+- Priorizar la compañera, su personalización y sus interacciones.
+- Los documentos aprobados y los informes de implementación son la fuente
+  de verdad compartida entre chats.
+- El chat principal decide qué tarea sigue.
+- Se mantiene la regla de documentar cada cambio en este readme.txt,
+  conservando el historial y distinguiendo validaciones de pendientes.
+
+Resultado de esta entrada
+- Workflow 1.0 registrado como regla de trabajo del proyecto.
+- Este chat asume Unity Development; las nuevas implementaciones se reciben
+  mediante una tarea y especificación APROBADA de Dirección.
+- Actualización documental, sin cambios de código, escenas o assets.
+- No se ejecutaron pruebas nuevas por esta actualización documental.
+
+======================================================================
+27/10/2026 - DIRECCION DE DISENO - GDD 0.6 BORRADOR Y ACEPTACION DE COMPANERA
+======================================================================
+
+Objetivo
+Preservar la vision del GDD y definir resultados verificables para mejorar
+la presencia visual, personalizacion y comportamiento de la companera.
+
+Documentos entregados (rutas relativas a Game Idea)
+- Documentation/GameDesignDocument_v0.5.md
+- Documentation/GameDesignDocument_v0.6_borrador.md
+- Documentation/Especificacion_Companera_v0.1.md
+- Documentation/references/companion-concept-v01.png
+
+Origen y estado
+- El archivo v0.5 ya no estaba en Downloads. Se recupero su texto integro
+  desde una lectura local anterior del 27/10/2026, sin reconstruir su
+  contenido por suposiciones. No se certifica identidad binaria con el
+  archivo original desaparecido.
+- La v0.6 conserva el cuerpo de la v0.5 y agrega revision de vision,
+  trazabilidad, diagnostico de la version tecnica 0.2 y prioridades.
+- Las decisiones aprobadas no se sustituyen. Los nuevos rangos, tiempos,
+  contenidos y criterios de direccion se distinguen como propuestas o
+  verificaciones derivadas; el borrador no equivale a aprobacion.
+- Especificacion de siete sistemas y 34 criterios: modelo, personalizacion,
+  rostro, cuerpo/persona, dialogo, memoria y autonomia.
+- Cada sistema define objetivo, datos, situaciones y evidencia de aceptacion.
+- La lamina v01 se conserva como referencia candidata, no como arte final.
+- Los hitos H1/H2/H3 ordenan la entrega sin eliminar clases, amistad,
+  romance opcional, hogar, misiones personales ni secuestros.
+
+Revision y validacion documental
+- Leidos el GDD, el registro actual y los resultados de desarrollo 0.2.
+- Inspeccion de solo lectura de codigo propio y version de Unity.
+- Comprobada igualdad del cuerpo heredado de la v0.5 en la v0.6.
+- Comprobados 34 identificadores unicos, referencias entre criterios y
+  16 enlaces locales del paquete segun sus destinos.
+- Comprobada la copia de la referencia y de los cuatro archivos mediante
+  hashes entre la preparacion y su destino.
+- Ninguna prueba nueva de aceptacion del producto se declara ejecutada.
+
+Limites y pendientes
+- Revisar identidad visual definitiva y referencias anime originales.
+- Aprobar extremos corporales, gestos, catalogo facial y parametros de ensayo.
+- Definir plataforma, hardware objetivo, guardado de recuerdos y primera clase.
+- No se modificaron codigo, escenas, prefabs, ajustes ni assets de Unity.
+- No se ejecutaron compilacion, Play Mode, build ni medidas de rendimiento.
+- No se envio el encargo al chat de desarrollo; queda preparado en el GDD.
+
+======================================================================
+27/10/2026 - WORKFLOW 1.0 - ADOPCION EN GAME DESIGN
+======================================================================
+
+- Guardado Documentation/Workflow_Desarrollo_v1.0.md con el workflow
+  proporcionado por el usuario para los tres roles.
+- Este registro corresponde a Chat 2 - Game Design: mantiene GDD,
+  especificaciones, referencias y criterios; no modifica codigo fuente.
+- Direccion (Cerebro) asigna IDs, prioridades, aprobaciones de desarrollo,
+  validacion de entregas y la siguiente tarea.
+- GDD v0.6 borrador y Especificacion_Companera v0.1 permanecen PROPUESTA,
+  con ID de tarea pendiente de asignacion por Direccion.
+- H1/H2/H3 son propuestas de secuencia, no IDs de tarea ni autorizaciones.
+- Diferenciadas las marcas de requisito/evidencia A/D/P/V de los estados
+  formales de aprobacion y validacion del workflow.
+- Revision administrativa 1: sin cambios en las mecanicas, el cuerpo
+  heredado de la v0.5 ni los 34 criterios de aceptacion.
+- Verificado el contenido heredado, la seccion de requisitos conservada,
+  los 34 IDs unicos y los siete estados formales del workflow.
+- Comprobados hashes previos para evitar sobrescribir cambios concurrentes
+  en los documentos; copias de entrega verificadas por hash.
+- No se asignaron tareas ni se enviaron instrucciones a otros chats.
+- No se modificaron codigo, escenas, prefabs ni assets de Unity.
+- No se ejecutaron nuevas pruebas del juego.
