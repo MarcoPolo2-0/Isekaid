@@ -68,3 +68,41 @@ La decisión DEC-001 **no aprueba automáticamente** la totalidad de la especifi
 - **Unity:** `MarcoPolo2-0/Isekaid-2026-10-27_13-09-18` (privado) para el proyecto Unity 6 real.
 - **Vínculo:** submódulo `Isekaidunity`, declarado en `.gitmodules` del repositorio principal. Referencia a un commit fijo; el principal se actualiza manualmente cuando se apruebe una versión del código Unity.
 - Consultar `Documentation/Workflow_Desarrollo_v1.0.md` para procedimientos de actualización y trabajo.
+
+## DEC-002 — Revisión de entregas ISEK-001 y autorización de prototipo corporal controlado
+
+**Fecha:** 28/10/2026.  
+**Estado:** APROBADA COMO AUTORIZACIÓN DE TRABAJO ACOTADO. **NO** implica aceptación artística ni cierre de ISEK-001.  
+**Tarea:** [ISEK-001](https://github.com/MarcoPolo2-0/Isekaid/issues/1).
+
+### Evidencia revisada
+
+- Diseño: [Especificación ISEK-001 v0.1](Specifications/ISEK-001.md), entrega en commit `1874c868f5730765914abe82d99ab8e6e693218a`.
+- Técnica: [Auditoría ISEK-001](Audits/ISEK-001/INFORME.md), entrega en commit `62b613e0b470c7c8f510dcfb87e0c0057ba3a0ca`.
+- El original `assets/woman.fbx` conserva el hash registrado por ambos informes.
+
+### Resolución de Dirección — Chat 1
+
+1. **Se acepta la evaluación técnica de la puerta G1**: la malla Woman se considera viable para continuar el prototipado, sin declarar terminada su adaptación artística, su licencia detallada ni una integración de producción.
+2. **G2: factibilidad demostrada, resultado artístico pendiente.** Los ensayos de Blender generaron controles independientes de pecho, caderas y cintura y 27 combinaciones; el FBX diagnóstico se importó en un proyecto Unity aislado con Avatar Humanoid válido y Blend Shapes. Esto autoriza seguir explorando los tres ejes, **no** aprobar extremos, aspecto neutral definitivo ni declarar acabada cintura.
+3. **G3 y G4 continúan pendientes.** Se observaron penetraciones en prendas de prueba, deformaciones de pesos automáticos y ausencia de rostro anime, cabello, animaciones finales y prueba en las escenas del juego. No presentar estas partes como completas.
+4. **Se aprueba la especificación v0.1 solo como marco de trabajo de las puertas G1–G4 y de sus 16 casos de aceptación.** Las cifras, tiempos, amplitudes estéticas y elementos etiquetados como propuestas siguen sujetos a revisión visual y funcional. El GDD v0.6 continúa en BORRADOR.
+5. **Se autoriza a Chat 3 una etapa limitada G2-PROTO** en rama separada del repositorio Unity privado: preparar una **versión neutral corporal editable** y **tres controles experimentales** de pecho/caderas/cintura; mejorar transiciones y evaluar pesos/ropa con pruebas reproducibles. La ropa de ensayo y el esqueleto diagnóstico **no** son recursos finales. No sustituir el maniquí de las escenas actuales ni fusionar con `main` antes de revisión del Chat 1.
+6. **Se solicita a Chat 2 revisión visual enfocada:** comparar turnaround neutral con dirección anime, documentar rangos y referencias faciales/cabello, preparar criterios de aprobación visual que no dependan solo de métricas. Las versiones nuevas de requisitos se entregan como propuestas y se revisan aquí antes de ampliar el alcance de Chat 3.
+
+### Condiciones de entrega de G2-PROTO
+
+- Archivo Blender derivado editable y FBX exportable en la rama de trabajo de Unity, sin alterar el original del repositorio principal; registrar procedencia, versión y hash.
+- Turnaround frontal, perfil, tres cuartos y espalda del cuerpo neutral; vistas comparables de los extremos y matriz de 27 combinaciones.
+- Informe de fallos visibles de ropa/skin y cómo se corrigen; no ocultar clipping, ni declarar completa la aceptación G3.
+- Evidencia de reimportación correcta en Unity; preferentemente ensayos en entorno separado y sin tocar escenas de producción.
+- Informe al Issue `ISEK-001`, commit/PR y evidencias; advertir explícitamente qué no está validado.
+- **La autorización termina en la presentación de G2-PROTO**: rostro anime completo, ropa final, locomoción integrada y reemplazo en creador/aventura requieren revisión de la siguiente puerta.
+
+### Riesgos y obligaciones abiertas
+
+- Verificar variante exacta CC BY, atribución, enlaces de licencia y modificaciones antes de distribuir derivados.
+- No fijar presupuesto de rendimiento/plataforma sin mediciones y decisión de alcance.
+- No actualizar la referencia del submódulo del repositorio principal por una prueba todavía no aceptada.
+
+**Próxima revisión de Chat 1:** aceptación artística del cuerpo neutral y rangos, seguida de autorización específica para G3/G4.
