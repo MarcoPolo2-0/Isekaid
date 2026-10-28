@@ -4,7 +4,8 @@
 
 **Última actualización:** 28/10/2026 — trazabilidad de DEC-001 e ISEK-001.
 
-**Revisión administrativa:** 1 — adopción del [Workflow de desarrollo v1.0](Workflow_Desarrollo_v1.0.md).  
+**Revisión administrativa histórica:** 1 — adopción del [Workflow de desarrollo v1.0](Workflow_Desarrollo_v1.0.md).  
+**Ubicación y procedimiento vigentes:** [Workflow v1.1](Workflow_Desarrollo_v1.1.md), DEC-006 (sin alterar requisitos creativos de esta propuesta).  
 **Responsable:** Chat 2 — Game Design.  
 **Revisión y aprobación:** Chat 1 — Dirección del proyecto (Cerebro).  
 **Tareas vinculadas:** [ISEK-001](Specifications/ISEK-001.md) concreta la base corporal y visual conforme a DEC-001. Los sistemas sociales y de autonomía conservan su alcance propuesto y requieren asignación de Dirección.  

@@ -201,7 +201,7 @@ Cada resultado debe identificar versión, controles, pose/clip, cámara, ilumina
 
 ## 10. Entrega y revisión
 
-Desarrollo entregará un informe de ISEK-001 con estado por puerta y por criterio, archivos creados/modificados, pruebas realizadas, capturas/clips, defectos y límites. Mantener los originales en `assets/` del principal y el recurso de trabajo/importado y código en el repositorio Unity privado, conforme al workflow. No duplicar todo Unity en el repositorio público.
+Desarrollo entregará un informe de ISEK-001 con estado por puerta y por criterio, archivos creados/modificados, pruebas realizadas, capturas/clips, defectos y límites. Conservar el original en `assets/` y el recurso editable/importado y el código en `UnityProjectIsekaid/` del mismo repositorio, según el workflow v1.1. Identificar el estado experimental, verificar licencias y evitar integrar en escenas hasta aprobación.
 
 Las fuentes editables y exportaciones deben indicar su versión y correspondencia. La evidencia compartida se ubicará según su contenido y permiso de publicación; no asumir que todos los recursos de terceros pueden copiarse al repositorio público. La atribución exacta de la base se resuelve antes de distribuir el derivado.
 
