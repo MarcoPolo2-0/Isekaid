@@ -142,3 +142,12 @@ Si una nueva idea modifica un requisito aprobado, debe registrarse como cambio d
 8. Priorizar la compañera, su personalización y sus interacciones.
 9. Los documentos aprobados y los informes de implementación son la fuente de verdad entre chats.
 10. El chat principal decide qué tarea se realiza después.
+
+## Repositorio y fuente de verdad
+
+- **Repositorio oficial vigente:** [MarcoPolo2-0/Isekaid](https://github.com/MarcoPolo2-0/Isekaid), rama `main`. No abrir nuevas tareas en el repositorio anterior `Isekaid-2026-10-27_13-09-18`.
+- **Carpeta documental:** `Documentation/`. Antes de trabajar, ambos chats deben leer `Documentation/DECISIONS.md`, este workflow y la especificación pertinente.
+- **Estado documental:** `GameDesignDocument_v0.5.md` es la base aprobada; `GameDesignDocument_v0.6_borrador.md` y `Especificacion_Companera_v0.1.md` son propuestas hasta revisión explícita del Chat 1.
+- **Seguimiento:** GitHub Issues `ISEK-###`. Los cambios técnicos deben incluir evidencia y commits o PR cuando corresponda.
+- **Sincronización:** cada chat debe consultar GitHub antes de iniciar. La carpeta local no recibe cambios automáticamente: actualizar con `git pull` tras verificar `git status`.
+- **Auditoría estructural pendiente:** la entrada `Isekaidunity` aparece en GitHub como submódulo Git sin URL configurada; se debe verificar que el proyecto Unity real tenga sus archivos `Assets/`, `Packages/`, `ProjectSettings/` versionados correctamente, antes de afirmar que el código está respaldado en el repositorio oficial.
