@@ -1,3 +1,5 @@
+> **ARCHIVO HISTÓRICO:** este workflow v1.0 describía el esquema de dos repositorios y submódulo, ya descontinuado según DEC-006. Para toda operación nueva, usar [Workflow v1.1](Workflow_Desarrollo_v1.1.md). Se conserva el texto original por trazabilidad.
+
 # ISEKAID — Workflow de desarrollo
 
 **Versión:** 1.0  

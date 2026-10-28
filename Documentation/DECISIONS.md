@@ -229,3 +229,18 @@ El usuario prefiere la silueta estilizada de G2-PROTO a la versión G2-CORR. La 
 **Chat 3:** conservar los dos prototipos y la fuente original; elaborar una nueva neutral de cuatro vistas antes de ampliar el trabajo de skinning y ropa. Mantener el mismo PR sin fusionar y sin alterar escenas de producción. Recalcular controles y pruebas tras aprobación visual.
 
 **Estado de puertas:** G2 requiere correcciones; G3/G4 permanecen sin autorización. La aprobación técnica parcial no sustituye la aceptación artística del usuario.
+
+
+## DEC-006 — Repositorio único y limpieza de raíz Unity
+
+**Fecha:** 28/10/2026. **Estado:** APROBADA — organización técnica vigente. Esta decisión sustituye exclusivamente la organización de repositorios de DEC-001/002/003/004 y del workflow v1.0; sus decisiones artísticas y técnicas históricas permanecen registradas.
+
+- **Repositorio único:** `MarcoPolo2-0/Isekaid`, rama estable `main`. **Raíz real de Unity:** `UnityProjectIsekaid/` (contiene `Assets/`, `Packages/`, `ProjectSettings/`, `SourceArt/`). **No hay submódulos activos.** Las referencias al antiguo `Isekaidunity` y al repositorio privado son históricas, no instrucciones vigentes.
+- Se retiran del estado actual del repositorio `Packages/`, `ProjectSettings/` y `.vsconfig` en la **raíz general**, por duplicar una instalación Unity anterior. Su contenido sigue recuperable en los commits previos. No se toca el contenido equivalente bajo `UnityProjectIsekaid/`.
+- Se conserva en `UnityProjectIsekaid/Assets/_Project/` el prototipo original, sus tres escenas `CharacterCreation`, `Game` y `CompanionPrototype`, scripts, prefabs y archivos `.meta`. La lista de escenas de compilación vigente se encuentra en `UnityProjectIsekaid/ProjectSettings/EditorBuildSettings.asset`.
+- Los recursos `G2-PROTO` y `G2-CORR` ya están versionados en el nuevo repositorio como **evidencia experimental**, no como aceptación artística ni autorización de reemplazar recursos del juego. **DEC-005 sigue vigente: G2-CORR rechazada visualmente, G2 en correcciones, G3/G4 sin autorización.** La presencia de estos archivos en `main` tras la migración no implica aprobación ni integración a escenas.
+- Proceso vigente de tres chats, Git, ramas y PR: [Workflow de desarrollo v1.1](Workflow_Desarrollo_v1.1.md). Las entregas futuras usan este único repositorio, nombran rutas relativas a su raíz y enlazan al Issue ISEK-001.
+- Se incorpora verificación automatizada **estática** de estructura, escena inicial y archivos esenciales; no certifica importación, Play Mode, compilación de C#, materiales ni builds en Unity. La validación en Unity 6000.6.7f1 sigue pendiente y debe informarse por separado.
+- **Advertencia de distribución:** el repositorio actualmente es público y contiene código, imágenes y recursos de terceros; revisar licencias, atribución y credenciales antes de publicar nuevas dependencias o distribuir derivados.
+
+**Próxima tarea:** abrir en Unity Hub `UnityProjectIsekaid/`, comprobar compilación/Play Mode del creador y aventura, preservar el prototipo y luego continuar la iteración artística G2 bajo DEC-005.

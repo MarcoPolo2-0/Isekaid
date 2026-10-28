@@ -1,2 +1,6 @@
-*.fbx filter=lfs diff=lfs merge=lfs -text
-*.blend filter=lfs diff=lfs merge=lfs -text
+[attr]lfs filter=lfs diff=lfs merge=lfs -text
+[attr]unity-json text eol=lf linguist-language=json
+[attr]unity-yaml text eol=lf merge=unityyamlmerge linguist-language=yaml
+
+*.fbx lfs
+*.blend lfs

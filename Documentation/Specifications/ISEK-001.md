@@ -7,7 +7,7 @@
 **Decisión vinculante:** [DEC-001](../DECISIONS.md).  
 **Base aprobada:** [GDD v0.5](../GameDesignDocument_v0.5.md).  
 **Referencia de aceptación general:** [Compañera v0.1](../Especificacion_Companera_v0.1.md), todavía PROPUESTA.  
-**Workflow:** [Desarrollo v1.0](../Workflow_Desarrollo_v1.0.md).
+**Workflow vigente:** [Desarrollo v1.1](../Workflow_Desarrollo_v1.1.md). El v1.0 se conserva como historial.
 
 **Estado posterior — DEC-003:** G2 requiere correcciones; solo G2-CORR está autorizada. A es referencia de trabajo, no arte final aceptado. La [revisión artística v0.2](ISEK-001_Direccion_Artistica_v0.2.md) localiza correcciones y revisa AV01–04 sobre la evidencia real de G2-PROTO; sus precisiones adicionales permanecen como propuestas. G3/G4 e integración siguen pendientes de Dirección.
 
