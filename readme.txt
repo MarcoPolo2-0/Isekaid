@@ -530,3 +530,22 @@ Proteccion y limites
 - Memoria asentada: crecimiento maximo 0.25 MiB; conteos de mallas/texturas/materiales/avatars constantes. La reserva del allocator permanece, sin afirmar ausencia absoluta de fugas ni VRAM validada.
 - tools/verify_unified_layout.py y pruebas originales del creador/Game pasan. Informe, resultados y hashes actualizados en Documentation/Audits/VRM-POC.
 - 803 archivos protegidos intactos; VRM y capturas siguen privados. Sin fusion a main, nuevo creador ni integracion de produccion.
+28/10/2026 - ISEK-001 - SISTEMA VRM V0.2 / REVISION DE CHAT 1
+- Direccion conceptual VRM + catalogo: APROBADA CON AJUSTES por instruccion
+  directa de Chat 1; implementacion definitiva pendiente de Chat 3.
+- Identidad, personalidad, memoria, clase y representacion independientes.
+- Primera entrega funcional: un avatar incluido y uno importado VRM 1.0.
+  Tres apariencias del catalogo son objetivo posterior; VRM 0.x pendiente.
+- Conservados 26 criterios, distribuidos sin duplicados: F1 tecnica (5),
+  F2 importacion/persistencia (11), F3 personalidad/expresiones (8),
+  F4 catalogo completo (2). Los casos siguen sin ejecutar ni aceptar.
+- Diferenciados limites tecnicos, permisos declarados y revision humana
+  de derechos. Ningun resultado tecnico equivale a licencia validada.
+- Tres personalidades y profundidad narrativa conservadas; Woman y ambos
+  G2 quedan como trabajo historico, sin nuevas correcciones corporales.
+- Version 0.1 conservada; version 0.2 incorpora la revision documental.
+- Verificados IDs, particion de fases y cuatro enlaces locales de v0.2.
+- No se cambia GDD v0.5, no se cierra ISEK-001 ni se ejecutan Unity,
+  importacion, Play Mode o builds. Esperar evaluacion tecnica antes de
+  solicitar aprobacion definitiva del cambio de alcance.
+- Entrega mediante rama y PR documental, sin incluir el experimento Unity.
