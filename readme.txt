@@ -493,3 +493,23 @@ Proteccion y limites
   diferencias discretas de caderas y expresiones pendientes en 3D real.
 - No se ejecutaron Blender, Unity, deformaciones, animaciones ni builds;
   no se modificaron codigo, FBX, evidencias de auditoria ni submodulo.
+
+
+28/10/2026 - ISEK-001 / G2-PROTO - ENTREGA PARA REVISION
+- Rama privada feature/isek-001-g2-body: neutral derivada, seis Shape Keys, pesos normalizados y muestras de ropa corregidas en reposo.
+- Blender editable, FBX, scripts, informe y 108 vistas de 27 combinaciones en SourceArt/Companion/Woman/G2-PROTO; recurso importable aislado en Assets/G2BodyPrototype.
+- Unity 6000.6.7f1 aislado: Humanoid valido, 27 combinaciones; original preservado y 58 archivos existentes sin cambios.
+- Pendiente aprobacion visual de neutral/rangos; ropa en poses mantiene penetraciones hasta 13.70 mm. G2 no se declara aceptada.
+- Sin sustitucion del maniqui, cambios de escenas definitivas, fusion a main ni actualizacion del puntero de submodulo.
+- Publicado commit privado afcdd61649bac3cabc833605d61037006eaf6509 y PR borrador https://github.com/MarcoPolo2-0/Isekaid-2026-10-27_13-09-18/pull/2
+- Informe comunicado a Direccion en https://github.com/MarcoPolo2-0/Isekaid/issues/1#issuecomment-6474245300
+
+28/10/2026 - ISEK-001 G2-CORR / DEC-003 - PR #2
+- Neutral candidata y extremos recalculados sin reducir amplitudes maximas. Topologia preservada; 4330 vertices de regiones protegidas sin cambios neutrales.
+- 27 combinaciones, 108 vistas, 15 barridos de 101 muestras con otros ejes neutros/extremos mixtos; 315 frames y tres GIF de evidencia.
+- Pesos locales y holguras revisados; mismos 18 casos repetidos. Clipping maximo 13.70 -> 4.03 mm, persiste en 6 casos. Cruces de triangulos medidos, no se ocultan. Estiramiento maximo 3.584 frente a 3.578: no resuelto.
+- Unity aislado: Humanoid valido y controles sincronizados en cuerpo y dos muestras; 27 combinaciones + 1515 estados, 4629 horneados.
+- Informe, estados AC/AV y hashes en SourceArt/Companion/Woman/G2-CORR. G2 requiere revision artistica; sin Play Mode ni builds.
+- Version G2-PROTO recuperable intacta, 165 archivos protegidos sin cambios. Sin cambios de escenas/perfil/UI/runtime, fusion ni puntero de submodulo.
+- Publicado G2-CORR: b329a3e510068ffef61c951143921cb3d9777d3b en el mismo PR borrador #2.
+- Informe comunicado en https://github.com/MarcoPolo2-0/Isekaid/issues/1#issuecomment-6475338380
