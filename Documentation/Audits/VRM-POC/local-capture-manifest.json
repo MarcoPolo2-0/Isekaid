@@ -1,0 +1,26 @@
+{
+  "private_directory": "UnityProjectIsekaid/LocalVrmEvidence",
+  "captures": {
+    "existing-controller-follow.png": "17b6a4daa75342509ba8050ec3c451f262baa480a3091f67a660a5eceec09d6c",
+    "expressions-contact-sheet.jpg": "bbae93b69450287f34fcff07fe3618dcc4f6f666bc3499bdf2d335aa06fbab32",
+    "face-aa.png": "5dd577fcff0b4075086601a0922fe81ba8614a60f0259bc6baa4df38cf03d78f",
+    "face-angry.png": "32ddb0082d7c87588cb97b3f8cb25809dcc2e5abfac101814443402da46cbc96",
+    "face-blink.png": "d57e5bc3537812b053f68dad09aed70a589061f4d3da420d684d8683f5290b25",
+    "face-blinkLeft.png": "550b94ed56b5d98703e141de4607ca144e55408f51f9ddcbd90fd45d22ddcbfc",
+    "face-blinkRight.png": "80fea57ba59327bd3e0597099807a25d62b5a5895ef580ee52b2ce2d714ccbe7",
+    "face-ee.png": "fc46264793371e209db8f5bef696899272c844644c6ffd788ef2ef8fa785bd8e",
+    "face-happy.png": "92630d51023bf14ef2b986dfdc18aaeb5ddb0bb113a39fca656246d540e110ee",
+    "face-ih.png": "17666f67f55959251dcf049b5d0ea51478fd1ec212d041a2ed1d7fe75d022b10",
+    "face-neutral.png": "f1d63c097817dedbc7835fc46f0469eb8964bdacd26aadb3ea0898ad6caee9c1",
+    "face-oh.png": "1139cd5df3a1b7358657634ecbc3ac7e20f2774cb2a21af6a7e0f7cb227f3764",
+    "face-ou.png": "313403f311b2cbbba5af403e8382326568d18ecf52521eb0ba37c500ee075838",
+    "face-relaxed.png": "40f6b44d15fac32606c189e9f6dc5bf45b251e7f37a4bf8ec8da713d58a78a2f",
+    "face-sad.png": "c63a6801b274645743b8fc46d40f2f65a16c322424bc50d0ca32fff0361123a5",
+    "face-surprised.png": "75ba7b051c985a064ec85146ac31dc069420faf4ab825fa3222cc7a3fb9296d6",
+    "motion-Idle.png": "75b5d437ecc6bd575c0610d92360c03a02a328c4f474041f44367304d9670d14",
+    "motion-Run.png": "cab359831af5b61a11eaef0c892472655ff29b04a8242264d3bab7b63e8bd82b",
+    "motion-Turn.png": "16fc75b74ff2b102bc06a3e27bdae5d9ee8d9c171a2c7158e8f24ee4116974ee",
+    "motion-Walk.png": "cc26bea829103e3de19663fbaeb05637e82a0b1f344db93e410dea8c002a0158"
+  },
+  "public_images_included": false
+}

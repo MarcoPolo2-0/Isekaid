@@ -1,0 +1,176 @@
+{
+    "unity": "6000.6.7f1",
+    "graphicsDevice": "NVIDIA GeForce RTX 5070 Ti",
+    "processor": "Intel(R) Core(TM) i7-14700F",
+    "importMilliseconds": 702.7114868164063,
+    "meanEditorFrameMs": 0.4519432485103607,
+    "p95EditorFrameMs": 0.5041999816894531,
+    "allocatedBefore": 469016370,
+    "allocatedAfter": 663430984,
+    "allocatedEnd": 687796219,
+    "vertices": 21330,
+    "triangles": 32654,
+    "materials": 16,
+    "renderers": 3,
+    "springs": 25,
+    "rejectionChecks": 9,
+    "humanoid": true,
+    "safeFallback": true,
+    "personalityIndependent": true,
+    "followMoved": true,
+    "failedImportPreservedAvatar": true,
+    "followDistance": 0.1568903923034668,
+    "avatarBoundsSize": {
+        "x": 0.7205944061279297,
+        "y": 2.25356388092041,
+        "z": 0.7914388179779053
+    },
+    "anchorScale": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 1.0
+    },
+    "captureRenderReadbackPngMs": [
+        236.91119384765625,
+        32.841800689697266,
+        32.15810012817383,
+        25.668399810791016,
+        43.47869873046875,
+        40.368499755859375,
+        41.37879943847656,
+        41.615699768066406,
+        43.93429946899414,
+        41.76150131225586,
+        42.20100021362305,
+        41.11389923095703,
+        40.6786994934082,
+        43.79499816894531,
+        41.08110046386719,
+        41.022701263427734,
+        43.600399017333984,
+        44.25360107421875,
+        24.80470085144043
+    ],
+    "expressions": [
+        "happy",
+        "angry",
+        "sad",
+        "relaxed",
+        "surprised",
+        "aa",
+        "ih",
+        "ou",
+        "ee",
+        "oh",
+        "blink",
+        "blinkLeft",
+        "blinkRight",
+        "lookUp",
+        "lookDown",
+        "lookLeft",
+        "lookRight",
+        "neutral"
+    ],
+    "shaders": [
+        "VRM10/Universal Render Pipeline/MToon10"
+    ],
+    "error": "",
+    "faceTests": [
+        {
+            "name": "neutral",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "happy",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "angry",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "sad",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "relaxed",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "surprised",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "blink",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "blinkLeft",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "blinkRight",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "aa",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "ih",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "ou",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "ee",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        },
+        {
+            "name": "oh",
+            "available": true,
+            "maximumMorphWeight": 100.0
+        }
+    ],
+    "motionTests": [
+        {
+            "name": "Idle",
+            "maximumThighRotation": 0.0,
+            "maximumSpringRotation": 179.99948120117188,
+            "maximumRootRotation": 0.0
+        },
+        {
+            "name": "Walk",
+            "maximumThighRotation": 26.99994659423828,
+            "maximumSpringRotation": 179.9988555908203,
+            "maximumRootRotation": 0.0
+        },
+        {
+            "name": "Run",
+            "maximumThighRotation": 53.99998474121094,
+            "maximumSpringRotation": 179.9998779296875,
+            "maximumRootRotation": 0.0
+        },
+        {
+            "name": "Turn",
+            "maximumThighRotation": 28.255859375,
+            "maximumSpringRotation": 179.99639892578125,
+            "maximumRootRotation": 135.01426696777344
+        }
+    ]
+}

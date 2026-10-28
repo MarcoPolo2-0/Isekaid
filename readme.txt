@@ -514,9 +514,23 @@ Proteccion y limites
 - Publicado G2-CORR: b329a3e510068ffef61c951143921cb3d9777d3b en el mismo PR borrador #2.
 - Informe comunicado en https://github.com/MarcoPolo2-0/Isekaid/issues/1#issuecomment-6475338380
 
-======================================================================
+28/10/2026 - VRM-POC - PR experimental de importacion local
+- UniVRM 0.131.4 fijado, VRM 1.0 local validado; escena independiente con adaptador de apariencia y expresiones.
+- Baseline existente pasa en Play Mode antes y despues; falta tools/verify_unified_layout.py de ISEK-002.
+- Humanoid, clips de ensayo, 14 expresiones, 25 Spring Bones y 9 rechazos de seguridad comprobados. Capturas reales privadas en LocalVrmEvidence.
+- Informe y hashes: Documentation/Audits/VRM-POC. Original, Woman, G2 y 803 archivos protegidos sin cambios.
+- Archivo VRM y capturas excluidos de Git por permisos; sin cambios de escenas/prefabs definitivos, perfil, gameplay o nuevo creador.
+- Viabilidad tecnica acotada: requiere revision de escala/locomocion, perfilado standalone y derechos de recursos antes de integrar. Sin fusion a main.
+
+28/10/2026 - VRM-POC / PR #4 - CORRECCION DE ESTABILIDAD
+- Rama actualizada con main 83553e9 mediante merge; cambios locales anteriores respaldados y preservados.
+- Reemplazo transaccional: candidato preparado y activado antes de publicar referencias y destruir el anterior; rollback de visibilidad y expresiones.
+- Descarga explicita e idempotente; rechazo de operaciones simultaneas y limpieza al destruir el presentador durante la carga.
+- Unity Play Mode: cinco fallos por etapa, rollback de primera carga, seis ciclos de carga/reemplazo/descarga y 1138 referencias a recursos comprobadas destruidas.
+- Memoria asentada: crecimiento maximo 0.25 MiB; conteos de mallas/texturas/materiales/avatars constantes. La reserva del allocator permanece, sin afirmar ausencia absoluta de fugas ni VRAM validada.
+- tools/verify_unified_layout.py y pruebas originales del creador/Game pasan. Informe, resultados y hashes actualizados en Documentation/Audits/VRM-POC.
+- 803 archivos protegidos intactos; VRM y capturas siguen privados. Sin fusion a main, nuevo creador ni integracion de produccion.
 28/10/2026 - ISEK-001 - SISTEMA VRM V0.2 / REVISION DE CHAT 1
-======================================================================
 - Direccion conceptual VRM + catalogo: APROBADA CON AJUSTES por instruccion
   directa de Chat 1; implementacion definitiva pendiente de Chat 3.
 - Identidad, personalidad, memoria, clase y representacion independientes.

@@ -1,0 +1,35 @@
+{
+  "unity": "6000.6.7f1",
+  "project": "UnityProjectIsekaid",
+  "before": {
+    "ISEKAID_PROTOTYPE_CHECKS_PASSED": true,
+    "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED": true
+  },
+  "after": {
+    "ISEKAID_PROTOTYPE_CHECKS_PASSED": true,
+    "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED": true
+  },
+  "isek002_layout_script_present": false,
+  "known_warnings": [
+    "Existing UGameStudio UAC0005 AppDomain.GetAssemblies warning",
+    "Nested UnityProjectIsekaid/.gitattributes contains macros Git only allows at repository root; not changed in this experiment"
+  ],
+  "stability_revision": {
+    "merged_main": "83553e9f7e74567d60aab06f0b701caee8d715ec",
+    "merge_commit": "55d3684a0756d611c524b430afcccb2d4b443027",
+    "layout_script_present": true,
+    "layout_exit_code": 0,
+    "layout_output": "ISEKAID_STRUCTURE_OK \u2014 archivos, rutas, escenas y exclusiones b\u00e1sicas\nNOTA: compilaci\u00f3n, importaci\u00f3n, Play Mode y builds requieren Unity\n",
+    "prototype_checks": {
+      "ISEKAID_PROTOTYPE_CHECKS_PASSED": true,
+      "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED": true
+    },
+    "local_modifications_preserved_before_own_log_append": {
+      "readme.txt": "f482f07f5b3779513b27279618154012a10a1c7e0cee7e593920797b7ec2a7c7",
+      "Documentation/Specifications/Sistema_Companera_VRM_v0.1_PROPUESTA.md": "5208a5b360198b9d87bbeaac029030b1b4f305971fb602dfb1a9e678114edefb",
+      "Documentation/Specifications/Sistema_Companera_VRM_v0.2.md": "544422ce3c893fa75d4957535f3a3990513a3b5b1d9bd29dc91208cbb39b0798"
+    },
+    "protected_files_checked": 803,
+    "protected_changed": []
+  }
+}

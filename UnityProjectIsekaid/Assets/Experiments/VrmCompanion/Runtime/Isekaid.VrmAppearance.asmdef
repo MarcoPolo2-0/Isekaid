@@ -1,0 +1,10 @@
+{
+  "name": "Isekaid.VrmAppearance",
+  "references": [
+    "VRM10",
+    "UniGLTF",
+    "UniGLTF.Utils",
+    "UniJSON"
+  ],
+  "autoReferenced": true
+}
