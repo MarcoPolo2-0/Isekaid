@@ -1,0 +1,17 @@
+{
+  "unity": "6000.6.7f1",
+  "project": "UnityProjectIsekaid",
+  "before": {
+    "ISEKAID_PROTOTYPE_CHECKS_PASSED": true,
+    "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED": true
+  },
+  "after": {
+    "ISEKAID_PROTOTYPE_CHECKS_PASSED": true,
+    "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED": true
+  },
+  "isek002_layout_script_present": false,
+  "known_warnings": [
+    "Existing UGameStudio UAC0005 AppDomain.GetAssemblies warning",
+    "Nested UnityProjectIsekaid/.gitattributes contains macros Git only allows at repository root; not changed in this experiment"
+  ]
+}

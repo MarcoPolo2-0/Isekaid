@@ -513,3 +513,11 @@ Proteccion y limites
 - Version G2-PROTO recuperable intacta, 165 archivos protegidos sin cambios. Sin cambios de escenas/perfil/UI/runtime, fusion ni puntero de submodulo.
 - Publicado G2-CORR: b329a3e510068ffef61c951143921cb3d9777d3b en el mismo PR borrador #2.
 - Informe comunicado en https://github.com/MarcoPolo2-0/Isekaid/issues/1#issuecomment-6475338380
+
+28/10/2026 - VRM-POC - PR experimental de importacion local
+- UniVRM 0.131.4 fijado, VRM 1.0 local validado; escena independiente con adaptador de apariencia y expresiones.
+- Baseline existente pasa en Play Mode antes y despues; falta tools/verify_unified_layout.py de ISEK-002.
+- Humanoid, clips de ensayo, 14 expresiones, 25 Spring Bones y 9 rechazos de seguridad comprobados. Capturas reales privadas en LocalVrmEvidence.
+- Informe y hashes: Documentation/Audits/VRM-POC. Original, Woman, G2 y 803 archivos protegidos sin cambios.
+- Archivo VRM y capturas excluidos de Git por permisos; sin cambios de escenas/prefabs definitivos, perfil, gameplay o nuevo creador.
+- Viabilidad tecnica acotada: requiere revision de escala/locomocion, perfilado standalone y derechos de recursos antes de integrar. Sin fusion a main.

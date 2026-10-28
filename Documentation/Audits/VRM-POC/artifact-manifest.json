@@ -1,0 +1,9 @@
+{
+  "baseline-results.json": "0e600f2aae9ea2f104135e922eb9ede3a37e9a05aa5a6068daef96fa46f91e96",
+  "INFORME.md": "b6a37d9d928d0d5799a8d224c80722045af5528078a78b404283b4e444e3914b",
+  "local-capture-manifest.json": "4c0892399fe5d5aa30ae7d0c81c99f007f99ddeb7ca7a58db48da2f93bb36232",
+  "protected-files-check.json": "c7221961e5893ccce63cabf5e31eaaaa8eef4e3deba2b754cbf6b9cbd62b00b6",
+  "runtime-results.json": "745341e29a8b392abda0cfcaa576901fa37ecaf9a33396b063de4474309bac7e",
+  "source-inspection.json": "979e380b146d95740f068670f83889dd32a1386a46031460a510847dcb332dbc",
+  "scripts/check_delivery.py": "d9586f53d7e5271713159c01115ddbbb463146a607389324dedb62cee6c73f25"
+}

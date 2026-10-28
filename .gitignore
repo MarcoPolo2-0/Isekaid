@@ -121,3 +121,7 @@ InitTestScene*.unity*
 /UnityProjectIsekaid/*.sln
 /UnityProjectIsekaid/*.slnx
 
+
+# Local avatar used by the VRM experiment; redistribution is not authorized.
+/assets/test yandere companion.vrm
+/UnityProjectIsekaid/LocalVrmEvidence/
