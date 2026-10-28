@@ -3,6 +3,8 @@
 **Versión:** 0.1 · **Fecha:** 28/10/2026, Guatemala.  
 **Estado:** PROPUESTA ARTÍSTICA, pendiente de revisión del Chat 1.  
 **Responsable:** Chat 2 — Game Design.  
+
+**Continuidad de revisión:** [DEC-003](../DECISIONS.md) seleccionó A como referencia de trabajo y mantuvo G2 en correcciones. La [dirección artística v0.2](ISEK-001_Direccion_Artistica_v0.2.md) desarrolla observaciones sobre los renders reales de G2-PROTO. Esta v0.1 y sus imágenes se conservan como historial conceptual; no representan arte final aprobado.
 **Autoridad:** [DEC-001 y DEC-002](../DECISIONS.md).  
 **Marco:** [ISEK-001 v0.1](ISEK-001.md), [GDD v0.5](../GameDesignDocument_v0.5.md) y [auditoría Woman v1.0](../Audits/ISEK-001/INFORME.md).
 

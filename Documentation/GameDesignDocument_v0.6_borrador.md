@@ -481,4 +481,6 @@ La preparación documental no depende de resolverlos todos ahora. Cada punto blo
 
 **Validación documental:** integridad del cuerpo heredado, enlaces locales, IDs de criterios y coherencia entre estados aprobados/propuestos. La comprobación final de estos puntos se registra en `readme.txt` al publicar el paquete.
 
+**Revisión de trazabilidad 4, 28/10/2026:** [DEC-003](DECISIONS.md) mantiene G2 en correcciones y limita la autorización a G2-CORR. La [dirección artística v0.2](Specifications/ISEK-001_Direccion_Artistica_v0.2.md) compara renders reales y objetivos conceptuales, localiza correcciones corporales, revisa AV01–04 y corrige referencias de prendas/expresión. Las precisiones nuevas son propuestas; este GDD permanece en BORRADOR.
+
 **Sin ejecución de producto en esta revisión:** no se modifica código, escenas, prefabs, configuración, datos de partida ni assets dentro de Unity. No se realiza nueva compilación, Play Mode, medición de rendimiento ni build. No se afirma validación visual del juego a partir de la lámina.

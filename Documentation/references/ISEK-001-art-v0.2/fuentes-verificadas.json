@@ -1,0 +1,87 @@
+{
+  "source_commit": "afcdd61649bac3cabc833605d61037006eaf6509",
+  "verification": "Coincidencia con blobs del commit y SHA-256 local; sin ejecutar Blender o Unity",
+  "source_repository": "MarcoPolo2-0/Isekaid-2026-10-27_13-09-18",
+  "files": [
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/INFORME.md",
+      "sha256": "c095ff1b6f869602ddd3ccd12d74afb00a56bbb095363e5a39247cd0872a528d",
+      "git_blob": "a43feb9f4d122a0e12ee72f1bdca4312a3ba9f6a"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/artifact-manifest.json",
+      "sha256": "5f8dd041f13a3fb4d66c189625ee8f6d8d9b595569e7f18dab3aa680a0ef3fcb",
+      "git_blob": "3bc6ec3da2b42d041bf42a73c00b99fa695f26c6"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/original-vs-neutral.jpg",
+      "sha256": "b0eca67c96669e3c7280a31cc3e2d6495c8dde0f985488e9bf2712ad7397c455",
+      "git_blob": "d66bcbd6651f553cfd4bfc20357e484f2cb67df8"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/neutral-body-front.png",
+      "sha256": "100c8ed0177134712a4a690dfbc06456ac655a467f19a016ae63726a6c2da69b",
+      "git_blob": "53e13ca7231afdbe80ca97bcddf2c89f7954bb61"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/neutral-body-side.png",
+      "sha256": "76d7dea73b86bf005db75956d90bea9dceec8bf82970f230430b19738e4c5a2b",
+      "git_blob": "73fcd4166cf55ccc06ef3ebbb344fc4ca7cf0dcd"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/neutral-body-back.png",
+      "sha256": "7cb4f75902cf73ae05b1819c78fc5d9a46d0b27f3fcbf5f76fd6c5b39c1fc911",
+      "git_blob": "f7a4669437062d0ee19d1333d14e390c4207e779"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/neutral-body-threequarter.png",
+      "sha256": "03905ca29dd1f76e68804e426ef3179a7bb38b41652e26c155754a21167302ed",
+      "git_blob": "f2eff1b023a2b835ca21a4bfaa75e9c32d6bbf5b"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/matrix-27-front.jpg",
+      "sha256": "8bcbf5b2e49f9d9743559edd748430bcb2060b60e89532a25f317f950d9540c7",
+      "git_blob": "11d0463901c057849845eeddef1c23c3af816256"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/matrix-27-side.jpg",
+      "sha256": "de05c6e3eeb0b3511c9975be63b34795496f2d095a013edeb0f0b06b231b78ea",
+      "git_blob": "55dadea11689ae499337c8f7d6beb985c1884638"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/combinations/1_1_0_front.png",
+      "sha256": "427447f7aa420ff76659e799042c93fffdd9c85888378132eeabfc71fe8b6ac4",
+      "git_blob": "62230d6c3b659d5425fb854b3c92b51e3dbc4d97"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/combinations/1_1_2_front.png",
+      "sha256": "2d751f9868bd80ae375c9bfde06e61f0a839c2795c34e5ece279550bb17d4b10",
+      "git_blob": "11545efc891c2fbca9cda31f17098e26c731c1a5"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/combinations/1_0_1_front.png",
+      "sha256": "08ddff51d1c947913f96a0adcb40a82682c134077f91a6e7df5a62cb309cb625",
+      "git_blob": "c99c54661aa664862d766e672bee26c4b9a36b70"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/combinations/1_2_1_front.png",
+      "sha256": "ea17e15698ba82674ef16c70ec840aefaf08c24946b299ea05d0503738eaf7d6",
+      "git_blob": "6864fd7c5e6c7aeb3039c61105874c42d02f1389"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/14-chest-profile-0.png",
+      "sha256": "3b09fbe2e4c84e4b66bafc9a77fec89603c2690a3c8764f6ca262a57fc601363",
+      "git_blob": "897fd554089978b7ebf2b5ce312fd94df27de2b0"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/14-chest-profile-2.png",
+      "sha256": "57d28d402af0500811a4bbc65be2aae00fd1cda37b31f664dba19f5a7897ba66",
+      "git_blob": "024888c3b62393bdc22168e47b274eed6ff55018"
+    },
+    {
+      "path": "SourceArt/Companion/Woman/G2-PROTO/evidence/neutral-clothes-front.png",
+      "sha256": "416ed08c6877cadeeaff334be50a1f363fb54fd687e0d51c026c22b785d4f4b3",
+      "git_blob": "90b165e97f7902ac1fb2220b79bf2fe342fdbcaa"
+    }
+  ]
+}

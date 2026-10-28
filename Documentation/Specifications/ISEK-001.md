@@ -9,6 +9,8 @@
 **Referencia de aceptación general:** [Compañera v0.1](../Especificacion_Companera_v0.1.md), todavía PROPUESTA.  
 **Workflow:** [Desarrollo v1.0](../Workflow_Desarrollo_v1.0.md).
 
+**Estado posterior — DEC-003:** G2 requiere correcciones; solo G2-CORR está autorizada. A es referencia de trabajo, no arte final aceptado. La [revisión artística v0.2](ISEK-001_Direccion_Artistica_v0.2.md) localiza correcciones y revisa AV01–04 sobre la evidencia real de G2-PROTO; sus precisiones adicionales permanecen como propuestas. G3/G4 e integración siguen pendientes de Dirección.
+
 **Revisión vigente — DEC-002, 28/10/2026:** Dirección aceptó la evaluación técnica G1, la factibilidad experimental de tres ejes y este marco de cuatro puertas/16 criterios; autorizó únicamente G2-PROTO. La apariencia neutral, los extremos y los detalles propuestos siguen pendientes de aceptación artística. Los estados y pruebas pendientes descritos abajo registran la entrega original; consultar [DEC-002](../DECISIONS.md) y la [auditoría técnica](../Audits/ISEK-001/INFORME.md) para los resultados posteriores. La [propuesta artística v0.1](ISEK-001_Direccion_Artistica_v0.1.md) reúne alternativas y referencias para la nueva revisión. Este aviso no aprueba la especificación completa ni autoriza G3/G4.
 
 La elección de la base corporal está aprobada en DEC-001. Esta versión concreta su dirección visual, controles, pruebas y entregables; no declara aprobados sus detalles nuevos ni completada la tarea. Dirección revisa la especificación y Desarrollo informa la viabilidad técnica antes de sustituir al personaje actual.
