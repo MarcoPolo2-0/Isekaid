@@ -2,17 +2,20 @@
 
 **Versión:** 0.6 — borrador de revisión.  
 **Fecha:** 27/10/2026, Guatemala.  
+**Última actualización:** 28/10/2026 — trazabilidad de DEC-001 e ISEK-001.  
 **Estado:** PROPUESTA — pendiente de revisión del Chat 1, Dirección del proyecto (Cerebro); acuerdos previos conservados.  
 **Workflow:** [Desarrollo v1.0](Workflow_Desarrollo_v1.0.md).  
 **Responsable de esta revisión:** Chat 2 — Game Design.  
-**ID de tarea:** pendiente de asignación por Dirección; no se ha autorizado el inicio de desarrollo de esta propuesta.  
+**Tarea vinculada:** [ISEK-001](Specifications/ISEK-001.md), base corporal y visual conforme a [DEC-001](DECISIONS.md). La aprobación de esa dirección no aprueba este borrador completo.  
 **Motor:** Unity 6; proyecto local inspeccionado: 6000.6.7f1.  
 **Dirección artística:** anime 3D con cel shading.  
 **Documento base:** [GameDesignDocument_v0.5.md](GameDesignDocument_v0.5.md).  
 **Especificación de aceptación:** [Compañera v0.1](Especificacion_Companera_v0.1.md).  
-**Ubicación documental:** `C:\Users\PC\Documents\Game Idea\Documentation`.
+**Ubicación documental vigente:** `C:\Users\PC\Documents\Game Idea\Isekaid\Documentation`.
 
 Esta revisión conserva literalmente el cuerpo de las secciones 1–16 y el registro de la v0.5. Las secciones 17–21 añaden estado actual, trazabilidad, prioridades y control de decisiones. Los detalles marcados como propuesta en la v0.5 mantienen ese estado. La versión 0.6 no aprueba por sí sola sus ampliaciones.
+
+**Actualización de dirección, 28/10/2026:** DEC-001 establece el modelo **Woman de Fly_jkey**, disponible como `assets/woman.fbx`, como base candidata principal para ISEK-001, con apariencia neutral equilibrada. Pecho y caderas son independientes; cintura está condicionada a evaluación técnica. La especificación [ISEK-001 v0.1](Specifications/ISEK-001.md) define cuatro puertas y 16 criterios, en estado PROPUESTA. La documentación técnica de la sección 18 describe la revisión del 27/10; no es una auditoría nueva del proyecto reubicado. La lámina v01 sigue siendo candidata y no representa una aprobación del modelo final.
 
 La copia de v0.5 se recuperó del texto íntegro de una lectura local anterior del 27/10/2026: su archivo de Downloads ya no estaba disponible al realizar esta revisión. Se conserva ese contenido, incluida su nota histórica de entrega. No se afirma identidad binaria con el archivo original desaparecido ni que dicha nota describa la ubicación actual.
 
@@ -396,7 +399,7 @@ No se ejecutó Unity durante esta revisión de diseño. Las pruebas de compilaci
 | Autonomía | `CompanionController` sigue mediante NavMesh, recibe esperar/seguir y consulta posición navegable | No demuestra evaluación completa de percepción, ruta inválida, decisiones sociales o tácticas | Navegación y órdenes como base para casos de recuperación |
 | Supervivencia | Estado Downed, contador 30 s y postura inclinada; pruebas de regresión existentes | Ensayo de incapacidad, no combate, reanimación animada ni checkpoint de aventura completo | Separación trampa/incapacidad y temporizador ya comprobado por desarrollo |
 
-Rutas de contraste: [CompanionState](../Isekaid/Assets/_Project/Scripts/Companion/CompanionState.cs), [CompanionProfile](../Isekaid/Assets/_Project/Scripts/Companion/CompanionProfile.cs), [CompanionController](../Isekaid/Assets/_Project/Scripts/Companion/CompanionController.cs), [CompanionAppearance](../Isekaid/Assets/_Project/Scripts/Companion/CompanionAppearance.cs), [CompanionProfileStore](../Isekaid/Assets/_Project/Scripts/Companion/CompanionProfileStore.cs), [CompanionPalette](../Isekaid/Assets/_Project/Scripts/Companion/CompanionPalette.cs), [constructor del prototipo](../Isekaid/Assets/_Project/Editor/PrototypeSceneBuilder.cs) y [pruebas existentes](../Isekaid/Assets/_Project/Editor/PrototypePlayModeChecks.cs).
+Rutas de contraste: [CompanionState](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionState.cs), [CompanionProfile](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionProfile.cs), [CompanionController](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionController.cs), [CompanionAppearance](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionAppearance.cs), [CompanionProfileStore](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionProfileStore.cs), [CompanionPalette](../Isekaidunity/Assets/_Project/Scripts/Companion/CompanionPalette.cs), [constructor del prototipo](../Isekaidunity/Assets/_Project/Editor/PrototypeSceneBuilder.cs) y [pruebas existentes](../Isekaidunity/Assets/_Project/Editor/PrototypePlayModeChecks.cs).
 
 Estas observaciones están acotadas al código propio revisado. No califican todos los paquetes de terceros ni afirman que los ZIP externos de personajes estén listos para integrarse.
 
@@ -471,6 +474,8 @@ La preparación documental no depende de resolverlos todos ahora. Cada punto blo
 **0.6 borrador, 27/10/2026:** recuperado y preservado el texto de la v0.5; añadida trazabilidad de acuerdos; actualizado el diagnóstico con la versión técnica 0.2 y lectura actual del código propio; elaborados criterios de aceptación de modelo, personalización, expresiones, cuerpo, conversación, memoria y autonomía; definidos hitos y evidencia; identificada la lámina v01 como candidata.
 
 **Revisión administrativa 1, 27/10/2026:** incorporado el Workflow de desarrollo v1.0. Estado formal PROPUESTA; revisión a cargo de Dirección y mantenimiento a cargo de Game Design. Tarea pendiente de asignación. No cambian los acuerdos de diseño, los 34 criterios ni el cuerpo heredado de la v0.5.
+
+**Revisión de trazabilidad 2, 28/10/2026:** vinculadas DEC-001 e ISEK-001; actualizado el directorio documental tras la reorganización en repositorio principal y submódulo Unity. Creada la propuesta específica para `woman.fbx`. Se mantienen sin cambios el cuerpo aprobado de la v0.5 y las propuestas generales fuera de esta tarea.
 
 **Validación documental:** integridad del cuerpo heredado, enlaces locales, IDs de criterios y coherencia entre estados aprobados/propuestos. La comprobación final de estos puntos se registra en `readme.txt` al publicar el paquete.
 

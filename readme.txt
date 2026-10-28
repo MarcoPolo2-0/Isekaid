@@ -344,3 +344,60 @@ Limites y pendientes
 - No se asignaron tareas ni se enviaron instrucciones a otros chats.
 - No se modificaron codigo, escenas, prefabs ni assets de Unity.
 - No se ejecutaron nuevas pruebas del juego.
+
+======================================================================
+28/10/2026 - GAME DESIGN - ISEK-001 CON WOMAN.FBX
+======================================================================
+
+- Incorporadas por avance directo las decisiones y el workflow publicados
+  por Direccion en el repositorio principal; sin cambiar el puntero Unity
+  ni sus archivos locales pendientes.
+- Creada Documentation/Specifications/ISEK-001.md, version 0.1, PROPUESTA.
+- La eleccion de woman.fbx como candidato principal procede de DEC-001.
+- Definidos silueta neutral, pecho y caderas independientes, cintura
+  condicionada a viabilidad, ropa compatible, perfil y animaciones minimas.
+- Definida matriz de 9 combinaciones, o 27 con cintura, seis poses criticas
+  y barridos continuos; cuatro puertas de evaluacion y 16 criterios.
+- Vinculados ISEK-001 y DEC-001 desde el GDD v0.6 y la especificacion general.
+- Actualizada la ubicacion documental y ocho enlaces hacia Isekaidunity.
+- Conservados los acuerdos del GDD v0.5 y el estado PROPUESTA de los borradores.
+
+Validacion documental y del archivo recibido
+- Confirmados 16 IDs unicos y 31 enlaces locales de los documentos revisados.
+- Confirmado que el cuerpo heredado de la v0.5 no cambio.
+- woman.fbx: 639772 bytes, cabecera FBX binario 7400.
+- SHA-256: 674C07FF612577A1A5B7E7EE124202722FA5EB0F68BDC01C820A875B5BEF1D87.
+- Confirmado que el FBX original conserva ese hash tras la entrega.
+- La fuente Sketchfab devolvio HTTP 403; la licencia se registra como
+  informacion de DEC-001, sin afirmar verificacion independiente nueva.
+
+Limites
+- No se inspeccionaron topologia, rig o Shape Keys en Blender.
+- No se modificaron FBX, codigo, escenas, prefabs ni assets de Unity.
+- No se ejecutaron compilacion, Play Mode, build ni pruebas de deformacion.
+- Ninguna puerta tecnica ni criterio de producto se declara superado.
+- La especificacion queda preparada para revision de Direccion.
+
+======================================================================
+28/10/2026 - ENTREGA FORMAL DE DISENO ISEK-001 V0.1
+======================================================================
+
+- Confirmado que el trabajo actualizado estaba guardado localmente, sin
+  un commit previo ni otra rama remota que contuviera esta entrega.
+- Preparada la publicacion documental de ISEK-001 v0.1 en el repositorio
+  principal MarcoPolo2-0/Isekaid, conservando su estado PROPUESTA.
+- Especificacion general y GDD v0.6 referencian expresamente DEC-001:
+  modelo Woman de Fly_jkey, apariencia neutral equilibrada, pecho y
+  caderas independientes y cintura condicionada a viabilidad tecnica.
+- Identificados ISEK-001-P01 a P04 para revisar silueta y extremos,
+  controles y perfil, expresiones y animaciones, y alcance de las puertas.
+- Verificados 16 criterios unicos, cuatro puntos de aprobacion,
+  31 enlaces locales y conservacion del cuerpo heredado de la v0.5.
+- El hash de woman.fbx coincide con la referencia registrada.
+- Alcance de la entrega: Documentation/Specifications/ISEK-001.md,
+  Documentation/Especificacion_Companera_v0.1.md,
+  Documentation/GameDesignDocument_v0.6_borrador.md y este registro.
+- No se aprueba la especificacion ni se declara viable el FBX por esta
+  publicacion. Revision de Direccion y validacion tecnica pendientes.
+- No se modifican decisiones aprobadas, codigo ni puntero del submodulo.
+- No se ejecutaron Blender, Unity, pruebas de deformacion ni builds.

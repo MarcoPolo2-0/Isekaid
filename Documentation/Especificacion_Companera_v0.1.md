@@ -2,13 +2,17 @@
 
 **Versión:** 0.1 · **Fecha:** 27/10/2026 · **Estado:** PROPUESTA.
 
+**Última actualización:** 28/10/2026 — trazabilidad de DEC-001 e ISEK-001.
+
 **Revisión administrativa:** 1 — adopción del [Workflow de desarrollo v1.0](Workflow_Desarrollo_v1.0.md).  
 **Responsable:** Chat 2 — Game Design.  
 **Revisión y aprobación:** Chat 1 — Dirección del proyecto (Cerebro).  
-**ID de tarea:** pendiente de asignación por Dirección.  
+**Tareas vinculadas:** [ISEK-001](Specifications/ISEK-001.md) concreta la base corporal y visual conforme a DEC-001. Los sistemas sociales y de autonomía conservan su alcance propuesto y requieren asignación de Dirección.  
 **Inicio de desarrollo:** no autorizado por esta especificación; requiere estado APROBADA para una tarea, versión y alcance identificados.
 
 **Base:** [GDD v0.5](GameDesignDocument_v0.5.md), [revisión v0.6](GameDesignDocument_v0.6_borrador.md) y prioridades solicitadas el 27/10/2026. Este documento define resultados; no modifica código ni acredita una implementación.
+
+**Actualización de trazabilidad, 28/10/2026:** [DEC-001](DECISIONS.md) selecciona el modelo **Woman de Fly_jkey**, disponible como `assets/woman.fbx`, como candidato principal. Establece una apariencia neutral equilibrada, ajustes independientes de pecho y caderas y cintura condicionada a viabilidad técnica. [ISEK-001 v0.1](Specifications/ISEK-001.md) especifica esta tarea; sigue en PROPUESTA. La selección del candidato no aprueba el resto de este documento. Se conserva como referencia histórica la matriz original de dos ejes; la especificación de la tarea amplía la prueba a tres ejes solo si cintura se habilita.
 
 ## 1. Propósito y alcance
 
