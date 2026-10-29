@@ -644,3 +644,9 @@ Proteccion y limites
   F3; implementacion F3 requiere autorizacion posterior. Woman/G2 en pausa.
 - GDD v0.5 e historial completo de readme de Desarrollo/Diseno conservados.
 - Solo correccion documental; no se ejecutan Unity ni builds, ni se fusiona PR.
+
+2026-10-29 — F3A: rama feature/isek-f3a-dialogue-runtime desde main 4bd6857 (PR #6/#7 fusionados). Autorización directa de Dirección para diálogo local limitado en Game; F2 sigue pendiente de pruebas manuales. Contenido provisional JSON con IDs estables, director por encuentro, opciones UI Toolkit y reacciones semánticas reutilizan control, avatar y pausa existentes. Sin cambios de escenas, GUID existentes, perfil o importador; no F3 completa, memoria persistente, romance ni combate. Pruebas en preparación; sin declarar funcionalidad verificada todavía.
+
+2026-10-29 — F3A: primer recorrido real Play Mode superado en Unity 6000.6.7f1: personalidades, elecciones, rescate/reanimación, pausa, movimiento y cambios de apariencia. Capturas reales revisadas a 1920x1080, 1600x900 y 1280x720. Corrección local de entrada: Tab/Esc no reanudan Game detrás del creador aditivo. Se ajusta la presentación para no repetir Spoke al pausar/reanudar y conservar la petición de ayuda al salir del menú; pruebas adicionales y regresión F2 en curso. El Editor batch no acredita captura física del cursor.
+
+2026-10-29 — F3A: 123 comprobaciones finales Play Mode PASS (editor-results.json); se confirma no repetición de Spoke por pausa y reacción de ayuda desde el menú. Regresión F2 con metadatos grandes PASS: 43 comprobaciones, 195 recursos liberados. Regresión original de dos escenas PASS; guardas: 9 rechazos y 2 límites de archivo; almacenamiento heredado: 11 aserciones PASS. Capturas públicas seleccionadas exclusivamente de Adventurer CC0; VRM y capturas privadas excluidos.

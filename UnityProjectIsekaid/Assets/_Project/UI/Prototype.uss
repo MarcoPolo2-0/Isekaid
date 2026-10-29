@@ -19,6 +19,10 @@ Button { background-color: rgb(40, 58, 60); color: rgb(235, 238, 231); border-wi
 Button:hover { background-color: rgb(59, 80, 78); }
 Button:focus { border-color: rgb(235, 220, 180); }
 Button:disabled { opacity: 0.4; }
+#conversation { position: absolute; left: 25%; right: 25%; bottom: 55px; padding: 18px 24px; background-color: rgba(16, 29, 32, 0.97); border-top-width: 2px; border-top-color: rgb(209, 181, 114); border-radius: 8px; }
+#conversation-speaker { font-size: 12px; color: rgb(209, 181, 114); margin-bottom: 10px; white-space: normal; }
+#conversation-text { font-size: 18px; white-space: normal; margin-bottom: 12px; }
+#conversation-options Button { min-height: 38px; }
 Button.primary { background-color: rgb(205, 180, 121); color: rgb(20, 34, 35); -unity-font-style: bold; min-height: 43px; }
 .palette { flex-direction: row; }
 .palette Button { flex-grow: 1; flex-basis: 0; margin-right: 4px; font-size: 12px; padding: 5px 3px; }

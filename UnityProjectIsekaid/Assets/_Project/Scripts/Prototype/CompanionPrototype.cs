@@ -36,12 +36,18 @@ namespace Isekaid
             navMeshInstance = NavMesh.AddNavMeshData(navigation);
         }
 
-        private void OnEnable() => companion.Changed += OnCompanionChanged;
+        private void OnEnable()
+        {
+            companion.Changed += OnCompanionChanged;
+            companion.Dialogue.Changed += RefreshInput;
+        }
         private void Start() => SetPaused(false);
 
         private void OnDisable()
         {
             companion.Changed -= OnCompanionChanged;
+            companion.Dialogue.Changed -= RefreshInput;
+            companion.Dialogue.Close();
             player.InputEnabled = false;
             Time.timeScale = previousTimeScale;
             Cursor.lockState = CursorLockMode.None;
@@ -57,12 +63,27 @@ namespace Isekaid
 
         private void Update()
         {
+            if (changingScene) return;
             var keyboard = Keyboard.current;
+            var dialogue = companion.Dialogue;
+            if (!IsPaused && dialogue.Active && keyboard != null && keyboard.escapeKey.wasPressedThisFrame)
+            { dialogue.Close(); return; }
             if (keyboard != null && (keyboard.tabKey.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame))
                 SetPaused(!IsPaused);
 
             if (IsPaused)
                 return;
+
+            if (dialogue.Active)
+            {
+                if (keyboard != null)
+                {
+                    int choice = keyboard.digit1Key.wasPressedThisFrame ? 0 : keyboard.digit2Key.wasPressedThisFrame ? 1 : keyboard.digit3Key.wasPressedThisFrame ? 2 : -1;
+                    if (choice >= 0 && choice < dialogue.Choices.Count) dialogue.Choose(dialogue.Choices[choice].id);
+                    else if (keyboard.fKey.wasPressedThisFrame) companion.SetFollowing(!companion.IsFollowing);
+                }
+                return;
+            }
 
             bool interact = player.InteractPressed;
             bool command = keyboard != null && keyboard.fKey.wasPressedThisFrame;
@@ -99,10 +120,17 @@ namespace Isekaid
         {
             IsPaused = paused || companion.State.LifeState == CompanionLifeState.Dead;
             Time.timeScale = IsPaused ? 0f : 1f;
-            player.InputEnabled = !IsPaused;
-            Cursor.lockState = IsPaused ? CursorLockMode.None : CursorLockMode.Locked;
-            Cursor.visible = IsPaused;
+            companion.Dialogue.SetSuspended(IsPaused);
+            RefreshInput();
             Changed?.Invoke();
+        }
+
+        private void RefreshInput()
+        {
+            bool blocked = IsPaused || companion.Dialogue.Active || changingScene || !isActiveAndEnabled;
+            player.InputEnabled = !blocked;
+            Cursor.lockState = blocked ? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = blocked;
         }
 
         public void SimulateIncapacitation()
@@ -124,6 +152,7 @@ namespace Isekaid
                 return;
             if (companion.State.LifeState == CompanionLifeState.Downed || companion.State.LifeState == CompanionLifeState.Dead)
                 return;
+            companion.Dialogue.Interrupt(DialoguePriority.Important);
             changingScene = true;
             pausedBeforeCreation = IsPaused;
             SetPaused(true);

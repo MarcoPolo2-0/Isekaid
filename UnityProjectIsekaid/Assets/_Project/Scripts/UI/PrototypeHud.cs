@@ -21,6 +21,7 @@ namespace Isekaid
         private Button incapacitate;
         private float nextHudUpdate;
         private float dialogueUntil;
+        private DialoguePresenter conversation;
 
         private void OnEnable()
         {
@@ -41,6 +42,7 @@ namespace Isekaid
             prompt = AddLabel(root, "", "prompt");
             dialogue = AddLabel(root, "", "dialogue");
             AddLabel(root, "WASD  Moverse     Ratón  Mirar     Shift  Correr     Espacio  Saltar     Tab / Esc  Pausa", "controls");
+            conversation = new DialoguePresenter(root, prototype.Companion.Dialogue, () => prototype.Companion.State.Personality);
 
             menu = new ScrollView { name = "menu" };
             root.Add(menu);
@@ -67,6 +69,7 @@ namespace Isekaid
         {
             prototype.Changed -= Refresh;
             prototype.Companion.Spoke -= ShowDialogue;
+            conversation?.Dispose();
         }
 
         private static Label AddLabel(VisualElement parent, string text, string className)
@@ -86,6 +89,7 @@ namespace Isekaid
 
         private void ShowDialogue(string line)
         {
+            if (prototype.Companion.Dialogue.Active) { dialogue.text = ""; return; }
             dialogue.text = "COMPAÑERA\n" + line;
             dialogueUntil = Time.time + 9f;
             dialogue.style.display = DisplayStyle.Flex;
@@ -138,13 +142,13 @@ namespace Isekaid
             appearanceNotice.text = appearance.RecoveredFallback ? appearance.Status : "";
             timer.text = state.LifeState == CompanionLifeState.Downed ? $"RESCATE  {Mathf.CeilToInt(state.RescueSecondsRemaining):00} s" : "";
             prompt.text = "";
-            if (!prototype.IsPaused && prototype.CanInteract())
+            if (!prototype.IsPaused && !prototype.Companion.Dialogue.Active && prototype.CanInteract())
                 prompt.text = state.LifeState == CompanionLifeState.Active
-                    ? "Mantén E · Conversar     F · Sígueme / Espera aquí"
+                    ? (prototype.Companion.Dialogue.HasTopics ? "Mantén E · Conversar     F · Sígueme / Espera aquí" : "Sin temas nuevos · F · Sígueme / Espera aquí")
                     : state.LifeState == CompanionLifeState.Trapped ? "Mantén E · Desactivar la trampa"
                     : state.LifeState == CompanionLifeState.Downed ? "Mantén E · Reanimar" : "";
 
-            dialogue.style.display = dialogue.text.Length > 0 && Time.time < dialogueUntil && !prototype.IsPaused
+            dialogue.style.display = dialogue.text.Length > 0 && Time.time < dialogueUntil && !prototype.IsPaused && !prototype.Companion.Dialogue.Active
                 ? DisplayStyle.Flex : DisplayStyle.None;
         }
     }

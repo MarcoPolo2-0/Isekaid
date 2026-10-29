@@ -1,0 +1,207 @@
+{
+  "provisional": true,
+  "entries": [
+    {
+      "id": "fact.rescue",
+      "emotion": "Relief",
+      "texts": [
+        "¡Ya estaba buscando cómo salir! ...Pero gracias. ¿Tú también vas hacia la aldea?",
+        "Te detuviste a ayudarme... Gracias. No conozco este camino. Podemos llegar juntos a la aldea.",
+        "Gracias... Creí que nadie iba a escucharme. Si también vas a la aldea, ¿podemos acompañarnos?"
+      ]
+    },
+    {
+      "id": "fact.revive",
+      "emotion": "Relief",
+      "texts": [
+        "Puedo levantarme. Esta vez sí necesitaba una mano... Gracias.",
+        "Volviste cuando te necesitaba. Gracias. Recuperaré el aliento antes de seguir.",
+        "Gracias por volver... Ya puedo ponerme en pie. Necesito respirar un momento."
+      ]
+    },
+    {
+      "id": "fact.follow",
+      "emotion": "Joy",
+      "texts": [
+        "Voy contigo. Pero también estaré vigilando el camino.",
+        "Sigamos cerca y atentos. Yo también miraré por dónde pisamos.",
+        "Está bien... Te acompaño. Avisaré si veo algo."
+      ]
+    },
+    {
+      "id": "fact.wait",
+      "emotion": "Neutral",
+      "texts": [
+        "Espero aquí. No tardes sin avisar.",
+        "Me quedaré en este punto. Avísame cuando quieras continuar.",
+        "Te espero aquí... Así sabrás dónde encontrarme."
+      ]
+    },
+    {
+      "id": "fact.downed",
+      "emotion": "Sadness",
+      "texts": [
+        "¡No puedo levantarme! Necesito que te acerques y me ayudes.",
+        "¡Necesito ayuda! Acércate; todavía podemos salir de esta.",
+        "No puedo seguir... Por favor, acércate para reanimarme."
+      ]
+    },
+    {
+      "id": "talk.first",
+      "emotion": "Neutral",
+      "texts": [
+        "Bien, podemos hablar un momento. ¿Qué quieres saber?",
+        "Te has detenido a escucharme otra vez. ¿Qué quieres preguntarme?",
+        "Podemos hablar un poco... ¿Qué te gustaría saber?"
+      ],
+      "options": [
+        {
+          "id": "question.health",
+          "text": "¿Cómo te encuentras?",
+          "target": "answer.health"
+        },
+        {
+          "id": "question.trap",
+          "text": "¿Qué piensas de esa trampa?",
+          "target": "answer.trap"
+        },
+        {
+          "id": "question.route",
+          "text": "¿Cómo seguimos?",
+          "target": "answer.route"
+        }
+      ]
+    },
+    {
+      "id": "talk.following",
+      "emotion": "Joy",
+      "texts": [
+        "Seguimos juntos por ahora. Si quieres preguntar algo, aprovecha este descanso.",
+        "Estamos avanzando juntos. Me alegra poder hablar mientras recuperamos el aliento.",
+        "Caminar acompañada me tranquiliza... Podemos hablar un momento."
+      ],
+      "options": [
+        {
+          "id": "question.health",
+          "text": "¿Cómo te encuentras?",
+          "target": "answer.health"
+        },
+        {
+          "id": "question.trap",
+          "text": "¿Qué piensas de esa trampa?",
+          "target": "answer.trap"
+        },
+        {
+          "id": "question.route",
+          "text": "¿Cómo seguimos?",
+          "target": "answer.route"
+        }
+      ]
+    },
+    {
+      "id": "talk.waiting",
+      "emotion": "Neutral",
+      "texts": [
+        "Sigo en el sitio que acordamos. ¿Querías preguntarme algo antes de salir?",
+        "Te estaba esperando aquí, como dijimos. ¿Hablamos antes de continuar?",
+        "No me he movido de aquí... ¿Quieres que hablemos antes de seguir?"
+      ],
+      "options": [
+        {
+          "id": "question.health",
+          "text": "¿Cómo te encuentras?",
+          "target": "answer.health"
+        },
+        {
+          "id": "question.trap",
+          "text": "¿Qué piensas de esa trampa?",
+          "target": "answer.trap"
+        },
+        {
+          "id": "question.route",
+          "text": "¿Cómo seguimos?",
+          "target": "answer.route"
+        }
+      ]
+    },
+    {
+      "id": "talk.again",
+      "emotion": "Surprise",
+      "texts": [
+        "¿Otra pregunta? De acuerdo, mientras sigamos atentos.",
+        "Has vuelto a conversar. Todavía podemos aclarar algo antes de seguir.",
+        "Oh... ¿Querías hablar un poco más? Te escucho."
+      ],
+      "options": [
+        {
+          "id": "question.health",
+          "text": "¿Cómo te encuentras?",
+          "target": "answer.health"
+        },
+        {
+          "id": "question.trap",
+          "text": "¿Qué piensas de esa trampa?",
+          "target": "answer.trap"
+        },
+        {
+          "id": "question.route",
+          "text": "¿Cómo seguimos?",
+          "target": "answer.route"
+        }
+      ]
+    },
+    {
+      "id": "talk.recovered",
+      "emotion": "Relief",
+      "texts": [
+        "Ya puedo mantenerme en pie. No pienso fingir que no necesitaba ayuda.",
+        "Después de que me ayudaras a levantarme, prefiero retomar el camino con calma.",
+        "Ya respiro mejor... Gracias por no dejarme atrás cuando no podía moverme."
+      ],
+      "options": [
+        {
+          "id": "question.health",
+          "text": "¿Cómo te encuentras?",
+          "target": "answer.health"
+        },
+        {
+          "id": "question.trap",
+          "text": "¿Qué piensas de esa trampa?",
+          "target": "answer.trap"
+        },
+        {
+          "id": "question.route",
+          "text": "¿Cómo seguimos?",
+          "target": "answer.route"
+        }
+      ]
+    },
+    {
+      "id": "answer.health",
+      "emotion": "Relief",
+      "texts": [
+        "Mejor que dentro de esa trampa. Puedo seguir, pero iré con cuidado.",
+        "Ahora puedo respirar con calma. Salir de allí y tener compañía ayuda.",
+        "Todavía estoy algo nerviosa... Pero ya puedo caminar. Gracias por preguntar."
+      ]
+    },
+    {
+      "id": "answer.trap",
+      "emotion": "Anger",
+      "texts": [
+        "Dejar algo así en el camino... No voy a volver a pisar sin mirar.",
+        "Me enfada que alguien la dejara allí. No quiero que ninguno de los dos caiga otra vez.",
+        "No me parece justo que alguien hiciera eso... Estaré más atenta a dónde piso."
+      ]
+    },
+    {
+      "id": "answer.route",
+      "emotion": "Concern",
+      "texts": [
+        "Primero mira el suelo. Si seguimos hacia la aldea, prefiero hacerlo sin otra caída.",
+        "Mantengámonos atentos al sendero. Aún no conocemos bien este lugar.",
+        "Podemos seguir hacia la aldea... Si vemos algo extraño, mejor detenernos a mirar."
+      ]
+    }
+  ]
+}
