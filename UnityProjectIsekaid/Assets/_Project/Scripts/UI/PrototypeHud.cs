@@ -148,6 +148,7 @@ namespace Isekaid
                     : state.LifeState == CompanionLifeState.Trapped ? "Mantén E · Desactivar la trampa"
                     : state.LifeState == CompanionLifeState.Downed ? "Mantén E · Reanimar" : "";
 
+            if (prototype.Companion.Dialogue.Active) dialogue.text = "";
             dialogue.style.display = dialogue.text.Length > 0 && Time.time < dialogueUntil && !prototype.IsPaused && !prototype.Companion.Dialogue.Active
                 ? DisplayStyle.Flex : DisplayStyle.None;
         }

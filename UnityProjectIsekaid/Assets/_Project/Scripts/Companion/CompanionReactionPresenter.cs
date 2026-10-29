@@ -6,20 +6,31 @@ namespace Isekaid
     {
         private readonly Func<string, bool> request;
         private float remaining;
+        private string preferredOverride, fallbackOverride;
         public CompanionEmotion Emotion { get; private set; }
         public string AppliedExpression { get; private set; } = "neutral";
         public bool UsedFallback { get; private set; }
 
         public CompanionReactionPresenter(Func<string, bool> request) { this.request = request; }
-        public void Show(CompanionEmotion emotion, float seconds = -1f)
+        public void Show(CompanionEmotion emotion, float seconds = -1f, string preferred = null, string fallback = null)
         {
             Emotion = emotion;
             remaining = seconds;
+            preferredOverride = preferred;
+            fallbackOverride = fallback;
             Reapply();
         }
 
         public void Reapply()
         {
+            if (preferredOverride != null)
+            {
+                string requested = preferredOverride == "reset" ? "neutral" : preferredOverride;
+                UsedFallback = requested.EndsWith("_if_validated", StringComparison.Ordinal) || !request(requested);
+                AppliedExpression = UsedFallback ? (fallbackOverride == "reset" ? "neutral" : fallbackOverride ?? "neutral") : requested;
+                if (UsedFallback) request(AppliedExpression);
+                return;
+            }
             string preferred = Emotion switch
             {
                 CompanionEmotion.Joy => "happy",

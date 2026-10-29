@@ -683,3 +683,7 @@ Proteccion y limites
   autoriza Fase 3 completa ni concede aceptacion manual de F2.
 
 2026-10-29 — F3A revisión de Dirección: se integra la documentación y biblioteca canónica del PR #9 (6df539d) en la rama del PR #10, conservando completos ambos bloques de readme. Autorizada su adaptación local y corrección de continuidad/cursor, 18 recorridos y episodios de reanimación. Textos todavía sujetos a aprobación; sin ampliar F3, modificar confianza ni fusionar main.
+
+2026-10-29 — F3A revisión PR #10: biblioteca runtime adaptada reproduciblemente desde las 60 entradas del PR #9; IDs, textos y 18 opciones conservados y efectos cero validados. Cursor/opciones/foco sobreviven al cierre voluntario, pausa, creador y suspensión vital; reanimación y retorno por episodio, órdenes sin respuesta a no-op, tres casuales con enfriamiento activo compartido. Se preparan pruebas de los 18 recorridos, doble incapacidad y cambios reales de avatar. Expresiones condicionales no certificadas usan neutral, sin inventar gestos o validación artística.
+
+2026-10-29 — F3A revisión PR #10: Play Mode final PASS, 285 comprobaciones y 18 recorridos independientes. Verificados cierre/reapertura sin reemitir raíz, foco/opciones en creador catálogo→VRM→catálogo, doble reanimación por episodio, suspensión idempotente y callbacks con revisión obsoleta rechazados. Se retira el aviso transitorio antiguo al abrir el menú de temas. F3A-R10 y aprobación editorial/visual siguen parciales; regresión F2 y build revisada en preparación.

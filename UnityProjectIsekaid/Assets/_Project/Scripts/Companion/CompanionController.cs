@@ -21,6 +21,7 @@ namespace Isekaid
         private CompanionAppearance appearance;
         private object reactionAvatar;
         private DialogueEntry reactingTo;
+        private bool dialogueVisible;
 
         public CompanionState State { get; private set; } = new CompanionState();
         public bool IsFollowing { get; private set; }
@@ -40,6 +41,7 @@ namespace Isekaid
             appearance.Apply(profile);
             reactions = new CompanionReactionPresenter(appearance.PreviewExpression);
             Dialogue.Changed += OnDialogueChanged;
+            Dialogue.Presented += Speak;
         }
 
         private void Update()
@@ -81,8 +83,7 @@ namespace Isekaid
                 IsFollowing = true;
                 trap.SetActive(false);
                 visual.localRotation = Quaternion.identity;
-                if (!fromTrap) Dialogue.Revived();
-                Speak(fromTrap ? "fact.rescue" : "fact.revive");
+                if (fromTrap) Dialogue.Rescued(); else Dialogue.Revived();
                 Changed?.Invoke();
                 return true;
             }
@@ -95,10 +96,9 @@ namespace Isekaid
 
         public void SetFollowing(bool follow)
         {
-            if (State.LifeState != CompanionLifeState.Active)
+            if (State.LifeState != CompanionLifeState.Active || IsFollowing == follow)
                 return;
 
-            Dialogue.Interrupt(DialoguePriority.Important);
             IsFollowing = follow;
             nextPathTime = 0f;
             if (agent.isOnNavMesh)
@@ -110,15 +110,15 @@ namespace Isekaid
                     agent.velocity = Vector3.zero;
                 }
             }
-            Speak(follow ? "fact.follow" : "fact.wait");
+            Dialogue.FollowingChanged();
             Changed?.Invoke();
         }
 
         public void SetPersonality(CompanionPersonality value)
         {
+            if (State.Personality == value) return;
             State.Personality = value;
-            Dialogue.Interrupt(DialoguePriority.Important);
-            reactions.Clear();
+            Dialogue.RebindPersonality();
             Changed?.Invoke();
         }
 
@@ -127,7 +127,6 @@ namespace Isekaid
             if (!State.Incapacitate())
                 return false;
 
-            Dialogue.Interrupt(DialoguePriority.Survival);
             IsFollowing = false;
             if (agent.isOnNavMesh)
             {
@@ -135,7 +134,7 @@ namespace Isekaid
                 agent.isStopped = true;
             }
             visual.localRotation = Quaternion.Euler(0f, 0f, 65f);
-            Speak("fact.downed");
+            Dialogue.Downed();
             Changed?.Invoke();
             return true;
         }
@@ -155,23 +154,21 @@ namespace Isekaid
             Changed?.Invoke();
         }
 
-        private void Speak(string id)
+        private void Speak(DialogueEntry entry)
         {
-            var entry = DialogueContent.Current.Get(id);
-            reactions.Show(entry.Emotion, 6f);
+            reactions.Show(entry.Emotion, Dialogue.Active && ReferenceEquals(Dialogue.Current, entry) ? -1f : 6f,
+                entry.preferredExpression, entry.fallbackExpression);
             Spoke?.Invoke(entry.Text(State.Personality));
         }
 
         private void OnDialogueChanged()
         {
-            if (ReferenceEquals(reactingTo, Dialogue.Current)) return;
+            bool visible = Dialogue.Active && !Dialogue.Suspended && Dialogue.Current != null;
+            if (visible && (!dialogueVisible || !ReferenceEquals(reactingTo, Dialogue.Current)))
+                reactions.Show(Dialogue.Current.Emotion, -1f, Dialogue.Current.preferredExpression, Dialogue.Current.fallbackExpression);
+            else if (!visible && dialogueVisible) reactions.Clear();
+            dialogueVisible = visible;
             reactingTo = Dialogue.Current;
-            if (Dialogue.Active)
-            {
-                reactions.Show(Dialogue.Current.Emotion);
-                Spoke?.Invoke(Dialogue.Current.Text(State.Personality));
-            }
-            else reactions.Clear();
         }
 
         private void OnDisable()
@@ -182,7 +179,7 @@ namespace Isekaid
 
         private void OnDestroy()
         {
-            if (dialogue != null) dialogue.Changed -= OnDialogueChanged;
+            if (dialogue != null) { dialogue.Changed -= OnDialogueChanged; dialogue.Presented -= Speak; }
         }
     }
 }

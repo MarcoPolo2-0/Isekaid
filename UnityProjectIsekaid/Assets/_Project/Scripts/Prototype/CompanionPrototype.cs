@@ -152,7 +152,6 @@ namespace Isekaid
                 return;
             if (companion.State.LifeState == CompanionLifeState.Downed || companion.State.LifeState == CompanionLifeState.Dead)
                 return;
-            companion.Dialogue.Interrupt(DialoguePriority.Important);
             changingScene = true;
             pausedBeforeCreation = IsPaused;
             SetPaused(true);
