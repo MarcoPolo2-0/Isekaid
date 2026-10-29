@@ -38,7 +38,7 @@ No clonar ni actualizar submódulos; `Isekaidunity` y el antiguo repositorio Uni
 - GDD aprobado: `Documentation/GameDesignDocument_v0.5.md`. El documento v0.6 continúa **BORRADOR**.
 - Prototipo existente y rescatado: `CharacterCreation.unity`, `Game.unity`, `CompanionPrototype.unity` y `Assets/_Project/`. Mantenerlos funcionales mientras evoluciona la compañera.
 - ISEK-001 permanece abierta; Woman/G2 quedan históricos y pausados por DEC-007. VRM 1.0 + catálogo local es la dirección principal. La pausa no acepta ni elimina los resultados anteriores.
-- Siguiente revisión técnica: abrir en Unity, detectar errores de consola, probar creador → escena Game, persistencia de perfil y regreso a escena, adjuntar evidencia; luego reanudar iteración visual G2 separada del juego estable.
+- Siguiente puerta: revisar las pruebas reales de Fase 2 —creador → escena Game, persistencia, recuperación y regresiones— y someter su aceptación a Dirección. Preparar documentalmente Fase 3 cuando el sistema visual esté estable; su implementación requiere autorización específica posterior. Woman/G2 permanecen pausados hasta nueva autorización.
 
 ## Verificación sin ejecutar Unity
 

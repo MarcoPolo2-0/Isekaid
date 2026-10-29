@@ -575,3 +575,11 @@ Proteccion y limites
   privados. No se ejecutan Unity, Play Mode, importacion, animaciones o builds.
 - Rama docs/isek-vrm-f2-dec007 y PR hacia main para revision; sin fusion
   automatica. Se preservan entradas previas de readme de Desarrollo y Diseno.
+
+28/10/2026 - CHAT 2 / PR #6 - CORRECCION DE REVISION DE DIRECCION
+- Atendida revision 5692435453: retirada de workflow v1.2 la instruccion
+  residual de reanudar G2, contradictoria con DEC-007.
+- Siguiente puerta: revision/aceptacion de F2 y preparacion documental de
+  F3; implementacion F3 requiere autorizacion posterior. Woman/G2 en pausa.
+- GDD v0.5 e historial completo de readme de Desarrollo/Diseno conservados.
+- Solo correccion documental; no se ejecutan Unity ni builds, ni se fusiona PR.
