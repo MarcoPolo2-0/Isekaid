@@ -1,0 +1,847 @@
+{
+  "schemaVersion": 1,
+  "proposalId": "ISEKAID.F3A.DIF.0.1",
+  "status": "PROPUESTA_PENDIENTE_DIRECCION",
+  "date": "2026-10-29",
+  "base": {
+    "commit": "f657d78390202c2414a629d81401d8d801636bb1",
+    "canonicalPath": "Documentation/Specifications/F3A_Biblioteca_v0.1.json",
+    "canonicalSha256": "32a90c2d0d980b84d52d6a3c4e1eb18770b7ab9fbf86082562c8ced2833835ef"
+  },
+  "integration": {
+    "kind": "editorial_patch_not_runtime_resource",
+    "runtimeFormatVersion": 2,
+    "allowedSetFields": [
+      "spokenText",
+      "intention"
+    ],
+    "applyOnlyAfterDirectionApproval": true,
+    "regenerationByDevelopment": "tools/build_f3a_runtime_content.py",
+    "preserve": [
+      "entry IDs",
+      "option IDs and texts",
+      "targets",
+      "events",
+      "conditions",
+      "priorities",
+      "cooldowns",
+      "memory",
+      "source order"
+    ],
+    "onBaseMismatch": "Stop and review; never overwrite a newer canonical revision.",
+    "currentEffects": "intention is carried but does not select an animation or create gameplay effects; text can be adapted through the existing builder."
+  },
+  "presentationProposal": {
+    "status": "REQUIERE_IMPLEMENTACION_Y_CAPACIDADES_COMPATIBLES",
+    "appliedByCurrentRuntime": false,
+    "textVisibleImmediately": true,
+    "urgentTextDelayMs": 0,
+    "urgentSocialCue": false,
+    "clock": "active_game_time",
+    "fallback": "Keep text and choice access; omit missing body/gaze cues and use existing expression fallback.",
+    "profiles": [
+      {
+        "personality": "tsundere",
+        "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones.",
+        "defaultRhythm": "Primero una afirmación o acción concreta; pausa breve solo al admitir necesidad o gratitud. Evitar que cada frase termine justificándose.",
+        "defaultPosture": "Base estable y torso disponible para actuar; un gesto corto, manos sin tensión permanente.",
+        "defaultGaze": "Contacto directo al discrepar; apartar brevemente la mirada al agradecer y volver al interlocutor.",
+        "optionalSocialCueLeadMs": 0,
+        "optionalSocialCueDurationMs": [
+          450,
+          800
+        ],
+        "silence": "Dar espacio y dejar de insistir; ninguna frase automática ni premio o castigo.",
+        "rejection": "Aceptar el límite con brevedad y mantener su destino propio; orgullo sin represalia."
+      },
+      {
+        "personality": "yandere",
+        "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad.",
+        "defaultRhythm": "Tomar un detalle de la interacción, expresar qué significa para ella y abrir espacio al otro. Una pausa deliberada sin repetir preguntas ni exigir respuesta.",
+        "defaultPosture": "Torso orientado al intercambio, gesto abierto contenido; conservar distancia funcional y manos propias.",
+        "defaultGaze": "Atención sostenida con descansos naturales; nunca fijación ininterrumpida ni invasión.",
+        "optionalSocialCueLeadMs": 150,
+        "optionalSocialCueDurationMs": [
+          800,
+          1200
+        ],
+        "silence": "Atención disponible y luego descanso; no interpretar silencio como abandono ni abrir otra charla.",
+        "rejection": "Aceptar una negativa y expresar lo que ella prefiere; no culpabilizar, perseguir ni prometer exclusividad."
+      },
+      {
+        "personality": "shy",
+        "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo.",
+        "defaultRhythm": "Observar, iniciar con prudencia y cerrar la decisión sin diluirla. El desacuerdo y la petición urgente son claros, sin tartamudeo obligatorio.",
+        "defaultPosture": "Manos próximas al cuerpo y hombros sin encogimiento permanente; al poner un límite, estabilizar la postura.",
+        "defaultGaze": "Contacto intermitente; mirar al interlocutor al pedir ayuda o afirmar un límite.",
+        "optionalSocialCueLeadMs": 350,
+        "optionalSocialCueDurationMs": [
+          600,
+          1000
+        ],
+        "silence": "Reposo y contacto intermitente sin disculparse ni llenar el hueco.",
+        "rejection": "Aceptar el cierre sin autoacusación; conservar capacidad de negarse o pedir algo concreto."
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "id": "F3A.TSU.A.RESCUE",
+      "decision": "REVISAR",
+      "reason": "La gratitud terminaba en un límite parecido en las tres. Se distingue la primera prioridad: recuperar control, reconocer al otro u ordenar la propia reacción.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.TRAP.OPEN",
+      "decision": "CONSERVAR",
+      "reason": "Ya aporta un foco propio: mecanismo del accidente, experiencia de no ver al otro o descripción sensorial prudente.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.TRAP.DETAIL",
+      "decision": "CONSERVAR",
+      "reason": "Conservar reacción diferenciada ante autor desconocido; no inventa identidad ni enemigo presente.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.TRAP.SPACE",
+      "decision": "CONSERVAR",
+      "reason": "La respuesta al aplazamiento ya dirige la atención a una prioridad distinta; revisar junto a los nuevos cierres.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.OPEN",
+      "decision": "REVISAR",
+      "reason": "Las tres explicaban nervios y capacidad de continuar. Se diferencia qué hacen con la vulnerabilidad: comprobar, buscar reciprocidad o pedir espacio de observación.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.BREATH",
+      "decision": "REVISAR",
+      "reason": "La misma aceptación agradecida ocultaba el carácter. Se diferencia un plan práctico, compañía recíproca y silencio solicitado.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.LATER",
+      "decision": "REVISAR",
+      "reason": "El aplazamiento tenía una explicación social equivalente. Se distingue cómo cierra cada una y se permite una negativa breve y firme.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.ROAD.OPEN",
+      "decision": "CONSERVAR",
+      "reason": "Conservar el destino propio y el contraste entre determinación, coordinación y petición cauta.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.ROAD.TOGETHER",
+      "decision": "CONSERVAR",
+      "reason": "Conservar acuerdo temporal y autonomía. El acompañamiento hablado no cambia SetFollowing ni crea promesa.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.B.ROAD.UNCERTAIN",
+      "decision": "REVISAR",
+      "reason": "Las tres tranquilizaban al jugador con la misma conclusión. Se conserva la elección y cambia la atención: destino propio, expectativas compartidas o certeza concreta.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.C.LATER_1",
+      "decision": "REVISAR",
+      "reason": "El recuerdo del rescate funcionaba como agradecimiento reiterado. Se diferencia cómo vuelve a ese hecho existente, sin registrar un recuerdo nuevo.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.C.LATER_2",
+      "decision": "CONSERVAR",
+      "reason": "Conservar la diferencia entre enfado práctico, interés por los planes y tristeza ante el lugar del rescate.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.C.LATER_3",
+      "decision": "CONSERVAR",
+      "reason": "Conservar humor seco, alegría de conocer al otro y apertura reservada.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.D.FOLLOW",
+      "decision": "CONSERVAR",
+      "reason": "Conservar aviso práctico, necesidad de información y derecho a pedir un ritmo menor.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.D.WAIT",
+      "decision": "REVISAR",
+      "reason": "Las tres daban la misma confirmación extendida. Se distingue coordinación práctica, continuidad de compañía y asentimiento reservado.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.D.WAIT_OPINION",
+      "decision": "REVISAR",
+      "reason": "La opinión de espera era genérica. Se hace observable una preferencia distinta sin alterar la orden real.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.E.DOWNED",
+      "decision": "REVISAR",
+      "reason": "Las tres pedían ayuda con una variación léxica mínima. Se ajusta el foco de la petición; la urgencia y acceso a rescate siguen siendo iguales.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.E.REVIVED",
+      "decision": "REVISAR",
+      "reason": "La gratitud tras recuperar movilidad tenía un ritmo equivalente. Se distingue comprobación práctica, reconocimiento del vínculo momentáneo y admisión breve del miedo.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.F.SAFE_RETURN",
+      "decision": "CONSERVAR",
+      "reason": "Conservar matices de recuperación; el disparador sigue siendo petición explícita tras reanimación.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.TSU.F.RESUME",
+      "decision": "REVISAR",
+      "reason": "Las tres pedían retomar sin repetir. Se distingue cierre de un asunto, atención al intercambio y voluntad de responder con más claridad.",
+      "communicativeGoal": "Recuperar capacidad de actuar; reconocer ayuda sin ceder sus decisiones."
+    },
+    {
+      "id": "F3A.YAN.A.RESCUE",
+      "decision": "REVISAR",
+      "reason": "La gratitud terminaba en un límite parecido en las tres. Se distingue la primera prioridad: recuperar control, reconocer al otro u ordenar la propia reacción.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.TRAP.OPEN",
+      "decision": "CONSERVAR",
+      "reason": "Ya aporta un foco propio: mecanismo del accidente, experiencia de no ver al otro o descripción sensorial prudente.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.TRAP.DETAIL",
+      "decision": "CONSERVAR",
+      "reason": "Conservar reacción diferenciada ante autor desconocido; no inventa identidad ni enemigo presente.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.TRAP.SPACE",
+      "decision": "CONSERVAR",
+      "reason": "La respuesta al aplazamiento ya dirige la atención a una prioridad distinta; revisar junto a los nuevos cierres.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.OPEN",
+      "decision": "REVISAR",
+      "reason": "Las tres explicaban nervios y capacidad de continuar. Se diferencia qué hacen con la vulnerabilidad: comprobar, buscar reciprocidad o pedir espacio de observación.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.BREATH",
+      "decision": "REVISAR",
+      "reason": "La misma aceptación agradecida ocultaba el carácter. Se diferencia un plan práctico, compañía recíproca y silencio solicitado.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.LATER",
+      "decision": "REVISAR",
+      "reason": "El aplazamiento tenía una explicación social equivalente. Se distingue cómo cierra cada una y se permite una negativa breve y firme.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.ROAD.OPEN",
+      "decision": "CONSERVAR",
+      "reason": "Conservar el destino propio y el contraste entre determinación, coordinación y petición cauta.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.ROAD.TOGETHER",
+      "decision": "CONSERVAR",
+      "reason": "Conservar acuerdo temporal y autonomía. El acompañamiento hablado no cambia SetFollowing ni crea promesa.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.B.ROAD.UNCERTAIN",
+      "decision": "REVISAR",
+      "reason": "Las tres tranquilizaban al jugador con la misma conclusión. Se conserva la elección y cambia la atención: destino propio, expectativas compartidas o certeza concreta.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.C.LATER_1",
+      "decision": "REVISAR",
+      "reason": "El recuerdo del rescate funcionaba como agradecimiento reiterado. Se diferencia cómo vuelve a ese hecho existente, sin registrar un recuerdo nuevo.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.C.LATER_2",
+      "decision": "CONSERVAR",
+      "reason": "Conservar la diferencia entre enfado práctico, interés por los planes y tristeza ante el lugar del rescate.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.C.LATER_3",
+      "decision": "CONSERVAR",
+      "reason": "Conservar humor seco, alegría de conocer al otro y apertura reservada.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.D.FOLLOW",
+      "decision": "CONSERVAR",
+      "reason": "Conservar aviso práctico, necesidad de información y derecho a pedir un ritmo menor.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.D.WAIT",
+      "decision": "REVISAR",
+      "reason": "Las tres daban la misma confirmación extendida. Se distingue coordinación práctica, continuidad de compañía y asentimiento reservado.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.D.WAIT_OPINION",
+      "decision": "REVISAR",
+      "reason": "La opinión de espera era genérica. Se hace observable una preferencia distinta sin alterar la orden real.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.E.DOWNED",
+      "decision": "REVISAR",
+      "reason": "Las tres pedían ayuda con una variación léxica mínima. Se ajusta el foco de la petición; la urgencia y acceso a rescate siguen siendo iguales.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.E.REVIVED",
+      "decision": "REVISAR",
+      "reason": "La gratitud tras recuperar movilidad tenía un ritmo equivalente. Se distingue comprobación práctica, reconocimiento del vínculo momentáneo y admisión breve del miedo.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.F.SAFE_RETURN",
+      "decision": "CONSERVAR",
+      "reason": "Conservar matices de recuperación; el disparador sigue siendo petición explícita tras reanimación.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.YAN.F.RESUME",
+      "decision": "REVISAR",
+      "reason": "Las tres pedían retomar sin repetir. Se distingue cierre de un asunto, atención al intercambio y voluntad de responder con más claridad.",
+      "communicativeGoal": "Reconocer a la otra persona y aclarar el espacio compartido sin exigir intimidad."
+    },
+    {
+      "id": "F3A.SHY.A.RESCUE",
+      "decision": "REVISAR",
+      "reason": "La gratitud terminaba en un límite parecido en las tres. Se distingue la primera prioridad: recuperar control, reconocer al otro u ordenar la propia reacción.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.TRAP.OPEN",
+      "decision": "CONSERVAR",
+      "reason": "Ya aporta un foco propio: mecanismo del accidente, experiencia de no ver al otro o descripción sensorial prudente.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.TRAP.DETAIL",
+      "decision": "CONSERVAR",
+      "reason": "Conservar reacción diferenciada ante autor desconocido; no inventa identidad ni enemigo presente.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.TRAP.SPACE",
+      "decision": "CONSERVAR",
+      "reason": "La respuesta al aplazamiento ya dirige la atención a una prioridad distinta; revisar junto a los nuevos cierres.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.OPEN",
+      "decision": "REVISAR",
+      "reason": "Las tres explicaban nervios y capacidad de continuar. Se diferencia qué hacen con la vulnerabilidad: comprobar, buscar reciprocidad o pedir espacio de observación.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.BREATH",
+      "decision": "REVISAR",
+      "reason": "La misma aceptación agradecida ocultaba el carácter. Se diferencia un plan práctico, compañía recíproca y silencio solicitado.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.LATER",
+      "decision": "REVISAR",
+      "reason": "El aplazamiento tenía una explicación social equivalente. Se distingue cómo cierra cada una y se permite una negativa breve y firme.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.ROAD.OPEN",
+      "decision": "CONSERVAR",
+      "reason": "Conservar el destino propio y el contraste entre determinación, coordinación y petición cauta.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.ROAD.TOGETHER",
+      "decision": "CONSERVAR",
+      "reason": "Conservar acuerdo temporal y autonomía. El acompañamiento hablado no cambia SetFollowing ni crea promesa.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.B.ROAD.UNCERTAIN",
+      "decision": "REVISAR",
+      "reason": "Las tres tranquilizaban al jugador con la misma conclusión. Se conserva la elección y cambia la atención: destino propio, expectativas compartidas o certeza concreta.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.C.LATER_1",
+      "decision": "REVISAR",
+      "reason": "El recuerdo del rescate funcionaba como agradecimiento reiterado. Se diferencia cómo vuelve a ese hecho existente, sin registrar un recuerdo nuevo.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.C.LATER_2",
+      "decision": "CONSERVAR",
+      "reason": "Conservar la diferencia entre enfado práctico, interés por los planes y tristeza ante el lugar del rescate.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.C.LATER_3",
+      "decision": "CONSERVAR",
+      "reason": "Conservar humor seco, alegría de conocer al otro y apertura reservada.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.D.FOLLOW",
+      "decision": "CONSERVAR",
+      "reason": "Conservar aviso práctico, necesidad de información y derecho a pedir un ritmo menor.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.D.WAIT",
+      "decision": "REVISAR",
+      "reason": "Las tres daban la misma confirmación extendida. Se distingue coordinación práctica, continuidad de compañía y asentimiento reservado.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.D.WAIT_OPINION",
+      "decision": "REVISAR",
+      "reason": "La opinión de espera era genérica. Se hace observable una preferencia distinta sin alterar la orden real.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.E.DOWNED",
+      "decision": "REVISAR",
+      "reason": "Las tres pedían ayuda con una variación léxica mínima. Se ajusta el foco de la petición; la urgencia y acceso a rescate siguen siendo iguales.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.E.REVIVED",
+      "decision": "REVISAR",
+      "reason": "La gratitud tras recuperar movilidad tenía un ritmo equivalente. Se distingue comprobación práctica, reconocimiento del vínculo momentáneo y admisión breve del miedo.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.F.SAFE_RETURN",
+      "decision": "CONSERVAR",
+      "reason": "Conservar matices de recuperación; el disparador sigue siendo petición explícita tras reanimación.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    },
+    {
+      "id": "F3A.SHY.F.RESUME",
+      "decision": "REVISAR",
+      "reason": "Las tres pedían retomar sin repetir. Se distingue cierre de un asunto, atención al intercambio y voluntad de responder con más claridad.",
+      "communicativeGoal": "Encontrar espacio para observar y expresar una decisión propia, aun con miedo."
+    }
+  ],
+  "edits": [
+    {
+      "id": "F3A.TSU.A.RESCUE",
+      "expected": {
+        "spokenText": "Uf… Ya puedo apoyar los pies. Estaba buscando cómo soltar la cuerda, pero… gracias. No tires de ella otra vez.",
+        "intention": "thank_with_boundaries"
+      },
+      "set": {
+        "spokenText": "Ya está. Primero, fuera del lazo. Puedo sostenerme… Gracias. Me has sacado de un buen lío.",
+        "intention": "regain_agency_a_rescue"
+      },
+      "reason": "La gratitud terminaba en un límite parecido en las tres. Se distingue la primera prioridad: recuperar control, reconocer al otro u ordenar la propia reacción."
+    },
+    {
+      "id": "F3A.YAN.A.RESCUE",
+      "expected": {
+        "spokenText": "Ya está… Gracias. Oí que te acercabas y no sabía si ibas a pasar de largo. Prefiero alejarme de esta cuerda.",
+        "intention": "thank_with_boundaries"
+      },
+      "set": {
+        "spokenText": "Gracias por detenerte. No sabía quién venía por el sendero; ahora sé quién me sacó del lazo. Me gustaría conocerte un poco, cuando pueda respirar.",
+        "intention": "attend_shared_exchange_a_rescue"
+      },
+      "reason": "La gratitud terminaba en un límite parecido en las tres. Se distingue la primera prioridad: recuperar control, reconocer al otro u ordenar la propia reacción."
+    },
+    {
+      "id": "F3A.SHY.A.RESCUE",
+      "expected": {
+        "spokenText": "Gracias… Ya estoy en el suelo. No sabía cuánto más podría sujetarme. Prefiero no tocar esa cuerda.",
+        "intention": "thank_with_boundaries"
+      },
+      "set": {
+        "spokenText": "Gracias… Dame un momento. Ya estoy en el suelo. Prefiero apartarme de la cuerda antes de seguir hablando.",
+        "intention": "observe_then_assert_a_rescue"
+      },
+      "reason": "La gratitud terminaba en un límite parecido en las tres. Se distingue la primera prioridad: recuperar control, reconocer al otro u ordenar la propia reacción."
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.OPEN",
+      "expected": {
+        "spokenText": "Me tiembla un poco una pierna. No hace falta que me mires así; puedo decirte si necesito parar.",
+        "intention": "answer_and_offer_choice"
+      },
+      "set": {
+        "spokenText": "Puedo apoyar la pierna. Voy a probar despacio; si necesito parar, lo diré. Lo de la cuerda… todavía me cuesta hablarlo.",
+        "intention": "regain_agency_b_feel_open"
+      },
+      "reason": "Las tres explicaban nervios y capacidad de continuar. Se diferencia qué hacen con la vulnerabilidad: comprobar, buscar reciprocidad o pedir espacio de observación."
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.OPEN",
+      "expected": {
+        "spokenText": "Sigo sobresaltada. Me ayuda poder hablar, pero no quiero que confundas eso con que ya nos conocemos.",
+        "intention": "answer_and_offer_choice"
+      },
+      "set": {
+        "spokenText": "Sigo sobresaltada. Me ayuda que quieras saber cómo estoy. Quiero hablar contigo, pero despacio; aún nos estamos conociendo.",
+        "intention": "attend_shared_exchange_b_feel_open"
+      },
+      "reason": "Las tres explicaban nervios y capacidad de continuar. Se diferencia qué hacen con la vulnerabilidad: comprobar, buscar reciprocidad o pedir espacio de observación."
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.OPEN",
+      "expected": {
+        "spokenText": "Todavía me tiembla la voz. Puedo continuar, pero voy a necesitar un momento para ordenar lo que quiero decir.",
+        "intention": "answer_and_offer_choice"
+      },
+      "set": {
+        "spokenText": "Déjame pensarlo… Me tiembla la voz, aunque ya puedo moverme. Ahora mismo prefiero escuchar un poco.",
+        "intention": "observe_then_assert_b_feel_open"
+      },
+      "reason": "Las tres explicaban nervios y capacidad de continuar. Se diferencia qué hacen con la vulnerabilidad: comprobar, buscar reciprocidad o pedir espacio de observación."
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.BREATH",
+      "expected": {
+        "spokenText": "Un momento me vendrá bien… Gracias por preguntar en vez de decidir por mí.",
+        "intention": "respond_without_creating_promise"
+      },
+      "set": {
+        "spokenText": "Sí. Un momento, y vuelvo a intentarlo. Gracias por darme margen.",
+        "intention": "regain_agency_b_feel_breath"
+      },
+      "reason": "La misma aceptación agradecida ocultaba el carácter. Se diferencia un plan práctico, compañía recíproca y silencio solicitado."
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.BREATH",
+      "expected": {
+        "spokenText": "Gracias. Quédate donde pueda verte mientras respiro; luego seguimos, si te parece.",
+        "intention": "respond_without_creating_promise"
+      },
+      "set": {
+        "spokenText": "Gracias. Agradezco que podamos quedarnos aquí sin llenar cada silencio. Cuando me encuentre mejor, también quiero escucharte.",
+        "intention": "attend_shared_exchange_b_feel_breath"
+      },
+      "reason": "La misma aceptación agradecida ocultaba el carácter. Se diferencia un plan práctico, compañía recíproca y silencio solicitado."
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.BREATH",
+      "expected": {
+        "spokenText": "Me gustaría. No necesito que hables todo el tiempo… Con un poco de silencio me basta.",
+        "intention": "respond_without_creating_promise"
+      },
+      "set": {
+        "spokenText": "Sí… Me vendrá bien. Voy a quedarme callada un momento.",
+        "intention": "observe_then_assert_b_feel_breath"
+      },
+      "reason": "La misma aceptación agradecida ocultaba el carácter. Se diferencia un plan práctico, compañía recíproca y silencio solicitado."
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.LATER",
+      "expected": {
+        "spokenText": "Sí. Prefiero hablar cuando deje de oír esa cuerda en la cabeza. No es culpa tuya.",
+        "intention": "respect_silence"
+      },
+      "set": {
+        "spokenText": "Después. Prefiero recuperar el pulso antes de explicarme. Podemos dejarlo aquí.",
+        "intention": "regain_agency_b_feel_later"
+      },
+      "reason": "El aplazamiento tenía una explicación social equivalente. Se distingue cómo cierra cada una y se permite una negativa breve y firme."
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.LATER",
+      "expected": {
+        "spokenText": "Sí. Prefiero escucharte con atención cuando se me pase el sobresalto, no fingir que estoy bien.",
+        "intention": "respect_silence"
+      },
+      "set": {
+        "spokenText": "Sí, después. Quiero prestar atención a lo que me cuentes; ahora solo consigo pensar en lo que acaba de pasar. Lo dejamos por hoy.",
+        "intention": "attend_shared_exchange_b_feel_later"
+      },
+      "reason": "El aplazamiento tenía una explicación social equivalente. Se distingue cómo cierra cada una y se permite una negativa breve y firme."
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.LATER",
+      "expected": {
+        "spokenText": "Sí, después. No es que no quiera hablar contigo; ahora me cuesta encontrar las palabras.",
+        "intention": "respect_silence"
+      },
+      "set": {
+        "spokenText": "Después, por favor. Ahora no quiero hablar de ello.",
+        "intention": "observe_then_assert_b_feel_later"
+      },
+      "reason": "El aplazamiento tenía una explicación social equivalente. Se distingue cómo cierra cada una y se permite una negativa breve y firme."
+    },
+    {
+      "id": "F3A.TSU.B.ROAD.UNCERTAIN",
+      "expected": {
+        "spokenText": "No tienes que decidirlo ahora. Compartir un camino no nos obliga a compartir todos los planes.",
+        "intention": "respond_without_creating_promise"
+      },
+      "set": {
+        "spokenText": "Yo sigo hacia la aldea. Podemos compartir este tramo; el resto de tus planes es asunto tuyo.",
+        "intention": "regain_agency_b_road_uncertain"
+      },
+      "reason": "Las tres tranquilizaban al jugador con la misma conclusión. Se conserva la elección y cambia la atención: destino propio, expectativas compartidas o certeza concreta."
+    },
+    {
+      "id": "F3A.YAN.B.ROAD.UNCERTAIN",
+      "expected": {
+        "spokenText": "Entonces no decidamos más de lo necesario. Por ahora coincidimos en el sendero; después podemos hablarlo.",
+        "intention": "respond_without_creating_promise"
+      },
+      "set": {
+        "spokenText": "Me alegra saberlo antes de hacerme una idea equivocada. Quiero compartir este tramo contigo; al llegar, cada uno podrá elegir su camino.",
+        "intention": "attend_shared_exchange_b_road_uncertain"
+      },
+      "reason": "Las tres tranquilizaban al jugador con la misma conclusión. Se conserva la elección y cambia la atención: destino propio, expectativas compartidas o certeza concreta."
+    },
+    {
+      "id": "F3A.SHY.B.ROAD.UNCERTAIN",
+      "expected": {
+        "spokenText": "Está bien. No hace falta decidir el resto del viaje ahora. Yo sí quiero llegar a la aldea.",
+        "intention": "respond_without_creating_promise"
+      },
+      "set": {
+        "spokenText": "No hace falta decidirlo ahora. Yo quiero llegar a la aldea. Hasta allí sé qué camino quiero tomar.",
+        "intention": "observe_then_assert_b_road_uncertain"
+      },
+      "reason": "Las tres tranquilizaban al jugador con la misma conclusión. Se conserva la elección y cambia la atención: destino propio, expectativas compartidas o certeza concreta."
+    },
+    {
+      "id": "F3A.TSU.C.LATER_1",
+      "expected": {
+        "spokenText": "No he olvidado que te detuviste a ayudarme. Solo que no sé muy bien qué decir después de un gracias.",
+        "intention": "recall_or_comment_without_reward"
+      },
+      "set": {
+        "spokenText": "Lo del lazo… gracias otra vez. Me sale mejor fijarme por dónde piso que hablar de estas cosas.",
+        "intention": "regain_agency_c_later_1"
+      },
+      "reason": "El recuerdo del rescate funcionaba como agradecimiento reiterado. Se diferencia cómo vuelve a ese hecho existente, sin registrar un recuerdo nuevo."
+    },
+    {
+      "id": "F3A.YAN.C.LATER_1",
+      "expected": {
+        "spokenText": "Recuerdo que me escuchaste. Eso me da una razón para seguir hablando contigo, no para dejar de hacer preguntas.",
+        "intention": "recall_or_comment_without_reward"
+      },
+      "set": {
+        "spokenText": "Te detuviste a soltarme. Vuelvo a pensar en ese momento mientras hablamos; por eso quiero prestar atención a la persona que tengo delante.",
+        "intention": "attend_shared_exchange_c_later_1"
+      },
+      "reason": "El recuerdo del rescate funcionaba como agradecimiento reiterado. Se diferencia cómo vuelve a ese hecho existente, sin registrar un recuerdo nuevo."
+    },
+    {
+      "id": "F3A.SHY.C.LATER_1",
+      "expected": {
+        "spokenText": "Recuerdo cómo te acercaste a soltar la trampa. Ahora puedo hablar de ello sin quedarme mirando la cuerda.",
+        "intention": "recall_or_comment_without_reward"
+      },
+      "set": {
+        "spokenText": "Antes me costaba decir algo más que gracias. Ahora puedo mirarte y decirlo con calma: me ayudaste.",
+        "intention": "observe_then_assert_c_later_1"
+      },
+      "reason": "El recuerdo del rescate funcionaba como agradecimiento reiterado. Se diferencia cómo vuelve a ese hecho existente, sin registrar un recuerdo nuevo."
+    },
+    {
+      "id": "F3A.TSU.D.WAIT",
+      "expected": {
+        "spokenText": "De acuerdo, espero aquí. Avísame cuando quieras continuar.",
+        "intention": "accept_wait"
+      },
+      "set": {
+        "spokenText": "De acuerdo. Espero aquí. Retomamos el camino cuando me avises.",
+        "intention": "regain_agency_d_wait"
+      },
+      "reason": "Las tres daban la misma confirmación extendida. Se distingue coordinación práctica, continuidad de compañía y asentimiento reservado."
+    },
+    {
+      "id": "F3A.YAN.D.WAIT",
+      "expected": {
+        "spokenText": "Te espero aquí. Avísame cuando vayas a continuar para que podamos coordinarnos.",
+        "intention": "accept_wait"
+      },
+      "set": {
+        "spokenText": "Te espero aquí. Me gustaría que me avisaras antes de seguir; así retomamos el camino juntos.",
+        "intention": "attend_shared_exchange_d_wait"
+      },
+      "reason": "Las tres daban la misma confirmación extendida. Se distingue coordinación práctica, continuidad de compañía y asentimiento reservado."
+    },
+    {
+      "id": "F3A.SHY.D.WAIT",
+      "expected": {
+        "spokenText": "De acuerdo. Me quedo aquí; avísame cuando continuemos.",
+        "intention": "accept_wait"
+      },
+      "set": {
+        "spokenText": "Sí. Me quedo aquí.",
+        "intention": "observe_then_assert_d_wait"
+      },
+      "reason": "Las tres daban la misma confirmación extendida. Se distingue coordinación práctica, continuidad de compañía y asentimiento reservado."
+    },
+    {
+      "id": "F3A.TSU.D.WAIT_OPINION",
+      "expected": {
+        "spokenText": "Puedo esperar. Aunque prefiero que no perdamos de vista por dónde seguir.",
+        "intention": "accept_wait_and_voice_preference"
+      },
+      "set": {
+        "spokenText": "Espero aquí. Aun así, preferiría avanzar en cuanto podamos; quiero salir de este tramo.",
+        "intention": "regain_agency_d_wait_opinion"
+      },
+      "reason": "La opinión de espera era genérica. Se hace observable una preferencia distinta sin alterar la orden real."
+    },
+    {
+      "id": "F3A.YAN.D.WAIT_OPINION",
+      "expected": {
+        "spokenText": "Está bien. Si necesito moverme te lo diré; esperar no significa que deje de estar atenta.",
+        "intention": "accept_wait_and_voice_preference"
+      },
+      "set": {
+        "spokenText": "Te espero. Prefiero seguir acompañada, aunque también necesito decidir por dónde voy. Avísame cuando quieras continuar.",
+        "intention": "attend_shared_exchange_d_wait_opinion"
+      },
+      "reason": "La opinión de espera era genérica. Se hace observable una preferencia distinta sin alterar la orden real."
+    },
+    {
+      "id": "F3A.SHY.D.WAIT_OPINION",
+      "expected": {
+        "spokenText": "Puedo esperar. Aunque preferiría seguir cuando podamos; estar quieta me pone algo nerviosa.",
+        "intention": "accept_wait_and_voice_preference"
+      },
+      "set": {
+        "spokenText": "Me quedo. Pero preferiría continuar pronto; este sitio todavía me inquieta.",
+        "intention": "observe_then_assert_d_wait_opinion"
+      },
+      "reason": "La opinión de espera era genérica. Se hace observable una preferencia distinta sin alterar la orden real."
+    },
+    {
+      "id": "F3A.TSU.E.DOWNED",
+      "expected": {
+        "spokenText": "¡Ayúdame! No consigo levantarme.",
+        "intention": "request_help_urgently"
+      },
+      "set": {
+        "spokenText": "¡Ayúdame a levantarme! No puedo sola.",
+        "intention": "request_practical_assistance"
+      },
+      "reason": "Las tres pedían ayuda con una variación léxica mínima. Se ajusta el foco de la petición; la urgencia y acceso a rescate siguen siendo iguales."
+    },
+    {
+      "id": "F3A.YAN.E.DOWNED",
+      "expected": {
+        "spokenText": "¡Necesito ayuda! No puedo incorporarme.",
+        "intention": "request_help_urgently"
+      },
+      "set": {
+        "spokenText": "¡Necesito ayuda! Por favor, acércate.",
+        "intention": "request_direct_contact_for_help"
+      },
+      "reason": "Las tres pedían ayuda con una variación léxica mínima. Se ajusta el foco de la petición; la urgencia y acceso a rescate siguen siendo iguales."
+    },
+    {
+      "id": "F3A.SHY.E.DOWNED",
+      "expected": {
+        "spokenText": "¡Ayuda, por favor! No puedo levantarme.",
+        "intention": "request_help_urgently"
+      },
+      "set": {
+        "spokenText": "¡No puedo levantarme! ¡Ayuda!",
+        "intention": "state_need_clearly_under_pressure"
+      },
+      "reason": "Las tres pedían ayuda con una variación léxica mínima. Se ajusta el foco de la petición; la urgencia y acceso a rescate siguen siendo iguales."
+    },
+    {
+      "id": "F3A.TSU.E.REVIVED",
+      "expected": {
+        "spokenText": "Ah… Ya puedo moverme. Has vuelto a ayudarme. Gracias. Esa vez no iba a salir sola.",
+        "intention": "thank_after_reanimation"
+      },
+      "set": {
+        "spokenText": "Ya puedo moverme. Esta vez no podía sola… Gracias. Voy a comprobar cómo me sostengo.",
+        "intention": "regain_agency_e_revived"
+      },
+      "reason": "La gratitud tras recuperar movilidad tenía un ritmo equivalente. Se distingue comprobación práctica, reconocimiento del vínculo momentáneo y admisión breve del miedo."
+    },
+    {
+      "id": "F3A.YAN.E.REVIVED",
+      "expected": {
+        "spokenText": "Has vuelto… Gracias. Ahora puedo mirarte sin estar luchando por levantarme. Necesito un instante.",
+        "intention": "thank_after_reanimation"
+      },
+      "set": {
+        "spokenText": "Has vuelto a ayudarme. Gracias. Quiero decírtelo mirándote, ahora que puedo: me alegra verte aquí.",
+        "intention": "attend_shared_exchange_e_revived"
+      },
+      "reason": "La gratitud tras recuperar movilidad tenía un ritmo equivalente. Se distingue comprobación práctica, reconocimiento del vínculo momentáneo y admisión breve del miedo."
+    },
+    {
+      "id": "F3A.SHY.E.REVIVED",
+      "expected": {
+        "spokenText": "Gracias… Ya puedo moverme. Antes no me salían las palabras. Necesito respirar un momento.",
+        "intention": "thank_after_reanimation"
+      },
+      "set": {
+        "spokenText": "Gracias… Me asusté. Necesito un momento antes de intentar seguir.",
+        "intention": "observe_then_assert_e_revived"
+      },
+      "reason": "La gratitud tras recuperar movilidad tenía un ritmo equivalente. Se distingue comprobación práctica, reconocimiento del vínculo momentáneo y admisión breve del miedo."
+    },
+    {
+      "id": "F3A.TSU.F.RESUME",
+      "expected": {
+        "spokenText": "Lo que estábamos hablando puede esperar si hace falta. Si seguimos, empieza por donde lo dejamos.",
+        "intention": "offer_to_resume_without_repeating"
+      },
+      "set": {
+        "spokenText": "Bien. Quedó una respuesta pendiente. Podemos retomarla; no hace falta volver al principio.",
+        "intention": "regain_agency_f_resume"
+      },
+      "reason": "Las tres pedían retomar sin repetir. Se distingue cierre de un asunto, atención al intercambio y voluntad de responder con más claridad."
+    },
+    {
+      "id": "F3A.YAN.F.RESUME",
+      "expected": {
+        "spokenText": "Me importa lo que ibas a decir. Si todavía quieres hablarlo, retomemos desde ahí; no hace falta empezar de cero.",
+        "intention": "offer_to_resume_without_repeating"
+      },
+      "set": {
+        "spokenText": "Quedó algo entre nosotros a medio decir. Me interesa escucharte, si todavía quieres continuar.",
+        "intention": "attend_shared_exchange_f_resume"
+      },
+      "reason": "Las tres pedían retomar sin repetir. Se distingue cierre de un asunto, atención al intercambio y voluntad de responder con más claridad."
+    },
+    {
+      "id": "F3A.SHY.F.RESUME",
+      "expected": {
+        "spokenText": "Antes me preguntabas algo… Si quieres continuar, te escucho. No hace falta repetirlo todo.",
+        "intention": "offer_to_resume_without_repeating"
+      },
+      "set": {
+        "spokenText": "Antes estaba intentando responderte… Si quieres, podemos volver a esa parte. Ahora encuentro mejor las palabras.",
+        "intention": "observe_then_assert_f_resume"
+      },
+      "reason": "Las tres pedían retomar sin repetir. Se distingue cierre de un asunto, atención al intercambio y voluntad de responder con más claridad."
+    }
+  ]
+}
