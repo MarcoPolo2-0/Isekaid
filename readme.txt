@@ -722,3 +722,21 @@ Proteccion y limites
 - Propuesta pendiente de Direccion, sin fusion automatica ni cierre de R10/F3A/ISEK-001. Iniciativa espontanea, rechazo personal y memoria ampliada permanecen como fases posteriores. Historial completo de readme conservado.
 
 2026-10-29 — Dirección (Chat 1): nueva revisión consolidada Documentation/GameDesignDocument_v0.7_borrador.md a partir de GDD v0.5 y v0.6 y estado PR #7/#9/#10/#11/#12. Mantiene intactas versiones históricas. Actualiza dirección VRM/DEC-007, F2/F3A, locomoción y presentación observadas en prueba manual, nombre Dandere con compatibilidad Shy, método editorial inspirado en fichas de personaje de SillyTavern y referencias de estudio, distinguiendo claramente Deredere y los 33 cambios editoriales como PROPUESTAS. El documento no modifica Unity ni aprueba nuevos sistemas; pendiente revisión y aceptación de Dirección mediante PR.
+
+2026-10-29 — CHAT 2 / Revision editorial GDD v0.7 en PR #13, rama docs/isek-gdd-v07-consolidated, entrada d94d671. Comparadas las 16 secciones de v0.5 y seis bloques adicionales de v0.6 con DEC-001–007, F2/F3A y propuestas PR #11. No se modifica Unity, biblioteca canonica ni GDD v0.5/v0.6.
+- GDD-R01: leyenda de ACORDADO / IMPLEMENTADO / VALIDADO MANUALMENTE / PROPUESTO / PENDIENTE y matriz de estados separados; implementado no significa validado o aprobado.
+- GDD-R02: contador activo/pausa tecnicamente probado frente a ratificacion formal heredada pendiente; no cambia balance ni comportamiento.
+- GDD-R03: explicitadas fronteras de combate, salud cero, Game Over/reinicio de ensayo y checkpoint de campana; tambien enemigos, hogar y secuestro futuros.
+- GDD-R04: Dandere es nombre visible acordado, aun no aplicado; conservar Shy/2, shy e IDs SHY. Cambio de etiqueta no exige migracion de datos.
+- GDD-R05: depurados ejemplos de prologo que competian con contenido canonico/reforzaban caricaturas; referencia a A.RESCUE vigente y propuesta PR #11.
+- GDD-R06: restaurada visibilidad de aprendizaje, gustos/habitos, expresividad normal/comica, silueta y referencia artistica; editor corporal propio sigue pausado DEC-007.
+- GDD-R07: separados RemembersFirstRescue/Trust=1 existentes de FirstRescue_BanditTrap y relacion persistente propuestos, sin premio duplicado.
+- GDD-R08: conciliada eleccion de clase con alternativa propuesta de preasignacion inicial; flujo sigue pendiente.
+- GDD-R09: recuperados pendientes heredados de dificultad, dano amigo, atacantes, jefes, rescate, hogar y narrativa.
+- GDD-R10: offline como requisito con prueba fisica pendiente; opcion de modelo local fuera del MVP conservada como propuesta, sin conectar servicios al runtime.
+- GDD-R11: ampliado metodo de fichas profundas en nueve areas y contraste de seis situaciones; referencias por arquetipo como estudio, sin copiar personajes. No se inspeccionaron tarjetas privadas de SillyTavern.
+- GDD-R12: comprobados 0/33 ajustes aplicados en fuente/runtime; manual de Direccion documentado sin cerrar F2/F3A ni criterios PARTIAL.
+- GDD-R13: precisada trampa de bandidos y puerta de promocion del maestro; revision tecnica de Chat 3 y aprobacion final de Direccion pendientes.
+- Nuevo informe Documentation/Audits/GDD-v0.7/Revision_Editorial_Chat2.md: cobertura historica, motivos por hallazgo, limites, decisiones abiertas y recomendacion de revision final.
+- Comprobaciones: 19 secciones principales, 22 secciones historicas trazadas, 13 hallazgos, 39 enlaces locales validos, cinco archivos protegidos intactos y readme conservado integro. Comprobador canonico/runtime existente PASS, 60 entradas/18 rutas, sin aplicar parche narrativo.
+- Solo documentacion: no se ejecutan Unity, compilacion, Play Mode, animaciones ni builds. v0.7 sigue BORRADOR; Deredere y N1/N2 no quedan autorizados. Commit/push a la misma rama del PR #13, sin fusion automatica.
