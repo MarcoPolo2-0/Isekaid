@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "target": "Windows x64 Development Mono",
+  "sourceCommit": "5f3da89dd0e1853f8b24d8ac8c291723260bf4cb",
+  "buildReportedBytes": 196505711,
+  "sha256": {
+    "Isekaid.exe": "3726509af94bdacbfe23f85da13109a7e70fb7d61913506e98690bd3208b2fd7",
+    "Isekaid_Data/Managed/Isekaid.Runtime.dll": "64ff967ed7da8aa7703472e023eb600df4312f227f4cbe1f333a48108c508fe0",
+    "Isekaid_Data/Managed/Isekaid.F2Validation.dll": "0ab4a864fc28a780818cbd801d1daeacda013811c23968e8ff200667fb322ef3"
+  }
+}

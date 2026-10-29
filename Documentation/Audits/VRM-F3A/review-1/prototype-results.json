@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "markers": [
+    "ISEKAID_PROTOTYPE_CHECKS_PASSED",
+    "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED"
+  ],
+  "log": "f3a-review-prototype-regression.log"
+}

@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "implementationCommit": "a1aebe32a80f804c7657f7d0f176891a3c1d8a53",
+  "checksCompleted": 23,
+  "failure": "W moves after closing dialogue",
+  "resolution": "Final fixture runs at 60 FPS, samples input across frames and retains the displacement assertion. Both final Editor and Windows runs pass 285 checks/18 paths; the production runtime DLL is unchanged.",
+  "secondAttempt": {
+    "implementationCommit": "130cca9",
+    "meters": 0.05157573,
+    "frames": 4216,
+    "inputEnabled": true,
+    "paused": false,
+    "minimumMoveDistance": 0.001
+  }
+}

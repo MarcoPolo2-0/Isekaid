@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "target": "Windows x64 Development Mono",
+  "implementationCommit": "d2f58a8e954dc70de6ca6bddc87583d1bc21132a",
+  "gameplayCommit": "a1aebe32a80f804c7657f7d0f176891a3c1d8a53",
+  "buildReportedBytes": 196562300,
+  "runtimeDllUnchangedSinceFirstWindowsAttempt": true,
+  "sha256": {
+    "Isekaid.exe": "3726509af94bdacbfe23f85da13109a7e70fb7d61913506e98690bd3208b2fd7",
+    "Isekaid_Data/Managed/Isekaid.Runtime.dll": "e47667e5a5cf73bb2c30c0627499f2314b38b8d837cfb29b7012db9194202a63",
+    "Isekaid_Data/Managed/Isekaid.F2Validation.dll": "108f5fa3475df39fa72dddab6d987863c15a27be20ff4c3293f543af2a5e2586"
+  }
+}

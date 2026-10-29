@@ -16,10 +16,17 @@ namespace Isekaid
         private Vector3 initialPosition;
         private Quaternion initialRotation;
         private float nextPathTime;
-        private int conversationIndex;
+        private DialogueDirector dialogue;
+        private CompanionReactionPresenter reactions;
+        private CompanionAppearance appearance;
+        private object reactionAvatar;
+        private DialogueEntry reactingTo;
+        private bool dialogueVisible;
 
         public CompanionState State { get; private set; } = new CompanionState();
         public bool IsFollowing { get; private set; }
+        public DialogueDirector Dialogue => dialogue ??= new DialogueDirector(() => State, () => IsFollowing);
+        public CompanionReactionPresenter Reactions => reactions;
         public event Action Changed;
         public event Action<string> Spoke;
 
@@ -30,15 +37,29 @@ namespace Isekaid
             initialRotation = transform.rotation;
             var profile = CompanionProfileStore.Load();
             State.Personality = profile.personality;
-            GetComponent<CompanionAppearance>().Apply(profile);
+            appearance = GetComponent<CompanionAppearance>();
+            appearance.Apply(profile);
+            reactions = new CompanionReactionPresenter(appearance.PreviewExpression);
+            Dialogue.Changed += OnDialogueChanged;
+            Dialogue.Presented += Speak;
         }
 
         private void Update()
         {
             var previousState = State.LifeState;
             State.Tick(Time.deltaTime);
+            Dialogue.Tick(Time.deltaTime);
+            if (appearance.Ready)
+            {
+                object currentAvatar = appearance.Importer.HasAvatar ? (object)appearance.Importer.LoadedBytes : appearance.Catalog;
+                if (!ReferenceEquals(reactionAvatar, currentAvatar)) { reactionAvatar = currentAvatar; reactions.Reapply(); }
+                reactions.Tick(Time.deltaTime);
+            }
             if (State.LifeState != previousState)
+            {
+                reactions.Clear();
                 Changed?.Invoke();
+            }
 
             if (Time.timeScale == 0f || !agent.isOnNavMesh)
                 return;
@@ -62,7 +83,7 @@ namespace Isekaid
                 IsFollowing = true;
                 trap.SetActive(false);
                 visual.localRotation = Quaternion.identity;
-                Spoke?.Invoke(State.RescueLine(fromTrap));
+                if (fromTrap) Dialogue.Rescued(); else Dialogue.Revived();
                 Changed?.Invoke();
                 return true;
             }
@@ -70,13 +91,12 @@ namespace Isekaid
             if (State.LifeState != CompanionLifeState.Active)
                 return false;
 
-            Spoke?.Invoke(State.TalkLine(conversationIndex++));
-            return true;
+            return Dialogue.Begin();
         }
 
         public void SetFollowing(bool follow)
         {
-            if (State.LifeState != CompanionLifeState.Active)
+            if (State.LifeState != CompanionLifeState.Active || IsFollowing == follow)
                 return;
 
             IsFollowing = follow;
@@ -90,14 +110,15 @@ namespace Isekaid
                     agent.velocity = Vector3.zero;
                 }
             }
-            Spoke?.Invoke(follow ? "Vamos. Mantengamos los ojos abiertos." : "Te espero aquí. Avísame cuando continuemos.");
+            Dialogue.FollowingChanged();
             Changed?.Invoke();
         }
 
         public void SetPersonality(CompanionPersonality value)
         {
+            if (State.Personality == value) return;
             State.Personality = value;
-            conversationIndex = 0;
+            Dialogue.RebindPersonality();
             Changed?.Invoke();
         }
 
@@ -113,7 +134,7 @@ namespace Isekaid
                 agent.isStopped = true;
             }
             visual.localRotation = Quaternion.Euler(0f, 0f, 65f);
-            Spoke?.Invoke("¡Necesito ayuda! Acércate para reanimarme.");
+            Dialogue.Downed();
             Changed?.Invoke();
             return true;
         }
@@ -123,13 +144,42 @@ namespace Isekaid
             var selectedPersonality = State.Personality;
             State = new CompanionState { Personality = selectedPersonality };
             IsFollowing = false;
-            conversationIndex = 0;
+            Dialogue.ResetEncounter();
+            reactions.Clear();
             agent.ResetPath();
             agent.Warp(initialPosition);
             transform.rotation = initialRotation;
             visual.localRotation = Quaternion.identity;
             trap.SetActive(true);
             Changed?.Invoke();
+        }
+
+        private void Speak(DialogueEntry entry)
+        {
+            reactions.Show(entry.Emotion, Dialogue.Active && ReferenceEquals(Dialogue.Current, entry) ? -1f : 6f,
+                entry.preferredExpression, entry.fallbackExpression);
+            Spoke?.Invoke(entry.Text(State.Personality));
+        }
+
+        private void OnDialogueChanged()
+        {
+            bool visible = Dialogue.Active && !Dialogue.Suspended && Dialogue.Current != null;
+            if (visible && (!dialogueVisible || !ReferenceEquals(reactingTo, Dialogue.Current)))
+                reactions.Show(Dialogue.Current.Emotion, -1f, Dialogue.Current.preferredExpression, Dialogue.Current.fallbackExpression);
+            else if (!visible && dialogueVisible) reactions.Clear();
+            dialogueVisible = visible;
+            reactingTo = Dialogue.Current;
+        }
+
+        private void OnDisable()
+        {
+            dialogue?.Close();
+            if (appearance != null && appearance.Ready) reactions?.Clear();
+        }
+
+        private void OnDestroy()
+        {
+            if (dialogue != null) { dialogue.Changed -= OnDialogueChanged; dialogue.Presented -= Speak; }
         }
     }
 }

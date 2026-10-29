@@ -645,6 +645,15 @@ Proteccion y limites
 - GDD v0.5 e historial completo de readme de Desarrollo/Diseno conservados.
 - Solo correccion documental; no se ejecutan Unity ni builds, ni se fusiona PR.
 
+2026-10-29 — F3A: rama feature/isek-f3a-dialogue-runtime desde main 4bd6857 (PR #6/#7 fusionados). Autorización directa de Dirección para diálogo local limitado en Game; F2 sigue pendiente de pruebas manuales. Contenido provisional JSON con IDs estables, director por encuentro, opciones UI Toolkit y reacciones semánticas reutilizan control, avatar y pausa existentes. Sin cambios de escenas, GUID existentes, perfil o importador; no F3 completa, memoria persistente, romance ni combate. Pruebas en preparación; sin declarar funcionalidad verificada todavía.
+
+2026-10-29 — F3A: primer recorrido real Play Mode superado en Unity 6000.6.7f1: personalidades, elecciones, rescate/reanimación, pausa, movimiento y cambios de apariencia. Capturas reales revisadas a 1920x1080, 1600x900 y 1280x720. Corrección local de entrada: Tab/Esc no reanudan Game detrás del creador aditivo. Se ajusta la presentación para no repetir Spoke al pausar/reanudar y conservar la petición de ayuda al salir del menú; pruebas adicionales y regresión F2 en curso. El Editor batch no acredita captura física del cursor.
+
+2026-10-29 — F3A: 123 comprobaciones finales Play Mode PASS (editor-results.json); se confirma no repetición de Spoke por pausa y reacción de ayuda desde el menú. Regresión F2 con metadatos grandes PASS: 43 comprobaciones, 195 recursos liberados. Regresión original de dos escenas PASS; guardas: 9 rechazos y 2 límites de archivo; almacenamiento heredado: 11 aserciones PASS. Capturas públicas seleccionadas exclusivamente de Adventurer CC0; VRM y capturas privadas excluidos.
+
+2026-10-29 — F3A: build Windows x64 Development Mono Succeeded (196,505,711 bytes), implementación 5f3da89. Ejecutable real: 123 comprobaciones F3A PASS; regresión F2 Windows: 36 PASS y segundo proceso sin fuente: 2 PASS. Metadatos adversariales: 35 PASS. Estructura y 715 archivos protegidos F2 sin cambios. Informes, hashes, capturas reales solo del catálogo y guía de revisión manual en Documentation/Audits/VRM-F3A/. Pendientes: juego manual en ventana enfocada/captura física del cursor, aprobación de textos/lectura emocional y estabilidad manual F2; se mantienen los cuatro criterios parciales F2 y las restricciones de derechos. Sin fusionar ni declarar F3 completa.
+
+
 ======================================================================
 28/10/2026 - CHAT 2 / F3A - DISENO NARRATIVO Y REACCIONES CONTEXTUALES
 ======================================================================
@@ -672,3 +681,19 @@ Proteccion y limites
   ejecutan Unity, Play Mode, conversaciones en juego ni builds.
 - Chat 3 continua infraestructura autorizada en paralelo; esta entrega no
   autoriza Fase 3 completa ni concede aceptacion manual de F2.
+
+2026-10-29 — F3A revisión de Dirección: se integra la documentación y biblioteca canónica del PR #9 (6df539d) en la rama del PR #10, conservando completos ambos bloques de readme. Autorizada su adaptación local y corrección de continuidad/cursor, 18 recorridos y episodios de reanimación. Textos todavía sujetos a aprobación; sin ampliar F3, modificar confianza ni fusionar main.
+
+2026-10-29 — F3A revisión PR #10: biblioteca runtime adaptada reproduciblemente desde las 60 entradas del PR #9; IDs, textos y 18 opciones conservados y efectos cero validados. Cursor/opciones/foco sobreviven al cierre voluntario, pausa, creador y suspensión vital; reanimación y retorno por episodio, órdenes sin respuesta a no-op, tres casuales con enfriamiento activo compartido. Se preparan pruebas de los 18 recorridos, doble incapacidad y cambios reales de avatar. Expresiones condicionales no certificadas usan neutral, sin inventar gestos o validación artística.
+
+2026-10-29 — F3A revisión PR #10: Play Mode final PASS, 285 comprobaciones y 18 recorridos independientes. Verificados cierre/reapertura sin reemitir raíz, foco/opciones en creador catálogo→VRM→catálogo, doble reanimación por episodio, suspensión idempotente y callbacks con revisión obsoleta rechazados. Se retira el aviso transitorio antiguo al abrir el menú de temas. F3A-R10 y aprobación editorial/visual siguen parciales; regresión F2 y build revisada en preparación.
+
+2026-10-29 — F3A revisión PR #10: CI comprobará también que el recurso runtime coincide con la biblioteca canónica mediante tools/build_f3a_runtime_content.py --check. Regresión F2 Editor PASS (43 comprobaciones y 195 recursos liberados); guardas 9+2, almacenamiento 11 y prototipo original de dos escenas PASS.
+
+2026-10-29 — F3A revisión PR #10: primer ensayo Windows detectó ausencia de desplazamiento con un pulso de W de duración solo temporal, manteniéndose habilitada la entrada al cerrar. El ensayo ahora mantiene teclas al menos tres frames, espera liberación procesada y usa timeout; conserva la aserción de desplazamiento y registra metros/frames/entrada/pausa. Play Mode con el ensayo revisado PASS (285/18). Sin corrección adicional de gameplay para esa observación; Windows se repetirá en una nueva build.
+
+2026-10-29 — F3A revisión PR #10: segundo ensayo Windows registró solo 0.0516 m en 4,216 frames con entrada habilitada y pausa desactivada. El prefab original tiene minMoveDistance=0.001 m: se documenta el caso de pasos submilimétricos a frecuencias extremas fuera de foco. El escenario de pruebas se acota a 60 FPS y restaura los ajustes al salir, sin modificar jugador/prefab/escenas; Play Mode final a 60 FPS PASS, 285 comprobaciones/18 recorridos y desplazamiento real 1.3158 m. Windows se repite con esa calibración.
+
+2026-10-29 — F3A revisión PR #10: Windows final a 60 FPS PASS, 285 comprobaciones y 18 recorridos; desplazamiento W tras cierre 1.4591 m en 34 frames, entrada habilitada y sin pausa. DLL de gameplay idéntica a la primera build de esta revisión; build final 196,562,300 bytes. Regresión F2 Windows PASS (36), documentación nueva por criterio en Documentation/Audits/VRM-F3A/review-1/: 17 PASS y 3 PARTIAL (D08, R10, R11), sin convertir fixtures acotados en aprobación editorial o callbacks SDK inexistentes. Modelos/capturas VRM privados y originales preservados. Reinicio F2 y CI se comprueban al cierre.
+
+2026-10-29 — F3A revisión PR #10: segundo proceso Windows F2 PASS (2 comprobaciones) sin copia fuente. Informe/hashes/capturas/criterios actualizados; fuente narrativa de Chat 2 intacta, ambos bloques de readme conservados y 715 originales protegidos. Se publica evidencia para revisión de Dirección, sin fusionar main ni dar por aprobada F2/F3.
