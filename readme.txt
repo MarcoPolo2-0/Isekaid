@@ -549,3 +549,15 @@ Proteccion y limites
   importacion, Play Mode o builds. Esperar evaluacion tecnica antes de
   solicitar aprobacion definitiva del cambio de alcance.
 - Entrega mediante rama y PR documental, sin incluir el experimento Unity.
+
+[2026-10-28] F2 VRM - implementacion experimental en curso
+- Rama feature/isek-vrm-f2-character-creator creada desde main 480a8e9.
+- Checkout independiente; cambios locales y documentos de Chat 2 preservados.
+- Escenas originales y metadatos respaldados fuera del repositorio antes de modificar.
+- Importador transaccional reutilizado en _Project/AvatarRuntime, conservando GUID.
+- Catalogo local Adventurer con licencia CC0 publicada por Dawn to Dusk Games.
+- Creador con importacion Windows, permisos declarados, muestras visuales y personalidad independiente.
+- Perfil v2 con identidad, referencia visual separada, copia privada por SHA-256 y guardado con respaldo.
+- El regreso al creador mantiene el encuentro en pausa; no reinicia memoria ni confianza existentes.
+- Verificacion inicial estatica del prototipo: PASS. Play Mode base bloqueado por excepcion de UnityEditor.Search.SearchDatabase; no se atribuye al gameplay.
+- Pruebas de integracion y revision visual en curso; esta entrada no declara cerrada F2.

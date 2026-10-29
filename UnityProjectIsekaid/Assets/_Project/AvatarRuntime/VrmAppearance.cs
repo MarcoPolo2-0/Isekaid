@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 using UniVRM10;
 using UnityEngine;
 
@@ -17,7 +18,11 @@ namespace Isekaid.ExperimentalVrm
         public Transform Anchor;
         public RuntimeAnimatorController TrialAnimations;
         public float FacingYaw;
+        public bool ShowDiagnosticGUI = true;
+        public float FitHeight;
+        public byte[] LoadedBytes { get; private set; }
         public Vrm10Instance Avatar { get; private set; }
+        public bool HasAvatar => Avatar != null;
         public string Status { get; private set; } = "Selecciona un VRM local. El archivo no se publica.";
         public string LocalPath = "";
         public string[] Expressions { get; private set; } = Array.Empty<string>();
@@ -39,21 +44,29 @@ namespace Isekaid.ExperimentalVrm
 #endif
         }
 
-        public async Task LoadLocal(string path)
+        public async Task LoadLocal(string path, CancellationToken cancellation = default, string expectedHash = null)
         {
             if (loading) throw new InvalidOperationException("Ya hay una importación en curso.");
             loading = true;
             Vrm10Instance candidate = null;
             Vrm10Instance retired = null;
+            Vrm10FastSpringboneRuntimeStandalone springRuntime = null;
             var visibility = new Dictionary<Renderer, bool>();
             try
             {
                 byte[] bytes = VrmFileGuard.ReadLocal(path);
+                if (expectedHash != null && AvatarFiles.Hash(bytes) != expectedHash)
+                    throw new System.IO.InvalidDataException("La copia privada del avatar está dañada.");
+                cancellation.ThrowIfCancellationRequested();
                 Checkpoint("ValidatedBytes");
                 var timer = System.Diagnostics.Stopwatch.StartNew();
+                // Retired avatars must not requeue disposed buffers through the shared spring combiner.
+                springRuntime = new Vrm10FastSpringboneRuntimeStandalone();
                 candidate = await Vrm10.LoadBytesAsync(bytes, canLoadVrm0X: false,
-                    controlRigGenerationOption: ControlRigGenerationOption.Generate, showMeshes: false);
+                    controlRigGenerationOption: ControlRigGenerationOption.Generate, showMeshes: false,
+                    ct: cancellation, springboneRuntime: springRuntime);
                 if (destroyed || this == null) throw new OperationCanceledException("El presentador fue destruido durante la importación.");
+                cancellation.ThrowIfCancellationRequested();
                 if (candidate == null) throw new InvalidOperationException("UniVRM no devolvió un avatar.");
                 Checkpoint("Imported", candidate);
                 var animator = candidate.GetComponent<Animator>();
@@ -70,10 +83,25 @@ namespace Isekaid.ExperimentalVrm
                     if (renderer.sharedMaterials.Any(m => m == null || m.shader == null || !m.shader.isSupported || m.shader.name == "Hidden/InternalErrorShader"))
                         throw new InvalidOperationException("Material o shader incompatible.");
                 candidate.transform.SetParent(Anchor != null ? Anchor : transform, false);
+                foreach (var child in candidate.GetComponentsInChildren<Transform>(true)) child.gameObject.layer = (Anchor != null ? Anchor : transform).gameObject.layer;
                 candidate.transform.localRotation = Quaternion.Euler(0, FacingYaw, 0);
+                if (FitHeight > 0)
+                {
+                    var renderers = candidate.GetComponentsInChildren<Renderer>();
+                    if (renderers.Length == 0) throw new InvalidOperationException("El modelo no tiene geometría visible.");
+                    var bounds = renderers[0].bounds;
+                    foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+                    if (bounds.size.y < .1f) throw new InvalidOperationException("Altura inválida.");
+                    candidate.transform.localScale *= FitHeight / bounds.size.y;
+                    bounds = renderers[0].bounds;
+                    foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+                    candidate.transform.position += Vector3.up * ((Anchor != null ? Anchor : transform).position.y - bounds.min.y);
+                    foreach (var collider in candidate.GetComponentsInChildren<Collider>()) collider.enabled = false;
+                }
                 animator.runtimeAnimatorController = TrialAnimations;
                 animator.applyRootMotion = false;
                 animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+                animator.updateMode = AnimatorUpdateMode.UnscaledTime;
                 var nextKeys = new Dictionary<string, ExpressionKey>(StringComparer.OrdinalIgnoreCase);
                 foreach (var key in candidate.Runtime.Expression.ExpressionKeys) nextKeys.Add(key.Name, key);
                 var nextExpressions = nextKeys.Keys.ToArray();
@@ -89,6 +117,7 @@ namespace Isekaid.ExperimentalVrm
                         nextOriginalVisibility.Add(renderer, renderer.enabled);
                 }
                 Checkpoint("Prepared", candidate);
+                cancellation.ThrowIfCancellationRequested();
                 resources.EnableUpdateWhenOffscreen();
                 candidate.gameObject.SetActive(true);
                 resources.ShowMeshes();
@@ -98,10 +127,13 @@ namespace Isekaid.ExperimentalVrm
                 Checkpoint("Activated", candidate);
                 foreach (var renderer in visibility.Keys) renderer.enabled = false;
                 Checkpoint("PreviousHidden", candidate);
+                cancellation.ThrowIfCancellationRequested();
 
                 // Publish the prepared presentation only after every fallible activation step succeeds.
                 retired = Avatar;
                 Avatar = candidate;
+                springRuntime = null;
+                LoadedBytes = bytes;
                 keys = nextKeys;
                 Expressions = nextExpressions;
                 originalVisibility = nextOriginalVisibility;
@@ -121,7 +153,9 @@ namespace Isekaid.ExperimentalVrm
                 {
                     candidate.gameObject.SetActive(false);
                     Destroy(candidate.gameObject);
+                    springRuntime = null;
                 }
+                springRuntime?.Dispose();
                 loading = false;
             }
             if (retired != null) Destroy(retired.gameObject);
@@ -143,6 +177,7 @@ namespace Isekaid.ExperimentalVrm
         {
             if (Avatar != null) { Avatar.gameObject.SetActive(false); Destroy(Avatar.gameObject); }
             Avatar = null;
+            LoadedBytes = null;
             keys.Clear();
             Expressions = Array.Empty<string>();
             RestoreVisibility(originalVisibility);
@@ -176,6 +211,7 @@ namespace Isekaid.ExperimentalVrm
 
         private void OnGUI()
         {
+            if (!ShowDiagnosticGUI) return;
             GUILayout.BeginArea(new Rect(12, 12, 680, 190), GUI.skin.box);
             GUILayout.Label("Prueba VRM local — escena experimental");
             LocalPath = GUILayout.TextField(LocalPath);

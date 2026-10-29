@@ -49,7 +49,7 @@ namespace Isekaid.Editor
             copy.hair = 4;
             Check(!copy.IsValid, "Unsupported palette indices must be rejected.");
             copy.hair = 0;
-            copy.version = 2;
+            copy.version = 3;
             Check(!copy.IsValid, "Unknown profile versions must be rejected.");
 
             var scene = EditorSceneManager.OpenScene(CharacterCreationController.GameScenePath);
