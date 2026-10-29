@@ -1,0 +1,62 @@
+{
+  "phase": "F2",
+  "specification": "v0.2",
+  "requiresDirectionReview": true,
+  "criteria": [
+    {
+      "id": "VRM-AC01",
+      "status": "PARTIAL",
+      "evidence": "Catálogo único incorporado y ejecutable local sin cuenta ni descarga. No se desconectó físicamente la red durante este ensayo."
+    },
+    {
+      "id": "VRM-AC04",
+      "status": "PASS",
+      "evidence": "Cancelación, peticiones consecutivas y diálogo nativo; el candidato cancelado no sustituye al anterior."
+    },
+    {
+      "id": "VRM-AC12",
+      "status": "PARTIAL",
+      "evidence": "Identidad, personalidad, datos legacy y estado real existente conservados. Clase, misiones y rasgos evolucionados aún no existen funcionalmente; no se acredita F3."
+    },
+    {
+      "id": "VRM-AC13",
+      "status": "PASS",
+      "evidence": "Error de guardado inyectado y fallo real de reemplazo de archivo bloqueado; original y respaldo recuperables. No se ensayó corte eléctrico real."
+    },
+    {
+      "id": "VRM-AC14",
+      "status": "PASS",
+      "evidence": "Copia gestionada comprobada tras borrar el archivo fuente y reiniciar el ejecutable."
+    },
+    {
+      "id": "VRM-AC15",
+      "status": "PASS",
+      "evidence": "Copia dañada/perdida: fallback anunciado, referencia y memoria del encuentro conservadas; reimportación recupera el recurso."
+    },
+    {
+      "id": "VRM-AC16",
+      "status": "PASS",
+      "evidence": "Migración v1 con colores, personalidad y JSON desconocido preservados; respaldo y error de guardado comprobados."
+    },
+    {
+      "id": "VRM-AC17",
+      "status": "PASS",
+      "evidence": "Restricciones reales y fixture con créditos mostrados por separado de la declaración humana. Revisión de derechos pendiente; no equivale a permiso legal validado."
+    },
+    {
+      "id": "VRM-AC22",
+      "status": "PARTIAL",
+      "evidence": "Copias por hash y respaldos preservados. No se implementa eliminación de biblioteca ni se acredita compatibilidad con formatos futuros de partida."
+    },
+    {
+      "id": "VRM-AC24",
+      "status": "PARTIAL",
+      "evidence": "Edición bloqueada en incapacitación/muerte y encuentro pausado conservado. Combate, secuestro y secuencias importantes requieren sistemas y pruebas posteriores."
+    },
+    {
+      "id": "VRM-AC26",
+      "status": "PASS",
+      "evidence": "Muestras sin controlador de compañera propio; no modifican confianza, rescates ni estado del encuentro conservado."
+    }
+  ]
+}

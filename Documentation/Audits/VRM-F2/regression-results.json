@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "prototypeChecks": true,
+  "prototypePlayModeChecks": true,
+  "editorSearchExceptionExcluded": true,
+  "originalHistoricalScenePlayMode": "NOT RUN",
+  "sourceLog": "f2-regression-04.log"
+}

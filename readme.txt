@@ -583,3 +583,11 @@ Proteccion y limites
 - Nueve rechazos heredados y dos pruebas de archivo local (tamano y version VRM no admitida) PASS.
 - Avisos MIT y procedencia CC0 conservados junto al ejecutable; capturas VRM privadas excluidas de Git.
 - F2 se entrega para revision con criterios parciales documentados; no se aprueba arte, no se inicia F3/F4 y no se fusiona main.
+
+[2026-10-28] F2 VRM - informe y evidencias para revision
+- Informe VRM-F2 con 11 criterios v0.2: 7 PASS y 4 PARTIAL, sin declarar cierre artistico o narrativo.
+- Adjuntos resultados de Editor, Windows, selector, reinicio, guardados, rechazos y regresiones; manifiestos SHA-256 de implementacion, build, capturas locales y 715 originales protegidos.
+- Capturas publicas limitadas al catalogo CC0. VRM de prueba, copias gestionadas, sus imagenes y builds permanecen fuera de Git.
+- Publicados pasos reproducibles y comprobador de entrega. Main consultado de nuevo: permanece en 480a8e9; no hay nuevos cambios documentales que incorporar.
+- Cambios automaticos de cache de URP durante la build retirados del checkout; se conserva el ajuste intencional de shaders para carga VRM.
+- Se conserva una build Windows de revision local con avisos de terceros. Revision de Direccion, desconexion fisica de red y limitaciones futuras documentadas.
