@@ -5,6 +5,8 @@
 **Rama:** docs/isek-f3a-n1-character-voices, creada desde main `f835d3b` y actualizada sin commit de mezcla a `24cad113be5edc8ca1d44db1857a3f23209a2dd5` al incorporarse PR #13. La fuente canónica y el runtime no cambiaron.  
 **Seguimiento:** [F3A #8](https://github.com/MarcoPolo2-0/Isekaid/issues/8) · [ISEK-001 #1](https://github.com/MarcoPolo2-0/Isekaid/issues/1).
 
+**Actualización posterior para revisión final:** Dirección aprobó documentalmente el GDD v0.7; su publicación oficial se prepara en el [PR independiente #15](https://github.com/MarcoPolo2-0/Isekaid/pull/15). Esa aprobación no autoriza los candidatos N1. [Presentación final de biblias y 30 textos](09_Presentacion_Final_Direccion_v0.1.md), con decisiones creativas prioritarias; fichas y parche permanecen sin cambios.
+
 ## 1. Índice de entregables
 
 | Documento | Propósito |
@@ -17,12 +19,13 @@
 | [Comparación y actuación](06_Matriz_Reacciones_Actuacion_v0.1.md) | Siete contextos iguales, siete emociones y propuesta N2 con alternativas |
 | [Protocolo y aceptación](07_Prueba_Ciega_Aceptacion_v0.1.md) | Medidas, criterios y clave para administración |
 | [Hoja ciega separada](07b_Muestras_Ciegas_v0.1.md) | 21 muestras sin personalidad/nombre/ID de fuente, para participantes |
+| [Presentación final para Dirección](09_Presentacion_Final_Direccion_v0.1.md) | Motivaciones/contradicciones, comparación y tabla de 30 candidatos con decisiones C1–C5 |
 | Este informe | Dependencias, preservación del contrato, comprobaciones y decisiones pendientes |
 
 ## 2. Fuentes consultadas y estado de referencia
 
 - [GDD v0.5](../../GameDesignDocument_v0.5.md), maestro histórico, sin modificaciones.
-- [GDD v0.7 en PR #13, corte 0180b8b](https://github.com/MarcoPolo2-0/Isekaid/blob/0180b8b35f59a0a5f4357bb14549066b33a03ddc/Documentation/GameDesignDocument_v0.7_borrador.md): BORRADOR con revisiones editorial/técnica. PR #13 se fusionó durante esta preparación y ya está en main; el archivo sigue sin aprobación como maestro definitivo. Se consulta sin sobrescribirlo o promoverlo desde N1.
+- [GDD v0.7 en PR #13, corte 0180b8b](https://github.com/MarcoPolo2-0/Isekaid/blob/0180b8b35f59a0a5f4357bb14549066b33a03ddc/Documentation/GameDesignDocument_v0.7_borrador.md): referencia histórica del borrador con revisiones editorial/técnica, anterior a la aprobación documental de Dirección. PR #13 se fusionó durante la preparación original de N1; la promoción oficial posterior se entrega por separado en PR #15, sin sobrescribirlo desde N1.
 - [DECISIONS](../../DECISIONS.md), [workflow v1.2](../../Workflow_Desarrollo_v1.2.md), [especificación F3A](../F3A_Especificacion_v0.1.md), [eventos](../F3A_Contrato_Eventos_v0.1.md), [aceptación](../F3A_Aceptacion_v0.1.md) y [matriz emocional](../F3A_Matriz_Emocional_v0.1.md).
 - [Biblioteca canónica](../F3A_Biblioteca_v0.1.json), [dirección de diferenciación](../F3A_Diferenciacion_Personalidades_v0.1_PROPUESTA.md), [revisión anterior de 60 entradas](../F3A_Diferenciacion_Revision_60_v0.1.md) y [parche PR #11](../F3A_Diferenciacion_Editorial_v0.1_PROPUESTA.json).
 - Lectura del adaptador [build_f3a_runtime_content.py](../../../tools/build_f3a_runtime_content.py), [datos runtime](../../../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/DialogueContent.cs), [director](../../../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/DialogueDirector.cs), [presentador emocional](../../../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionReactionPresenter.cs) y [UI](../../../UnityProjectIsekaid/Assets/_Project/Scripts/UI/DialoguePresenter.cs). [Auditoría técnica F3A](../../Audits/VRM-F3A/review-1/INFORME.md) y [locomoción/render](../../Audits/Companion-Locomotion-Render/INFORME.md) como evidencia previa, no repetida aquí.
@@ -88,6 +91,6 @@ Las pruebas humanas, N2 corporal, Play Mode y build quedan PENDIENTES. Estos res
 2. Autorizar por ID qué 7 recomendaciones acepta, qué 23 versiones mejoradas adopta y si conserva las tres alertas actuales. Puede aprobar solo un subconjunto.
 3. Ratificar el protocolo y umbrales de identificación, y ejecutar lectura editorial/ciega antes de dar por lograda la diferenciación.
 4. Definir la actuación mínima N2 que se encargará a Desarrollo con capacidades comprobables. No cerrar F3A-R10 por frases distintas.
-5. Mantener los sistemas posteriores y Deredere fuera de alcance hasta su autorización propia. El GDD v0.7 permanece como borrador, aunque el PR #13 ya se haya fusionado.
+5. Mantener los sistemas posteriores y Deredere fuera de alcance hasta su autorización propia. El GDD v0.7 tiene aprobación documental posterior; la publicación de su archivo oficial está en PR #15 y no autoriza N1 automáticamente.
 
 No se pide aprobar una historia completa ni fijar todos los detalles futuros para evaluar esta entrega. La prioridad es una relación inicial entre desconocidos, con tres maneras coherentes de pensar y decidir.
