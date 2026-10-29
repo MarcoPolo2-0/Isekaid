@@ -631,3 +631,9 @@ Proteccion y limites
 - 35 aserciones adversariales PASS, incluidas conservacion byte a byte del perfil/respaldo ante rechazo, esquema invalido, tamano escapado y roundtrip cerca del limite.
 - VRM privado de prueba con JSON de 1,427,620 bytes: recorrido Editor PASS; perfil resultante de 1,088 bytes y metadatos de 370 bytes, sin persistir la propiedad desconocida de 1,300,000 caracteres.
 - Regresion de prototipo, 11 aserciones previas de almacenamiento y guardas de archivos repetidas: PASS. Pruebas Windows/reinicio y CI se registran en el informe de revision.
+
+[2026-10-28] PR #7 - resultados finales de la revision tecnica
+- Recorrido Windows con el VRM adversarial PASS; segundo proceso sin copia fuente PASS. Perfil legible de 1,088 bytes, metadatos de 370 bytes, respaldo existente y campos desconocidos excluidos.
+- Informe de revision, resultados, hashes del binario actualizado y generador reproducible de fixture privado agregados en VRM-F2/metadata-review.
+- Se mantienen 7 criterios F2 PASS y 4 PARTIAL. Offline fisico, gameplay futuro, derechos y calidad visual no se declaran aprobados. No se publica el VRM derivado ni sus capturas.
+- Cambios del PR #6 integrados conservando ambos registros; main permanece sin fusionar. La correccion se publica en el mismo PR #7.

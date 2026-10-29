@@ -1,0 +1,21 @@
+{
+  "implementationCommit": "0a0b920",
+  "integratedPr6": "6261706b2ec3378cc4c8405225b540d7d89e44db",
+  "mergeCommit": "c863817",
+  "privateFixtureIncluded": false,
+  "sha256": {
+    "Documentation/DECISIONS.md": "d1ede1047efd4ce71e0bdd99d4a8ee4f57df2e3f0b85943fb98c6e41e90ab45b",
+    "Documentation/GameDesignDocument_v0.6_borrador.md": "18746b76f5051956f72680cd761e441b1040a5699112b79b17f2d24c5b2f3174",
+    "Documentation/Specifications/ISEK-001_Estado_DEC007.md": "4408bc775851c28105dec4502b4efe1c0c71655b89a9612dafe60d1653d72ce5",
+    "Documentation/Specifications/VRM_F2_F3_Matriz_Trazabilidad_v0.1.md": "3687aafa078809982e55a2f14f9f4d68da9f9c35e3ae60c26d765beea1dd99d5",
+    "Documentation/Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md": "e88c3044a24c08d594fac8a77ec2685beacd14dd20aff9ac624a80e5509cf973",
+    "Documentation/Specifications/VRM_Fase3_Personalidad_Contextual_v0.1_BORRADOR.md": "dd415e2d2f045bc6e369249b2fb8cd4b90f41c4d2a3067810af66e51aab37b50",
+    "Documentation/Workflow_Desarrollo_v1.2.md": "c39c4a1ca82408b2ba41b3129b56951e3deb18021b5d97c7326b711372306ab3",
+    "UnityProjectIsekaid/Assets/_Project/AvatarRuntime/AvatarSelection.cs": "190278ecce8b454d4b674d8c478903a683266424eeb53707bd79cba048a3dae8",
+    "UnityProjectIsekaid/Assets/_Project/Editor/F2IntegrationChecks.cs": "da02818258497a62f5060a27d5b93dbae6fcf2c13a229280a515456e80aa550c",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionProfileStore.cs": "e1bc4afcf416d0226153b745c3db68c4e1d7a7a09f8369cb2edbf7a0a1d606f4",
+    "UnityProjectIsekaid/Assets/_Project/Validation/F2MetadataChecks.cs": "c59a69fd921daf30ca7ad7a5776b2c5220c1fc9e0070ae95a20d349163be9412",
+    "UnityProjectIsekaid/Assets/_Project/Validation/F2MetadataChecks.cs.meta": "f11bd73243bbe3524c17f133348064096b9636f05f2c119a8ecad0b4971d4055",
+    "readme.txt": "247a366ce98831944d18c6d05a1b582502882cca2b19e6c6e242e69e606daf34"
+  }
+}

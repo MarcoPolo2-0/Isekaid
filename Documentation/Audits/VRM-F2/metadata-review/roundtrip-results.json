@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "fixtureSha256": "e51cc3f6f3c610c2cc8707fb6478ccbfd1b3a33ff5bf6fb672682e244376b6c0",
+  "fixtureJsonBytes": 1427620,
+  "discardedUnknownFieldCharacters": 1300000,
+  "profileBytes": 984,
+  "metadataBytes": 370,
+  "backupExists": true,
+  "sourceCopyDeleted": true
+}

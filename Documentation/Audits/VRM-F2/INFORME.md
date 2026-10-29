@@ -3,6 +3,8 @@
 **Fecha:** 28/10/2026, Guatemala. **Unity:** 6000.6.7f1. **Rama:** `feature/isek-vrm-f2-character-creator`.
 **Base:** `main` 480a8e9, con PR #3 y #4 incorporados. **Estado:** entrega experimental para revisiÃ³n de DirecciÃ³n; no fusionar ni iniciar F3.
 
+**Revisión posterior de Dirección:** [corrección del presupuesto de metadatos, roundtrip y pruebas](metadata-review/INFORME.md). Incluye la documentación del PR #6, sin fusionar main. Los resultados del cuerpo de este informe conservan la entrega inicial.
+
 ## 1. Resultado y alcance
 
 El creador permite elegir Adventurer, importar un VRM 1.0 local, girar la vista previa, probar animaciones y expresiones, seleccionar una de las tres personalidades, guardar y entrar a Game. La apariencia se carga mediante el importador transaccional existente; se conservan su validaciÃ³n, sus GUID y el controlador de compaÃ±era del prototipo.

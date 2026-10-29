@@ -23,4 +23,6 @@ for name in ("editor-results.json", "storage-results.json", "windows-results.jso
     assert path.is_file(), f"Missing run: {name}"
     result = json.loads(path.read_text(encoding="utf-8-sig"))
     assert result["passed"], f"Failed run: {name}"
+for path in (report / "metadata-review").glob("*-results.json"):
+    assert json.loads(path.read_text(encoding="utf-8-sig"))["passed"], f"Failed metadata review run: {path.name}"
 print(f"ISEKAID_F2_DELIVERY_CHECKS_PASSED protected={len(manifest['sha256'])}")
