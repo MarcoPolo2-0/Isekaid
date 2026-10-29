@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "target": "StandaloneWindows64",
+  "sourceCommit": "0a0b920",
+  "buildSummaryBytes": 196454398,
+  "sourceLog": "f2-review-windows-build.log",
+  "sha256": {
+    "UnityProjectIsekaid/Builds/F2Windows/Isekaid.exe": "3726509af94bdacbfe23f85da13109a7e70fb7d61913506e98690bd3208b2fd7",
+    "UnityProjectIsekaid/Builds/F2Windows/Isekaid_Data/Managed/Isekaid.Runtime.dll": "bb929d2b77ab49947f7fe0d7584192fc94213847293f31498e573f82c2c4c250",
+    "UnityProjectIsekaid/Builds/F2Windows/Isekaid_Data/Managed/Isekaid.VrmAppearance.dll": "232b3b765f3bf14170b1a6559c668d478a41fa5a3922889b15e5613a51a166fa"
+  }
+}

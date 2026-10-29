@@ -5,14 +5,15 @@ namespace Isekaid
     [Serializable]
     public sealed class CompanionProfile
     {
-        public int version = 1;
+        public int version = 2;
+        public string identity = "";
         public CompanionPersonality personality = CompanionPersonality.Shy;
         public int hair;
         public int eyes;
         public int top;
         public int trousers;
 
-        public bool IsValid => version == 1 && (int)personality >= 0 && (int)personality < 3 &&
+        public bool IsValid => (version == 1 || version == 2) && (int)personality >= 0 && (int)personality < 3 &&
             hair >= 0 && hair < 4 && eyes >= 0 && eyes < 4 && top >= 0 && top < 4 && trousers >= 0 && trousers < 4;
 
         public int GetColorIndex(int part)

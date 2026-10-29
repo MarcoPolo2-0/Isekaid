@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310280716}
   - component: {fileID: 310280715}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: TransformChangeCheck_DO_NOT_DESTROY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,9 +171,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 791350481774716731, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: visualRoot
+      value: 
+      objectReference: {fileID: 426117178}
+    - target: {fileID: 791350481774716731, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: catalogPrefab
+      value: 
+      objectReference: {fileID: 7538346685261547537, guid: 3b13c1f7b976cee4ea7995231e6c33fd, type: 3}
+    - target: {fileID: 791350481774716731, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: vrmAnimations
+      value: 
+      objectReference: {fileID: 9100000, guid: 50354c0fcb2d7b0478a79ca46f285e95, type: 2}
+    - target: {fileID: 831992515764340249, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 2050594773220998611, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
       propertyPath: m_Name
       value: CompanionPreview
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050594773220998611, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243938288088198970, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 2255413106317715057, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,6 +239,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2738187764979839341, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3253038301421635106, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3278499027014704060, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3450961803778789065, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619887853922789784, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990674459789378839, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253939317835419714, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483982720314702572, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650942565658432363, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368094096175970045, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838015701585880320, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530053943002877922, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080144568560891583, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -236,6 +312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e77153a2ca0b44b9cf215d3a4b27ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Isekaid.Runtime::Isekaid.CompanionAppearance
+--- !u!4 &426117178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1144248027162803388, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
+  m_PrefabInstance: {fileID: 426117175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &660023303
 GameObject:
   m_ObjectHideFlags: 1
@@ -246,7 +327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660023305}
   - component: {fileID: 660023304}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: InputControls_DO_NOT_DESTROY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817211650}
   - component: {fileID: 817211649}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: KeyLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +470,7 @@ GameObject:
   - component: {fileID: 1085610874}
   - component: {fileID: 1085610873}
   - component: {fileID: 1085610872}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: PreviewStage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729628381}
   - component: {fileID: 1729628380}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: DataSaveManager_GO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +708,7 @@ GameObject:
   - component: {fileID: 1773901033}
   - component: {fileID: 1773901032}
   - component: {fileID: 1773901031}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: PreviewCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -677,11 +758,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.6
+  orthographic size: 1.65
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483648
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -702,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 1773901030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: -5}
+  m_LocalPosition: {x: 0, y: 0.75, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -718,7 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054705299}
   - component: {fileID: 2054705298}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: UGame-InSceneVariables
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "target": "StandaloneWindows64",
+  "configuration": "Development Mono",
+  "sourceCommit": "9b21ca4",
+  "buildSummaryBytes": 196441782,
+  "sourceLog": "f2-windows-build7.log",
+  "binarySha256": {
+    "UnityProjectIsekaid/Builds/F2Windows/Isekaid.exe": "3726509af94bdacbfe23f85da13109a7e70fb7d61913506e98690bd3208b2fd7",
+    "UnityProjectIsekaid/Builds/F2Windows/Isekaid_Data/Managed/Isekaid.Runtime.dll": "e28f467146614e4965a1009b190394c6abc6e628b6130d0297b108de2d4d03d1",
+    "UnityProjectIsekaid/Builds/F2Windows/Isekaid_Data/Managed/Isekaid.VrmAppearance.dll": "141e062f3594fe66acbc1018b6ed3ed66a30639c692cf93973d44a5374850c66"
+  },
+  "notices": [
+    "Adventurer.txt",
+    "UniGLTF-MIT.txt",
+    "UniVRM-MIT.txt"
+  ]
+}

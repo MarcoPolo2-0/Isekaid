@@ -1,6 +1,6 @@
 {
   "name": "Isekaid.Editor",
   "rootNamespace": "Isekaid.Editor",
-  "references": ["Isekaid.Runtime", "Unity.InputSystem"],
+  "references": ["Isekaid.Runtime", "Unity.InputSystem", "Isekaid.VrmAppearance", "Isekaid.F2Validation"],
   "includePlatforms": ["Editor"]
 }

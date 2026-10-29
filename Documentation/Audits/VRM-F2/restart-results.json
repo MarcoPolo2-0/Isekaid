@@ -1,0 +1,19 @@
+{
+    "unity": "6000.6.7f1",
+    "platform": "WindowsPlayer",
+    "avatarHash": "37eadcbaa4e240b691601daabcfa4ad4d5319793dff0cc0d128eff55f4de8736",
+    "error": "",
+    "passed": true,
+    "releasedResources": 0,
+    "importMilliseconds": 0.0,
+    "averageFrameMilliseconds": 0.0,
+    "previewHeight": 0.0,
+    "previewFeetOffset": 0.0,
+    "memoryBefore": 0,
+    "memoryAfter": 0,
+    "peakMemory": 0,
+    "checks": [
+        "A new process reloads the managed VRM without the source file",
+        "Restarted creator starts Game"
+    ]
+}

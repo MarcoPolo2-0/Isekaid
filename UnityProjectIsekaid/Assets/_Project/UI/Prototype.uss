@@ -23,13 +23,13 @@ Button.primary { background-color: rgb(205, 180, 121); color: rgb(20, 34, 35); -
 .palette { flex-direction: row; }
 .palette Button { flex-grow: 1; flex-basis: 0; margin-right: 4px; font-size: 12px; padding: 5px 3px; }
 .unity-base-popup-field__input { background-color: rgb(40, 58, 60); color: rgb(235, 238, 231); min-height: 32px; border-color: rgb(72, 91, 90); }
-#creation-header { position: absolute; left: 5%; top: 5%; width: 38%; }
+#creation-header { position: absolute; left: 5%; top: 3%; width: 40%; }
 #creation-header .menu-title { font-size: 44px; margin-bottom: 14px; }
 #creation-header .body { font-size: 16px; color: rgb(185, 204, 197); }
 #creation-menu { position: absolute; right: 4%; top: 5%; bottom: 6%; width: 39%; max-width: 470px; padding: 25px; background-color: rgba(16, 29, 32, 0.97); border-top-width: 3px; border-top-color: rgb(209, 181, 114); border-radius: 12px; }
 .creation-title { font-size: 28px; -unity-font-style: bold; margin-bottom: 8px; white-space: normal; }
 #creation-menu .section-title { margin-top: 15px; }
 #creation-menu .body { margin-top: 12px; font-size: 14px; }
-#preview-controls { position: absolute; left: 4%; bottom: 6%; width: 20%; padding: 14px 20px; background-color: rgb(16, 29, 32); border-radius: 8px; }
+#preview-controls { position: absolute; left: 4%; bottom: 4%; width: 40%; padding: 14px 20px; background-color: rgb(16, 29, 32); border-radius: 8px; }
 .feedback { white-space: normal; color: rgb(255, 191, 148); margin-top: 10px; }
 .palette Button.selected { border-left-color: rgb(235, 220, 180); border-right-color: rgb(235, 220, 180); border-top-color: rgb(235, 220, 180); background-color: rgb(70, 87, 79); -unity-font-style: bold; }

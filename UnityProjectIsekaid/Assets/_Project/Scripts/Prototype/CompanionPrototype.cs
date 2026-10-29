@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 namespace Isekaid
 {
@@ -16,6 +20,10 @@ namespace Isekaid
         private NavMeshDataInstance navMeshInstance;
         private float previousTimeScale;
         private bool changingScene;
+        public static CompanionPrototype Editing { get; private set; }
+        private readonly Dictionary<Behaviour, bool> suspendedViews = new Dictionary<Behaviour, bool>();
+        private readonly Dictionary<UIDocument, StyleEnum<DisplayStyle>> suspendedDocuments = new Dictionary<UIDocument, StyleEnum<DisplayStyle>>();
+        private bool pausedBeforeCreation;
 
         public FirstPersonController Player => player;
         public CompanionController Companion => companion;
@@ -42,6 +50,7 @@ namespace Isekaid
 
         private void OnDestroy()
         {
+            if (Editing == this) Editing = null;
             if (navMeshInstance.valid)
                 navMeshInstance.Remove();
         }
@@ -113,8 +122,45 @@ namespace Isekaid
         {
             if (changingScene || !Application.CanStreamedLevelBeLoaded(CharacterCreationController.ScenePath))
                 return;
+            if (companion.State.LifeState == CompanionLifeState.Downed || companion.State.LifeState == CompanionLifeState.Dead)
+                return;
             changingScene = true;
-            SceneManager.LoadSceneAsync(CharacterCreationController.ScenePath);
+            pausedBeforeCreation = IsPaused;
+            SetPaused(true);
+            Editing = this;
+            suspendedViews.Clear();
+            foreach (var root in gameObject.scene.GetRootGameObjects())
+            {
+                foreach (var document in root.GetComponentsInChildren<UIDocument>(true))
+                {
+                    suspendedDocuments.Add(document, document.rootVisualElement.style.display);
+                    document.rootVisualElement.style.display = DisplayStyle.None;
+                }
+                foreach (var view in root.GetComponentsInChildren<Behaviour>(true))
+                    if (view is Camera || view is AudioListener || view is Light)
+                    { suspendedViews.Add(view, view.enabled); view.enabled = false; }
+            }
+            var operation = SceneManager.LoadSceneAsync(CharacterCreationController.ScenePath, LoadSceneMode.Additive);
+            operation.completed += _ => SceneManager.SetActiveScene(SceneManager.GetSceneByPath(CharacterCreationController.ScenePath));
+        }
+
+        public async Task ResumeFromCreation(CompanionProfile profile)
+        {
+            var presentation = companion.GetComponent<CompanionAppearance>();
+            await presentation.LoadSaved(preserveOnFailure: true);
+            if (presentation.RecoveredFallback) throw new InvalidOperationException("La apariencia guardada requiere recuperación.");
+            presentation.Apply(profile);
+            companion.SetPersonality(profile.personality);
+            var creator = SceneManager.GetSceneByPath(CharacterCreationController.ScenePath);
+            SceneManager.SetActiveScene(gameObject.scene);
+            if (creator.IsValid()) _ = SceneManager.UnloadSceneAsync(creator);
+            foreach (var pair in suspendedViews) if (pair.Key != null) pair.Key.enabled = pair.Value;
+            foreach (var pair in suspendedDocuments) if (pair.Key != null) pair.Key.rootVisualElement.style.display = pair.Value;
+            suspendedViews.Clear();
+            suspendedDocuments.Clear();
+            Editing = null;
+            changingScene = false;
+            SetPaused(pausedBeforeCreation);
         }
     }
 }

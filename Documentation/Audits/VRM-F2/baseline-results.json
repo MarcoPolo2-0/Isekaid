@@ -1,0 +1,9 @@
+{
+  "baseCommit": "480a8e9",
+  "staticPrototypeChecks": "PASS",
+  "playModeBeforeChanges": "BLOCKED",
+  "cause": "UnityEditor.Search.SearchDatabase index exception",
+  "sourceLog": "f2-baseline-repeat.log",
+  "protectedOriginals": 715,
+  "sceneBackupBeforeChanges": true
+}

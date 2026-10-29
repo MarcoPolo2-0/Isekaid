@@ -1,0 +1,111 @@
+{
+  "captures": [
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/editor/creator-catalog-1280.png",
+      "sha256": "07e4e26a8b6e832ed7c754a7c572f669204eee96586f3bb41de1c2a0bdad30a0",
+      "width": 1280,
+      "height": 720,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/editor/creator-catalog-1600.png",
+      "sha256": "1a38f45d8045a3e1f25a83f0cdaecf58a921ff79b7ebef6eb18b4f4d67935552",
+      "width": 1600,
+      "height": 900,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/editor/creator-catalog-1920.png",
+      "sha256": "7545ac816b323d82c67d1f100c46b66f919fc43680abebcfbb7ee11d14e6e04b",
+      "width": 1920,
+      "height": 1080,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/editor/creator-vrm-private.png",
+      "sha256": "be9f79a8a7385a8cc31100070f240c0b7ddf9e76e6bb1f81817bd32e9038b6f6",
+      "width": 1920,
+      "height": 1080,
+      "private": true
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/editor/fit-diagnostic-private.png",
+      "sha256": "78c46ba7a36a83d1a3d744c7ff55d813be7f7b77ee43b70f086a80f39ffc238f",
+      "width": 1920,
+      "height": 1080,
+      "private": true
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/editor/game-catalog.png",
+      "sha256": "9fc98d3b6fb8648ff7fc168245126cd9c2a9e4e34bcb8a644a3831ee52993d4f",
+      "width": 1920,
+      "height": 1080,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/editor/game-vrm-private.png",
+      "sha256": "d1083b06af1a4482e99a4f26137454f53494c0fc496cf424934aad6395c9a01f",
+      "width": 1920,
+      "height": 1080,
+      "private": true
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/restart/restart-game-vrm.png",
+      "sha256": "1889b0f9df5a4fc19b4b922680af5623bbaf464c658ba2da16a95482ca21efa0",
+      "width": 1920,
+      "height": 1080,
+      "private": true
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/restart/restart-managed-vrm.png",
+      "sha256": "1889b0f9df5a4fc19b4b922680af5623bbaf464c658ba2da16a95482ca21efa0",
+      "width": 1920,
+      "height": 1080,
+      "private": true
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/windows/creator-catalog-1280.png",
+      "sha256": "70a8c6ec12b8def06babc3a9030980a0ff2b1ddd572091a2af8d90d34aed344a",
+      "width": 1280,
+      "height": 720,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/windows/creator-catalog-1600.png",
+      "sha256": "73b7349f69177c7b2f6fcbf592308ba6175f0bd817423a6819d031b9872221ae",
+      "width": 1600,
+      "height": 900,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/windows/creator-catalog-1920.png",
+      "sha256": "1889b0f9df5a4fc19b4b922680af5623bbaf464c658ba2da16a95482ca21efa0",
+      "width": 1920,
+      "height": 1080,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/windows/creator-vrm-private.png",
+      "sha256": "252590bced39cd6a7540d509909e6cfe0eb08d5f001d74da0fea279e45df1986",
+      "width": 1920,
+      "height": 1080,
+      "private": true
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/windows/game-catalog.png",
+      "sha256": "2119f650c1e0c2aee90f369cc4a5506caea104062127301acee6379c9cf87193",
+      "width": 1920,
+      "height": 1080,
+      "private": false
+    },
+    {
+      "path": "UnityProjectIsekaid/LocalVrmEvidence/F2/windows/game-vrm-private.png",
+      "sha256": "dadf5681d0314f9f5a285fa6565c88a04bb543b0044f3609bdff89cc295bc5d2",
+      "width": 1920,
+      "height": 1080,
+      "private": true
+    }
+  ],
+  "privateVrmImagesPublished": false,
+  "publicCatalogEvidence": "evidence/"
+}

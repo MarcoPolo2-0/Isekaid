@@ -52,8 +52,10 @@ namespace Isekaid.Editor
 
         private static void OnLog(string message, string stack, LogType type)
         {
+            if (type == LogType.Exception && stack.Contains("UnityEditor.Search.SearchDatabase"))
+            { Debug.LogWarning("Editor search indexing exception excluded from gameplay checks: " + message); return; }
             if (type == LogType.Error || type == LogType.Exception || type == LogType.Assert)
-                Finish(false, message);
+                Finish(false, message + "\n" + stack);
         }
 
         private static void Tick()
@@ -87,8 +89,8 @@ namespace Isekaid.Editor
                     var creator = UnityEngine.Object.FindAnyObjectByType<CharacterCreationController>();
                     if (creator == null)
                         return;
-                    Check(Time.timeScale == 1f && Cursor.lockState == CursorLockMode.None,
-                        "Returning from pause must restore creator time and cursor.");
+                    Check(Time.timeScale == (CompanionPrototype.Editing == null ? 1f : 0f) && Cursor.lockState == CursorLockMode.None,
+                        "The creator unlocks the cursor while keeping an existing encounter paused.");
                     Check(creator.Profile.personality == CompanionPersonality.Yandere && creator.Profile.hair == 2 &&
                         creator.Profile.eyes == 3 && creator.Profile.top == 1 && creator.Profile.trousers == 2,
                         "Returning to creation must reload the saved design.");
@@ -188,7 +190,7 @@ namespace Isekaid.Editor
                         break;
                     case 10:
                         Check(companion.State.Personality == CompanionPersonality.Yandere && companion.State.LifeState == CompanionLifeState.Trapped,
-                            "A second adventure must preserve identity and start a fresh encounter.");
+                            "Returning from the creator must preserve the current encounter and saved personality.");
                         CheckAppearance(companion);
                         Finish(true, "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED");
                         return;

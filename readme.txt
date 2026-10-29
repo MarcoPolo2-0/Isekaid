@@ -550,6 +550,49 @@ Proteccion y limites
   solicitar aprobacion definitiva del cambio de alcance.
 - Entrega mediante rama y PR documental, sin incluir el experimento Unity.
 
+[2026-10-28] F2 VRM - implementacion experimental en curso
+- Rama feature/isek-vrm-f2-character-creator creada desde main 480a8e9.
+- Checkout independiente; cambios locales y documentos de Chat 2 preservados.
+- Escenas originales y metadatos respaldados fuera del repositorio antes de modificar.
+- Importador transaccional reutilizado en _Project/AvatarRuntime, conservando GUID.
+- Catalogo local Adventurer con licencia CC0 publicada por Dawn to Dusk Games.
+- Creador con importacion Windows, permisos declarados, muestras visuales y personalidad independiente.
+- Perfil v2 con identidad, referencia visual separada, copia privada por SHA-256 y guardado con respaldo.
+- El regreso al creador mantiene el encuentro en pausa; no reinicia memoria ni confianza existentes.
+- Verificacion inicial estatica del prototipo: PASS. Play Mode base bloqueado por excepcion de UnityEditor.Search.SearchDatabase; no se atribuye al gameplay.
+- Pruebas de integracion y revision visual en curso; esta entrada no declara cerrada F2.
+
+[2026-10-28] F2 VRM - recorrido integrado y correcciones verificadas
+- Pruebas en Play Mode: catalogo y VRM llegan a Game sin sustituir CompanionController.
+- Conservados encuentro, instancia de estado, primer rescate, confianza, personalidad, velocidad y radio de navegacion durante el cambio visual.
+- Corregidos metadatos VRM, encuadre tras evaluar Animator y HUD al volver del creador.
+- Spring Bones usa el runtime independiente de UniVRM para evitar una fuga comprobada del combinador compartido en reemplazos; repeticion con detector nativo sin ese aviso.
+- 195 recursos propios liberados en tres ciclos VRM/catalogo; cancelacion durante carga y fallos de preparacion/activacion/guardado comprobados.
+- Nueve comprobaciones de migracion, conservacion de campos legacy y respaldo: PASS.
+- PrototypeChecks y PrototypePlayModeChecks: PASS; asercion del creador actualizada a conservar el encuentro en pausa, segun F2.
+- Verificados 715 archivos originales protegidos: cero cambios de contenido, incluidos Woman, SourceArt, prefabs y GUID de escenas.
+- Capturas reales revisadas en 1920x1080, 1280x720 y 1600x900. Capturas con el VRM privado permanecen excluidas de Git.
+- Build Windows y comprobacion fuera del Editor en curso; no se declara lista para lanzamiento ni se inicia F3.
+
+[2026-10-28] F2 VRM - validacion de Windows y recuperacion en el encuentro
+- Build Windows de desarrollo generada con Unity 6000.6.7f1 y probada fuera del Editor, sin incluir el fixture privado.
+- Selector nativo real: seleccion y cancelacion verificadas; corregido el buffer Win32 para evitar un desbordamiento de pila en Mono.
+- Ejecutable reiniciado en un segundo proceso sin el archivo fuente: apariencia gestionada y personalidad recuperadas; entrada a Game comprobada.
+- Probado fallo de activacion al volver al encuentro: permanecen la apariencia anterior, el perfil guardado y la confianza; el creador permite reintentar.
+- Regresion final: PrototypeChecks y PrototypePlayModeChecks PASS. Once aserciones de almacenamiento PASS, incluido fallo real de reemplazo por archivo bloqueado.
+- Nueve rechazos heredados y dos pruebas de archivo local (tamano y version VRM no admitida) PASS.
+- Avisos MIT y procedencia CC0 conservados junto al ejecutable; capturas VRM privadas excluidas de Git.
+- F2 se entrega para revision con criterios parciales documentados; no se aprueba arte, no se inicia F3/F4 y no se fusiona main.
+
+[2026-10-28] F2 VRM - informe y evidencias para revision
+- Informe VRM-F2 con 11 criterios v0.2: 7 PASS y 4 PARTIAL, sin declarar cierre artistico o narrativo.
+- Adjuntos resultados de Editor, Windows, selector, reinicio, guardados, rechazos y regresiones; manifiestos SHA-256 de implementacion, build, capturas locales y 715 originales protegidos.
+- Capturas publicas limitadas al catalogo CC0. VRM de prueba, copias gestionadas, sus imagenes y builds permanecen fuera de Git.
+- Publicados pasos reproducibles y comprobador de entrega. Main consultado de nuevo: permanece en 480a8e9; no hay nuevos cambios documentales que incorporar.
+- Cambios automaticos de cache de URP durante la build retirados del checkout; se conserva el ajuste intencional de shaders para carga VRM.
+- Se conserva una build Windows de revision local con avisos de terceros. Revision de Direccion, desconexion fisica de red y limitaciones futuras documentadas.
+
+
 ======================================================================
 28/10/2026 - CHAT 2 / DEC-007 - VRM F2 Y PREPARACION DE GAMEPLAY F3
 ======================================================================
@@ -576,6 +619,24 @@ Proteccion y limites
 - Rama docs/isek-vrm-f2-dec007 y PR hacia main para revision; sin fusion
   automatica. Se preservan entradas previas de readme de Desarrollo y Diseno.
 
+[2026-10-28] PR #7 - incorporacion de la revision documental #6
+- Integrados los commits del PR #6 (6261706), todavia abierto, dentro de la rama experimental F2; main no se fusiona ni se modifica.
+- Conservadas todas las entradas de ambos readme.txt y los documentos historicos. Las propuestas F2-P01-P04 y F3 conservan su estado documental.
+
+[2026-10-28] PR #7 - correccion del presupuesto de metadatos y verificacion del guardado
+- VRMC_vrm.meta se reduce a una lista explicita de campos estandar: textos de identidad/derechos, autores, referencias y permisos booleanos. Se conserva completo el VRM privado original.
+- Presupuesto persistido: 32 KiB UTF-8 en total; limites por campo, 16 autores y 8 referencias. Los textos legales demasiado largos se rechazan, no se recortan; se rechazan tipos incorrectos y controles no admitidos.
+- El perfil completo conserva el limite de 1 MiB. Se comprueba el tamano final, incluidas codificaciones/escapes, antes de reemplazar archivos.
+- El archivo temporal se lee con el mismo lector del perfil antes del commit atomico; despues se relee el destino y se verifica el payload esperado antes de devolver exito.
+- 35 aserciones adversariales PASS, incluidas conservacion byte a byte del perfil/respaldo ante rechazo, esquema invalido, tamano escapado y roundtrip cerca del limite.
+- VRM privado de prueba con JSON de 1,427,620 bytes: recorrido Editor PASS; perfil resultante de 1,088 bytes y metadatos de 370 bytes, sin persistir la propiedad desconocida de 1,300,000 caracteres.
+- Regresion de prototipo, 11 aserciones previas de almacenamiento y guardas de archivos repetidas: PASS. Pruebas Windows/reinicio y CI se registran en el informe de revision.
+
+[2026-10-28] PR #7 - resultados finales de la revision tecnica
+- Recorrido Windows con el VRM adversarial PASS; segundo proceso sin copia fuente PASS. Perfil legible de 1,088 bytes, metadatos de 370 bytes, respaldo existente y campos desconocidos excluidos.
+- Informe de revision, resultados, hashes del binario actualizado y generador reproducible de fixture privado agregados en VRM-F2/metadata-review.
+- Se mantienen 7 criterios F2 PASS y 4 PARTIAL. Offline fisico, gameplay futuro, derechos y calidad visual no se declaran aprobados. No se publica el VRM derivado ni sus capturas.
+- Cambios del PR #6 integrados conservando ambos registros; main permanece sin fusionar. La correccion se publica en el mismo PR #7.
 28/10/2026 - CHAT 2 / PR #6 - CORRECCION DE REVISION DE DIRECCION
 - Atendida revision 5692435453: retirada de workflow v1.2 la instruccion
   residual de reanudar G2, contradictoria con DEC-007.
