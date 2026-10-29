@@ -750,3 +750,12 @@ Proteccion y limites
 - T-C06: §17 enumera VRM-AC01/12/22/24, F3A-D08/R10/R11 y LOC-05/REN-04 parciales; se enlaza informe técnico y corte de código sin convertirlos en aceptación.
 - Verificados Shy/2, shy e IDs SHY, tres opciones actuales, 60 entradas/18 rutas y 0/33 ajustes aplicados. No se implementan Dandere visible, Deredere ni perfiles de actuación. GDD v0.5/v0.6, DECISIONS, auditoría editorial Chat 2, canónica/runtime, escenas, prefabs y todo Unity conservados.
 - Nuevos Documentation/Audits/GDD-v0.7/Revision_Tecnica_Chat3.md y Revision_Tecnica_Chat3.resultados.json: matriz por afirmación, contratos, procedencia de pruebas históricas, límites, comprobaciones estáticas y dictamen APTO TÉCNICAMENTE COMO CANDIDATO. La decisión de maestro oficial corresponde a Dirección; v0.7 sigue BORRADOR y PR #13 sin fusionar. Cambios registrados para commit/push en la misma rama y comprobación de CI, sin modificar registros anteriores.
+
+2026-10-29 — CHAT 2 / Oficializacion documental GDD v0.7 por instruccion de Direccion, conforme con auditorias editorial y tecnica. Rama independiente docs/isek-gdd-v07-official desde main 24cad11; sin fusion automatica.
+- Creado Documentation/GameDesignDocument_v0.7.md como maestro oficial con aprobacion documental. GDD v0.5, v0.6 y borrador v0.7 conservados integros; no se renombra ni sobrescribe el borrador.
+- Secciones de diseno 1–18 identicas al borrador revisado. Solo portada, vigencia, trazabilidad y registro de oficializacion; las notas de elaboracion conservan su fecha/estado historico.
+- DEC-008 registra autoridad, alcance y limites: no autoriza Deredere, nuevas mecanicas, parametros pendientes, integracion N1 o actuacion N2; no acepta automaticamente F2/F3A, catalogo o arte.
+- README apunta al maestro v0.7 y workflow v1.2; se actualiza su referencia a ISEK-001/Woman/G2 historicos y PR #14 en revision. Workflow actualiza la referencia maestra y la puerta de revision documental, conservando contratos y limites.
+- PR #14 sigue separado: Nera/Liora/Sira provisionales y 30 cambios candidatos pendientes de decision por ID. Ningun dialogo aplicado al juego.
+- Validacion documental: 19 secciones, 18 secciones de diseno sin cambios, cinco archivos protegidos intactos y 64 enlaces locales/anclas validos. Historial completo de readme conservado; no se ejecutan Unity, compilacion, Play Mode o builds.
+- Publicacion mediante commit/push y PR documental independiente; no se fusiona este PR ni #14 desde esta entrega.

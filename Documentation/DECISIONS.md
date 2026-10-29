@@ -2,11 +2,13 @@
 
 **Autoridad coordinadora:** Chat 1 (Dirección).  
 **Aprobación final:** usuario.  
-**Actualizado:** 2026-10-28.
+**Actualizado:** 2026-10-29.
 **Repositorio vigente:** `MarcoPolo2-0/Isekaid`.
 **Documentación:** `Documentation/`.
 
 Este documento contiene decisiones de diseño para que los Chats 2 y 3 trabajen con el mismo contexto. Una decisión aprobada de diseño **no** equivale a validación técnica ni a implementación terminada.
+
+**Maestro documental vigente — DEC-008:** [GDD v0.7](GameDesignDocument_v0.7.md), aprobado documentalmente por instrucción directa de Dirección del 29/10/2026. Las propuestas y validaciones pendientes conservan su estado. Las referencias al maestro anterior en decisiones fechadas son históricas.
 
 **Dirección visual vigente — DEC-007:** VRM 1.0 + catálogo local adoptados; F2 autorizada y pendiente de entrega real. Woman/G2 y el editor corporal quedan pausados e históricos. La continuidad de correcciones y las restricciones de repositorios de decisiones anteriores se leen con DEC-006/007; no son órdenes vigentes de reanudación. [Contrato F2](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md), [workflow v1.2](Workflow_Desarrollo_v1.2.md).
 
@@ -286,3 +288,17 @@ El [contrato funcional F2](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md) 
 - GDD v0.5 permanece intacto como histórico aprobado. El borrador v0.6 incorpora enmiendas de personalización claramente diferenciadas; no se aprueba todo el documento.
 
 **Próxima aceptación:** informe y evidencias de F2 por Chat 3; revisión de Dirección antes de declarar terminada la fase. Ni la autorización ni este PR completan F2, ISEK-001 o ISEK-002. No fusionar la entrega documental automáticamente.
+
+## DEC-008 — Aprobación documental del GDD v0.7
+
+**Fecha:** 29/10/2026, Guatemala. **Autoridad:** instrucción directa de Dirección/usuario, conforme con las auditorías editorial de Chat 2 y técnica de Chat 3.  
+**Estado:** APROBACIÓN DOCUMENTAL; publicación del maestro mediante PR independiente. No se ordena fusión automática.
+
+- Se adopta [GameDesignDocument_v0.7.md](GameDesignDocument_v0.7.md) como documento maestro oficial. Parte del borrador revisado de PR #13, corte `0180b8b35f59a0a5f4357bb14549066b33a03ddc`, incorporado a main por `24cad11`.
+- Se conservan íntegros [v0.5](GameDesignDocument_v0.5.md), [v0.6](GameDesignDocument_v0.6_borrador.md) y [borrador v0.7](GameDesignDocument_v0.7_borrador.md). No se renombra, elimina o sobrescribe el borrador; se crea un archivo oficial nuevo.
+- La promoción cambia portada, vigencia, trazabilidad y registro administrativo. Las secciones de diseño §§1–18 se preservan; las notas previas mantienen su carácter histórico.
+- La aprobación del documento **no aprueba automáticamente** contenidos PROPUESTOS/PENDIENTES: Deredere, nuevas mecánicas, datos biográficos, integración N1, actuación N2 o parámetros de balance no ratificados. No convierte evidencia técnica o manual parcial en aceptación completa de F2/F3A, catálogo o arte final.
+- [PR #14](https://github.com/MarcoPolo2-0/Isekaid/pull/14) sigue en revisión creativa: nombres Nera/Liora/Sira provisionales y 30 cambios recomendados sobre el conjunto de 33 revisiones. Dirección seleccionará los IDs y rasgos que autorice antes de solicitar a Desarrollo integración; no se aplica el parche ni se fusiona #14 desde esta decisión.
+- Se actualizan README y la referencia operativa del workflow v1.2. No se modifican Unity, biblioteca canónica, recurso runtime, serialización o pruebas originales. Los cambios se añaden a readme sin borrar historial.
+
+**Límite:** esta decisión oficializa el documento; no marca ISEK-001/F3A completados ni amplía la autorización de implementación. La incorporación física a main se entrega mediante PR para revisión.
