@@ -4409,6 +4409,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1479749877480318851, guid: b63bebeae82592346b83d74d61936f50, type: 3}
+      propertyPath: visualRoot
+      value: 
+      objectReference: {fileID: 5077055269096110363}
+    - target: {fileID: 1479749877480318851, guid: b63bebeae82592346b83d74d61936f50, type: 3}
+      propertyPath: catalogPrefab
+      value: 
+      objectReference: {fileID: 7538346685261547537, guid: 3b13c1f7b976cee4ea7995231e6c33fd, type: 3}
+    - target: {fileID: 1479749877480318851, guid: b63bebeae82592346b83d74d61936f50, type: 3}
+      propertyPath: vrmAnimations
+      value: 
+      objectReference: {fileID: 9100000, guid: 50354c0fcb2d7b0478a79ca46f285e95, type: 2}
     - target: {fileID: 4836477243339262077, guid: b63bebeae82592346b83d74d61936f50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4462,6 +4474,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b63bebeae82592346b83d74d61936f50, type: 3}
+--- !u!4 &5077055269096110363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3818738519689265936, guid: b63bebeae82592346b83d74d61936f50, type: 3}
+  m_PrefabInstance: {fileID: 5077055269096110362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5077055269096110364 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8337603943069132800, guid: b63bebeae82592346b83d74d61936f50, type: 3}

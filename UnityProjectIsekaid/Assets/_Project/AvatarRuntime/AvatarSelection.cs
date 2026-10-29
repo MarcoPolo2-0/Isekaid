@@ -34,7 +34,7 @@ namespace Isekaid.ExperimentalVrm
             return new AvatarSelection
             {
                 kind = "vrm", catalogId = "", vrmVersion = "1.0", hash = AvatarFiles.Hash(bytes),
-                metadataJson = root["extensions"]["VRMC_vrm"]["meta"].ToString(),
+                metadataJson = root["extensions"]["VRMC_vrm"]["meta"].ToString("  "),
                 localUseAcknowledged = acknowledged
             };
         }

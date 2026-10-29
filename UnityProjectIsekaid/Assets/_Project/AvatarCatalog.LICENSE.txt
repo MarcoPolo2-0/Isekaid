@@ -1,0 +1,7 @@
+# Avatar catalog F2
+
+Adventurer, Outfit 02, by Dawn to Dusk Games. Source: https://dawn-to-dusk-games.itch.io/3d-anime-female-adventurer
+
+The author's page lists Creative Commons Zero v1.0 Universal (CC0-1.0), checked 2026-10-28. Local source provenance and source archive hashes: Assets/_Project/Art/Companion/Adventurer/SourceReceipt.json.
+
+The existing meshes, textures and Unarmed Idle/Walk/Run clips are reused. No private VRM or derivatives of the private test model belong to this catalog. F2 catalog art is provisional; final artistic acceptance and the three-entry catalog remain later milestones.

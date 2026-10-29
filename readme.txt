@@ -561,3 +561,25 @@ Proteccion y limites
 - El regreso al creador mantiene el encuentro en pausa; no reinicia memoria ni confianza existentes.
 - Verificacion inicial estatica del prototipo: PASS. Play Mode base bloqueado por excepcion de UnityEditor.Search.SearchDatabase; no se atribuye al gameplay.
 - Pruebas de integracion y revision visual en curso; esta entrada no declara cerrada F2.
+
+[2026-10-28] F2 VRM - recorrido integrado y correcciones verificadas
+- Pruebas en Play Mode: catalogo y VRM llegan a Game sin sustituir CompanionController.
+- Conservados encuentro, instancia de estado, primer rescate, confianza, personalidad, velocidad y radio de navegacion durante el cambio visual.
+- Corregidos metadatos VRM, encuadre tras evaluar Animator y HUD al volver del creador.
+- Spring Bones usa el runtime independiente de UniVRM para evitar una fuga comprobada del combinador compartido en reemplazos; repeticion con detector nativo sin ese aviso.
+- 195 recursos propios liberados en tres ciclos VRM/catalogo; cancelacion durante carga y fallos de preparacion/activacion/guardado comprobados.
+- Nueve comprobaciones de migracion, conservacion de campos legacy y respaldo: PASS.
+- PrototypeChecks y PrototypePlayModeChecks: PASS; asercion del creador actualizada a conservar el encuentro en pausa, segun F2.
+- Verificados 715 archivos originales protegidos: cero cambios de contenido, incluidos Woman, SourceArt, prefabs y GUID de escenas.
+- Capturas reales revisadas en 1920x1080, 1280x720 y 1600x900. Capturas con el VRM privado permanecen excluidas de Git.
+- Build Windows y comprobacion fuera del Editor en curso; no se declara lista para lanzamiento ni se inicia F3.
+
+[2026-10-28] F2 VRM - validacion de Windows y recuperacion en el encuentro
+- Build Windows de desarrollo generada con Unity 6000.6.7f1 y probada fuera del Editor, sin incluir el fixture privado.
+- Selector nativo real: seleccion y cancelacion verificadas; corregido el buffer Win32 para evitar un desbordamiento de pila en Mono.
+- Ejecutable reiniciado en un segundo proceso sin el archivo fuente: apariencia gestionada y personalidad recuperadas; entrada a Game comprobada.
+- Probado fallo de activacion al volver al encuentro: permanecen la apariencia anterior, el perfil guardado y la confianza; el creador permite reintentar.
+- Regresion final: PrototypeChecks y PrototypePlayModeChecks PASS. Once aserciones de almacenamiento PASS, incluido fallo real de reemplazo por archivo bloqueado.
+- Nueve rechazos heredados y dos pruebas de archivo local (tamano y version VRM no admitida) PASS.
+- Avisos MIT y procedencia CC0 conservados junto al ejecutable; capturas VRM privadas excluidas de Git.
+- F2 se entrega para revision con criterios parciales documentados; no se aprueba arte, no se inicia F3/F4 y no se fusiona main.

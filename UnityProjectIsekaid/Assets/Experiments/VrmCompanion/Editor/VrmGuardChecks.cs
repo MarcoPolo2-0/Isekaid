@@ -8,6 +8,37 @@ namespace Isekaid.ExperimentalVrm.Editor
 {
     public static class VrmGuardChecks
     {
+        public static void ValidateF2AndRegression()
+        {
+            var args = Environment.GetCommandLineArgs();
+            int source = Array.IndexOf(args, "-isekVrmFixture");
+            if (source < 0 || source + 1 >= args.Length) throw new ArgumentException("An authorized local fixture is required.");
+            byte[] valid = VrmFileGuard.ReadLocal(args[source + 1]);
+            int rejected = Run(valid);
+            Directory.CreateDirectory(AvatarFiles.Root);
+            string oversized = Path.Combine(AvatarFiles.Root, "oversized.vrm");
+            using (var file = new FileStream(oversized, FileMode.Create, FileAccess.Write)) file.SetLength(VrmFileGuard.MaximumBytes + 1L);
+            bool sizeRejected = false;
+            try { VrmFileGuard.ReadLocal(oversized); } catch (InvalidDataException) { sizeRejected = true; }
+            File.Delete(oversized);
+            if (!sizeRejected) throw new InvalidOperationException("The local file size boundary was not enforced.");
+            int jsonLength = BitConverter.ToInt32(valid, 12);
+            string json = Encoding.UTF8.GetString(valid, 20, jsonLength);
+            string changed = Regex.Replace(json, "(\"specVersion\"\\s*:\\s*\")1\\.0(\")", "${1}9.9${2}");
+            byte[] content = Encoding.UTF8.GetBytes(changed);
+            if (changed == json || content.Length != jsonLength) throw new InvalidOperationException("The unsupported version fixture must preserve the GLB layout.");
+            var unsupported = (byte[])valid.Clone(); Array.Copy(content, 0, unsupported, 20, content.Length);
+            string unsupportedPath = Path.Combine(AvatarFiles.Root, "unsupported-version.vrm");
+            File.WriteAllBytes(unsupportedPath, unsupported);
+            bool versionRejected = false;
+            try { VrmFileGuard.ReadLocal(unsupportedPath); } catch (InvalidDataException error) { versionRejected = error.Message.Contains("VRM 1.0"); }
+            File.Delete(unsupportedPath);
+            if (!versionRejected) throw new InvalidOperationException("The unsupported VRM version was not rejected specifically.");
+            File.WriteAllText(Path.Combine(AvatarFiles.Root, "guard-results.json"), "{\"passed\":true,\"rejections\":" + rejected + ",\"fileBoundaryChecks\":2}");
+            UnityEngine.Debug.Log("ISEKAID_F2_GUARD_CHECKS_PASSED " + rejected);
+            Isekaid.Editor.F2IntegrationChecks.StorageAndRegression();
+        }
+
         public static int Run(byte[] valid)
         {
             int count = 0;

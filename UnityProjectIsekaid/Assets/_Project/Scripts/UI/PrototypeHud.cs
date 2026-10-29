@@ -16,6 +16,7 @@ namespace Isekaid
         private Label prompt;
         private Label dialogue;
         private Label timer;
+        private Label appearanceNotice;
         private Button resume;
         private Button incapacitate;
         private float nextHudUpdate;
@@ -35,6 +36,7 @@ namespace Isekaid
             objective = AddLabel(header, "", "objective");
             status = AddLabel(header, "", "status");
             timer = AddLabel(header, "", "timer");
+            appearanceNotice = AddLabel(header, "", "hint");
             AddLabel(root, "+", "crosshair");
             prompt = AddLabel(root, "", "prompt");
             dialogue = AddLabel(root, "", "dialogue");
@@ -54,7 +56,7 @@ namespace Isekaid
             incapacitate = AddButton(menu, "Simular incapacitación", prototype.SimulateIncapacitation);
             AddButton(menu, "Reiniciar encuentro", Restart);
             AddButton(menu, "Volver al creador de personaje", prototype.OpenCharacterCreation);
-            AddLabel(menu, "Volver al creador conserva tu diseño. Al continuar comienza un nuevo encuentro. El guardado de la aventura sigue pendiente.", "hint");
+            AddLabel(menu, "El creador conserva este encuentro en pausa y permite cambiar apariencia y personalidad. No está disponible durante una incapacitación. El guardado de la aventura entre sesiones sigue pendiente.", "hint");
 
             prototype.Changed += Refresh;
             prototype.Companion.Spoke += ShowDialogue;
@@ -132,6 +134,8 @@ namespace Isekaid
             nextHudUpdate = Time.unscaledTime + 0.1f;
 
             var state = prototype.Companion.State;
+            var appearance = prototype.Companion.GetComponent<CompanionAppearance>();
+            appearanceNotice.text = appearance.RecoveredFallback ? appearance.Status : "";
             timer.text = state.LifeState == CompanionLifeState.Downed ? $"RESCATE  {Mathf.CeilToInt(state.RescueSecondsRemaining):00} s" : "";
             prompt.text = "";
             if (!prototype.IsPaused && prototype.CanInteract())

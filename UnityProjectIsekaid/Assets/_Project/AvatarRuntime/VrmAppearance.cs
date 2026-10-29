@@ -20,6 +20,7 @@ namespace Isekaid.ExperimentalVrm
         public float FacingYaw;
         public bool ShowDiagnosticGUI = true;
         public float FitHeight;
+        public bool UseUnscaledTime;
         public byte[] LoadedBytes { get; private set; }
         public Vrm10Instance Avatar { get; private set; }
         public bool HasAvatar => Avatar != null;
@@ -30,6 +31,7 @@ namespace Isekaid.ExperimentalVrm
         public bool PreviewingMotion { get; set; }
         private bool loading;
         private bool destroyed;
+        private GameObject avatarRoot;
         private Dictionary<string, ExpressionKey> keys = new Dictionary<string, ExpressionKey>(StringComparer.OrdinalIgnoreCase);
         private Dictionary<Renderer, bool> originalVisibility = new Dictionary<Renderer, bool>();
 #if UNITY_EDITOR
@@ -49,7 +51,8 @@ namespace Isekaid.ExperimentalVrm
             if (loading) throw new InvalidOperationException("Ya hay una importación en curso.");
             loading = true;
             Vrm10Instance candidate = null;
-            Vrm10Instance retired = null;
+            GameObject retired = null;
+            GameObject candidateRoot = null;
             Vrm10FastSpringboneRuntimeStandalone springRuntime = null;
             var visibility = new Dictionary<Renderer, bool>();
             try
@@ -82,26 +85,21 @@ namespace Isekaid.ExperimentalVrm
                 foreach (var renderer in candidate.GetComponentsInChildren<Renderer>())
                     if (renderer.sharedMaterials.Any(m => m == null || m.shader == null || !m.shader.isSupported || m.shader.name == "Hidden/InternalErrorShader"))
                         throw new InvalidOperationException("Material o shader incompatible.");
-                candidate.transform.SetParent(Anchor != null ? Anchor : transform, false);
-                foreach (var child in candidate.GetComponentsInChildren<Transform>(true)) child.gameObject.layer = (Anchor != null ? Anchor : transform).gameObject.layer;
-                candidate.transform.localRotation = Quaternion.Euler(0, FacingYaw, 0);
+                // Build the normalized rig before moving the imported root into a rotated scene anchor.
+                var runtime = candidate.Runtime;
+                candidateRoot = candidate.gameObject;
                 if (FitHeight > 0)
                 {
-                    var renderers = candidate.GetComponentsInChildren<Renderer>();
-                    if (renderers.Length == 0) throw new InvalidOperationException("El modelo no tiene geometría visible.");
-                    var bounds = renderers[0].bounds;
-                    foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
-                    if (bounds.size.y < .1f) throw new InvalidOperationException("Altura inválida.");
-                    candidate.transform.localScale *= FitHeight / bounds.size.y;
-                    bounds = renderers[0].bounds;
-                    foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
-                    candidate.transform.position += Vector3.up * ((Anchor != null ? Anchor : transform).position.y - bounds.min.y);
-                    foreach (var collider in candidate.GetComponentsInChildren<Collider>()) collider.enabled = false;
+                    candidateRoot = new GameObject("AvatarPresentation");
+                    candidate.transform.SetParent(candidateRoot.transform, false);
                 }
+                candidateRoot.transform.SetParent(Anchor != null ? Anchor : transform, false);
+                foreach (var child in candidate.GetComponentsInChildren<Transform>(true)) child.gameObject.layer = (Anchor != null ? Anchor : transform).gameObject.layer;
+                candidateRoot.transform.localRotation = Quaternion.Euler(0, FacingYaw, 0);
                 animator.runtimeAnimatorController = TrialAnimations;
                 animator.applyRootMotion = false;
                 animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
-                animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+                animator.updateMode = UseUnscaledTime ? AnimatorUpdateMode.UnscaledTime : AnimatorUpdateMode.Normal;
                 var nextKeys = new Dictionary<string, ExpressionKey>(StringComparer.OrdinalIgnoreCase);
                 foreach (var key in candidate.Runtime.Expression.ExpressionKeys) nextKeys.Add(key.Name, key);
                 var nextExpressions = nextKeys.Keys.ToArray();
@@ -120,8 +118,23 @@ namespace Isekaid.ExperimentalVrm
                 cancellation.ThrowIfCancellationRequested();
                 resources.EnableUpdateWhenOffscreen();
                 candidate.gameObject.SetActive(true);
-                resources.ShowMeshes();
+                animator.Rebind();
                 animator.Update(0f);
+                if (FitHeight > 0)
+                {
+                    candidate.Runtime.Process();
+                    await PreparedFrame(cancellation);
+                    var bounds = VisibleBounds(candidate);
+                    if (bounds.size.y < .1f) throw new InvalidOperationException("Altura inválida.");
+                    candidateRoot.transform.localScale *= FitHeight / bounds.size.y;
+                    animator.Update(0f);
+                    candidate.Runtime.Process();
+                    await PreparedFrame(cancellation);
+                    bounds = VisibleBounds(candidate);
+                    candidateRoot.transform.position += Vector3.up * ((Anchor != null ? Anchor : transform).position.y - bounds.min.y);
+                    foreach (var collider in candidate.GetComponentsInChildren<Collider>()) collider.enabled = false;
+                }
+                resources.ShowMeshes();
                 if (resources.VisibleRenderers.Any(r => r == null || !r.enabled || !r.gameObject.activeInHierarchy))
                     throw new InvalidOperationException("No se pudo activar la apariencia candidata.");
                 Checkpoint("Activated", candidate);
@@ -130,8 +143,10 @@ namespace Isekaid.ExperimentalVrm
                 cancellation.ThrowIfCancellationRequested();
 
                 // Publish the prepared presentation only after every fallible activation step succeeds.
-                retired = Avatar;
+                retired = avatarRoot;
                 Avatar = candidate;
+                avatarRoot = candidateRoot;
+                candidateRoot = null;
                 springRuntime = null;
                 LoadedBytes = bytes;
                 keys = nextKeys;
@@ -151,19 +166,40 @@ namespace Isekaid.ExperimentalVrm
             {
                 if (candidate != null)
                 {
-                    candidate.gameObject.SetActive(false);
-                    Destroy(candidate.gameObject);
+                    if (candidateRoot == null) candidateRoot = candidate.gameObject;
+                    candidateRoot.SetActive(false);
+                    Destroy(candidateRoot);
                     springRuntime = null;
                 }
                 springRuntime?.Dispose();
                 loading = false;
             }
-            if (retired != null) Destroy(retired.gameObject);
+            if (retired != null) Destroy(retired);
         }
 
         private static void RestoreVisibility(Dictionary<Renderer, bool> values)
         {
             foreach (var pair in values) if (pair.Key != null) pair.Key.enabled = pair.Value;
+        }
+
+        private static Bounds VisibleBounds(Vrm10Instance avatar)
+        {
+            var renderers = avatar.GetComponentsInChildren<Renderer>();
+            if (renderers.Length == 0) throw new InvalidOperationException("El avatar no tiene geometría visible.");
+            var bounds = renderers[0].bounds;
+            foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+            if (!float.IsFinite(bounds.center.x) || !float.IsFinite(bounds.center.y) || !float.IsFinite(bounds.center.z) ||
+                !float.IsFinite(bounds.size.x) || !float.IsFinite(bounds.size.y) || !float.IsFinite(bounds.size.z))
+                throw new InvalidOperationException("El rig produce coordenadas inválidas.");
+            return bounds;
+        }
+
+        private async Task PreparedFrame(CancellationToken cancellation)
+        {
+            int frame = Time.frameCount;
+            do { await Task.Yield(); } while (frame == Time.frameCount);
+            cancellation.ThrowIfCancellationRequested();
+            if (destroyed || this == null) throw new OperationCanceledException("La vista previa ya no está disponible.");
         }
 
         public void Unload()
@@ -175,7 +211,8 @@ namespace Isekaid.ExperimentalVrm
 
         private void ReleaseAvatar()
         {
-            if (Avatar != null) { Avatar.gameObject.SetActive(false); Destroy(Avatar.gameObject); }
+            if (avatarRoot != null) { avatarRoot.SetActive(false); Destroy(avatarRoot); }
+            avatarRoot = null;
             Avatar = null;
             LoadedBytes = null;
             keys.Clear();

@@ -1,0 +1,5 @@
+{
+  "name": "Isekaid.F2Validation",
+  "references": ["Isekaid.Runtime", "Isekaid.VrmAppearance", "VRM10", "UniGLTF"],
+  "autoReferenced": true
+}
