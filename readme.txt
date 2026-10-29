@@ -549,3 +549,37 @@ Proteccion y limites
   importacion, Play Mode o builds. Esperar evaluacion tecnica antes de
   solicitar aprobacion definitiva del cambio de alcance.
 - Entrega mediante rama y PR documental, sin incluir el experimento Unity.
+
+======================================================================
+28/10/2026 - CHAT 2 / DEC-007 - VRM F2 Y PREPARACION DE GAMEPLAY F3
+======================================================================
+- Instruccion directa de Direccion formalizada: VRM 1.0 + catalogo local
+  adoptados; F2 autorizada, no implementada ni aceptada por este documento.
+- Confirmados PR #3 y #4 fusionados. POC leido como evidencia acotada de
+  Play Mode/estabilidad, sin repetir Unity ni atribuirle persistencia/builds.
+- DEC-007, enmienda explicita del GDD v0.6 y workflow nuevo v1.2 preparados.
+  GDD v0.5 y versiones historicas sin cambios.
+- ISEK-001 permanece abierto; Woman/G2 y editor corporal pausados y
+  conservados. Seguimiento funcional F2 creado en Issue #5.
+- Contrato F2: seleccion, importacion VRM, vista previa, estados, tres
+  personalidades, migracion v1, copia/guardado y recuperacion; 18 casos.
+- Una apariencia incluida y una importada suficientes para F2; recurso
+  distribuible aun requiere derechos humanos revisados. No se elige asset.
+- F3 borrador: seis capas, eventos/memoria, promesas, peligro, iniciativa,
+  confianza y matriz contextual de tres personalidades; diez casos propuestos.
+- Matriz mantiene 26 IDs y particion 5/11/8/2; F2-P01 a P04 y F3 son
+  aclaraciones/propuestas, no bloquean ni amplian automaticamente a Chat 3.
+- Verificacion documental: siete documentos, 67 enlaces locales, IDs unicos,
+  particion conservada y cuerpo heredado de v0.5 preservado.
+- Sin cambios de codigo, escenas, prototipos tecnicos, Woman/G2 ni recursos
+  privados. No se ejecutan Unity, Play Mode, importacion, animaciones o builds.
+- Rama docs/isek-vrm-f2-dec007 y PR hacia main para revision; sin fusion
+  automatica. Se preservan entradas previas de readme de Desarrollo y Diseno.
+
+28/10/2026 - CHAT 2 / PR #6 - CORRECCION DE REVISION DE DIRECCION
+- Atendida revision 5692435453: retirada de workflow v1.2 la instruccion
+  residual de reanudar G2, contradictoria con DEC-007.
+- Siguiente puerta: revision/aceptacion de F2 y preparacion documental de
+  F3; implementacion F3 requiere autorizacion posterior. Woman/G2 en pausa.
+- GDD v0.5 e historial completo de readme de Desarrollo/Diseno conservados.
+- Solo correccion documental; no se ejecutan Unity ni builds, ni se fusiona PR.
