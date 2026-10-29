@@ -1,0 +1,57 @@
+{
+  "implementationCommit": "d2f58a8e954dc70de6ca6bddc87583d1bc21132a",
+  "gameplayCommit": "a1aebe32a80f804c7657f7d0f176891a3c1d8a53",
+  "designCommit": "6df539da5334f76bd66d5e9be28c81c2735e5e6b",
+  "designMerge": "9d8464c",
+  "protectedFileCount": 715,
+  "protectedFilesUnchanged": true,
+  "hashConvention": "Source hashes are versioned Git blobs; canonical sourceSha256 normalizes text newlines; image hashes are actual PNG files.",
+  "sourceSha256": {
+    "UnityProjectIsekaid/Assets/_Project/Resources/Dialogue/F3A.es.json": "e04b1753e2088c461f5801f3d9be5efd4983fe7654fcd92977dbbb66c9a6c3bb",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionController.cs": "f0afc9dbcb69f0db37325bd0e837cae14ce3a7bef748666db3ec331cc35aa685",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionReactionPresenter.cs": "abd54da303f18659f44d2f53495255a711e055ad79c43311c71fe9a9fc146914",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/Companion/DialogueContent.cs": "f1d6395acc4a17a13a8a514b9d9774f4ae0c9c74913ed81439648668f4535c55",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/Companion/DialogueDirector.cs": "4a84c8fd34b3e7bc6070d3a813c16e949f00bde09529a86be4819e5295ddd531",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/Prototype/CompanionPrototype.cs": "f3d8f8eabe1fafecdd8d1e110f42a8f6f999607847f7b6756abdbd9c445eda73",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/UI/DialoguePresenter.cs": "a07a26ef3f900798cb4935c39387fc4a34db9c111414f3d416e1cad5901e887c",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/UI/PrototypeHud.cs": "a1a553e2537b1a8ee34d03db1fa3b313729755294ebb389a05146d2b3b7b978c",
+    "UnityProjectIsekaid/Assets/_Project/Validation/F3ARuntimeChecks.cs": "c07a63d8438159001457906093f35c3e499111e35920baac788a2411c4b0fab3",
+    "tools/build_f3a_runtime_content.py": "5109882b80d3fc00df9c9bc3aa40d217f9ca21204d9040a57a2033d83ce998df",
+    ".github/workflows/verify-layout.yml": "74ba1af92e951fdf0fbbee3e6554dc903dd428c9d2b589826e380aef598f5b90"
+  },
+  "evidenceSha256": {
+    "evidence/canonical-answer-Shy.png": "c1001388d5012d1fd26139debbf8efa3af45fe9c8419a8bbcb36d961afac0432",
+    "evidence/canonical-answer-Tsundere.png": "d6a32a29f9ad7c2b699c6d13bda9350445777bf79731102e4aa57564ca9ed856",
+    "evidence/canonical-answer-Yandere.png": "54fadb7d04dbfcd76eb6ba9314ba35666f5b8b6ae97cfb5e06a07bd22a319028",
+    "evidence/canonical-root-1280.png": "385646483d44eb5234dfd6dbac189ff11c6c7cac60665b1482390fca081b51e3",
+    "evidence/canonical-root-1600.png": "fe8e9016fbc74662cf079c64b53eca25a935090e2081c40f9d3f56c0292d55a3",
+    "evidence/canonical-root-1920.png": "64eb15f40a7639600b473d5cf53fbb524dcef69137789e5aeecb9b2734856679"
+  },
+  "imageSizes": {
+    "canonical-answer-Shy.png": [
+      1920,
+      1080
+    ],
+    "canonical-answer-Tsundere.png": [
+      1920,
+      1080
+    ],
+    "canonical-answer-Yandere.png": [
+      1920,
+      1080
+    ],
+    "canonical-root-1280.png": [
+      1280,
+      720
+    ],
+    "canonical-root-1600.png": [
+      1600,
+      900
+    ],
+    "canonical-root-1920.png": [
+      1920,
+      1080
+    ]
+  },
+  "canonicalSourceSha256": "e475943e9a9eaab1787277a8257d111af21c7ff8509bef5f8145b3e3fc4f214e"
+}

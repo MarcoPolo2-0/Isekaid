@@ -1,5 +1,7 @@
 # ISEKAID — F3A: diálogos y reacciones en Game
 
+**Revisión vigente:** [correcciones de Dirección, biblioteca canónica PR #9 y continuidad del cursor](review-1/INFORME.md). El contenido de este documento conserva la entrega inicial de 13 entradas.
+
 **Fecha:** 29/10/2026, Guatemala. **Unity:** 6000.6.7f1.
 **Rama:** `feature/isek-f3a-dialogue-runtime`. **Base:** `main` `4bd685718d670006569841e93f6c38282323db01`, con PR #6 y #7 fusionados.
 **Implementación probada:** `5f3da89dd0e1853f8b24d8ac8c291723260bf4cb`. **Estado:** entrega técnica experimental para revisión de Dirección. No fusionar; no declara F3 completa ni acepta F2.

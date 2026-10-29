@@ -1,0 +1,126 @@
+{
+  "authority": "Complete-criterion assessment; raw runner criteria describe only covered fixtures",
+  "acceptance": "Pending Direction",
+  "cases": [
+    {
+      "id": "F3A-D01",
+      "status": "PASS",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Documentary/structural evidence; not artistic acceptance"
+    },
+    {
+      "id": "F3A-D02",
+      "status": "PASS",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Documentary/structural evidence; not artistic acceptance"
+    },
+    {
+      "id": "F3A-D03",
+      "status": "PASS",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Documentary/structural evidence; not artistic acceptance"
+    },
+    {
+      "id": "F3A-D04",
+      "status": "PASS",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Documentary/structural evidence; not artistic acceptance"
+    },
+    {
+      "id": "F3A-D05",
+      "status": "PASS",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Documentary/structural evidence; not artistic acceptance"
+    },
+    {
+      "id": "F3A-D06",
+      "status": "PASS",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Documentary/structural evidence; not artistic acceptance"
+    },
+    {
+      "id": "F3A-D07",
+      "status": "PASS",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Documentary/structural evidence; not artistic acceptance"
+    },
+    {
+      "id": "F3A-D08",
+      "status": "PARTIAL",
+      "evidence": "canonical library + generated runtime validation; see report",
+      "limit": "Human editorial approval pending"
+    },
+    {
+      "id": "F3A-R01",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R02",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R03",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R04",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R05",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R06",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R07",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R08",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R09",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    },
+    {
+      "id": "F3A-R10",
+      "status": "PARTIAL",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Distinct text checked; rhythm/posture and blind human comparison pending"
+    },
+    {
+      "id": "F3A-R11",
+      "status": "PARTIAL",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Foreign/double/stale UI revision checked; actual asynchronous SDK narrative callbacks and delayed-order fixture not implemented"
+    },
+    {
+      "id": "F3A-R12",
+      "status": "PASS",
+      "evidence": "editor-results.json + windows-results.json",
+      "limit": "Bounded actual prototype fixture; no general danger detector or campaign persistence"
+    }
+  ]
+}

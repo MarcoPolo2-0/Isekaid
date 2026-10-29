@@ -1,5 +1,7 @@
 # F3A — Reproducción y revisión manual
 
+**Revisión vigente:** [biblioteca canónica, 18 recorridos y guía manual actualizada](review-1/PRUEBAS.md). Los comandos siguen siendo válidos; usar resultados y hashes de la revisión actual.
+
 Usar Unity 6000.6.7f1 con soporte Windows, la rama F3A y un VRM 1.0 local autorizado. Cada ejecución completa utiliza un directorio de datos nuevo fuera del repositorio. Cerrar otras instancias de Unity que usen este mismo proyecto. No publicar modelos ni imágenes privadas.
 
 ## Unity Play Mode
