@@ -8,6 +8,8 @@
 **Origen:** [GDD v0.5 acordado](GameDesignDocument_v0.5.md) + [borrador v0.6](GameDesignDocument_v0.6_borrador.md), DEC-007, PR #7/#9/#10/#11/#12 y prueba manual del usuario.  
 **Ramas funcionales:** el documento no añade funcionalidades al juego. Requiere PR, revisión y aceptación para volverse maestro.
 
+**Corte técnico Chat 3:** contrastado con `main` `f835d3ba665b6d63cf94894bfaccd9a94ce783ce` y las evidencias F2/F3A/locomoción; [informe técnico](Audits/GDD-v0.7/Revision_Tecnica_Chat3.md). Esta auditoría documental no repite Unity ni cambia el estado BORRADOR.
+
 > **Regla de lectura:** decisión de diseño, existencia técnica y validación son estados distintos y pueden coexistir. Una función acordada puede seguir sin implementar; una función implementada puede requerir validación. Las ideas heredadas mantienen su carácter previo salvo una actualización explícita de Dirección.
 
 | Estado | Significado en este documento |
@@ -45,11 +47,11 @@ Juego **isekai** de acción y exploración en tiempo real, en primera persona, a
 
 **Dirección adoptada (DEC-007):** compañera femenina adulta en estilo anime 3D; la apariencia procede de un catálogo local o de una importación autorizada de **VRM 1.0**. Se pausa el editor corporal propio (Woman/G2 se conservan como historial, sin nuevas iteraciones). Funcionar sin Internet y sin servicios de generación de diálogo es un requisito ACORDADO; la prueba física con red desconectada sigue PENDIENTE según el informe F2.
 
-- **Independencia:** identidad, plantilla de personalidad, estado emocional, memoria, vínculo, clase, progresión y apariencia son datos separados. Cambiar VRM no crea una persona nueva ni modifica el rescate, confianza o clase.
+- **Independencia, regla de diseño:** identidad, plantilla de personalidad, estado emocional, memoria, vínculo, clase, progresión y apariencia deben permanecer separados. Hoy se conservan el perfil y el estado real del mismo encuentro al cambiar avatar; clase funcional, progresión y memoria de campaña siguen PENDIENTES. Cambiar VRM no crea una persona nueva ni debe asignarle clase o alterar sus hechos.
 - **Estado funcional comprobado:** un avatar incluido de catálogo (Adventurer, arte provisional) y un VRM local autorizado; vista previa, selección, copia privada administrada, carga/recuperación y perfil versionado. Soporte inicial probado en Windows; otros sistemas y VRM 0.x no están prometidos.
 - **Admisión y derechos:** la compatibilidad técnica, los permisos declarados en el archivo y la revisión humana de derechos son tres comprobaciones distintas. VRM 1.0 no significa aceptar cualquier archivo sin límites. El catálogo requiere procedencia/créditos revisados; importar un avatar no certifica legalmente todos sus usos. Ver [contrato F2](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md).
-- **Expresiones:** la intención emocional se produce desde el sistema narrativo; un adaptador elige los canales faciales compatibles de cada avatar o vuelve a neutral. La ausencia de Blend Shapes no altera decisiones o recuerdos.
-- **Animaciones:** reposo, caminar y correr con clips Humanoid cíclicos, mezclado continuo y velocidad suavizada; el NavMeshAgent conserva autoridad de desplazamiento. El movimiento continuo y el renderizado fueron reportados como mejorados en la prueba manual del 29/10/2026.
+- **Expresiones:** el sistema narrativo aporta emoción, intención y expresión preferida; el adaptador solicita los presets/canales disponibles y usa alternativas seguras o neutral si faltan. Las expresiones marcadas `_if_validated` siguen usando neutral sin certificación visual. `intention` se conserva como dato: todavía no selecciona por sí sola gestos, postura o mirada. La ausencia de canales faciales no altera decisiones o recuerdos.
+- **Animaciones:** reposo y un estado de locomoción con mezcla continua Walk/Run, clips Humanoid cíclicos y velocidad suavizada; el NavMeshAgent conserva autoridad de desplazamiento. El PR #12 equilibra la iluminación de ambas escenas, conservando materiales, shaders y texturas del VRM. El movimiento continuo y la presentación fueron reportados como mejorados en la prueba manual del 29/10/2026; esa observación no cierra la aceptación artística.
 - **Calidad pendiente:** contacto de pies, retargeting para avatares no ensayados, calidad final del arte, gestos, mirada, expresión cómica y rendimiento extensivo necesitan más pruebas. Un archivo VRM privado no concede derechos de redistribución.
 - **Catálogo futuro:** tres apariencias incluidas siguen siendo objetivo de fase posterior y requieren licencias, estilo visual y expresividad revisados.
 
@@ -113,7 +115,7 @@ Las clases son independientes de la personalidad. El jugador puede elegir una cl
 
 **Dirección permanente:** diálogos locales, offline, sin API de IA ni tokens de pago. La compañera no habla por una expresión facial y no inventa información que desconozca.
 
-**F3A integrada como prototipo:** biblioteca canónica local de 60 entradas (20 por personalidad anterior a renombrar Dandere), tres temas TRAP/FEEL/ROAD, nueve raíces y 18 alternativas. Existen elecciones, continuidad del cursor al cerrar/visitar el creador, control de repetición, reanimaciones por episodio y expresiones VRM con fallback. La prueba manual reportó conversaciones e incapacitación funcionando.
+**F3A integrada como prototipo:** biblioteca canónica local de 60 entradas (20 por plantilla técnica Tsundere/Yandere/Shy), tres temas TRAP/FEEL/ROAD, nueve raíces y 18 rutas alternativas raíz→hoja. Existen elecciones, continuidad del cursor con opciones pendientes al cerrar/visitar el creador, control de repetición, reanimaciones por episodio y expresiones VRM con fallback. La continuidad se conserva en memoria dentro de la misma instancia de encuentro: no se serializan cursor, temas consumidos, foco o episodios en el perfil. Cerrar un turno terminal sin opciones libera ese turno; no promete reabrir cualquier frase. La prueba manual reportó conversaciones e incapacitación funcionando.
 
 **Límites:** esto no significa diálogo libre ni memoria narrativa persistente de campaña. El sistema conserva estado de encuentro y hechos ya existentes; no implementa todavía promesas verificables, iniciativa espontánea general, percepciones de enemigos, conversaciones procedurales ni romance. Las diferencias de voz y presencia todavía están en revisión artística.
 
@@ -132,6 +134,7 @@ Las clases son independientes de la personalidad. El jugador puede elegir una cl
 - Las decisiones evalúan peligro, salud, distancia, rol táctico, órdenes, personalidad y experiencia.
 - Ante peligro grave prevalece la supervivencia sobre el deseo de mostrarse valiente o agradar al jugador.
 - **ACORDADO como regla de supervivencia:** al llegar a 0 de salud queda incapacitada, con **30 segundos** para rescatarla; agotarlos conduce a muerte, Game Over y retorno al último checkpoint. **IMPLEMENTADO en el ensayo:** Downed, contador de tiempo activo detenido en pausa, reanimación, muerte/Game Over de ensayo y reinicio del encuentro. La pausa del reloj tiene pruebas técnicas documentadas; no sigue «sin validar» en ese sentido. **PENDIENTE:** daño de combate real que cause 0 HP y checkpoint completo de campaña. La ratificación de la precisión de balance «tiempo activo» se conserva como pendiente formal de v0.6 §17.2; esta revisión no cambia el contador ni convierte una prueba en una nueva aprobación.
+- **Precisión del reloj implementado:** solo Downed descuenta `Time.deltaTime`; Trapped no activa ese plazo y Dead no permite reanimación. La pausa global pone `Time.timeScale=0` y detiene el contador; perder foco también pausa el prototipo. Abrir una conversación bloquea entrada del jugador, pero no activa por sí solo esa pausa global. El creador no puede abrirse durante Downed/Dead. No se utiliza tiempo de reloj del sistema ni tiempo transcurrido fuera de la partida.
 - **Acordado:** ciertos enemigos también pueden **secuestrar** a la compañera. Este estado es distinto de la muerte y conduce a una persecución o misión de rescate, sin Game Over inmediato. La mecánica exacta se desarrolla en la sección 11.
 - Las órdenes de supervivencia y la IA deben minimizar muertes atribuibles a errores de navegación o decisiones incomprensibles.
 
@@ -340,10 +343,12 @@ La futura compañera **cayó en una trampa preparada por bandidos**, no en una t
 - Creador de compañera con catálogo provisional o importación VRM 1.0 local y tres plantillas.
 - Escena Game con trampa, rescate inicial, seguimiento/espera, estado de incapacidad y reanimación.
 - Conversaciones ramificadas F3A con tres temas y respuestas según personalidad.
-- Animación Humanoid de seguimiento continuo y mejora visible de luz/materiales; la persona que probó reportó la mejora.
+- Animación Humanoid de seguimiento continuo y presentación mejorada al equilibrar la luz; materiales y texturas conservados. La persona que probó reportó la mejora.
 - Persistencia de selección de apariencia y personalidad; **no equivale a guardado completo de campaña**.
 
 **Próximos sistemas del prototipo — propuestas o pendientes:** combate básico del jugador y una clase funcional de la compañera, un animal/grupo/enemigo grande para probar prioridades, detección real de peligro, convivencia en hogar, salida en solitario, secuestro guionizado y checkpoints.
+
+**Reinicio actual:** «Reiniciar encuentro» crea un CompanionState nuevo, limpia rescate/confianza, consumo/cursor y episodios del diálogo, restaura trampa y posiciones iniciales y conserva la personalidad seleccionada y apariencia. No carga un checkpoint ni restaura una campaña. Volver del creador conserva la instancia de encuentro pausada; cerrar/reabrir el ejecutable solo recupera el perfil y su apariencia administrada.
 
 Las pruebas F2/F3A y locomoción acreditan el alcance ensayado, no la finalización del juego, todos los dispositivos o el carácter definitivo de los modelos y animaciones.
 
@@ -355,6 +360,10 @@ Las pruebas F2/F3A y locomoción acreditan el alcance ensayado, no la finalizaci
 - `CompanionAppearance`, `VrmAppearance` y `AvatarLocomotion`: representación/carga de avatar, locomoción y capacidades visuales; desacoplados del significado narrativo.
 - `CompanionProfileStore`: persistencia y recuperación versionadas para apariencia y plantilla, con respaldo.
 - `DialogueContent`, `DialogueDirector`, `DialoguePresenter` y `CompanionReactionPresenter`: datos locales, elección de respuesta, UI y salida emocional.
+
+**Contrato de guardado implementado:** `profile-v2.json` contiene versión de formato, identidad del perfil, personalidad, cuatro índices de color históricos, selección de catálogo o referencia VRM por hash y copia legacy. No serializa CompanionState, confianza/rescate actuales, cursor de diálogo, posiciones, misiones o checkpoints. El sobre final admite **1 MiB**; los metadatos VRM preparados para persistir usan lista de campos conocidos con presupuesto **32 KiB UTF-8**, límites por campo/cantidad y rechazo de tipos/tamaños inválidos sin recortar los textos legales conocidos. Los campos desconocidos se omiten del perfil; el VRM administrado conserva sus bytes originales.
+
+**Recuperación y admisión:** el temporal se vacía y relee con el lector de producción antes del reemplazo; el destino se relee después. El lector puede recuperar un respaldo legible y anunciarlo; si principal y respaldo existentes son ilegibles, guardar la recuperación requiere confirmación explícita y conserva sus originales. La selección VRM apunta a una copia privada por hash; si falta o está dañada se anuncia un fallback al catálogo, no se declara recuperada la campaña. La admisión actual exige VRM 1.0 estable, archivo de hasta **32 MiB**, JSON de hasta **4 MiB**, recursos incorporados sin URI y texturas PNG con presupuestos adicionales. Estos límites y los ensayos existentes no certifican todos los archivos ni un corte eléctrico real. Detalle y evidencias en el informe técnico.
 
 **Regla arquitectónica:** eventos de juego → estado narrativo/contexto → decisión e intención → diálogo/gesto/expresión. Ni la apariencia ni la UI escriben por sí mismas memoria, relación o confianza.
 
@@ -404,7 +413,7 @@ Sistemas futuros mencionados en documentos anteriores (IA de combate, necesidade
 
 **Lectura de las pruebas:** el usuario informó que las conversaciones, incapacitación/reanimación y la continuidad de movimiento funcionan, y que los modelos se ven mejor tras la corrección; las tres personalidades aún se sienten similares. Los tests automatizados documentados en los PR no sustituyen esta revisión subjetiva. No hay aprobación de arte final ni del sistema F3 completo.
 
-**Frontera de evidencia:** [F2](Audits/VRM-F2/INFORME.md) conserva límites de offline físico, datos futuros, recursos y momentos de cambio; [F3A revisión 1](Audits/VRM-F3A/review-1/criteria-status.json) mantiene D08, R10 y R11 en PARTIAL; [locomoción/render](Audits/Companion-Locomotion-Render/criteria-status.json) mantiene LOC-05/REN-04 en PARTIAL. La observación manual posterior de mejora se añade a esos registros: no reescribe sus resultados ni da por aceptados todos los criterios. La revisión técnica de Chat 3 y la aceptación formal completa siguen pendientes.
+**Frontera de evidencia:** [F2](Audits/VRM-F2/criteria-status.json) mantiene VRM-AC01/12/22/24 en PARTIAL: desconexión física, datos de sistemas futuros, eliminación de biblioteca/formatos futuros y momentos de cambio todavía no ensayables; [F3A revisión 1](Audits/VRM-F3A/review-1/criteria-status.json) mantiene D08, R10 y R11 en PARTIAL por aprobación editorial/actuación y casos asíncronos no implementados; [locomoción/render](Audits/Companion-Locomotion-Render/criteria-status.json) mantiene LOC-05/REN-04 en PARTIAL. Las observaciones manuales de mejora recogidas por Dirección no reescriben esas matrices ni aceptan automáticamente todos sus casos. El [informe de Chat 3](Audits/GDD-v0.7/Revision_Tecnica_Chat3.md) contrasta el código y las pruebas históricas; no ejecuta otra prueba manual ni concede la aceptación formal completa.
 
 ## 18. Método de autoría inspirado en tarjetas de personaje
 
@@ -461,10 +470,13 @@ Son consignas de investigación, no afirmaciones sobre toda la psicología de es
 - Trabajo de Chat 2: GDD/contratos/editorial; Chat 3: Unity y pruebas; Chat 1: dirección y revisión. Cambios de estado de propuesta a acordado requieren decisión explícita y revisión de PR.
 - Cada cambio debe registrarse también en el `readme.txt` raíz, con commits, push, PR y pruebas. El GDD maestro no sustituye los informes técnicos.
 - [Auditoría editorial de Chat 2](Audits/GDD-v0.7/Revision_Editorial_Chat2.md): cobertura de v0.5/v0.6, correcciones explícitas, comprobaciones y decisiones abiertas. Se mantiene el [workflow v1.2](Workflow_Desarrollo_v1.2.md).
+- [Auditoría técnica de Chat 3](Audits/GDD-v0.7/Revision_Tecnica_Chat3.md): contraste de `448c6f9` con `main` `f835d3b`, límites de importación/guardado, continuidad por encuentro, 30 s/pausa, Shy/2, propuestas no aplicadas y estados de evidencia. Dictamen técnico de candidatura; no aprobación del maestro.
 
 **Puerta para promoción:** revisión editorial y revisión de exactitud técnica son diferentes. Tras la revisión de Chat 3, Dirección decide la aprobación del contenido y si se publica como nuevo GDD maestro. Debe quedar explícito qué propuestas siguen abiertas, incluso dentro de un GDD aprobado. Hasta esa decisión no renombrar a v0.7 oficial, reemplazar el maestro aprobado, fusionar automáticamente este PR o iniciar nuevas mecánicas por esta revisión.
 
 **Registro v0.7 (borrador):** consolidación del GDD v0.5 y las enmiendas posteriores con la dirección VRM de DEC-007, el estado F2/F3A y la corrección de locomoción/render, nombre Dandere, metodología de perfiles profundos, referencias de estudio y distinción explícita entre funciones probadas y propuestas. **No se aprueba automáticamente Deredere, las 33 revisiones editoriales ni nuevas mecánicas.**
 
 **Revisión editorial Chat 2 — 29/10/2026:** separadas decisión, implementación y validación; precisados tiempo activo probado/checkpoint pendiente, Shy/2 frente a etiqueta Dandere y estado documental de los 33 ajustes; restaurada visibilidad de aprendizaje, preferencias, expresión híbrida/cómica, opción local fuera del MVP y decisiones heredadas aún abiertas; depurados ejemplos del prólogo y correspondencia de memoria; ampliados el método de fichas, fuentes y control de promoción. Motivos y alcance en la auditoría enlazada. GDD v0.5/v0.6, decisiones, biblioteca canónica y Unity permanecen intactos. Sin nueva ejecución de Unity o aceptación artística por esta revisión.
+
+**Revisión técnica Chat 3 — 29/10/2026:** precisado alcance implementado frente a capas futuras, guardado acotado y recuperación, continuidad en memoria y reinicio, reloj escalado/pausa e intención facial frente a actuación no integrada. Materiales/texturas conservados en la corrección de iluminación. Verificados Shy/2, 60 entradas/18 rutas y 0/33 ajustes aplicados; Deredere ausente. Solo documentación; no se ejecuta Unity, no se fusiona y v0.7 conserva su condición de BORRADOR hasta decisión de Dirección.
 
