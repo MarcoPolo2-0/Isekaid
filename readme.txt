@@ -637,3 +637,10 @@ Proteccion y limites
 - Informe de revision, resultados, hashes del binario actualizado y generador reproducible de fixture privado agregados en VRM-F2/metadata-review.
 - Se mantienen 7 criterios F2 PASS y 4 PARTIAL. Offline fisico, gameplay futuro, derechos y calidad visual no se declaran aprobados. No se publica el VRM derivado ni sus capturas.
 - Cambios del PR #6 integrados conservando ambos registros; main permanece sin fusionar. La correccion se publica en el mismo PR #7.
+28/10/2026 - CHAT 2 / PR #6 - CORRECCION DE REVISION DE DIRECCION
+- Atendida revision 5692435453: retirada de workflow v1.2 la instruccion
+  residual de reanudar G2, contradictoria con DEC-007.
+- Siguiente puerta: revision/aceptacion de F2 y preparacion documental de
+  F3; implementacion F3 requiere autorizacion posterior. Woman/G2 en pausa.
+- GDD v0.5 e historial completo de readme de Desarrollo/Diseno conservados.
+- Solo correccion documental; no se ejecutan Unity ni builds, ni se fusiona PR.
