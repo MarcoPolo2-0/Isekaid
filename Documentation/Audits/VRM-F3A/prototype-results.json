@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "log": "f3a-prototype-regression.log",
+  "markers": [
+    "ISEKAID_PROTOTYPE_CHECKS_PASSED",
+    "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED"
+  ]
+}
