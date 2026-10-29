@@ -19,3 +19,5 @@ jobs:
           python-version: "3.11"
       - name: Validar disposición del repositorio y escenas
         run: python tools/verify_unified_layout.py
+      - name: Validar biblioteca narrativa y recurso runtime
+        run: python tools/build_f3a_runtime_content.py --check

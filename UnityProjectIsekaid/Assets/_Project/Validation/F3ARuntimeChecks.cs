@@ -73,10 +73,14 @@ namespace Isekaid.Validation
         }
         private static async Task Press(Key key, int milliseconds = 100)
         {
+            int frame = Time.frameCount;
+            var timer = System.Diagnostics.Stopwatch.StartNew();
             InputSystem.QueueStateEvent(keyboard, new KeyboardState(key));
-            await Task.Delay(milliseconds);
+            // A stalled frame must not receive both key edges before the player updates.
+            await Until(() => timer.ElapsedMilliseconds >= milliseconds && Time.frameCount >= frame + 3, "Player did not process held input");
+            frame = Time.frameCount;
             InputSystem.QueueStateEvent(keyboard, new KeyboardState());
-            await Task.Delay(100);
+            await Until(() => Time.frameCount >= frame + 2, "Player did not process released input");
         }
         private static void Submit(string name)
         {
@@ -198,8 +202,11 @@ namespace Isekaid.Validation
                     Submit("conversation-close");
                     Check(!director.Active && prototype.Player.InputEnabled && director.Current.id == rootId && director.Choices.Count == 2, "Voluntary close retains pending root and restores movement");
                     var position = prototype.Player.transform.position;
+                    int moveFrame = Time.frameCount;
                     await Press(Key.W, 250);
-                    Check(Vector3.Distance(position, prototype.Player.transform.position) > .15f, "W moves after closing dialogue");
+                    float moved = Vector3.Distance(position, prototype.Player.transform.position);
+                    Check(moved > .15f, "W moves after closing dialogue: meters=" + moved + ", frames=" + (Time.frameCount - moveFrame) +
+                        ", input=" + prototype.Player.InputEnabled + ", paused=" + prototype.IsPaused + ", scale=" + Time.timeScale);
                     prototype.Player.ResetPosition();
                     Check(companion.Interact() && director.Current.id == rootId && director.FocusedOptionId == focus && Count(rootId) == 1, "Explicit reopen retains options/focus without respoken root");
                     foreach (var size in new[] { new Vector2Int(1920,1080), new Vector2Int(1600,900), new Vector2Int(1280,720) })
