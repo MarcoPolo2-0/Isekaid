@@ -1,0 +1,150 @@
+{
+    "passed": true,
+    "unity": "6000.6.7f1",
+    "phase": "candidate",
+    "error": "",
+    "avatarHash": "37eadcbaa4e240b691601daabcfa4ad4d5319793dff0cc0d128eff55f4de8736",
+    "motions": [
+        {
+            "avatar": "catalog",
+            "requested": "Idle",
+            "clip": "Idle",
+            "human": true,
+            "loop": true,
+            "length": 2.4583334922790527,
+            "normalizedStart": 0.43528085947036743,
+            "normalizedEnd": 1.4862184524536133,
+            "tailBoneDegrees": 0.0
+        },
+        {
+            "avatar": "catalog",
+            "requested": "Walk",
+            "clip": "Walk",
+            "human": true,
+            "loop": true,
+            "length": 1.0,
+            "normalizedStart": 1.0466428995132446,
+            "normalizedEnd": 5.179538726806641,
+            "tailBoneDegrees": 24.016372680664063
+        },
+        {
+            "avatar": "catalog",
+            "requested": "Run",
+            "clip": "Run",
+            "human": true,
+            "loop": true,
+            "length": 0.5833333730697632,
+            "normalizedStart": 8.112289428710938,
+            "normalizedEnd": 11.192774772644043,
+            "tailBoneDegrees": 74.9218521118164
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Idle",
+            "clip": "Idle",
+            "human": true,
+            "loop": true,
+            "length": 2.4583334922790527,
+            "normalizedStart": 0.39952442049980164,
+            "normalizedEnd": 1.4351904392242432,
+            "tailBoneDegrees": 0.2564085125923157
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Walk",
+            "clip": "Walk",
+            "human": true,
+            "loop": true,
+            "length": 1.0,
+            "normalizedStart": 1.0379917621612549,
+            "normalizedEnd": 5.138490200042725,
+            "tailBoneDegrees": 23.6999454498291
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Run",
+            "clip": "Run",
+            "human": true,
+            "loop": true,
+            "length": 0.5833333730697632,
+            "normalizedStart": 8.068056106567383,
+            "normalizedEnd": 11.143054008483887,
+            "tailBoneDegrees": 85.08001708984375
+        }
+    ],
+    "follows": [
+        {
+            "avatar": "catalog",
+            "scenario": "continuous",
+            "samples": 581,
+            "stateChanges": 5,
+            "timeResets": 0,
+            "nearThresholdCrossings": 4,
+            "transitionFrames": 47,
+            "requestedStateChanges": 0,
+            "rapidStateChanges": 0,
+            "distance": 7.873913764953613,
+            "maxSpeed": 3.800027847290039
+        },
+        {
+            "avatar": "catalog",
+            "scenario": "threshold-noise",
+            "samples": 291,
+            "stateChanges": 2,
+            "timeResets": 0,
+            "nearThresholdCrossings": 72,
+            "transitionFrames": 19,
+            "requestedStateChanges": 0,
+            "rapidStateChanges": 0,
+            "distance": 10.473034858703613,
+            "maxSpeed": 3.040027618408203
+        },
+        {
+            "avatar": "vrm",
+            "scenario": "continuous",
+            "samples": 574,
+            "stateChanges": 5,
+            "timeResets": 0,
+            "nearThresholdCrossings": 4,
+            "transitionFrames": 48,
+            "requestedStateChanges": 0,
+            "rapidStateChanges": 0,
+            "distance": 7.873378753662109,
+            "maxSpeed": 3.800025463104248
+        },
+        {
+            "avatar": "vrm",
+            "scenario": "threshold-noise",
+            "samples": 290,
+            "stateChanges": 2,
+            "timeResets": 0,
+            "nearThresholdCrossings": 72,
+            "transitionFrames": 19,
+            "requestedStateChanges": 0,
+            "rapidStateChanges": 0,
+            "distance": 10.47391128540039,
+            "maxSpeed": 3.0400261878967285
+        }
+    ],
+    "rendering": [
+        "scene-before clippedWhitePixels=109078",
+        "reference clippedWhitePixels=16153",
+        "balanced clippedWhitePixels=0"
+    ],
+    "gait": [
+        "catalog Idle humanScale=0.91338 footBoneMinY=0.0596 footBottom=0.0555 stanceBackSpeed=0.0000 samples=0",
+        "catalog Idle actualMeshMinY=0.00112",
+        "catalog Walk humanScale=0.91338 footBoneMinY=0.0554 footBottom=0.0555 stanceBackSpeed=1.3469 samples=139",
+        "catalog Run humanScale=0.91338 footBoneMinY=0.0401 footBottom=0.0555 stanceBackSpeed=3.8064 samples=42",
+        "vrm Idle humanScale=1.43738 footBoneMinY=0.1200 footBottom=0.1696 stanceBackSpeed=0.0000 samples=0",
+        "vrm Idle actualMeshMinY=0.01402",
+        "vrm Walk humanScale=1.43738 footBoneMinY=0.1157 footBottom=0.1696 stanceBackSpeed=1.2938 samples=143",
+        "vrm Run humanScale=1.43738 footBoneMinY=0.1008 footBottom=0.1696 stanceBackSpeed=3.7545 samples=39"
+    ],
+    "stride": [
+        "catalog target=1.40 measuredSpeed=1.400 lowFootWorldSpeed=1.328 contacts=126 effectiveHumanScale=0.97611",
+        "catalog target=3.80 measuredSpeed=3.797 lowFootWorldSpeed=0.960 contacts=26 effectiveHumanScale=0.97611",
+        "vrm target=1.40 measuredSpeed=1.400 lowFootWorldSpeed=1.359 contacts=129 effectiveHumanScale=0.98401",
+        "vrm target=3.80 measuredSpeed=3.797 lowFootWorldSpeed=0.924 contacts=26 effectiveHumanScale=0.98401"
+    ]
+}

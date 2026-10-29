@@ -59,14 +59,17 @@ namespace Isekaid.Editor
                 }
                 var animator = instance.GetComponent<Animator>();
                 if (animator == null) animator = instance.AddComponent<Animator>();
-                animator.runtimeAnimatorController = controller; animator.applyRootMotion = false; animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
+                animator.runtimeAnimatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(LocomotionBuilder.ControllerPath) ?? controller;
+                animator.avatar = AssetDatabase.LoadAssetAtPath<Avatar>(LocomotionBuilder.Root + "/AdventurerHumanoid.asset");
+                animator.applyRootMotion = false; animator.cullingMode = AnimatorCullingMode.AlwaysAnimate;
                 var renderers = instance.GetComponentsInChildren<Renderer>();
                 var bounds = renderers[0].bounds; foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
                 instance.transform.localScale *= 1.7f / bounds.size.y;
                 bounds = renderers[0].bounds; foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
                 // Store the offset on a wrapper so FBX animation bindings retain their original root.
                 var wrapper = new GameObject("Adventurer_CC0_F2");
-                instance.transform.SetParent(wrapper.transform, true); instance.transform.position -= Vector3.up * bounds.min.y;
+                instance.transform.SetParent(wrapper.transform, true);
+                if (animator.avatar == null) instance.transform.position -= Vector3.up * bounds.min.y;
                 var prefab = PrefabUtility.SaveAsPrefabAsset(wrapper, Root + "/Adventurer.prefab");
                 Object.DestroyImmediate(wrapper);
                 foreach (var scenePath in new[] { CharacterCreationController.ScenePath, CharacterCreationController.GameScenePath })
@@ -78,7 +81,7 @@ namespace Isekaid.Editor
                     if (visual == null) throw new InvalidOperationException("Visual root missing: " + scenePath);
                     serialized.FindProperty("visualRoot").objectReferenceValue = visual;
                     serialized.FindProperty("catalogPrefab").objectReferenceValue = prefab;
-                    serialized.FindProperty("vrmAnimations").objectReferenceValue = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>("Assets/Experiments/VrmCompanion/TrialAnimations.controller");
+                    serialized.FindProperty("vrmAnimations").objectReferenceValue = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(LocomotionBuilder.ControllerPath);
                     serialized.ApplyModifiedPropertiesWithoutUndo();
                     if (scenePath == CharacterCreationController.ScenePath)
                     {

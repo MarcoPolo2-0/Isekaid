@@ -79,11 +79,11 @@ namespace Isekaid.Editor
             stage.GetComponent<Renderer>().sharedMaterial = AssetDatabase.LoadAssetAtPath<Material>(Root + "/Materials/Stone.mat");
             var key = new GameObject("KeyLight").AddComponent<Light>();
             key.type = LightType.Directional;
-            key.intensity = 1.6f;
-            key.color = new Color(1f, 0.88f, 0.72f);
+            key.intensity = .65f;
+            key.color = Color.white;
             key.transform.rotation = Quaternion.Euler(30f, -25f, 0f);
             RenderSettings.ambientMode = AmbientMode.Flat;
-            RenderSettings.ambientLight = new Color(0.6f, 0.67f, 0.72f);
+            RenderSettings.ambientLight = new Color(.4f, .4f, .4f);
             RenderSettings.fog = false;
 
             var ui = new GameObject("CharacterCreation");

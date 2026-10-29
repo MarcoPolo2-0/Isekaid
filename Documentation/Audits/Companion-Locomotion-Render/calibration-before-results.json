@@ -1,0 +1,20 @@
+{
+    "passed": true,
+    "unity": "6000.6.7f1",
+    "phase": "calibration",
+    "error": "",
+    "avatarHash": "37eadcbaa4e240b691601daabcfa4ad4d5319793dff0cc0d128eff55f4de8736",
+    "motions": [],
+    "follows": [],
+    "rendering": [],
+    "gait": [
+        "catalog Idle humanScale=0.91338 footBoneMinY=0.1140 footBottom=0.0555 stanceBackSpeed=0.0000 samples=0",
+        "catalog Idle actualMeshMinY=0.05407",
+        "catalog Walk humanScale=0.91338 footBoneMinY=0.1091 footBottom=0.0555 stanceBackSpeed=0.8693 samples=129",
+        "catalog Run humanScale=0.91338 footBoneMinY=0.0945 footBottom=0.0555 stanceBackSpeed=5.4437 samples=40",
+        "vrm Idle humanScale=1.43738 footBoneMinY=0.1228 footBottom=0.1696 stanceBackSpeed=0.0000 samples=0",
+        "vrm Idle actualMeshMinY=0.00300",
+        "vrm Walk humanScale=1.43738 footBoneMinY=0.1045 footBottom=0.1696 stanceBackSpeed=0.7845 samples=130",
+        "vrm Run humanScale=1.43738 footBoneMinY=0.0868 footBottom=0.1696 stanceBackSpeed=4.6188 samples=49"
+    ]
+}

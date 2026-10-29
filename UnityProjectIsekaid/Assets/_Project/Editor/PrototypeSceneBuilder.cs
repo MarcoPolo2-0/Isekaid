@@ -84,13 +84,13 @@ namespace Isekaid.Editor
 
             var light = new GameObject("Sun").AddComponent<Light>();
             light.type = LightType.Directional;
-            light.intensity = 1.7f;
-            light.color = new Color(1f, 0.91f, 0.75f);
+            light.intensity = .65f;
+            light.color = Color.white;
             light.shadows = LightShadows.Soft;
             light.transform.rotation = Quaternion.Euler(48f, -35f, 0f);
             RenderSettings.sun = light;
-            RenderSettings.ambientMode = AmbientMode.Trilight;
-            RenderSettings.ambientSkyColor = new Color(0.55f, 0.68f, 0.76f);
+            RenderSettings.ambientMode = AmbientMode.Flat;
+            RenderSettings.ambientLight = new Color(.4f, .4f, .4f);
             RenderSettings.ambientEquatorColor = new Color(0.43f, 0.48f, 0.42f);
             RenderSettings.ambientGroundColor = new Color(0.22f, 0.28f, 0.24f);
             RenderSettings.fog = true;

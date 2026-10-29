@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "source": "guards.log",
+  "markers": [
+    "ISEKAID_PROTOTYPE_CHECKS_PASSED",
+    "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED"
+  ],
+  "editorInternalWarnings": [
+    "UnityEditor.Search.SearchDatabase",
+    "Unity.Hierarchy.HierarchyViewModel manager != NULL"
+  ]
+}

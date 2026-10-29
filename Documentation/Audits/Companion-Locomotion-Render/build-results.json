@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "target": "Windows x64 Development Mono",
+  "implementationCommit": "11358db57d90bac3ba62dfc0edd130a2fcd62d73",
+  "buildReportedBytes": 196472292,
+  "sha256": {
+    "Isekaid.exe": "3726509af94bdacbfe23f85da13109a7e70fb7d61913506e98690bd3208b2fd7",
+    "Isekaid_Data/Managed/Isekaid.Runtime.dll": "5ababdd40cd657afa59a2c8ec28cb3c2bb3178b6045f06553a3982e6a86cbaa3",
+    "Isekaid_Data/Managed/Isekaid.VrmAppearance.dll": "bd3df6b6d673a726f2341d325a1463baf6c4d440a63aaaf3cea29e06072c6e6c",
+    "Isekaid_Data/Managed/Isekaid.F2Validation.dll": "1803ffa1e6d74e2d4baa786148f6c5cb2349a9dd8922c609938d58183fc3489b",
+    "Isekaid_Data/sharedassets0.assets": "c370b6efc2a486a551bd69971f59e7000b73d409037021acdb620767c7e7e9c5",
+    "Isekaid_Data/level0": "ce9cf0c74f2c0e861cd24d6960903a311ffa11abb145a673f95952505aa63d03",
+    "Isekaid_Data/level1": "45fef10d310899e7671c8752c59be81364fd0495dedcbda45491d838e2421ed2"
+  }
+}

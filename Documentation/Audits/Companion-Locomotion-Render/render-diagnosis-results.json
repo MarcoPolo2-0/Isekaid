@@ -1,0 +1,130 @@
+{
+    "passed": true,
+    "unity": "6000.6.7f1",
+    "phase": "candidate",
+    "error": "",
+    "avatarHash": "37eadcbaa4e240b691601daabcfa4ad4d5319793dff0cc0d128eff55f4de8736",
+    "motions": [
+        {
+            "avatar": "catalog",
+            "requested": "Idle",
+            "clip": "Idle",
+            "human": true,
+            "loop": true,
+            "length": 2.4583334922790527,
+            "normalizedStart": 0.4261291027069092,
+            "normalizedEnd": 1.4708175659179688,
+            "tailBoneDegrees": 0.0
+        },
+        {
+            "avatar": "catalog",
+            "requested": "Walk",
+            "clip": "Walk",
+            "human": true,
+            "loop": true,
+            "length": 1.0,
+            "normalizedStart": 2.679269552230835,
+            "normalizedEnd": 5.262496471405029,
+            "tailBoneDegrees": 23.508228302001953
+        },
+        {
+            "avatar": "catalog",
+            "requested": "Run",
+            "clip": "Run",
+            "human": true,
+            "loop": true,
+            "length": 0.5833333730697632,
+            "normalizedStart": 7.764093399047852,
+            "normalizedEnd": 12.135326385498047,
+            "tailBoneDegrees": 69.14764404296875
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Idle",
+            "clip": "Idle",
+            "human": true,
+            "loop": true,
+            "length": 2.4583334922790527,
+            "normalizedStart": 0.4113585948944092,
+            "normalizedEnd": 1.4622104167938232,
+            "tailBoneDegrees": 0.0
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Walk",
+            "clip": "Walk",
+            "human": true,
+            "loop": true,
+            "length": 1.0,
+            "normalizedStart": 2.6709883213043213,
+            "normalizedEnd": 5.237372875213623,
+            "tailBoneDegrees": 25.015270233154297
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Run",
+            "clip": "Run",
+            "human": true,
+            "loop": true,
+            "length": 0.5833333730697632,
+            "normalizedStart": 7.713757514953613,
+            "normalizedEnd": 12.113369941711426,
+            "tailBoneDegrees": 56.79439926147461
+        }
+    ],
+    "follows": [
+        {
+            "avatar": "catalog",
+            "scenario": "continuous",
+            "samples": 540,
+            "stateChanges": 0,
+            "timeResets": 0,
+            "nearThresholdCrossings": 4,
+            "transitionFrames": 0,
+            "requestedStateChanges": 0,
+            "distance": 7.872740745544434,
+            "maxSpeed": 3.800025224685669
+        },
+        {
+            "avatar": "catalog",
+            "scenario": "threshold-noise",
+            "samples": 267,
+            "stateChanges": 0,
+            "timeResets": 0,
+            "nearThresholdCrossings": 74,
+            "transitionFrames": 0,
+            "requestedStateChanges": 0,
+            "distance": 10.510580062866211,
+            "maxSpeed": 3.0400283336639404
+        },
+        {
+            "avatar": "vrm",
+            "scenario": "continuous",
+            "samples": 536,
+            "stateChanges": 0,
+            "timeResets": 0,
+            "nearThresholdCrossings": 4,
+            "transitionFrames": 0,
+            "requestedStateChanges": 0,
+            "distance": 7.872729301452637,
+            "maxSpeed": 3.8000235557556152
+        },
+        {
+            "avatar": "vrm",
+            "scenario": "threshold-noise",
+            "samples": 280,
+            "stateChanges": 0,
+            "timeResets": 0,
+            "nearThresholdCrossings": 70,
+            "transitionFrames": 0,
+            "requestedStateChanges": 0,
+            "distance": 10.513514518737793,
+            "maxSpeed": 3.040024518966675
+        }
+    ],
+    "rendering": [
+        "scene-before clippedWhitePixels=109078",
+        "reference clippedWhitePixels=16153",
+        "balanced clippedWhitePixels=0"
+    ]
+}

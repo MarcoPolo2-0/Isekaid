@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.6, g: 0.67, b: 0.72, a: 1}
+  m_AmbientSkyColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 791350481774716731, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
       propertyPath: vrmAnimations
       value: 
-      objectReference: {fileID: 9100000, guid: 50354c0fcb2d7b0478a79ca46f285e95, type: 2}
+      objectReference: {fileID: 9100000, guid: 3766ccfb82e211a479c688e7ab7dfb64, type: 2}
     - target: {fileID: 831992515764340249, guid: b88f68fb8f0af6e4aacc63145a0b0f1d, type: 3}
       propertyPath: m_Layer
       value: 31
@@ -388,8 +388,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 1
-  m_Color: {r: 1, g: 0.88, b: 0.72, a: 1}
-  m_Intensity: 1.6
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.65
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
