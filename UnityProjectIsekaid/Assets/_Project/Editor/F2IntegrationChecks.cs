@@ -130,6 +130,7 @@ namespace Isekaid.Editor
             Storage();
             PrototypePlayModeChecks.Run();
         }
+        public static void MetadataStorage() => F2MetadataChecks.RunStorage();
         public static void BuildWindows()
         {
             if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows64))

@@ -10,6 +10,8 @@ namespace Isekaid.ExperimentalVrm
     [Serializable]
     public sealed class AvatarSelection
     {
+        public const int MaximumMetadataBytes = 32 * 1024;
+        private static readonly UTF8Encoding MetadataEncoding = new UTF8Encoding(false, true);
         public string kind = "catalog";
         public string catalogId = "adventurer-02";
         public string hash = "";
@@ -34,9 +36,71 @@ namespace Isekaid.ExperimentalVrm
             return new AvatarSelection
             {
                 kind = "vrm", catalogId = "", vrmVersion = "1.0", hash = AvatarFiles.Hash(bytes),
-                metadataJson = root["extensions"]["VRMC_vrm"]["meta"].ToString("  "),
+                metadataJson = SanitizeMetadata(root["extensions"]["VRMC_vrm"]["meta"]),
                 localUseAcknowledged = acknowledged
             };
+        }
+
+        public AvatarSelection SanitizedCopy()
+        {
+            if (metadataJson != null && MetadataEncoding.GetByteCount(metadataJson) > 4 * 1024 * 1024)
+                throw new InvalidDataException("Los metadatos del avatar superan el límite de lectura.");
+            return new AvatarSelection
+            {
+                kind = kind, catalogId = catalogId, hash = hash, vrmVersion = vrmVersion,
+                localUseAcknowledged = localUseAcknowledged,
+                metadataJson = kind == "vrm" ? SanitizeMetadata(JsonParser.Parse(metadataJson ?? "")) : ""
+            };
+        }
+
+        private static string SanitizeMetadata(JsonNode meta)
+        {
+            if (!meta.IsMap()) throw new InvalidDataException("Los metadatos del avatar deben ser un objeto JSON.");
+            var json = new JsonFormatter();
+            json.BeginMap();
+            foreach (var field in new[] {
+                ("name", 256), ("version", 64), ("copyrightInformation", 8192), ("contactInformation", 512),
+                ("thirdPartyLicenses", 8192), ("avatarPermission", 64), ("commercialUsage", 64),
+                ("creditNotation", 64), ("modification", 64), ("otherLicenseUrl", 2048) })
+            {
+                if (!meta.ContainsKey(field.Item1)) continue;
+                json.Key(field.Item1);
+                json.Value(BoundedText(meta[field.Item1], field.Item1, field.Item2));
+            }
+            foreach (var field in new[] { ("authors", 16, 256), ("references", 8, 2048) })
+            {
+                if (!meta.ContainsKey(field.Item1)) continue;
+                var values = meta[field.Item1];
+                if (!values.IsArray() || values.GetArrayCount() > field.Item2)
+                    throw new InvalidDataException("Demasiadas entradas o formato inválido en " + field.Item1 + ".");
+                json.Key(field.Item1); json.BeginList();
+                foreach (var value in values.ArrayItems()) json.Value(BoundedText(value, field.Item1, field.Item3));
+                json.EndList();
+            }
+            foreach (string field in new[] { "allowExcessivelyViolentUsage", "allowExcessivelySexualUsage",
+                "allowPoliticalOrReligiousUsage", "allowAntisocialOrHateUsage", "allowRedistribution" })
+            {
+                if (!meta.ContainsKey(field)) continue;
+                if (!meta[field].IsBoolean()) throw new InvalidDataException("Permiso de avatar inválido: " + field + ".");
+                json.Key(field); json.Value(meta[field].GetBoolean());
+            }
+            json.EndMap();
+            string result = json.ToString();
+            if (MetadataEncoding.GetByteCount(result) > MaximumMetadataBytes)
+                throw new InvalidDataException("Los metadatos permitidos del avatar superan 32 KiB. No se han recortado sus condiciones de uso.");
+            return result;
+        }
+
+        private static string BoundedText(JsonNode value, string field, int maximumBytes)
+        {
+            if (!value.IsString()) throw new InvalidDataException("Texto de metadatos inválido: " + field + ".");
+            string text = value.GetString();
+            if (MetadataEncoding.GetByteCount(text) > maximumBytes)
+                throw new InvalidDataException("El campo " + field + " supera el límite de metadatos. No se ha recortado su contenido.");
+            foreach (char c in text)
+                if (char.IsControl(c) && c != '\n' && c != '\r' && c != '\t')
+                    throw new InvalidDataException("El campo " + field + " contiene caracteres de control no admitidos.");
+            return text;
         }
     }
 
@@ -113,7 +177,7 @@ namespace Isekaid.ExperimentalVrm
             AtomicWrite(path, bytes);
         }
 
-        public static void AtomicWrite(string path, byte[] bytes)
+        public static void AtomicWrite(string path, byte[] bytes, Func<string, bool> validate = null)
         {
             Directory.CreateDirectory(Path.GetDirectoryName(path));
             string temporary = path + ".tmp-" + Guid.NewGuid().ToString("N");
@@ -121,6 +185,8 @@ namespace Isekaid.ExperimentalVrm
             {
                 using (var stream = new FileStream(temporary, FileMode.CreateNew, FileAccess.Write, FileShare.None))
                 { stream.Write(bytes, 0, bytes.Length); stream.Flush(true); }
+                if (validate != null && !validate(temporary))
+                    throw new InvalidDataException("El archivo preparado no supera la lectura de verificación; se conserva el guardado anterior.");
                 if (File.Exists(path)) File.Replace(temporary, path, path + ".bak");
                 else File.Move(temporary, path);
             }

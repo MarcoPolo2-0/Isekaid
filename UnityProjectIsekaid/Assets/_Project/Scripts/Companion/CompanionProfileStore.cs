@@ -9,6 +9,7 @@ namespace Isekaid
     public static class CompanionProfileStore
     {
         public const string PreferenceKey = "isekaid.companion.profile.v1";
+        public const int MaximumProfileBytes = 1024 * 1024;
         public static string SavePath => Path.Combine(AvatarFiles.Root, "profile-v2.json");
         public static string LastWarning { get; private set; } = "";
 #if UNITY_EDITOR || DEBUG
@@ -57,14 +58,15 @@ namespace Isekaid
             return new Record { profile = new CompanionProfile { identity = Guid.NewGuid().ToString("N") }, legacyProfileJson = legacy };
         }
 
-        private static bool TryRead(string path, out Record record)
+        private static bool TryRead(string path, out Record record, string expectedPayload = null)
         {
             record = null;
             try
             {
-                if (!File.Exists(path) || new FileInfo(path).Length > 1024 * 1024) return false;
+                if (!File.Exists(path) || new FileInfo(path).Length > MaximumProfileBytes) return false;
                 var envelope = JsonUtility.FromJson<Envelope>(File.ReadAllText(path));
                 if (envelope == null || envelope.payload == null || AvatarFiles.Hash(Encoding.UTF8.GetBytes(envelope.payload)) != envelope.sha256) return false;
+                if (expectedPayload != null && envelope.payload != expectedPayload) return false;
                 var candidate = JsonUtility.FromJson<Record>(envelope.payload);
                 if (candidate == null || candidate.formatVersion != 2 || candidate.profile == null || !candidate.profile.IsValid ||
                     string.IsNullOrEmpty(candidate.profile.identity) || candidate.appearance == null || !candidate.appearance.IsValid) return false;
@@ -95,19 +97,29 @@ namespace Isekaid
                     throw new InvalidDataException("Confirma una apariencia para recuperar el perfil sin borrar sus originales.");
                 record.profile.version = 2;
                 if (string.IsNullOrEmpty(record.profile.identity)) record.profile.identity = Guid.NewGuid().ToString("N");
-                if (record.appearance.kind == "vrm") AvatarFiles.ReadManaged(record.appearance);
-                var payload = JsonUtility.ToJson(record);
+                var prepared = new Record
+                {
+                    formatVersion = record.formatVersion, profile = record.profile,
+                    appearance = record.appearance.SanitizedCopy(), legacyProfileJson = record.legacyProfileJson
+                };
+                if (prepared.appearance.kind == "vrm") AvatarFiles.ReadManaged(prepared.appearance);
+                var payload = JsonUtility.ToJson(prepared);
                 var envelope = new Envelope { payload = payload, sha256 = AvatarFiles.Hash(Encoding.UTF8.GetBytes(payload)) };
+                byte[] bytes = Encoding.UTF8.GetBytes(JsonUtility.ToJson(envelope, true));
+                if (bytes.Length > MaximumProfileBytes)
+                    throw new InvalidDataException("El perfil preparado supera 1 MiB; no se ha reemplazado el perfil ni su respaldo.");
 #if UNITY_EDITOR || DEBUG
                 BeforeCommit?.Invoke();
 #endif
                 // Never overwrite the last valid backup with an unreadable primary file.
                 if (File.Exists(SavePath) && !validMain)
                     File.Move(SavePath, SavePath + ".unreadable-" + Guid.NewGuid().ToString("N"));
-                AvatarFiles.AtomicWrite(SavePath, Encoding.UTF8.GetBytes(JsonUtility.ToJson(envelope, true)));
+                AvatarFiles.AtomicWrite(SavePath, bytes, path => TryRead(path, out _, payload));
+                if (!TryRead(SavePath, out _, payload))
+                    throw new InvalidDataException("No se pudo confirmar la lectura del perfil guardado. El respaldo anterior sigue disponible.");
                 return true;
             }
-            catch (Exception failure) when (failure is IOException || failure is UnauthorizedAccessException || failure is ArgumentException)
+            catch (Exception failure) when (failure is IOException || failure is InvalidDataException || failure is UnauthorizedAccessException || failure is ArgumentException)
             { error = "No se pudo guardar. Se conserva la selección anterior. " + failure.Message; return false; }
         }
     }

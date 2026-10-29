@@ -622,3 +622,12 @@ Proteccion y limites
 [2026-10-28] PR #7 - incorporacion de la revision documental #6
 - Integrados los commits del PR #6 (6261706), todavia abierto, dentro de la rama experimental F2; main no se fusiona ni se modifica.
 - Conservadas todas las entradas de ambos readme.txt y los documentos historicos. Las propuestas F2-P01-P04 y F3 conservan su estado documental.
+
+[2026-10-28] PR #7 - correccion del presupuesto de metadatos y verificacion del guardado
+- VRMC_vrm.meta se reduce a una lista explicita de campos estandar: textos de identidad/derechos, autores, referencias y permisos booleanos. Se conserva completo el VRM privado original.
+- Presupuesto persistido: 32 KiB UTF-8 en total; limites por campo, 16 autores y 8 referencias. Los textos legales demasiado largos se rechazan, no se recortan; se rechazan tipos incorrectos y controles no admitidos.
+- El perfil completo conserva el limite de 1 MiB. Se comprueba el tamano final, incluidas codificaciones/escapes, antes de reemplazar archivos.
+- El archivo temporal se lee con el mismo lector del perfil antes del commit atomico; despues se relee el destino y se verifica el payload esperado antes de devolver exito.
+- 35 aserciones adversariales PASS, incluidas conservacion byte a byte del perfil/respaldo ante rechazo, esquema invalido, tamano escapado y roundtrip cerca del limite.
+- VRM privado de prueba con JSON de 1,427,620 bytes: recorrido Editor PASS; perfil resultante de 1,088 bytes y metadatos de 370 bytes, sin persistir la propiedad desconocida de 1,300,000 caracteres.
+- Regresion de prototipo, 11 aserciones previas de almacenamiento y guardas de archivos repetidas: PASS. Pruebas Windows/reinicio y CI se registran en el informe de revision.
