@@ -652,3 +652,34 @@ Proteccion y limites
 2026-10-29 — F3A: 123 comprobaciones finales Play Mode PASS (editor-results.json); se confirma no repetición de Spoke por pausa y reacción de ayuda desde el menú. Regresión F2 con metadatos grandes PASS: 43 comprobaciones, 195 recursos liberados. Regresión original de dos escenas PASS; guardas: 9 rechazos y 2 límites de archivo; almacenamiento heredado: 11 aserciones PASS. Capturas públicas seleccionadas exclusivamente de Adventurer CC0; VRM y capturas privadas excluidos.
 
 2026-10-29 — F3A: build Windows x64 Development Mono Succeeded (196,505,711 bytes), implementación 5f3da89. Ejecutable real: 123 comprobaciones F3A PASS; regresión F2 Windows: 36 PASS y segundo proceso sin fuente: 2 PASS. Metadatos adversariales: 35 PASS. Estructura y 715 archivos protegidos F2 sin cambios. Informes, hashes, capturas reales solo del catálogo y guía de revisión manual en Documentation/Audits/VRM-F3A/. Pendientes: juego manual en ventana enfocada/captura física del cursor, aprobación de textos/lectura emocional y estabilidad manual F2; se mantienen los cuatro criterios parciales F2 y las restricciones de derechos. Sin fusionar ni declarar F3 completa.
+
+
+======================================================================
+28/10/2026 - CHAT 2 / F3A - DISENO NARRATIVO Y REACCIONES CONTEXTUALES
+======================================================================
+- Autorizacion directa de Direccion: solo diseno/preparacion F3A.
+  PR #6/#7 fusionados comprobados; F2 pendiente de revision manual humana.
+- F3A_Especificacion_v0.1.md: alcance, voces, cursor, prioridades,
+  repeticion, silencio y limites existentes/futuros diferenciados.
+- F3A_Biblioteca_v0.1.json: 60 entradas unicas, 20 por personalidad;
+  situaciones A/B/C/D/E/F = 3/27/9/9/6/6, sin efectos de confianza/memoria.
+- F3A_Arboles_v0.1.md: trampa, estado personal y aldea, tres arboles;
+  27 nodos alcanzables y 18 opciones/rutas, todas con cierre.
+- F3A_Matriz_Emocional_v0.1.md: siete emociones x tres personalidades,
+  canales preferidos y alternativas VRM/gesto, sin decidir desde morphs.
+- F3A_Contrato_Eventos_v0.1.md: hechos actuales y adaptadores propuestos;
+  peligro general/promesas no se declaran implementados.
+- F3A_Aceptacion_v0.1.md: ocho criterios documentales/editoriales y
+  doce pruebas runtime pendientes; no confundir JSON valido con gameplay.
+- F3A_Propuestas_Futuras_v0.1.md: memoria persistente, promesas, confianza,
+  percepcion y demas extensiones separadas de esta autorizacion.
+- Verificacion estructural: IDs/textos distintos, campos y alternativas,
+  grafos/rutas, efectos cero, matriz de siete emociones y 27 enlaces locales.
+- Seguimiento F3A Issue #8, vinculado a ISEK-001 #1 y borrador F3.
+- Rama docs/isek-f3a-dialogue-design y PR a main para revision; sin fusion.
+- GDD, decisiones, documentos historicos y Unity sin modificar. No se
+  ejecutan Unity, Play Mode, conversaciones en juego ni builds.
+- Chat 3 continua infraestructura autorizada en paralelo; esta entrega no
+  autoriza Fase 3 completa ni concede aceptacion manual de F2.
+
+2026-10-29 — F3A revisión de Dirección: se integra la documentación y biblioteca canónica del PR #9 (6df539d) en la rama del PR #10, conservando completos ambos bloques de readme. Autorizada su adaptación local y corrección de continuidad/cursor, 18 recorridos y episodios de reanimación. Textos todavía sujetos a aprobación; sin ampliar F3, modificar confianza ni fusionar main.
