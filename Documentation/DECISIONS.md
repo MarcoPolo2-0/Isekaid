@@ -8,6 +8,8 @@
 
 Este documento contiene decisiones de diseño para que los Chats 2 y 3 trabajen con el mismo contexto. Una decisión aprobada de diseño **no** equivale a validación técnica ni a implementación terminada.
 
+**Dirección visual vigente — DEC-007:** VRM 1.0 + catálogo local adoptados; F2 autorizada y pendiente de entrega real. Woman/G2 y el editor corporal quedan pausados e históricos. La continuidad de correcciones y las restricciones de repositorios de decisiones anteriores se leen con DEC-006/007; no son órdenes vigentes de reanudación. [Contrato F2](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md), [workflow v1.2](Workflow_Desarrollo_v1.2.md).
+
 ## DEC-001 — Base corporal personalizable para la compañera
 
 - **Vinculada a:** `ISEK-001`.
@@ -244,3 +246,43 @@ El usuario prefiere la silueta estilizada de G2-PROTO a la versión G2-CORR. La 
 - **Advertencia de distribución:** el repositorio actualmente es público y contiene código, imágenes y recursos de terceros; revisar licencias, atribución y credenciales antes de publicar nuevas dependencias o distribuir derivados.
 
 **Próxima tarea:** abrir en Unity Hub `UnityProjectIsekaid/`, comprobar compilación/Play Mode del creador y aventura, preservar el prototipo y luego continuar la iteración artística G2 bajo DEC-005.
+
+## DEC-007 — VRM 1.0 + catálogo local; Fase 2 autorizada
+
+**Fecha:** 28/10/2026, Guatemala. **Autoridad:** instrucción directa del usuario como Chat 1 — Dirección.  
+**Estado de diseño:** ADOPTADO como dirección principal. **Implementación F2:** AUTORIZADA, PENDIENTE DE ENTREGA Y ACEPTACIÓN.  
+**Seguimiento:** [Fase 2 / Issue #5](https://github.com/MarcoPolo2-0/Isekaid/issues/5), [ISEK-001 / Issue #1](https://github.com/MarcoPolo2-0/Isekaid/issues/1).
+
+### Motivos y decisión
+
+Adoptar VRM 1.0 con importación desde archivo local y catálogo incluido para concentrar producción en una compañera viva y reutilizar herramientas externas de creación visual. Se deja de desarrollar por ahora el editor corporal propio. Esto reduce el alcance del editor que debemos producir, pero no acredita un ahorro medido ni elimina los costes de importación, compatibilidad, seguridad y soporte.
+
+Identidad, personalidad, memoria, relación, clase, progreso y representación visual son independientes. Cambiar apariencia conserva los datos de la misma compañera. Se mantienen tsundere, yandere y tímida, con emociones, preferencias, autonomía, memoria, iniciativas y desacuerdos; el formato visual no sustituye el cerebro ni reduce la narrativa a expresiones.
+
+Una apariencia predeterminada y una importada bastan para la primera entrega funcional. Tres apariencias incluidas son el objetivo posterior de catálogo. El juego funciona offline, sin necesitar VRoid Studio instalado, cuentas, MCP, modelos de lenguaje o APIs de pago. VRM 0.x queda pendiente y no se anuncia compatible.
+
+### Evidencia de los PR fusionados
+
+- [PR #3](https://github.com/MarcoPolo2-0/Isekaid/pull/3): especificación [VRM v0.2](Specifications/Sistema_Companera_VRM_v0.2.md), commit documental `bcb9adf8ea7423ec42e9895d444e8f5cb8457fb5`, fusión `c9531708e77a9684739b5d00b9e32b63d2be9d20`. Aprueba conceptualmente la dirección con ajustes; conserva los 26 criterios por fases, no resultados de ejecución.
+- [PR #4](https://github.com/MarcoPolo2-0/Isekaid/pull/4): prueba VRM y corrección transaccional `9947c0c53c7e85bc9b95678902737b5a9a9dbd33`; encabezado `db8ec8c83a625053f8f80bc4e7572f7e7209c8eb`, fusión `480a8e99aef9c3c82db8bf78429ab4c57e32a4b7`. Confirmado fusionado mediante API; el informe conserva frases anteriores a la fusión como contexto histórico.
+- [Informe VRM-POC](Audits/VRM-POC/INFORME.md): declara Play Mode en Unity 6000.6.7f1/URP 17.6.0/D3D11, UniVRM 0.131.4; carga local VRM 1.0, Humanoid, 14 presets faciales probados, seguimiento y clips sintéticos. Reemplazo transaccional, cinco fallos por etapa, seis ciclos, descarga idempotente y destrucción del propietario comprobados en el alcance descrito.
+- [Estabilidad](Audits/VRM-POC/stability-results.json): 1138 referencias inspeccionadas liberadas; mayor crecimiento asentado informado de unos 0.250 MiB. La tolerancia de ensayo de 16 MiB no es presupuesto de producción. Persisten coexistencia transitoria de dos avatares y coste de decodificación; no se ha probado toda fuga, VRAM o sesiones prolongadas.
+
+Esta Dirección adopta la viabilidad acotada documentada. La redacción de DEC-007 no vuelve a ejecutar esos ensayos ni convierte el POC en un creador funcional. La fusión conserva las pruebas experimentales, no acredita integración final, seguridad total o builds validadas.
+
+### Autorización acotada Fase 2
+
+Chat 3 puede continuar desde la v0.2 fusionada: selección local de apariencia predeterminada/importada, previsualización de cuerpo/rostro, tres personalidades independientes, carga/error/cancelación, copia gestionada, cambio visual seguro, conservación de identidad/estado y migración del perfil v1. Entregar evidencia real de guardado, recuperación, offline, 1920×1080/1280×720 e intermedias, controles accesibles y pruebas de regresión.
+
+El [contrato funcional F2](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md) y la [matriz](Specifications/VRM_F2_F3_Matriz_Trazabilidad_v0.1.md) detallan la entrega. Las precisiones nuevas identificadas F2-P01–P04 son propuestas en revisión; no bloquean trabajo autorizado ni se aplican por estar en un PR sin fusionar. La preparación del [borrador F3](Specifications/VRM_Fase3_Personalidad_Contextual_v0.1_BORRADOR.md) es documental; no autoriza implementar mecánicas nuevas o F3 completa.
+
+### Conservación y pendientes
+
+- Woman, G2-PROTO y G2-CORR se conservan como recursos históricos. Nuevas correcciones corporales quedan pausadas. Esta decisión sustituye la continuación activa del editor y correcciones de DEC-001–005, no reescribe sus resultados ni aprueba sus defectos.
+- [ISEK-001 permanece abierta](Specifications/ISEK-001_Estado_DEC007.md): el alcance corporal está pausado y su objetivo visual está siendo sustituido por VRM. No cerrar casos antiguos como superados por cambiar de estrategia.
+- Se conserva la organización unificada de DEC-006. El [workflow v1.2](Workflow_Desarrollo_v1.2.md) actualiza la siguiente puerta y responsabilidades; no altera el historial v1.0/v1.1.
+- Separar restricciones técnicas, permisos declarados y derechos sujetos a revisión humana. El modelo privado del POC tiene condiciones que no acreditan su redistribución o uso comercial; ni modelo ni capturas se publican como catálogo por pasar pruebas. El catálogo necesita recursos con procedencia y permisos comprobados por el equipo.
+- Pendientes: integración funcional; guardado/migración y fallos reales; cobertura de datos hostiles y cancelación lógica; presupuesto por plataforma, rendimiento sostenido y memoria en reemplazo; validación de builds; derechos de cada recurso y aprobación visual humana del catálogo.
+- GDD v0.5 permanece intacto como histórico aprobado. El borrador v0.6 incorpora enmiendas de personalización claramente diferenciadas; no se aprueba todo el documento.
+
+**Próxima aceptación:** informe y evidencias de F2 por Chat 3; revisión de Dirección antes de declarar terminada la fase. Ni la autorización ni este PR completan F2, ISEK-001 o ISEK-002. No fusionar la entrega documental automáticamente.

@@ -591,3 +591,34 @@ Proteccion y limites
 - Publicados pasos reproducibles y comprobador de entrega. Main consultado de nuevo: permanece en 480a8e9; no hay nuevos cambios documentales que incorporar.
 - Cambios automaticos de cache de URP durante la build retirados del checkout; se conserva el ajuste intencional de shaders para carga VRM.
 - Se conserva una build Windows de revision local con avisos de terceros. Revision de Direccion, desconexion fisica de red y limitaciones futuras documentadas.
+
+
+======================================================================
+28/10/2026 - CHAT 2 / DEC-007 - VRM F2 Y PREPARACION DE GAMEPLAY F3
+======================================================================
+- Instruccion directa de Direccion formalizada: VRM 1.0 + catalogo local
+  adoptados; F2 autorizada, no implementada ni aceptada por este documento.
+- Confirmados PR #3 y #4 fusionados. POC leido como evidencia acotada de
+  Play Mode/estabilidad, sin repetir Unity ni atribuirle persistencia/builds.
+- DEC-007, enmienda explicita del GDD v0.6 y workflow nuevo v1.2 preparados.
+  GDD v0.5 y versiones historicas sin cambios.
+- ISEK-001 permanece abierto; Woman/G2 y editor corporal pausados y
+  conservados. Seguimiento funcional F2 creado en Issue #5.
+- Contrato F2: seleccion, importacion VRM, vista previa, estados, tres
+  personalidades, migracion v1, copia/guardado y recuperacion; 18 casos.
+- Una apariencia incluida y una importada suficientes para F2; recurso
+  distribuible aun requiere derechos humanos revisados. No se elige asset.
+- F3 borrador: seis capas, eventos/memoria, promesas, peligro, iniciativa,
+  confianza y matriz contextual de tres personalidades; diez casos propuestos.
+- Matriz mantiene 26 IDs y particion 5/11/8/2; F2-P01 a P04 y F3 son
+  aclaraciones/propuestas, no bloquean ni amplian automaticamente a Chat 3.
+- Verificacion documental: siete documentos, 67 enlaces locales, IDs unicos,
+  particion conservada y cuerpo heredado de v0.5 preservado.
+- Sin cambios de codigo, escenas, prototipos tecnicos, Woman/G2 ni recursos
+  privados. No se ejecutan Unity, Play Mode, importacion, animaciones o builds.
+- Rama docs/isek-vrm-f2-dec007 y PR hacia main para revision; sin fusion
+  automatica. Se preservan entradas previas de readme de Desarrollo y Diseno.
+
+[2026-10-28] PR #7 - incorporacion de la revision documental #6
+- Integrados los commits del PR #6 (6261706), todavia abierto, dentro de la rama experimental F2; main no se fusiona ni se modifica.
+- Conservadas todas las entradas de ambos readme.txt y los documentos historicos. Las propuestas F2-P01-P04 y F3 conservan su estado documental.
