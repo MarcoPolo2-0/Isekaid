@@ -69,7 +69,7 @@
     "UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionAppearance.cs": "988edfa4e4a79aef0fa0eac3a63cd2aab5c2cae6fbb67e86bdb9a621715f91b9",
     "UnityProjectIsekaid/Assets/_Project/Validation/PresentationChecks.cs": "955c83e54f9b10de10014f6bc9b61337c03f982c5ae7289125a290f7a96c25f6",
     "UnityProjectIsekaid/Assets/_Project/Validation/PresentationChecks.cs.meta": "e6436260956efa0ca91f4fd080fd194a083d22c1738113dd3e564c3a3a682556",
-    "readme.txt": "8bd14a4e121ee0185fa9b30457d66920fee274a34e8730a1de371e9263b9f554",
+    "readme.txt": "5bc93f21ad8a5f194aa34d94cdf72cfd1d5fa5595c18df230f26f70742f08b03",
     "tools/vrm-reference/capture.cjs": "9312a4fccc448cb69a2bde44b8697bfeabd5921ef5e0a2c3f5ccd28d8e0ddd9a",
     "tools/vrm-reference/index.html": "92eda6811847ee42c242fe68d16d667da4a25b68bfabcd0b9438eefcd80d834c",
     "tools/vrm-reference/sources.json": "1a317e18690e17bba6a19e137367fc0116fc4494da7607556209819213cd071a"
@@ -85,5 +85,6 @@
     "visible-windows/presentation/vrm-Run.png": "f7bde51a8141df9d31beadb74832741852bd5290904dff7391817a8e45780ad0"
   },
   "privateEvidenceRoot": "UnityProjectIsekaid/LocalVrmEvidence/Presentation",
-  "finalWindowsVisible": true
+  "finalWindowsVisible": true,
+  "pullRequest": "https://github.com/MarcoPolo2-0/Isekaid/pull/12"
 }
