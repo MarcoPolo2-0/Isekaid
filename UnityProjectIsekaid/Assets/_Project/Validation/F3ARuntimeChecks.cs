@@ -30,6 +30,7 @@ namespace Isekaid.Validation
         public sealed class Results
         {
             public bool passed;
+            public int testFrameRate = 60;
             public string unity, platform, error, avatarHash, libraryId, sourceSha256;
             public List<string> checks = new List<string>();
             public List<EntryRecord> presentations = new List<EntryRecord>();
@@ -118,6 +119,9 @@ namespace Isekaid.Validation
                 libraryId = DialogueContent.Current.libraryId, sourceSha256 = DialogueContent.Current.sourceSha256 };
             if (F2RuntimeChecks.Argument("-isekTestData") == null) throw new InvalidOperationException("An isolated test data directory is required.");
             Application.runInBackground = true;
+            int previousFrameRate = Application.targetFrameRate, previousSync = QualitySettings.vSyncCount;
+            Application.targetFrameRate = 60;
+            QualitySettings.vSyncCount = 0;
             var originalSettings = InputSystem.settings;
             var originalFlags = originalSettings.hideFlags;
             originalSettings.hideFlags |= HideFlags.DontUnloadUnusedAsset;
@@ -171,6 +175,7 @@ namespace Isekaid.Validation
                 Report.criteria.Add("F3A-R10: PARTIAL (distinct canonical text verified; human rhythm/posture/editorial review pending)");
                 Report.limits.Add("OS cursor capture and physical mouse clicks require manual testing in a focused window.");
                 Report.limits.Add("Conditional soft/relaxed expressions use neutral until visual certification; no new gesture clips or danger detector.");
+                Report.limits.Add("Test scenario is capped at 60 FPS; the unchanged player prefab discards movement steps below 0.001 m at extreme uncapped background rates.");
             }
             finally
             {
@@ -179,6 +184,8 @@ namespace Isekaid.Validation
                 if (keyboard != null) InputSystem.RemoveDevice(keyboard);
                 if (originalSettings != null) { InputSystem.settings = originalSettings; originalSettings.hideFlags = originalFlags; }
                 Object.Destroy(settings);
+                Application.targetFrameRate = previousFrameRate;
+                QualitySettings.vSyncCount = previousSync;
             }
         }
 
@@ -206,7 +213,8 @@ namespace Isekaid.Validation
                     await Press(Key.W, 250);
                     float moved = Vector3.Distance(position, prototype.Player.transform.position);
                     Check(moved > .15f, "W moves after closing dialogue: meters=" + moved + ", frames=" + (Time.frameCount - moveFrame) +
-                        ", input=" + prototype.Player.InputEnabled + ", paused=" + prototype.IsPaused + ", scale=" + Time.timeScale);
+                        ", input=" + prototype.Player.InputEnabled + ", paused=" + prototype.IsPaused + ", scale=" + Time.timeScale +
+                        ", delta=" + Time.deltaTime + ", minMove=" + prototype.Player.GetComponent<CharacterController>().minMoveDistance);
                     prototype.Player.ResetPosition();
                     Check(companion.Interact() && director.Current.id == rootId && director.FocusedOptionId == focus && Count(rootId) == 1, "Explicit reopen retains options/focus without respoken root");
                     foreach (var size in new[] { new Vector2Int(1920,1080), new Vector2Int(1600,900), new Vector2Int(1280,720) })
