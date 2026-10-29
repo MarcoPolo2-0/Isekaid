@@ -1,0 +1,125 @@
+{
+    "passed": true,
+    "unity": "6000.6.7f1",
+    "phase": "baseline",
+    "error": "",
+    "avatarHash": "37eadcbaa4e240b691601daabcfa4ad4d5319793dff0cc0d128eff55f4de8736",
+    "motions": [
+        {
+            "avatar": "catalog",
+            "requested": "Idle",
+            "clip": "root|Animation",
+            "human": false,
+            "loop": false,
+            "length": 2.4583334922790527,
+            "normalizedStart": 0.4213785231113434,
+            "normalizedEnd": 1.4721198081970215,
+            "tailBoneDegrees": 0.0
+        },
+        {
+            "avatar": "catalog",
+            "requested": "Walk",
+            "clip": "root|Animation",
+            "human": false,
+            "loop": false,
+            "length": 1.0,
+            "normalizedStart": 0.6660149693489075,
+            "normalizedEnd": 3.233027696609497,
+            "tailBoneDegrees": 0.0
+        },
+        {
+            "avatar": "catalog",
+            "requested": "Run",
+            "clip": "root|Animation",
+            "human": false,
+            "loop": false,
+            "length": 0.5833333730697632,
+            "normalizedStart": 1.0870171785354614,
+            "normalizedEnd": 5.514673709869385,
+            "tailBoneDegrees": 0.0
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Idle",
+            "clip": "Idle",
+            "human": true,
+            "loop": true,
+            "length": 1.0,
+            "normalizedStart": 0.9854889512062073,
+            "normalizedEnd": 3.5522680282592773,
+            "tailBoneDegrees": 0.0
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Walk",
+            "clip": "Walk",
+            "human": true,
+            "loop": true,
+            "length": 1.0,
+            "normalizedStart": 0.6659661531448364,
+            "normalizedEnd": 3.249691963195801,
+            "tailBoneDegrees": 37.108333587646484
+        },
+        {
+            "avatar": "vrm",
+            "requested": "Run",
+            "clip": "Run",
+            "human": true,
+            "loop": true,
+            "length": 1.0,
+            "normalizedStart": 1.4300503730773926,
+            "normalizedEnd": 7.077402591705322,
+            "tailBoneDegrees": 25.460567474365234
+        }
+    ],
+    "follows": [
+        {
+            "avatar": "catalog",
+            "scenario": "continuous",
+            "samples": 544,
+            "stateChanges": 6,
+            "timeResets": 1,
+            "nearThresholdCrossings": 4,
+            "transitionFrames": 77,
+            "requestedStateChanges": 9,
+            "distance": 7.872908115386963,
+            "maxSpeed": 3.800018548965454
+        },
+        {
+            "avatar": "catalog",
+            "scenario": "threshold-noise",
+            "samples": 275,
+            "stateChanges": 0,
+            "timeResets": 1,
+            "nearThresholdCrossings": 72,
+            "transitionFrames": 222,
+            "requestedStateChanges": 74,
+            "distance": 10.514618873596191,
+            "maxSpeed": 3.0400235652923584
+        },
+        {
+            "avatar": "vrm",
+            "scenario": "continuous",
+            "samples": 546,
+            "stateChanges": 9,
+            "timeResets": 0,
+            "nearThresholdCrossings": 4,
+            "transitionFrames": 58,
+            "requestedStateChanges": 9,
+            "distance": 7.87380838394165,
+            "maxSpeed": 3.8000235557556152
+        },
+        {
+            "avatar": "vrm",
+            "scenario": "threshold-noise",
+            "samples": 265,
+            "stateChanges": 0,
+            "timeResets": 1,
+            "nearThresholdCrossings": 74,
+            "transitionFrames": 203,
+            "requestedStateChanges": 75,
+            "distance": 10.480796813964844,
+            "maxSpeed": 3.040026903152466
+        }
+    ]
+}

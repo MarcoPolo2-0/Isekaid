@@ -32,6 +32,7 @@ namespace Isekaid.ExperimentalVrm
         private bool loading;
         private bool destroyed;
         private GameObject avatarRoot;
+        private Animator avatarAnimator;
         private Dictionary<string, ExpressionKey> keys = new Dictionary<string, ExpressionKey>(StringComparer.OrdinalIgnoreCase);
         private Dictionary<Renderer, bool> originalVisibility = new Dictionary<Renderer, bool>();
 #if UNITY_EDITOR
@@ -145,6 +146,7 @@ namespace Isekaid.ExperimentalVrm
                 // Publish the prepared presentation only after every fallible activation step succeeds.
                 retired = avatarRoot;
                 Avatar = candidate;
+                avatarAnimator = animator;
                 avatarRoot = candidateRoot;
                 candidateRoot = null;
                 springRuntime = null;
@@ -214,6 +216,7 @@ namespace Isekaid.ExperimentalVrm
             if (avatarRoot != null) { avatarRoot.SetActive(false); Destroy(avatarRoot); }
             avatarRoot = null;
             Avatar = null;
+            avatarAnimator = null;
             LoadedBytes = null;
             keys.Clear();
             Expressions = Array.Empty<string>();
@@ -232,7 +235,12 @@ namespace Isekaid.ExperimentalVrm
 
         public void SetMotion(string name)
         {
-            if (Avatar != null) Avatar.GetComponent<Animator>().CrossFade(name, .15f);
+            AvatarLocomotion.Preview(avatarAnimator, name);
+        }
+
+        public void SetSpeed(float speed, float deltaTime)
+        {
+            AvatarLocomotion.SetSpeed(avatarAnimator, speed, deltaTime);
         }
 
         private async void LoadFromButton()

@@ -27,7 +27,7 @@ namespace Isekaid
         private Animator catalogAnimator;
         private NavMeshAgent agent;
         private CompanionController companion;
-        private string motion;
+        private bool previewMotion;
         private CancellationTokenSource lifetime;
 
         private void Initialize()
@@ -89,7 +89,7 @@ namespace Isekaid
             Selection = new AvatarSelection();
             RecoveredFallback = false;
             Ready = true;
-            motion = null;
+            previewMotion = false;
             Status = "Adventurer · Dawn to Dusk Games · CC0-1.0. Calidad visual provisional de Fase 2.";
         }
 
@@ -109,7 +109,7 @@ namespace Isekaid
                 Selection = selection;
                 RecoveredFallback = false;
                 Ready = true;
-                motion = null;
+                previewMotion = false;
                 Status = "VRM 1.0 preparado para uso local. Permisos declarados pendientes de revisión humana.";
             }
             finally { Busy = false; }
@@ -118,8 +118,9 @@ namespace Isekaid
         public void PreviewMotion(string value)
         {
             Initialize();
+            previewMotion = true;
             if (Importer.HasAvatar) Importer.SetMotion(value);
-            else if (catalogAnimator != null && catalogAnimator.HasState(0, Animator.StringToHash(value))) catalogAnimator.CrossFade(value, .15f);
+            else AvatarLocomotion.Preview(catalogAnimator, value);
         }
 
         public bool PreviewExpression(string value)
@@ -155,11 +156,12 @@ namespace Isekaid
         private void Update()
         {
             if (!Ready || companion == null || agent == null) return;
-            string next = companion.State.LifeState == CompanionLifeState.Active && companion.IsFollowing ?
-                (agent.velocity.magnitude > 3f ? "Run" : agent.velocity.magnitude > .1f ? "Walk" : "Idle") : "Idle";
-            if (motion == next) return;
-            motion = next;
-            PreviewMotion(next);
+            bool following = companion.State.LifeState == CompanionLifeState.Active && companion.IsFollowing;
+            if (following || companion.State.LifeState != CompanionLifeState.Active) previewMotion = false;
+            if (previewMotion) return;
+            float speed = following ? agent.velocity.magnitude : 0f;
+            if (Importer.HasAvatar) Importer.SetSpeed(speed, Time.deltaTime);
+            else AvatarLocomotion.SetSpeed(catalogAnimator, speed, Time.deltaTime);
         }
 
         private void OnDestroy()

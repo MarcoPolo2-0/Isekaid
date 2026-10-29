@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0;background:#192128}canvas{display:block}pre{position:absolute;color:white;top:0}</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/loaders/GLTFLoader.js":"./vendor/GLTFLoader.js"}}</script>
+<pre id="status">Loading local reference</pre><script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {VRMLoaderPlugin} from './vendor/three-vrm.module.js';
+const status=document.querySelector('#status');
+try {
+const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true}); renderer.setSize(960,1200); renderer.setClearColor(0x192128);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.NoToneMapping;document.body.append(renderer.domElement);
+const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(30,960/1200,.01,100);
+const light=new THREE.DirectionalLight(0xffffff,1);light.position.set(1,2,2);scene.add(light);scene.add(new THREE.AmbientLight(0xffffff,.2));
+const loader=new GLTFLoader();loader.register(parser=>new VRMLoaderPlugin(parser));
+const gltf=await loader.loadAsync('/avatar.vrm'),vrm=gltf.userData.vrm;scene.add(vrm.scene);
+const bounds=new THREE.Box3().setFromObject(vrm.scene),center=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());
+camera.position.set(center.x,center.y,center.z+size.y*2.1);camera.lookAt(center);vrm.update(0);renderer.render(scene,camera);
+const materials=[];vrm.scene.traverse(o=>{if(o.material)for(const m of Array.isArray(o.material)?o.material:[o.material])if(!materials.some(x=>x.name===m.name))materials.push({name:m.name,type:m.type,map:m.map?.name,color:m.color?.toArray(),emissive:m.emissive?.toArray()});});
+await fetch('/result',{method:'POST',body:JSON.stringify({viewer:'@pixiv/three-vrm 3.4.2 / three 0.180.0',width:size.x,height:size.y,materials})});
+await fetch('/capture',{method:'POST',body:renderer.domElement.toDataURL('image/png').split(',')[1]});status.textContent='Local VRM 1.0 reference — loaded';
+}catch(error){status.textContent=error.stack;await fetch('/result',{method:'POST',body:JSON.stringify({error:error.stack})});}
+</script>

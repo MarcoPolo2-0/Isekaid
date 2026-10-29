@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 20
   m_LinearFogEnd: 65
-  m_AmbientSkyColor: {r: 0.55, g: 0.68, b: 0.76, a: 1}
+  m_AmbientSkyColor: {r: 0.4, g: 0.4, b: 0.4, a: 1}
   m_AmbientEquatorColor: {r: 0.43, g: 0.48, b: 0.42, a: 1}
   m_AmbientGroundColor: {r: 0.22, g: 0.28, b: 0.24, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -519,8 +519,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 13
   m_Type: 1
-  m_Color: {r: 1, g: 0.91, b: 0.75, a: 1}
-  m_Intensity: 1.7
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.65
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4420,7 +4420,7 @@ PrefabInstance:
     - target: {fileID: 1479749877480318851, guid: b63bebeae82592346b83d74d61936f50, type: 3}
       propertyPath: vrmAnimations
       value: 
-      objectReference: {fileID: 9100000, guid: 50354c0fcb2d7b0478a79ca46f285e95, type: 2}
+      objectReference: {fileID: 9100000, guid: 3766ccfb82e211a479c688e7ab7dfb64, type: 2}
     - target: {fileID: 4836477243339262077, guid: b63bebeae82592346b83d74d61936f50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
