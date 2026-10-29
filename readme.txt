@@ -644,3 +644,31 @@ Proteccion y limites
   F3; implementacion F3 requiere autorizacion posterior. Woman/G2 en pausa.
 - GDD v0.5 e historial completo de readme de Desarrollo/Diseno conservados.
 - Solo correccion documental; no se ejecutan Unity ni builds, ni se fusiona PR.
+
+======================================================================
+28/10/2026 - CHAT 2 / F3A - DISENO NARRATIVO Y REACCIONES CONTEXTUALES
+======================================================================
+- Autorizacion directa de Direccion: solo diseno/preparacion F3A.
+  PR #6/#7 fusionados comprobados; F2 pendiente de revision manual humana.
+- F3A_Especificacion_v0.1.md: alcance, voces, cursor, prioridades,
+  repeticion, silencio y limites existentes/futuros diferenciados.
+- F3A_Biblioteca_v0.1.json: 60 entradas unicas, 20 por personalidad;
+  situaciones A/B/C/D/E/F = 3/27/9/9/6/6, sin efectos de confianza/memoria.
+- F3A_Arboles_v0.1.md: trampa, estado personal y aldea, tres arboles;
+  27 nodos alcanzables y 18 opciones/rutas, todas con cierre.
+- F3A_Matriz_Emocional_v0.1.md: siete emociones x tres personalidades,
+  canales preferidos y alternativas VRM/gesto, sin decidir desde morphs.
+- F3A_Contrato_Eventos_v0.1.md: hechos actuales y adaptadores propuestos;
+  peligro general/promesas no se declaran implementados.
+- F3A_Aceptacion_v0.1.md: ocho criterios documentales/editoriales y
+  doce pruebas runtime pendientes; no confundir JSON valido con gameplay.
+- F3A_Propuestas_Futuras_v0.1.md: memoria persistente, promesas, confianza,
+  percepcion y demas extensiones separadas de esta autorizacion.
+- Verificacion estructural: IDs/textos distintos, campos y alternativas,
+  grafos/rutas, efectos cero, matriz de siete emociones y 27 enlaces locales.
+- Seguimiento F3A Issue #8, vinculado a ISEK-001 #1 y borrador F3.
+- Rama docs/isek-f3a-dialogue-design y PR a main para revision; sin fusion.
+- GDD, decisiones, documentos historicos y Unity sin modificar. No se
+  ejecutan Unity, Play Mode, conversaciones en juego ni builds.
+- Chat 3 continua infraestructura autorizada en paralelo; esta entrega no
+  autoriza Fase 3 completa ni concede aceptacion manual de F2.
