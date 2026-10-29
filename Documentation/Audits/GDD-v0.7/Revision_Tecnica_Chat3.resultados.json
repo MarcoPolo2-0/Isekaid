@@ -1,0 +1,125 @@
+{
+  "auditType": "STATIC_DOCUMENTARY_ONLY",
+  "staticAuditPassed": true,
+  "inputCommit": "448c6f9bf31ec2be23256fc92bfcb40cdf3db194",
+  "mainCommit": "f835d3ba665b6d63cf94894bfaccd9a94ce783ce",
+  "unityTreeIdentical": {
+    "f835d3ba665b6d63cf94894bfaccd9a94ce783ce": "5bbd2d86fd8c017a705c0a85044689cb7f2e1773",
+    "HEAD": "5bbd2d86fd8c017a705c0a85044689cb7f2e1773",
+    "11358db57d90bac3ba62dfc0edd130a2fcd62d73": "5bbd2d86fd8c017a705c0a85044689cb7f2e1773"
+  },
+  "protectedBlobIdsUnchanged": {
+    "Documentation/GameDesignDocument_v0.5.md": "0adbd9599ee406387bd3753cf9832b62334b1237",
+    "Documentation/GameDesignDocument_v0.6_borrador.md": "709a06008f9aa205fe1043ac10909f18f546ef6d",
+    "Documentation/DECISIONS.md": "607e8cc6b999cbe5df37f28960453bfa51e3853d",
+    "Documentation/Audits/GDD-v0.7/Revision_Editorial_Chat2.md": "d0e5391f8f5de74388c7dafc6ab2f04571b65ad0",
+    "Documentation/Specifications/F3A_Biblioteca_v0.1.json": "2931044800a500bbcefe184b15c27ae516c393e7",
+    "Documentation/Specifications/F3A_Diferenciacion_Editorial_v0.1_PROPUESTA.json": "a5449636390d577d339cc8b71fadb9dfb69031db",
+    "UnityProjectIsekaid/Assets/_Project/Resources/Dialogue/F3A.es.json": "85f1cde84833a6b25e667b3555f0198ee7a6253a"
+  },
+  "freshUnityCompilePlayModeBuildOrManualTest": false,
+  "library": {
+    "entries": 60,
+    "roots": 9,
+    "routes": 18,
+    "perPersonality": 20,
+    "sourceProposalEditsApplied": 0,
+    "runtimeProposalEditsApplied": 0,
+    "shySerializedValue": 2,
+    "deredereInOwnRuntime": false
+  },
+  "documentLinksCheckedAgainstTrackedPaths": 57,
+  "readmeInputPrefixPreserved": true,
+  "mainReadmePrefixPreserved": true,
+  "existingChecks": {
+    "canonicalRuntime": "ISEKAID_F3A_LIBRARY_OK entries=60 paths=18",
+    "completeEquivalentCheckout": {
+      "unifiedLayout": "PASS",
+      "protectedOriginals": 715,
+      "deliveryCheck": "PASS"
+    }
+  },
+  "historicalEvidenceNotReexecuted": {
+    "editor-results.json": {
+      "recordedPassed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": null,
+      "sha256": "67762ab9227a85ac6ab878066e234f38ae83f586d2403435004139dd98bb77b8"
+    },
+    "windows-results.json": {
+      "recordedPassed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": null,
+      "sha256": "d3d67006438d70d3379ead6888dd0e68f6fe7610ab027c3100eb55ab42a7b3c7"
+    },
+    "f3a-editor-results.json": {
+      "recordedPassed": true,
+      "checks": 285,
+      "routes": 18,
+      "assertions": null,
+      "sha256": "a42c421728dbb116a1392374fc9436f6324c9f16ce58697b51848302257270df"
+    },
+    "f3a-windows-results.json": {
+      "recordedPassed": true,
+      "checks": 285,
+      "routes": 18,
+      "assertions": null,
+      "sha256": "b54100fb5f7507263958d57693e85f102273d7bbfa1045644c915b020e5d7d6f"
+    },
+    "f2-editor-results.json": {
+      "recordedPassed": true,
+      "checks": 43,
+      "routes": 0,
+      "assertions": null,
+      "sha256": "f7aa58cb4b468ceada2d03d0fca7b2ad279dd95c508ec733f45019d521971f72"
+    },
+    "f2-windows-results.json": {
+      "recordedPassed": true,
+      "checks": 36,
+      "routes": 0,
+      "assertions": null,
+      "sha256": "62e5cba5693ada74ea44082b1defb30e7e72a65305e5b62b52bbd40c671838f6"
+    },
+    "f2-restart-results.json": {
+      "recordedPassed": true,
+      "checks": 2,
+      "routes": 0,
+      "assertions": null,
+      "sha256": "df43e31192bf749ad24ed07bb330a5f606e071d0e80e8aef6386b76a909431a7"
+    },
+    "metadata-results.json": {
+      "recordedPassed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": 35,
+      "sha256": "4f76c55842e77808e9cd660f9aeda6008b2d03af408e9c2915d767e51191c114"
+    },
+    "build-results.json": {
+      "recordedPassed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": null,
+      "sha256": "3a31c7e015acbdf99b9a71166df1f0843c48fd920bf3dc4e26de4993f8593abf"
+    }
+  },
+  "remainingPartialCriteria": {
+    "F2": [
+      "VRM-AC01",
+      "VRM-AC12",
+      "VRM-AC22",
+      "VRM-AC24"
+    ],
+    "F3A": [
+      "F3A-D08",
+      "F3A-R10",
+      "F3A-R11"
+    ],
+    "locomotionRender": [
+      "LOC-05",
+      "REN-04"
+    ]
+  },
+  "verdict": "TECHNICALLY_SUITABLE_CANDIDATE_DIRECTION_DECISION_PENDING"
+}
