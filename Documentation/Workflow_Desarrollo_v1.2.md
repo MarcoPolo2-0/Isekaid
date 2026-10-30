@@ -35,10 +35,10 @@ No clonar ni actualizar submódulos; `Isekaidunity` y el antiguo repositorio Uni
 
 ## Estado actual y siguiente puerta
 
-- GDD aprobado: `Documentation/GameDesignDocument_v0.5.md`. El documento v0.6 continúa **BORRADOR**.
+- GDD maestro aprobado documentalmente: [v0.7](GameDesignDocument_v0.7.md), según DEC-008. v0.5, v0.6 y borrador v0.7 se conservan íntegros como historial; los contenidos PROPUESTOS/PENDIENTES no cambian de estado por la aprobación del maestro.
 - Prototipo existente y rescatado: `CharacterCreation.unity`, `Game.unity`, `CompanionPrototype.unity` y `Assets/_Project/`. Mantenerlos funcionales mientras evoluciona la compañera.
 - ISEK-001 permanece abierta; Woman/G2 quedan históricos y pausados por DEC-007. VRM 1.0 + catálogo local es la dirección principal. La pausa no acepta ni elimina los resultados anteriores.
-- Siguiente puerta: revisar las pruebas reales de Fase 2 —creador → escena Game, persistencia, recuperación y regresiones— y someter su aceptación a Dirección. Preparar documentalmente Fase 3 cuando el sistema visual esté estable; su implementación requiere autorización específica posterior. Woman/G2 permanecen pausados hasta nueva autorización.
+- Siguiente puerta: mantener la aceptación de F2/F3A por criterio y revisar creativamente F3A-N1 en el PR #14. La aprobación documental de v0.7 no autoriza aplicar los diálogos N1, incorporar Deredere o implementar sistemas futuros. Dirección decide IDs y alcances antes de la integración. Woman/G2 permanecen pausados hasta nueva autorización.
 
 ## Verificación sin ejecutar Unity
 
@@ -64,3 +64,5 @@ GitHub Actions ejecuta la misma comprobación en push y PR. Solo valida archivos
 - Estado y contrato: [F2](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md), [F3 borrador](Specifications/VRM_Fase3_Personalidad_Contextual_v0.1_BORRADOR.md), [matriz](Specifications/VRM_F2_F3_Matriz_Trazabilidad_v0.1.md).
 
 **Registro v1.2 — 28/10/2026:** DEC-007, coordinación sin bloquear F2, propuestas explícitas, pausa Woman/G2 y preservación de entradas concurrentes. v1.0/v1.1 intactos.
+
+**Enmienda administrativa — 29/10/2026:** actualizada la referencia al GDD maestro v0.7 y su aprobación documental DEC-008; separadas revisión creativa N1 e integración posterior. No cambian los contratos, criterios o límites de autorización de implementación.

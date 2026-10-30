@@ -782,3 +782,12 @@ Proteccion y limites
 - Plan de regresión N1/N2: selección/contrato, etiqueta y perfiles v1/v2, F2/F3A, seguimiento, pausa, 30 s/incapacitación, creador, cambios de avatar y callbacks obsoletos; prueba humana de voz/cuerpo separada y derechos de capturas preservados.
 - Simulación estática temporal: 40 selecciones válidas y siete rechazos PASS, sin escribir TARGET ni fuente real; candidato completo 30 cambios/30 íntegras, 60 entradas/18 rutas y restantes campos idénticos. Nuevo Impacto_Tecnico_Chat3.resultados.json conserva resultados y 16 blobs protegidos. No se ejecutan Unity, Play Mode, build, prueba humana o actuación N2.
 - Solo análisis, resultados y este registro se publican con commit/push en PR #14; fichas, propuesta, canónica/runtime, Unity, GDD e historial previos intactos. Dirección debe aprobar creativamente y después autorizar otro PR N1 de implementación. No fusionar automáticamente.
+
+2026-10-29 — CHAT 2 / Oficializacion documental GDD v0.7 por instruccion de Direccion, conforme con auditorias editorial y tecnica. Rama independiente docs/isek-gdd-v07-official desde main 24cad11; sin fusion automatica.
+- Creado Documentation/GameDesignDocument_v0.7.md como maestro oficial con aprobacion documental. GDD v0.5, v0.6 y borrador v0.7 conservados integros; no se renombra ni sobrescribe el borrador.
+- Secciones de diseno 1–18 identicas al borrador revisado. Solo portada, vigencia, trazabilidad y registro de oficializacion; las notas de elaboracion conservan su fecha/estado historico.
+- DEC-008 registra autoridad, alcance y limites: no autoriza Deredere, nuevas mecanicas, parametros pendientes, integracion N1 o actuacion N2; no acepta automaticamente F2/F3A, catalogo o arte.
+- README apunta al maestro v0.7 y workflow v1.2; se actualiza su referencia a ISEK-001/Woman/G2 historicos y PR #14 en revision. Workflow actualiza la referencia maestra y la puerta de revision documental, conservando contratos y limites.
+- PR #14 sigue separado: Nera/Liora/Sira provisionales y 30 cambios candidatos pendientes de decision por ID. Ningun dialogo aplicado al juego.
+- Validacion documental: 19 secciones, 18 secciones de diseno sin cambios, cinco archivos protegidos intactos y 64 enlaces locales/anclas validos. Historial completo de readme conservado; no se ejecutan Unity, compilacion, Play Mode o builds.
+- Publicacion mediante commit/push y PR documental independiente; no se fusiona este PR ni #14 desde esta entrega.
