@@ -1,5 +1,7 @@
 # F3A-N1 — Revisión dramática C2/C5 y hoja de revisión activa
 
+> **Corte histórico v0.4:** los tres textos ajustados por Dirección se revisan en la [microrevisión C2/C5](16_Microrevision_C2_C5_v0.1.md) y el [parche v0.5](17_Parche_Editorial_v0.5_PROPUESTA.json). E.REVIVED se mantiene como candidato preferido. Las comparaciones y 30 filas siguientes se conservan íntegramente como antecedente; no se acumulan parches ni se autorizan textos por esta nota.
+
 **Versión:** 0.1 · **Fecha:** 29/10/2026, Guatemala.
 **Estado:** RECOMENDACIÓN PARA DIRECCIÓN. DEC-009 aprueba orientación dramática; no aprueba estos textos, fichas o integración.
 **Activo:** [perfil Yandere v0.2](13_Yandere_Dramatica_v0.2_PROPUESTA.md) y [parche editorial v0.4](15_Parche_Editorial_v0.4_PROPUESTA.json). [Hoja C1–C5 previa](11_Hoja_Decisiones_C1_C5_v0.1.md) y [parche v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json) se conservan como antecedentes. C1/C3/C4 mantienen sus recomendaciones, todavía no aprobadas. [Entrega](08_Compatibilidad_Entrega_v0.1.md).

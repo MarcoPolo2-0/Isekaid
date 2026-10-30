@@ -5,7 +5,7 @@
 **Rama:** docs/isek-f3a-n1-character-voices, creada desde main `f835d3b` y actualizada sin commit de mezcla a `24cad113be5edc8ca1d44db1857a3f23209a2dd5` al incorporarse PR #13. La fuente canónica y el runtime no cambiaron.  
 **Seguimiento:** [F3A #8](https://github.com/MarcoPolo2-0/Isekaid/issues/8) · [ISEK-001 #1](https://github.com/MarcoPolo2-0/Isekaid/issues/1).
 
-**Revisión activa, DEC-009:** rama sincronizada con main `0ef11e5`, con [GDD maestro oficial v0.7](../../GameDesignDocument_v0.7.md)/DEC-008 intactos. Dirección aprueba Yandere DRAMÁTICA; las recomendaciones detalladas siguen pendientes. Activos: [biblia dramática v0.2](13_Yandere_Dramatica_v0.2_PROPUESTA.md), [C2/C5, comparación y 30 textos](14_C2_C5_Dramatica_v0.1.md), [parche v0.4](15_Parche_Editorial_v0.4_PROPUESTA.json). Cambian cuatro spokenText de Yandere respecto a v0.3; C1/C3/C4 y los otros 26 candidatos mantienen sus recomendaciones. Las versiones v0.2/v0.3 y sus materiales se conservan como antecedentes, no parches acumulables. Se preservan los registros de ambas ramas y el informe de Chat 3. Ni GDD ni dirección dramática autorizan integrar N1.
+**Revisión activa, microrevisión posterior a DEC-009:** rama sincronizada con main `0ef11e5`, con [GDD maestro oficial v0.7](../../GameDesignDocument_v0.7.md)/DEC-008 intactos. Dirección considera satisfactoria la orientación dramática; los textos siguen pendientes. Activos: [biblia dramática v0.2](13_Yandere_Dramatica_v0.2_PROPUESTA.md), [microrevisión C2/C5](16_Microrevision_C2_C5_v0.1.md) y [parche v0.5](17_Parche_Editorial_v0.5_PROPUESTA.json). Solo tres spokenText cambian frente a v0.4; E.REVIVED permanece candidato preferido, sin autorización final. Los otros 26 candidatos siguen pendientes. Versiones v0.2/v0.3/v0.4 y materiales históricos conservados, sin aplicación acumulada. Muestras ciegas pendientes de actualización cuando Dirección cierre los textos. No se autoriza integración.
 
 ## 1. Índice de entregables
 
@@ -23,8 +23,10 @@
 | [Hoja de decisiones C1–C5, histórica v0.3](11_Hoja_Decisiones_C1_C5_v0.1.md) | C1/C3/C4 siguen como recomendaciones pendientes; C2/C5 sustituidas |
 | [Parche editorial v0.3, histórico](12_Parche_Editorial_v0.3_PROPUESTA.json) | Siete formulaciones revisadas sobre v0.2; base de comparación, sin aplicar |
 | [Biblia Yandere dramática v0.2](13_Yandere_Dramatica_v0.2_PROPUESTA.md) | Perfil candidato, desencadenantes y cuatro etapas conceptuales; dirección aprobada, detalles pendientes |
-| [Revisión dramática C2/C5](14_C2_C5_Dramatica_v0.1.md) | Actual/previa/nueva, escenas comparables, 30 textos activos y límites de compatibilidad |
-| [Parche editorial v0.4](15_Parche_Editorial_v0.4_PROPUESTA.json) | Recomendación activa contra canónica: cuatro spokenText nuevos frente a v0.3; resto del contrato preservado |
+| [Revisión dramática C2/C5, corte histórico v0.4](14_C2_C5_Dramatica_v0.1.md) | Comparación y 30 textos anteriores, sin aplicación |
+| [Parche editorial v0.4, histórico íntegro](15_Parche_Editorial_v0.4_PROPUESTA.json) | Cuatro textos revisados frente a v0.3; preservado como fuente de comparación |
+| [Microrevisión C2/C5](16_Microrevision_C2_C5_v0.1.md) | v0.4/v0.5, evidencia de primera persona y criterios; E.REVIVED preferido |
+| [Parche editorial v0.5](17_Parche_Editorial_v0.5_PROPUESTA.json) | Recomendación activa: tres spokenText nuevos frente a v0.4; todas las intenciones intactas |
 | Este informe | Dependencias, preservación del contrato, comprobaciones y decisiones pendientes |
 
 ## 2. Fuentes consultadas y estado de referencia
@@ -106,10 +108,16 @@ Los hashes de v0.3 se calculan como SHA-256 de texto UTF-8 sin BOM con CRLF/CR n
 
 No se pide aprobar una historia completa ni fijar todos los detalles futuros para evaluar esta entrega. La prioridad es una relación inicial entre desconocidos, con tres maneras coherentes de pensar y decidir.
 
-## 9. Revisión dramática vigente, DEC-009
+## 9. Revisión dramática v0.4, antecedente de la microrevisión
 
 Se registra la nueva instrucción de Dirección sin alterar GDD o aprobaciones anteriores. La dirección Yandere dramática sustituye exclusivamente la interpretación excesivamente moderada de Liora. Perfil detallado, nombre, proyecto, escenas, gestos y diálogos siguen pendientes. Las etapas conceptuales A–D no son niveles ni los escenarios A–F de los IDs F3A.
 
 v0.4 conserva 33 revisiones/30 candidatos, hashes normalizados y expected. Solo revisa spokenText de F3A.YAN.A.RESCUE, F3A.YAN.B.FEEL.OPEN, F3A.YAN.C.LATER_1 y F3A.YAN.E.REVIVED frente a v0.3; todas las intenciones previas y campos de gameplay quedan iguales. El parche se evalúa contra la canónica, nunca como aplicación acumulativa de versiones.
 
 Se preservan completos parches v0.2/v0.3, informes de Chat 3, tarjetas y revisiones históricas. Las tarjetas v0.2 necesitan estímulos actualizados antes de evaluar v0.4; no se reportan resultados humanos. Nuevos celos, promesas, ocultación de información, conflicto o reparación necesitan escenas y mecanismos posteriores. No se incorpora contenido a Unity.
+
+## 10. Microrevisión v0.5, pendiente de Dirección
+
+Tres textos YAN se ajustan tras revisión de `01f3522`: A.RESCUE fija la atención en el gesto de rescate, FEEL.OPEN conserva autocorrección/curiosidad sin perder la necesidad de alejarse y C.LATER_1 corrige la formulación. E.REVIVED queda idéntico como candidato preferido. Todas las intenciones y los otros 26 candidatos permanecen sin cambios; ningún texto está autorizado para el juego.
+
+El [manifiesto v0.5](17_Parche_Editorial_v0.5_PROPUESTA.json) conserva 33 revisiones/30 candidatos, hashes y expected verificados contra sus bases. v0.4 queda íntegro; la [hoja de microrevisión](16_Microrevision_C2_C5_v0.1.md) presenta comparación exacta y evidencia estática. Las muestras ciegas se actualizarán en una versión posterior al cierre explícito de textos, no en esta revisión todavía pendiente. Sin cambios al GDD, Unity, canónica o runtime.
