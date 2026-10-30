@@ -1,5 +1,7 @@
 # F3A-N1 — Hoja de decisiones C1–C5
 
+> **Revisión histórica v0.3:** DEC-009 sustituye la orientación contenida de C2/C5 por [Yandere dramática y revisión activa v0.4](14_C2_C5_Dramatica_v0.1.md). C1/C3/C4 conservan sus recomendaciones pendientes; las 30 filas siguientes se preservan como corte anterior, no como un segundo parche vigente. La dirección dramática está aprobada; estos textos y personajes no lo están.
+
 **Versión:** 0.1 · **Estado:** RECOMENDACIÓN PARA DIRECCIÓN, ninguna aprobación de textos/personajes.  
 **Base sincronizada:** main `0ef11e5`, GDD oficial v0.7/DEC-008. PR #14 sigue sin fusionar.  
 **Recomendación activa:** [parche v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json). Sustituye la recomendación v0.2 para los mismos 33 IDs: 30 cambios candidatos y tres alarmas conservadas. No aplicar ambas propuestas sucesivamente al juego.

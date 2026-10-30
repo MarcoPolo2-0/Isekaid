@@ -302,3 +302,18 @@ El [contrato funcional F2](Specifications/VRM_Fase2_Contrato_Funcional_v0.1.md) 
 - Se actualizan README y la referencia operativa del workflow v1.2. No se modifican Unity, biblioteca canónica, recurso runtime, serialización o pruebas originales. Los cambios se añaden a readme sin borrar historial.
 
 **Límite:** esta decisión oficializa el documento; no marca ISEK-001/F3A completados ni amplía la autorización de implementación. La incorporación física a main se entrega mediante PR para revisión.
+
+## DEC-009 — Yandere dramática, original y gradual
+
+**Fecha:** 29/10/2026, Guatemala. **Autoridad:** instrucción directa del usuario como Dirección, «NUEVA DECISIÓN DE DIRECCIÓN: YANDERE DRAMÁTICA».
+**Estado:** DIRECCIÓN CREATIVA APROBADA; perfil detallado, diálogos y ejecución PENDIENTES DE REVISIÓN.
+**Entrega documental:** [PR #14](https://github.com/MarcoPolo2-0/Isekaid/pull/14), sin fusión autorizada.
+
+- Se aprueba una Yandere dramática: afecto intenso/desconcertante, contraste de dulzura e inquietud, apego que puede volverse obsesión, celos, miedo al abandono, contradicciones y decisiones cuestionables con consecuencias. Sustituye la orientación excesivamente moderada de la ficha anterior de Liora; no obliga a hacerla siempre agradable o autorregulada.
+- Su evolución debe ser gradual y conservar deseos, intereses y conflictos propios. En el primer encuentro hay gratitud/curiosidad y atención inusual, sin amor o pertenencia. Vínculo, apego intenso/conflicto y crisis/evolución requieren experiencias posteriores reales; no son niveles, variables, eventos o sistemas nuevos autorizados.
+- Se permite estudiar el contraste de Yuno Gasai como referencia, sin copiar trasfondo, relaciones, diálogos, diseño o acontecimientos. Violencia y romance no son respuestas automáticas; el protagonista conserva sus decisiones y la amistad sigue siendo una ruta completa.
+- La nueva [biblia dramática candidata](Specifications/F3A-N1/13_Yandere_Dramatica_v0.2_PROPUESTA.md) y [revisión C2/C5](Specifications/F3A-N1/14_C2_C5_Dramatica_v0.1.md) son propuestas para evaluar esta dirección. Liora/nombres, biografías, proyecto musical, desencadenantes concretos, escenas, actuaciones y cada diálogo requieren aprobación independiente.
+- [Parche editorial v0.4](Specifications/F3A-N1/15_Parche_Editorial_v0.4_PROPUESTA.json): solo recomendación documental. Mantiene 33 revisiones/30 candidatos y propone cuatro spokenText nuevos respecto a v0.3; no aprueba esos textos ni autoriza su aplicación. Las recomendaciones C1/C3/C4 permanecen pendientes.
+- Se conservan documentos, decisiones, parches y evidencias históricas. GDD v0.7 sigue maestro oficial por DEC-008 y no se modifica desde esta entrega. Sin cambios a canónica/runtime, Unity, serialización, Shy=2/shy/F3A.SHY.*, memoria o relación.
+
+**Siguiente puerta:** Dirección revisa los detalles y selecciona IDs/campos antes de solicitar implementación a Chat 3. No fusionar PR #14, no aplicar diálogos y no declarar completada F3A o ISEK-001.

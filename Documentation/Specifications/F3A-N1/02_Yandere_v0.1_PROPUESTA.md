@@ -1,5 +1,7 @@
 # F3A-N1 — Biblia de Yandere
 
+> **Antecedente histórico, sustituido por DEC-009:** la dirección activa es [Yandere dramática v0.2](13_Yandere_Dramatica_v0.2_PROPUESTA.md), con [C2/C5 y parche v0.4](14_C2_C5_Dramatica_v0.1.md). Se conserva esta ficha íntegra para trazabilidad. Sus restricciones de una Liora siempre autorregulada no limitan la nueva dirección; los detalles nuevos siguen propuestos.
+
 **Versión:** 0.1 · **Estado:** PROPUESTA DE PERSONAJE; pendiente de Dirección.  
 **Compatibilidad:** Yandere=1. Apariencia y clase independientes; nombre de trabajo sin efecto en UI, identidad persistida o serialización.  
 [Entrega y límites](08_Compatibilidad_Entrega_v0.1.md) · [Revisión de 33 ajustes](04_Revision_33_v0.1.md) · [Matriz de actuación](06_Matriz_Reacciones_Actuacion_v0.1.md).

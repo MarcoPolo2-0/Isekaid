@@ -5,14 +5,14 @@
 **Rama:** docs/isek-f3a-n1-character-voices, creada desde main `f835d3b` y actualizada sin commit de mezcla a `24cad113be5edc8ca1d44db1857a3f23209a2dd5` al incorporarse PR #13. La fuente canónica y el runtime no cambiaron.  
 **Seguimiento:** [F3A #8](https://github.com/MarcoPolo2-0/Isekaid/issues/8) · [ISEK-001 #1](https://github.com/MarcoPolo2-0/Isekaid/issues/1).
 
-**Revisión activa C1–C5:** rama sincronizada con main `0ef11e5`, que ya contiene el [GDD maestro oficial v0.7](../../GameDesignDocument_v0.7.md) y DEC-008. Se conservaron las entradas completas de ambas ramas y el análisis de Chat 3. Recomendación activa: [hoja de decisiones](11_Hoja_Decisiones_C1_C5_v0.1.md) y [parche v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json), con 30 candidatos. Las revisiones v0.2 y sus materiales quedan como antecedentes, no como un segundo parche a aplicar. La aprobación del GDD no autoriza N1.
+**Revisión activa, DEC-009:** rama sincronizada con main `0ef11e5`, con [GDD maestro oficial v0.7](../../GameDesignDocument_v0.7.md)/DEC-008 intactos. Dirección aprueba Yandere DRAMÁTICA; las recomendaciones detalladas siguen pendientes. Activos: [biblia dramática v0.2](13_Yandere_Dramatica_v0.2_PROPUESTA.md), [C2/C5, comparación y 30 textos](14_C2_C5_Dramatica_v0.1.md), [parche v0.4](15_Parche_Editorial_v0.4_PROPUESTA.json). Cambian cuatro spokenText de Yandere respecto a v0.3; C1/C3/C4 y los otros 26 candidatos mantienen sus recomendaciones. Las versiones v0.2/v0.3 y sus materiales se conservan como antecedentes, no parches acumulables. Se preservan los registros de ambas ramas y el informe de Chat 3. Ni GDD ni dirección dramática autorizan integrar N1.
 
 ## 1. Índice de entregables
 
 | Documento | Propósito |
 |---|---|
 | [Biblia Tsundere](01_Tsundere_v0.1_PROPUESTA.md) | Nera, nombre de trabajo: admitir ayuda conservando independencia y criterio |
-| [Biblia Yandere](02_Yandere_v0.1_PROPUESTA.md) | Liora, nombre de trabajo: intensidad en el significado del encuentro y límites recíprocos |
+| [Biblia Yandere v0.1, histórica](02_Yandere_v0.1_PROPUESTA.md) | Orientación contenida sustituida por DEC-009, conservada para trazabilidad |
 | [Biblia Dandere](03_Dandere_v0.1_PROPUESTA.md) | Sira, nombre de trabajo: observar, pensar y afirmar voluntad propia |
 | [Revisión de los 33 ajustes](04_Revision_33_v0.1.md) | Actual/PR11/final, evaluación individual y motivo |
 | [Parche editorial v0.2, histórico](05_Parche_Editorial_v0.2_PROPUESTA.json) | Antecedente íntegro de las 33 recomendaciones y hashes locales previos |
@@ -20,8 +20,11 @@
 | [Protocolo y aceptación](07_Prueba_Ciega_Aceptacion_v0.1.md) | Medidas, criterios y clave para administración |
 | [Hoja ciega separada](07b_Muestras_Ciegas_v0.1.md) | 21 muestras sin personalidad/nombre/ID de fuente, para participantes |
 | [Presentación final para Dirección](09_Presentacion_Final_Direccion_v0.1.md) | Motivaciones/contradicciones, comparación y tabla de 30 candidatos con decisiones C1–C5 |
-| [Hoja de decisiones C1–C5](11_Hoja_Decisiones_C1_C5_v0.1.md) | Recomendación activa, alternativas fuera del manifiesto y 30 IDs/textos exactos |
-| [Parche editorial v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json) | Siete formulaciones revisadas sobre v0.2, 30 candidatos; hashes normalizados UTF-8/LF |
+| [Hoja de decisiones C1–C5, histórica v0.3](11_Hoja_Decisiones_C1_C5_v0.1.md) | C1/C3/C4 siguen como recomendaciones pendientes; C2/C5 sustituidas |
+| [Parche editorial v0.3, histórico](12_Parche_Editorial_v0.3_PROPUESTA.json) | Siete formulaciones revisadas sobre v0.2; base de comparación, sin aplicar |
+| [Biblia Yandere dramática v0.2](13_Yandere_Dramatica_v0.2_PROPUESTA.md) | Perfil candidato, desencadenantes y cuatro etapas conceptuales; dirección aprobada, detalles pendientes |
+| [Revisión dramática C2/C5](14_C2_C5_Dramatica_v0.1.md) | Actual/previa/nueva, escenas comparables, 30 textos activos y límites de compatibilidad |
+| [Parche editorial v0.4](15_Parche_Editorial_v0.4_PROPUESTA.json) | Recomendación activa contra canónica: cuatro spokenText nuevos frente a v0.3; resto del contrato preservado |
 | Este informe | Dependencias, preservación del contrato, comprobaciones y decisiones pendientes |
 
 ## 2. Fuentes consultadas y estado de referencia
@@ -32,7 +35,7 @@
 - [Biblioteca canónica](../F3A_Biblioteca_v0.1.json), [dirección de diferenciación](../F3A_Diferenciacion_Personalidades_v0.1_PROPUESTA.md), [revisión anterior de 60 entradas](../F3A_Diferenciacion_Revision_60_v0.1.md) y [parche PR #11](../F3A_Diferenciacion_Editorial_v0.1_PROPUESTA.json).
 - Lectura del adaptador [build_f3a_runtime_content.py](../../../tools/build_f3a_runtime_content.py), [datos runtime](../../../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/DialogueContent.cs), [director](../../../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/DialogueDirector.cs), [presentador emocional](../../../UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionReactionPresenter.cs) y [UI](../../../UnityProjectIsekaid/Assets/_Project/Scripts/UI/DialoguePresenter.cs). [Auditoría técnica F3A](../../Audits/VRM-F3A/review-1/INFORME.md) y [locomoción/render](../../Audits/Companion-Locomotion-Render/INFORME.md) como evidencia previa, no repetida aquí.
 
-Se revisa el paquete PR #11 sin convertir su merge documental en autorización de integración. El hash de la fuente vigente es `32a90c2d0d980b84d52d6a3c4e1eb18770b7ab9fbf86082562c8ced2833835ef`. Sus 33 textos propuestos aún no se aplicaron. Las tres fichas nuevas son propuestas originales, sin copiar personajes de otras obras ni afirmar que se inspeccionaron tarjetas privadas.
+Se revisa el paquete PR #11 sin convertir su merge documental en autorización de integración. El hash histórico de bytes locales CRLF es `32a90c2d0d980b84d52d6a3c4e1eb18770b7ab9fbf86082562c8ced2833835ef`; los parches v0.3/v0.4 usan el SHA-256 normalizado UTF-8/LF `e475943e9a9eaab1787277a8257d111af21c7ff8509bef5f8145b3e3fc4f214e`. Sus 33 textos propuestos aún no se aplicaron. Las fichas son propuestas originales, sin copiar personajes de otras obras ni afirmar que se inspeccionaron tarjetas privadas.
 
 ## 3. Resultado editorial recomendado
 
@@ -41,7 +44,7 @@ Se revisa el paquete PR #11 sin convertir su merge documental en autorización d
 La diferencia se apoya en criterios, no solo en tono:
 
 - Tsundere quiere resolver y conservar agencia, pero necesita admitir una ayuda real. Su orgullo puede dificultar recibir, no justificar insultos.
-- Yandere asigna peso a lo ocurrido y busca saber qué significa para el otro, con una expectativa que debe contrastar. No es cariño genérico, romance inicial o derecho a cercanía.
+- Yandere concentra atención y afecto de forma desproporcionada. Su deseo de ser elegida puede entrar en conflicto con intentos de controlar información o decisiones cuando exista un vínculo futuro. Puede equivocarse y afrontar consecuencias; A solo ofrece gratitud y curiosidad intensas, sin posesión o amor. Véase DEC-009 y la ficha activa.
 - Dandere separa observación, interpretación y decisión; se reserva tiempo y puede dar una negativa clara. La valentía no requiere volverse extrovertida.
 
 La revisión detecta un límite real en F.RESUME: puede existir un cursor de raíz o de hoja, así que no se presupone una pregunta todavía sin respuesta. También rechaza tres cambios meramente cosméticos de E.DOWNED. Mantener claridad de emergencia es más importante que forzar diferencias en cada alarma.
@@ -97,8 +100,16 @@ Las pruebas humanas, N2 corporal, Play Mode y build quedan PENDIENTES. Estos res
 
 ## 8. Revisión posterior C1–C5, todavía propuesta
 
-La recomendación activa v0.3 conserva 33 revisiones, 7 ACEPTAR/23 MEJORAR/3 DESCARTAR, con 30 cambios candidatos. Siete formulaciones cambian frente a v0.2. El conjunto de IDs y los demás campos de gameplay se mantienen. Las alternativas de la hoja no pertenecen al manifiesto de 30.
+La recomendación histórica v0.3 conserva 33 revisiones, 7 ACEPTAR/23 MEJORAR/3 DESCARTAR, con 30 cambios candidatos. Siete formulaciones cambian frente a v0.2. El conjunto de IDs y los demás campos de gameplay se mantienen. Las alternativas de la hoja no pertenecen al manifiesto de 30.
 
 Los hashes de v0.3 se calculan como SHA-256 de texto UTF-8 sin BOM con CRLF/CR normalizados a LF, sin más transformaciones, y se anclan a commit/path/blob. El análisis técnico de Chat 3 se conserva como antecedente de v0.2; no se desactivan comprobaciones o expected para resolver la diferencia de saltos de línea. Las tarjetas ciegas v0.2 se conservan y necesitan actualizarse antes de evaluar v0.3. No se ejecuta el ensayo humano ni se regenera el recurso Unity en esta revisión.
 
 No se pide aprobar una historia completa ni fijar todos los detalles futuros para evaluar esta entrega. La prioridad es una relación inicial entre desconocidos, con tres maneras coherentes de pensar y decidir.
+
+## 9. Revisión dramática vigente, DEC-009
+
+Se registra la nueva instrucción de Dirección sin alterar GDD o aprobaciones anteriores. La dirección Yandere dramática sustituye exclusivamente la interpretación excesivamente moderada de Liora. Perfil detallado, nombre, proyecto, escenas, gestos y diálogos siguen pendientes. Las etapas conceptuales A–D no son niveles ni los escenarios A–F de los IDs F3A.
+
+v0.4 conserva 33 revisiones/30 candidatos, hashes normalizados y expected. Solo revisa spokenText de F3A.YAN.A.RESCUE, F3A.YAN.B.FEEL.OPEN, F3A.YAN.C.LATER_1 y F3A.YAN.E.REVIVED frente a v0.3; todas las intenciones previas y campos de gameplay quedan iguales. El parche se evalúa contra la canónica, nunca como aplicación acumulativa de versiones.
+
+Se preservan completos parches v0.2/v0.3, informes de Chat 3, tarjetas y revisiones históricas. Las tarjetas v0.2 necesitan estímulos actualizados antes de evaluar v0.4; no se reportan resultados humanos. Nuevos celos, promesas, ocultación de información, conflicto o reparación necesitan escenas y mecanismos posteriores. No se incorpora contenido a Unity.
