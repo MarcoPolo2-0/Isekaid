@@ -1,0 +1,22 @@
+{
+  "N1": {
+    "passed": true,
+    "command": "python tools/verify_f3a_n1.py",
+    "output": "ISEKAID_N1_VERIFIED changed=30 unchanged=30 entries=60 paths=18 rejected=7"
+  },
+  "generator": {
+    "passed": true,
+    "command": "python tools/build_f3a_runtime_content.py --check",
+    "output": "ISEKAID_F3A_LIBRARY_OK entries=60 paths=18"
+  },
+  "layout": {
+    "passed": true,
+    "command": "python tools/verify_unified_layout.py",
+    "output": "ISEKAID_STRUCTURE_OK — archivos, rutas, escenas y exclusiones básicas\nNOTA: compilación, importación, Play Mode y builds requieren Unity"
+  },
+  "F2protected": {
+    "passed": true,
+    "command": "python tools/verify_vrm_f2_delivery.py",
+    "output": "ISEKAID_F2_DELIVERY_CHECKS_PASSED protected=715"
+  }
+}

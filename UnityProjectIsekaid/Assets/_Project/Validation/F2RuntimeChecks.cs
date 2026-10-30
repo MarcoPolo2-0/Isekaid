@@ -79,8 +79,14 @@ namespace Isekaid.Validation
             Application.runInBackground = true;
             await Until(() => Object.FindAnyObjectByType<CharacterCreationController>()?.Appearance.Ready == true, "Creator did not initialize");
             var creator = Object.FindAnyObjectByType<CharacterCreationController>();
+            var personalityField = creator.GetComponent<UIDocument>().rootVisualElement.Query<DropdownField>().ToList()
+                .FirstOrDefault(field => field.choices.SequenceEqual(CompanionPalette.PersonalityNames));
+            Check(personalityField != null && personalityField.choices.SequenceEqual(new[] { "Tsundere", "Yandere", "Dandere" }) &&
+                (int)CompanionPersonality.Shy == 2, "Actual creator shows three personality labels with Dandere at Shy index 2");
             if (Argument("-isekF2Test") == "restart")
             {
+                Check(creator.Profile.personality == CompanionPersonality.Shy && personalityField.value == "Dandere" &&
+                    (int)CompanionProfileStore.Load().personality == 2, "New process preserves the saved Shy value behind the Dandere label");
                 Check(creator.Appearance.Selection.kind == "vrm" && creator.Appearance.Importer.HasAvatar, "A new process reloads the managed VRM without the source file");
                 Report.avatarHash = creator.Appearance.Selection.hash;
                 await Capture("restart-managed-vrm");
@@ -94,6 +100,11 @@ namespace Isekaid.Validation
             string identity = creator.Profile.identity;
             foreach (var value in new[] { CompanionPersonality.Tsundere, CompanionPersonality.Yandere, CompanionPersonality.Shy })
             { creator.SetPersonality(value); Check(creator.Profile.personality == value && creator.Appearance.Selection.kind == "catalog", "Catalog personality independent: " + value); }
+            personalityField.index = 0;
+            Check(creator.Profile.personality == CompanionPersonality.Tsundere, "Actual personality selector dispatches the Tsundere choice");
+            personalityField.index = 2;
+            Check(personalityField.value == "Dandere" && creator.Profile.personality == CompanionPersonality.Shy,
+                "Visible Dandere selection binds to the existing Shy value");
             foreach (string value in new[] { "Idle", "Walk", "Run" }) { creator.Appearance.PreviewMotion(value); await Task.Delay(150); }
             Check(creator.Appearance.PreviewExpression("happy") && creator.Appearance.PreviewExpression("blink"), "Catalog expressions use inspected channel names");
             creator.Appearance.PreviewExpression("neutral");

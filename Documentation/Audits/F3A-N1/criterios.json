@@ -1,0 +1,57 @@
+{
+  "status": "ENTREGA_EXPERIMENTAL_PENDIENTE_DIRECCION",
+  "criteria": [
+    {
+      "id": "N1-01",
+      "criterion": "Procedencia, SHA UTF-8/LF y expected",
+      "status": "PASS"
+    },
+    {
+      "id": "N1-02",
+      "criterion": "30 cambios exactos; 30 entradas intactas y tres DOWNED conservadas",
+      "status": "PASS"
+    },
+    {
+      "id": "N1-03",
+      "criterion": "60 IDs/orden, 18 rutas y todas las reglas/efectos conservados",
+      "status": "PASS"
+    },
+    {
+      "id": "N1-04",
+      "criterion": "Dandere visible, Shy=2, perfiles anteriores/reinicio",
+      "status": "PASS"
+    },
+    {
+      "id": "N1-05",
+      "criterion": "F2/F3A, continuidad, incapacitacion/reanimacion y pausa",
+      "status": "PASS"
+    },
+    {
+      "id": "N1-06",
+      "criterion": "Seguimiento/locomocion catalogo y VRM en Editor/Windows",
+      "status": "PASS_EN_ESCENARIOS_ACOTADOS"
+    },
+    {
+      "id": "N1-07",
+      "criterion": "UI real en tres resoluciones y capturas",
+      "status": "PASS_EN_ESCENARIOS_ACOTADOS"
+    },
+    {
+      "id": "N1-08",
+      "criterion": "Build Windows y regresiones",
+      "status": "PASS"
+    },
+    {
+      "id": "N1-09",
+      "criterion": "Escenas, prefabs, GUIDs, arquitectura, GDD y privados conservados",
+      "status": "PASS"
+    },
+    {
+      "id": "N1-10",
+      "criterion": "Aceptacion creativa/manual de Direccion",
+      "status": "PENDIENTE"
+    }
+  ],
+  "n2Implemented": false,
+  "merged": false
+}

@@ -83,6 +83,16 @@ namespace Isekaid.Editor
             void Check(bool condition, string message) { if (!condition) throw new InvalidOperationException(message); passed++; }
             try
             {
+                foreach (int version in new[] { 1, 2 })
+                {
+                    string shy = "{\"version\":" + version + ",\"identity\":\"n1-existing-shy\",\"personality\":2,\"hair\":2,\"eyes\":3,\"top\":1,\"trousers\":2}";
+                    PlayerPrefs.SetString(CompanionProfileStore.PreferenceKey, shy);
+                    var compatible = CompanionProfileStore.LoadRecord();
+                    Check(compatible.profile.personality == CompanionPersonality.Shy && (int)compatible.profile.personality == 2 &&
+                        compatible.profile.identity == "n1-existing-shy" && compatible.legacyProfileJson == shy &&
+                        compatible.profile.hair == 2 && compatible.profile.eyes == 3 && compatible.profile.top == 1 && compatible.profile.trousers == 2,
+                        "Existing Shy profile remains compatible: v" + version);
+                }
                 string legacy = "{\"version\":1,\"personality\":1,\"hair\":2,\"eyes\":3,\"top\":1,\"trousers\":2,\"memoryFixture\":{\"firstRescue\":true,\"trust\":7},\"classFixture\":\"archer\"}";
                 PlayerPrefs.SetString(CompanionProfileStore.PreferenceKey, legacy);
                 var record = CompanionProfileStore.LoadRecord();
@@ -93,6 +103,11 @@ namespace Isekaid.Editor
                 Check(PlayerPrefs.GetString(CompanionProfileStore.PreferenceKey) == legacy, "Legacy PlayerPrefs remains unchanged");
                 record.profile.personality = CompanionPersonality.Shy;
                 Check(CompanionProfileStore.TrySave(record, out _), "Second profile revision must save");
+                var persistedShy = CompanionProfileStore.LoadRecord();
+                Check(persistedShy.formatVersion == 2 && persistedShy.profile.version == 2 &&
+                    (int)persistedShy.profile.personality == 2 && persistedShy.profile.identity == identity &&
+                    CompanionPalette.PersonalityNames.Length == 3 && CompanionPalette.PersonalityNames[2] == "Dandere",
+                    "Dandere label preserves the reread v2 Shy value and identity");
                 string before = File.ReadAllText(CompanionProfileStore.SavePath);
                 CompanionProfileStore.BeforeCommit = () => throw new IOException("Injected disk failure");
                 record.profile.personality = CompanionPersonality.Tsundere;

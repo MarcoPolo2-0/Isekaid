@@ -1,0 +1,118 @@
+{
+  "status": "TECHNICAL_DELIVERY_PENDING_DIRECTION_MANUAL_ACCEPTANCE",
+  "sourceCommit": "68f816b5dca76aa1585041dc5ddca5a8d153ded6",
+  "tests": {
+    "editor-f3a.json": {
+      "passed": true,
+      "checks": 330,
+      "routes": 18,
+      "assertions": null,
+      "motions": 0,
+      "follows": 0
+    },
+    "editor-f2.json": {
+      "passed": true,
+      "checks": 46,
+      "routes": 0,
+      "assertions": null,
+      "motions": 0,
+      "follows": 0
+    },
+    "guard-results.json": {
+      "passed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": null,
+      "motions": 0,
+      "follows": 0
+    },
+    "storage-results.json": {
+      "passed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": 14,
+      "motions": 0,
+      "follows": 0
+    },
+    "metadata-results.json": {
+      "passed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": 35,
+      "motions": 0,
+      "follows": 0
+    },
+    "editor-presentation.json": {
+      "passed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": null,
+      "motions": 6,
+      "follows": 4
+    },
+    "windows-f3a.json": {
+      "passed": true,
+      "checks": 330,
+      "routes": 18,
+      "assertions": null,
+      "motions": 0,
+      "follows": 0
+    },
+    "windows-f2.json": {
+      "passed": true,
+      "checks": 39,
+      "routes": 0,
+      "assertions": null,
+      "motions": 0,
+      "follows": 0
+    },
+    "windows-restart.json": {
+      "passed": true,
+      "checks": 4,
+      "routes": 0,
+      "assertions": null,
+      "motions": 0,
+      "follows": 0
+    },
+    "windows-presentation.json": {
+      "passed": true,
+      "checks": 0,
+      "routes": 0,
+      "assertions": null,
+      "motions": 6,
+      "follows": 4
+    }
+  },
+  "windowsLogs": {
+    "windows-f3a": {
+      "exceptionOrErrorMarkers": 0,
+      "sha256": "6617e349ac58d04b23df96fda9187419a55a370950daf9ffa6aec81a20574658"
+    },
+    "windows-f2": {
+      "exceptionOrErrorMarkers": 0,
+      "sha256": "29d1e44bf9d3283ad0ac15fb45051d92de3d55de666e15428583144e69905785"
+    },
+    "windows-restart": {
+      "exceptionOrErrorMarkers": 0,
+      "sha256": "747da0e26f598787a64b0da9c7dca8e2ad8cc4d536e710e11bd21141a8458f9b"
+    },
+    "windows-presentation": {
+      "exceptionOrErrorMarkers": 0,
+      "sha256": "4b8ed6693e078435d4c14f760787c28b71c9694f43823ceae06f50f2879985b8"
+    }
+  },
+  "unchangedPrivateFixtures": true,
+  "scenesPrefabsGuidsSettingsUnchanged": true,
+  "changedUnityFiles": [
+    "UnityProjectIsekaid/Assets/_Project/Editor/F2IntegrationChecks.cs",
+    "UnityProjectIsekaid/Assets/_Project/Resources/Dialogue/F3A.es.json",
+    "UnityProjectIsekaid/Assets/_Project/Scripts/Companion/CompanionPalette.cs",
+    "UnityProjectIsekaid/Assets/_Project/Validation/F2RuntimeChecks.cs",
+    "UnityProjectIsekaid/Assets/_Project/Validation/F3ARuntimeChecks.cs"
+  ],
+  "readmeHistoryPreserved": true,
+  "publicScreenshots": 13,
+  "initialEditorLayoutFailurePreserved": true,
+  "n2Implemented": false,
+  "manualAcceptance": false
+}

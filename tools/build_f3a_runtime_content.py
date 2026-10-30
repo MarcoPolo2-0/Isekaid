@@ -95,5 +95,5 @@ if __name__ == "__main__":
         assert TARGET.read_text(encoding="utf-8") == expected, "Runtime library is stale or edited outside its canonical source"
     else:
         assert not sys.argv[1:], "Use no arguments to build or --check to verify"
-        TARGET.write_text(expected, encoding="utf-8")
+        TARGET.write_text(expected, encoding="utf-8", newline="\n")
     print("ISEKAID_F3A_LIBRARY_OK entries=60 paths=18")

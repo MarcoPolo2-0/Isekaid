@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "personalityBefore": 2,
+  "personalityAfter": 2,
+  "sameIdentity": true,
+  "sameAppearance": true,
+  "formatBefore": 2,
+  "formatAfter": 2,
+  "sourceFilesPublished": false
+}

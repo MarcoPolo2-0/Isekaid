@@ -1,0 +1,67 @@
+{
+  "editor-f3a-02": {
+    "logSha256": "891469b894b67c270f199bc2f3cd7f0e7f8f42f338b3ee79555265fcf547470b",
+    "markers": [
+      "ISEKAID_PROTOTYPE_CHECKS_PASSED",
+      "ISEKAID_F3A_PLAYMODE_CHECKS_PASSED"
+    ],
+    "searchIndexExceptionPresent": true,
+    "hierarchyWarningPresent": true,
+    "multipleAudioListenersWarningCount": 2,
+    "compilerErrors": 0
+  },
+  "editor-f2-final": {
+    "logSha256": "2e60b9ff09cf0a634cc05acd47dee8af4c48b1b8ab4a97c7f44a115657e2d2df",
+    "markers": [
+      "ISEKAID_PROTOTYPE_CHECKS_PASSED",
+      "ISEKAID_F2_RUNTIME_CHECKS_PASSED"
+    ],
+    "searchIndexExceptionPresent": true,
+    "hierarchyWarningPresent": true,
+    "multipleAudioListenersWarningCount": 1,
+    "compilerErrors": 0
+  },
+  "guards": {
+    "logSha256": "61b188ad9383bd1c1398ccbdceaf3eec1953847b0edd22ca39a5d58b5fbe863c",
+    "markers": [
+      "ISEKAID_F2_GUARD_CHECKS_PASSED 9",
+      "ISEKAID_F2_STORAGE_CHECKS_PASSED 14",
+      "ISEKAID_PROTOTYPE_CHECKS_PASSED",
+      "ISEKAID_TWO_SCENE_PLAYMODE_CHECKS_PASSED"
+    ],
+    "searchIndexExceptionPresent": true,
+    "hierarchyWarningPresent": true,
+    "multipleAudioListenersWarningCount": 0,
+    "compilerErrors": 0
+  },
+  "metadata": {
+    "logSha256": "aa9c54aecfec4eda82e009a939e72aee281b4c91058188387bbb3a7002fe5b4e",
+    "markers": [
+      "ISEKAID_F2_METADATA_CHECKS_PASSED 35"
+    ],
+    "searchIndexExceptionPresent": false,
+    "hierarchyWarningPresent": false,
+    "multipleAudioListenersWarningCount": 0,
+    "compilerErrors": 0
+  },
+  "editor-presentation": {
+    "logSha256": "bc8eaa2fed18827e33fb56418bc3d9cd26f4b66bacccf0a6516278325b811e1b",
+    "markers": [
+      "ISEKAID_PRESENTATION_CHECKS_FINISHED"
+    ],
+    "searchIndexExceptionPresent": true,
+    "hierarchyWarningPresent": true,
+    "multipleAudioListenersWarningCount": 0,
+    "compilerErrors": 0
+  },
+  "build-final": {
+    "logSha256": "521543c2f2b8eab612744c27d487f111d2190dce2f28b7ff563ba223c1644819",
+    "markers": [
+      "ISEKAID_F2_WINDOWS_BUILD Succeeded bytes=196472216"
+    ],
+    "searchIndexExceptionPresent": false,
+    "hierarchyWarningPresent": false,
+    "multipleAudioListenersWarningCount": 0,
+    "compilerErrors": 0
+  }
+}
