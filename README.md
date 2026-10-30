@@ -30,11 +30,12 @@ Isekaid/
 
 ## Continuar desarrollo
 
-- [Workflow vigente v1.1](Documentation/Workflow_Desarrollo_v1.1.md)
+- [Workflow vigente v1.2](Documentation/Workflow_Desarrollo_v1.2.md)
 - [Decisiones de Dirección](Documentation/DECISIONS.md) — consultar las más recientes; DEC-006 establece la nueva estructura.
-- [Issue ISEK-001](https://github.com/MarcoPolo2-0/Isekaid/issues/1) — siguiente hito artístico.
-- [GDD v0.5](Documentation/GameDesignDocument_v0.5.md) — base aprobada; v0.6 sigue borrador.
+- [Issue ISEK-001](https://github.com/MarcoPolo2-0/Isekaid/issues/1) — seguimiento de la compañera y sus criterios.
+- [GDD maestro oficial v0.7](Documentation/GameDesignDocument_v0.7.md) — aprobación documental de Dirección; no autoriza automáticamente propuestas o integraciones.
+- Historial íntegro: [v0.5](Documentation/GameDesignDocument_v0.5.md), [v0.6](Documentation/GameDesignDocument_v0.6_borrador.md) y [borrador v0.7](Documentation/GameDesignDocument_v0.7_borrador.md).
 
-El prototipo anterior se conserva. G2-PROTO/G2-CORR son recursos de experimentación: **G2-CORR no ha sido aceptada visualmente** y no autoriza iniciar G3/G4. Trabajar en ramas/PR por hito y pedir aprobación antes de fusionar o reemplazar modelos de producción.
+El prototipo anterior y las evidencias G2-PROTO/G2-CORR se conservan. Woman/G2 y el editor corporal están pausados por DEC-007; sus resultados no se declaran aceptados por adoptar VRM. La revisión de F3A-N1 sigue en el [PR #14](https://github.com/MarcoPolo2-0/Isekaid/pull/14), sin autorización automática para aplicar diálogos. Trabajar en ramas/PR por hito y someter las entregas a Dirección antes de fusionar o reemplazar modelos de producción.
 
 Este repositorio es **público**. Revisar licencias de recursos externos y no publicar secretos o datos privados.
