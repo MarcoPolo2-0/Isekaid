@@ -1,5 +1,7 @@
 # F3A-N1 — Protocolo de prueba ciega y aceptación
 
+**Versión del material:** las tarjetas/clave de esta entrega corresponden al candidato v0.2. Se conservan como historial; no puntuar la [revisión v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json) con esos textos sin actualizar primero los estímulos. El protocolo continúa siendo una propuesta y no hay resultados humanos.
+
 **Versión:** 0.1 · **Estado:** protocolo PROPUESTO, sin resultados humanos ni Unity.  
 [Hoja separada para participantes](07b_Muestras_Ciegas_v0.1.md) · [Matriz](06_Matriz_Reacciones_Actuacion_v0.1.md) · [Revisión editorial](04_Revision_33_v0.1.md) · [Compatibilidad](08_Compatibilidad_Entrega_v0.1.md).
 

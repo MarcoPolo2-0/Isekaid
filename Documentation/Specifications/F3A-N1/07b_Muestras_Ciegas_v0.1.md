@@ -1,5 +1,7 @@
 # F3A-N1 — Muestras para lectura ciega
 
+**Material histórico de la candidata editorial v0.2.** Requiere actualización antes de evaluar una revisión posterior. Se conserva sin reescribir las tarjetas originales.
+
 **Material editorial de prueba, no resultado de Unity.** Hoja para participantes: no incluye nombres de personaje, etiquetas de personalidad ni IDs de fuente. No consultar el resto de documentos hasta terminar. La persona administradora debe separar esta hoja de la clave del protocolo y puede mezclar las tarjetas conservando sus códigos.
 
 Para cada tarjeta anota: identificación (una de las tres descripciones dadas por quien administra, o «No puedo distinguir»), confianza de 1 a 5 y qué intenta conseguir la compañera. Cita una decisión o interpretación, además de la forma de decirla. No existe una respuesta correcta de simpatía: no estás eligiendo tu favorita.

@@ -1,5 +1,7 @@
 # F3A-N1 — Presentación final para Dirección
 
+**Presentación histórica v0.2:** sus dudas C1–C5 se resuelven como recomendación en la [hoja posterior](11_Hoja_Decisiones_C1_C5_v0.1.md) y el [parche v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json). Esta tabla anterior se conserva y no debe confundirse con la revisión activa.
+
 **Fecha:** 29/10/2026 · **Estado:** REVISIÓN CREATIVA, no aprobación o integración.  
 **Entrega:** [PR #14](https://github.com/MarcoPolo2-0/Isekaid/pull/14), anterior a cualquier autorización de Desarrollo.  
 **GDD:** Dirección ha aprobado documentalmente v0.7; su publicación está en el [PR independiente #15](https://github.com/MarcoPolo2-0/Isekaid/pull/15). Esa aprobación no autoriza estas fichas, diálogos o actuación N2.

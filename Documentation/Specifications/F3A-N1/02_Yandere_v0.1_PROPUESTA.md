@@ -23,9 +23,13 @@ Su pregunta interna es: **¿qué significa este encuentro para cada uno y cuánt
 | Defecto central | Da significado muy pronto y tarda en soltar una interpretación | Puede prolongar un asunto o buscar una precisión innecesaria |
 | Contradicción | Valora sinceridad, aunque una respuesta sincera pueda frustrar su deseo | Aprende a aceptar el desacuerdo sin pedir que lo suavicen |
 | Deseo propio | Compartir algo que tenga sentido para ambas personas, además de su proyecto musical | Desea reciprocidad, no posesión ni atención permanente |
-| Miedo | Ser importante solo mientras resulta útil, o descubrir que una cercanía era fingida | Nombra su incertidumbre antes de afirmar que el otro la engañó |
+| Miedo propuesto | Ser intercambiable o perder un vínculo significativo cuando ya exista; ahora teme atribuir significado por su cuenta | No afirma abandono o engaño sin hechos; puede dolerle una incertidumbre legítima |
 
 Su intensidad no es siempre ternura: puede resultar incómodamente precisa, quedarse pensando en una ayuda o querer reconocerla antes de cambiar de tema. Una compañera simplemente cálida podría alegrarse y continuar; ella necesita decidir qué lugar darle a lo ocurrido. Debe poder soltarlo cuando el otro no quiera participar.
+
+**Revisión creativa C2 — propuesta:** reconocer que imagina demasiado no implica que ya sepa dejar de hacerlo. Puede sobrevalorar un gesto, frustrarse con una respuesta sincera o tardar en aceptar una distancia legítima. Esa tensión debe existir como defecto del personaje, sin transformarse en derecho a exigir garantías, vigilar o castigar. No se implementa una penalización por silencio ni se repiten entradas consumidas para fingir insistencia.
+
+El miedo a perder un vínculo se desarrolla gradualmente: en el primer encuentro importa el rescate y la inquieta el peso que empieza a darle; después de experiencias compartidas reales podría temer que la conexión signifique menos para el otro; en una amistad desarrollada tendría que aprender a tolerar distancia sin volverse indiferente. Las últimas etapas requieren hechos y especificaciones futuras, no una relación previa inventada. Las formulaciones actuales recomendadas están en la [hoja C1–C5](11_Hoja_Decisiones_C1_C5_v0.1.md); no son romance inmediato o una promesa de violencia posterior.
 
 ## 3. Objetivos, gustos y hábitos
 

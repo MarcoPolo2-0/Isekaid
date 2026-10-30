@@ -1,5 +1,7 @@
 # F3A-N1 — Comparación de reacciones y dirección de actuación
 
+**Corte de textos v0.2, conservado:** las siete formulaciones revisadas después se consultan en la [hoja C1–C5](11_Hoja_Decisiones_C1_C5_v0.1.md) y el [parche v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json). La dirección de actuación sigue como propuesta N2, sin implementación.
+
 **Versión:** 0.1 · **Estado:** PROPUESTA N1/N2; textos recomendados y actuación deseada, sin ejecución Unity.  
 [Parche N1](05_Parche_Editorial_v0.2_PROPUESTA.json) · [Prueba ciega](07_Prueba_Ciega_Aceptacion_v0.1.md) · [Compatibilidad](08_Compatibilidad_Entrega_v0.1.md).
 

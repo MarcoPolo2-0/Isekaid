@@ -1,5 +1,7 @@
 # F3A-N1 — Recomendación editorial de los 33 cambios
 
+**Corte histórico v0.2:** esta revisión se conserva íntegra como antecedente. La recomendación activa posterior es la [hoja C1–C5](11_Hoja_Decisiones_C1_C5_v0.1.md) con su [parche v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json); ningún texto está aprobado automáticamente.
+
 **Versión:** 0.2 de recomendación · **Estado:** PENDIENTE DE APROBACIÓN, no biblioteca definitiva del juego.  
 [Datos revisables](05_Parche_Editorial_v0.2_PROPUESTA.json) · [Compatibilidad](08_Compatibilidad_Entrega_v0.1.md) · [Comparación/actuación](06_Matriz_Reacciones_Actuacion_v0.1.md).
 

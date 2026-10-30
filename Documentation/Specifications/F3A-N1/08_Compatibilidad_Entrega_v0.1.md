@@ -5,7 +5,7 @@
 **Rama:** docs/isek-f3a-n1-character-voices, creada desde main `f835d3b` y actualizada sin commit de mezcla a `24cad113be5edc8ca1d44db1857a3f23209a2dd5` al incorporarse PR #13. La fuente canónica y el runtime no cambiaron.  
 **Seguimiento:** [F3A #8](https://github.com/MarcoPolo2-0/Isekaid/issues/8) · [ISEK-001 #1](https://github.com/MarcoPolo2-0/Isekaid/issues/1).
 
-**Actualización posterior para revisión final:** Dirección aprobó documentalmente el GDD v0.7; su publicación oficial se prepara en el [PR independiente #15](https://github.com/MarcoPolo2-0/Isekaid/pull/15). Esa aprobación no autoriza los candidatos N1. [Presentación final de biblias y 30 textos](09_Presentacion_Final_Direccion_v0.1.md), con decisiones creativas prioritarias; fichas y parche permanecen sin cambios.
+**Revisión activa C1–C5:** rama sincronizada con main `0ef11e5`, que ya contiene el [GDD maestro oficial v0.7](../../GameDesignDocument_v0.7.md) y DEC-008. Se conservaron las entradas completas de ambas ramas y el análisis de Chat 3. Recomendación activa: [hoja de decisiones](11_Hoja_Decisiones_C1_C5_v0.1.md) y [parche v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json), con 30 candidatos. Las revisiones v0.2 y sus materiales quedan como antecedentes, no como un segundo parche a aplicar. La aprobación del GDD no autoriza N1.
 
 ## 1. Índice de entregables
 
@@ -15,11 +15,13 @@
 | [Biblia Yandere](02_Yandere_v0.1_PROPUESTA.md) | Liora, nombre de trabajo: intensidad en el significado del encuentro y límites recíprocos |
 | [Biblia Dandere](03_Dandere_v0.1_PROPUESTA.md) | Sira, nombre de trabajo: observar, pensar y afirmar voluntad propia |
 | [Revisión de los 33 ajustes](04_Revision_33_v0.1.md) | Actual/PR11/final, evaluación individual y motivo |
-| [Parche editorial v0.2](05_Parche_Editorial_v0.2_PROPUESTA.json) | 33 recomendaciones revisables, sin aplicar ni sustituir biblioteca |
+| [Parche editorial v0.2, histórico](05_Parche_Editorial_v0.2_PROPUESTA.json) | Antecedente íntegro de las 33 recomendaciones y hashes locales previos |
 | [Comparación y actuación](06_Matriz_Reacciones_Actuacion_v0.1.md) | Siete contextos iguales, siete emociones y propuesta N2 con alternativas |
 | [Protocolo y aceptación](07_Prueba_Ciega_Aceptacion_v0.1.md) | Medidas, criterios y clave para administración |
 | [Hoja ciega separada](07b_Muestras_Ciegas_v0.1.md) | 21 muestras sin personalidad/nombre/ID de fuente, para participantes |
 | [Presentación final para Dirección](09_Presentacion_Final_Direccion_v0.1.md) | Motivaciones/contradicciones, comparación y tabla de 30 candidatos con decisiones C1–C5 |
+| [Hoja de decisiones C1–C5](11_Hoja_Decisiones_C1_C5_v0.1.md) | Recomendación activa, alternativas fuera del manifiesto y 30 IDs/textos exactos |
+| [Parche editorial v0.3](12_Parche_Editorial_v0.3_PROPUESTA.json) | Siete formulaciones revisadas sobre v0.2, 30 candidatos; hashes normalizados UTF-8/LF |
 | Este informe | Dependencias, preservación del contrato, comprobaciones y decisiones pendientes |
 
 ## 2. Fuentes consultadas y estado de referencia
@@ -91,6 +93,12 @@ Las pruebas humanas, N2 corporal, Play Mode y build quedan PENDIENTES. Estos res
 2. Autorizar por ID qué 7 recomendaciones acepta, qué 23 versiones mejoradas adopta y si conserva las tres alertas actuales. Puede aprobar solo un subconjunto.
 3. Ratificar el protocolo y umbrales de identificación, y ejecutar lectura editorial/ciega antes de dar por lograda la diferenciación.
 4. Definir la actuación mínima N2 que se encargará a Desarrollo con capacidades comprobables. No cerrar F3A-R10 por frases distintas.
-5. Mantener los sistemas posteriores y Deredere fuera de alcance hasta su autorización propia. El GDD v0.7 tiene aprobación documental posterior; la publicación de su archivo oficial está en PR #15 y no autoriza N1 automáticamente.
+5. Mantener los sistemas posteriores y Deredere fuera de alcance hasta su autorización propia. El GDD v0.7 ya es el maestro oficial en main por PR #15/DEC-008; no autoriza N1 automáticamente.
+
+## 8. Revisión posterior C1–C5, todavía propuesta
+
+La recomendación activa v0.3 conserva 33 revisiones, 7 ACEPTAR/23 MEJORAR/3 DESCARTAR, con 30 cambios candidatos. Siete formulaciones cambian frente a v0.2. El conjunto de IDs y los demás campos de gameplay se mantienen. Las alternativas de la hoja no pertenecen al manifiesto de 30.
+
+Los hashes de v0.3 se calculan como SHA-256 de texto UTF-8 sin BOM con CRLF/CR normalizados a LF, sin más transformaciones, y se anclan a commit/path/blob. El análisis técnico de Chat 3 se conserva como antecedente de v0.2; no se desactivan comprobaciones o expected para resolver la diferencia de saltos de línea. Las tarjetas ciegas v0.2 se conservan y necesitan actualizarse antes de evaluar v0.3. No se ejecuta el ensayo humano ni se regenera el recurso Unity en esta revisión.
 
 No se pide aprobar una historia completa ni fijar todos los detalles futuros para evaluar esta entrega. La prioridad es una relación inicial entre desconocidos, con tres maneras coherentes de pensar y decidir.
