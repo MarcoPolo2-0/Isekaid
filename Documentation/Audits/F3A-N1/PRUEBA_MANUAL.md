@@ -4,7 +4,7 @@ Estado: integración experimental; la aceptación narrativa dentro del juego cor
 
 ## Preparación
 
-Usar Unity **6000.6.7f1**, la rama del PR de implementación y `UnityProjectIsekaid/`. Abrir `Assets/_Project/Scenes/CharacterCreation.unity`. Conservar los datos habituales y probar con un directorio aislado. El avatar VRM autorizado se selecciona desde su almacenamiento privado; no publicarlo ni compartir sus capturas.
+Usar Unity **6000.6.7f1**, la rama del PR de implementación y `UnityProjectIsekaid/`. Abrir `Assets/_Project/Scenes/CharacterCreation.unity`. Conservar los datos habituales y probar con un directorio aislado: iniciar el Editor con `-isekTestData "C:\ruta\nueva\n1-manual"`, sin `-executeMethod`, y entrar a Play Mode manualmente. El mismo argumento sirve para la build Development. Sin ese argumento se usa `Application.persistentDataPath/Companion`; no borrar esa carpeta para preparar la prueba. El avatar VRM autorizado se selecciona desde su almacenamiento privado; no publicarlo ni compartir sus capturas.
 
 El manifiesto [manifest.json](manifest.json) enumera los 30 IDs exactos, los campos modificados y los hashes. [Parche_Autorizado_v0.5.json](Parche_Autorizado_v0.5.json) es una copia de evidencia del blob `77228337ac434b4a56a47e25f05219e6c1ceffe7` del commit aprobado `5bdfeed43994e509f48dde148beca50dc961278f`. Su estado editorial histórico no sustituye la autorización directa posterior de Dirección. No se aplicaron versiones anteriores ni se fusionó el PR #14.
 

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "target": "StandaloneWindows64",
+  "development": true,
+  "totalSize": 196472216,
+  "sourceCommit": "68f816b5dca76aa1585041dc5ddca5a8d153ded6",
+  "files": {
+    "Isekaid.exe": "3726509af94bdacbfe23f85da13109a7e70fb7d61913506e98690bd3208b2fd7",
+    "Isekaid_Data/Managed/Isekaid.F2Validation.dll": "80da30e469435f13f7ace7d41f174f4c84158c2bc67043d78e043bd685ab74d7",
+    "Isekaid_Data/Managed/Isekaid.Runtime.dll": "dfaeef063aa66f5adc7baf070c9a536bcf62b46994ee32b76db0a63a0dfcaec8",
+    "Isekaid_Data/Managed/Isekaid.VrmAppearance.dll": "bd3df6b6d673a726f2341d325a1463baf6c4d440a63aaaf3cea29e06072c6e6c"
+  }
+}

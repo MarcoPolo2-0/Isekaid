@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "unity": "6000.6.7f1",
+  "phase": "candidate",
+  "error": "",
+  "avatarHash": "37eadcbaa4e240b691601daabcfa4ad4d5319793dff0cc0d128eff55f4de8736",
+  "motions": [
+    {
+      "avatar": "catalog",
+      "requested": "Idle",
+      "clip": "Idle",
+      "human": true,
+      "loop": true,
+      "length": 2.4583334922790527,
+      "normalizedStart": 0.43537768721580505,
+      "normalizedEnd": 1.4865386486053467,
+      "tailBoneDegrees": 0.0
+    },
+    {
+      "avatar": "catalog",
+      "requested": "Walk",
+      "clip": "Walk",
+      "human": true,
+      "loop": true,
+      "length": 1.0,
+      "normalizedStart": 1.0464048385620117,
+      "normalizedEnd": 5.205165863037109,
+      "tailBoneDegrees": 25.87881851196289
+    },
+    {
+      "avatar": "catalog",
+      "requested": "Run",
+      "clip": "Run",
+      "human": true,
+      "loop": true,
+      "length": 0.5833333730697632,
+      "normalizedStart": 8.161491394042969,
+      "normalizedEnd": 11.24151611328125,
+      "tailBoneDegrees": 66.93597412109375
+    },
+    {
+      "avatar": "vrm",
+      "requested": "Idle",
+      "clip": "Idle",
+      "human": true,
+      "loop": true,
+      "length": 2.4583334922790527,
+      "normalizedStart": 0.4036960005760193,
+      "normalizedEnd": 1.439289927482605,
+      "tailBoneDegrees": 0.2825484275817871
+    },
+    {
+      "avatar": "vrm",
+      "requested": "Walk",
+      "clip": "Walk",
+      "human": true,
+      "loop": true,
+      "length": 1.0,
+      "normalizedStart": 1.011457920074463,
+      "normalizedEnd": 5.110212802886963,
+      "tailBoneDegrees": 19.75864028930664
+    },
+    {
+      "avatar": "vrm",
+      "requested": "Run",
+      "clip": "Run",
+      "human": true,
+      "loop": true,
+      "length": 0.5833333730697632,
+      "normalizedStart": 8.02686882019043,
+      "normalizedEnd": 11.081926345825195,
+      "tailBoneDegrees": 85.8808822631836
+    }
+  ],
+  "follows": [
+    {
+      "avatar": "catalog",
+      "scenario": "continuous",
+      "samples": 589,
+      "stateChanges": 5,
+      "timeResets": 0,
+      "nearThresholdCrossings": 4,
+      "transitionFrames": 49,
+      "requestedStateChanges": 0,
+      "rapidStateChanges": 0,
+      "distance": 7.872726917266846,
+      "maxSpeed": 3.8000242710113525
+    },
+    {
+      "avatar": "catalog",
+      "scenario": "threshold-noise",
+      "samples": 290,
+      "stateChanges": 2,
+      "timeResets": 0,
+      "nearThresholdCrossings": 74,
+      "transitionFrames": 19,
+      "requestedStateChanges": 0,
+      "rapidStateChanges": 0,
+      "distance": 10.474875450134277,
+      "maxSpeed": 3.0400238037109375
+    },
+    {
+      "avatar": "vrm",
+      "scenario": "continuous",
+      "samples": 574,
+      "stateChanges": 5,
+      "timeResets": 0,
+      "nearThresholdCrossings": 4,
+      "transitionFrames": 48,
+      "requestedStateChanges": 0,
+      "rapidStateChanges": 0,
+      "distance": 7.873222827911377,
+      "maxSpeed": 3.8000288009643555
+    },
+    {
+      "avatar": "vrm",
+      "scenario": "threshold-noise",
+      "samples": 294,
+      "stateChanges": 2,
+      "timeResets": 0,
+      "nearThresholdCrossings": 74,
+      "transitionFrames": 20,
+      "requestedStateChanges": 0,
+      "rapidStateChanges": 0,
+      "distance": 10.477557182312012,
+      "maxSpeed": 3.0400209426879883
+    }
+  ],
+  "rendering": [
+    "scene-before clippedWhitePixels=109078",
+    "reference clippedWhitePixels=16153",
+    "balanced clippedWhitePixels=0"
+  ],
+  "gait": [
+    "catalog Idle humanScale=0.91338 footBoneMinY=0.0596 footBottom=0.0555 stanceBackSpeed=0.0000 samples=0",
+    "catalog Idle actualMeshMinY=0.00111",
+    "catalog Walk humanScale=0.91338 footBoneMinY=0.0554 footBottom=0.0555 stanceBackSpeed=1.3585 samples=143",
+    "catalog Run humanScale=0.91338 footBoneMinY=0.0401 footBottom=0.0555 stanceBackSpeed=3.7976 samples=44",
+    "vrm Idle humanScale=1.43738 footBoneMinY=0.1200 footBottom=0.1696 stanceBackSpeed=0.0000 samples=0",
+    "vrm Idle actualMeshMinY=0.01401",
+    "vrm Walk humanScale=1.43738 footBoneMinY=0.1157 footBottom=0.1696 stanceBackSpeed=1.3063 samples=143",
+    "vrm Run humanScale=1.43738 footBoneMinY=0.1000 footBottom=0.1696 stanceBackSpeed=3.7712 samples=39"
+  ],
+  "stride": [
+    "catalog target=1.40 measuredSpeed=1.400 lowFootWorldSpeed=1.321 contacts=129 effectiveHumanScale=0.97611",
+    "catalog target=3.80 measuredSpeed=3.796 lowFootWorldSpeed=0.917 contacts=26 effectiveHumanScale=0.97611",
+    "vrm target=1.40 measuredSpeed=1.400 lowFootWorldSpeed=1.350 contacts=128 effectiveHumanScale=0.98402",
+    "vrm target=3.80 measuredSpeed=3.796 lowFootWorldSpeed=0.960 contacts=30 effectiveHumanScale=0.98402"
+  ]
+}
