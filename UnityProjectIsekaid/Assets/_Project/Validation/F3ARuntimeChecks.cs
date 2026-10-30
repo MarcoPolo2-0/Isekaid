@@ -202,6 +202,11 @@ namespace Isekaid.Validation
                 var option = director.Choices[branch];
                 Check(director.Choices.Count == 2 && root.Q<Label>("conversation-text").text == director.Current.text, "Canonical root and two options: " + fixtureName);
                 Check(!director.Choose("not-a-choice"), "Foreign option rejected: " + fixtureName);
+                if (topic.id == "F3A.TREE.FEEL" && branch == 0)
+                {
+                    foreach (var size in new[] { new Vector2Int(1920,1080), new Vector2Int(1600,900), new Vector2Int(1280,720) })
+                    { await F2RuntimeChecks.Capture("n1-feel-" + personality + "-" + size.x, size.x, size.y); CheckLayout(size.x); }
+                }
                 if (personality == CompanionPersonality.Tsundere && topic.id == "F3A.TREE.TRAP" && branch == 0)
                 {
                     root.Q<Button>(director.Choices[1].id).Focus();
@@ -380,7 +385,8 @@ namespace Isekaid.Validation
         private static void CheckLayout(int width)
         {
             var panel = root.Q("conversation"); var bounds = panel.worldBound;
-            Check(bounds.width > 0 && bounds.xMin >= 0 && bounds.yMin >= 0 && bounds.xMax <= root.worldBound.xMax + 1 && bounds.yMax <= root.worldBound.yMax + 1, "Canonical dialogue inside viewport: " + width);
+            Check(bounds.width > 0 && bounds.xMin >= 0 && bounds.yMin >= 0 && bounds.xMax <= root.worldBound.xMax + 1 && bounds.yMax <= root.worldBound.yMax + 1,
+                "Canonical dialogue inside viewport: " + width + " panel=" + bounds + " root=" + root.worldBound);
             foreach (var label in panel.Query<Label>().ToList())
             {
                 var measured = label.MeasureTextSize(label.text, label.contentRect.width, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined);

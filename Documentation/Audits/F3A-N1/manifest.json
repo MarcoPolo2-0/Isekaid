@@ -1,0 +1,241 @@
+{
+  "task": "F3A-N1",
+  "status": "EXPERIMENTAL_PENDING_DIRECTION_MANUAL_ACCEPTANCE",
+  "approvedCommit": "5bdfeed43994e509f48dde148beca50dc961278f",
+  "sourcePath": "Documentation/Specifications/F3A-N1/17_Parche_Editorial_v0.5_PROPUESTA.json",
+  "sourceBlob": "77228337ac434b4a56a47e25f05219e6c1ceffe7",
+  "patchSha256": "79fbecb9f073147328e50e97112eb9364789098c3af428fcbee3465fc86172fa",
+  "baseCommit": "0ef11e552178ad2daf52293d7c32f4cdd1f80ea6",
+  "canonicalBlobBefore": "2931044800a500bbcefe184b15c27ae516c393e7",
+  "canonicalSha256Before": "e475943e9a9eaab1787277a8257d111af21c7ff8509bef5f8145b3e3fc4f214e",
+  "canonicalSha256After": "4754a2c8a1526e82356ba45fd6ff82b333ea9293e80dbcb49fc50a6d89e80b39",
+  "runtimeSha256After": "eafcb8dacd4f466a913630b52d54813d5c54ba4899aac0d25cd5ef7efef51eee",
+  "hashConvention": "SHA-256 of UTF-8 text without BOM after CRLF and lone CR normalization to LF; no other text normalization.",
+  "changes": [
+    {
+      "id": "F3A.TSU.A.RESCUE",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.OPEN",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.BREATH",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.B.FEEL.LATER",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.B.ROAD.UNCERTAIN",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.C.LATER_1",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.D.WAIT",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.D.WAIT_OPINION",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.E.REVIVED",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.TSU.F.RESUME",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.A.RESCUE",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.OPEN",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.BREATH",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.B.FEEL.LATER",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.B.ROAD.UNCERTAIN",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.C.LATER_1",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.D.WAIT",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.D.WAIT_OPINION",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.E.REVIVED",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.YAN.F.RESUME",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.A.RESCUE",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.OPEN",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.BREATH",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.B.FEEL.LATER",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.B.ROAD.UNCERTAIN",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.C.LATER_1",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.D.WAIT",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.D.WAIT_OPINION",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.E.REVIVED",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    },
+    {
+      "id": "F3A.SHY.F.RESUME",
+      "fields": [
+        "spokenText",
+        "intention"
+      ]
+    }
+  ],
+  "unchangedEntries": 30,
+  "preservedDowned": [
+    "F3A.TSU.E.DOWNED",
+    "F3A.YAN.E.DOWNED",
+    "F3A.SHY.E.DOWNED"
+  ],
+  "visibleLabel": {
+    "before": "Tímida",
+    "after": "Dandere",
+    "internalEnum": "Shy",
+    "numericValue": 2,
+    "contentKey": "shy",
+    "idPrefix": "F3A.SHY."
+  },
+  "n2Implemented": false
+}

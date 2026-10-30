@@ -4,7 +4,7 @@ namespace Isekaid
 {
     public static class CompanionPalette
     {
-        public static readonly string[] PersonalityNames = { "Tsundere", "Yandere", "Tímida" };
+        public static readonly string[] PersonalityNames = { "Tsundere", "Yandere", "Dandere" };
         public static readonly string[] Parts = { "CABELLO", "OJOS", "TOP", "PANTALÓN" };
         public static readonly string[][] Names =
         {

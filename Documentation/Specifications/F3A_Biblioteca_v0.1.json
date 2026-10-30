@@ -124,9 +124,9 @@
           "interactionWindow": "provided_eligible"
         }
       },
-      "spokenText": "Uf… Ya puedo apoyar los pies. Estaba buscando cómo soltar la cuerda, pero… gracias. No tires de ella otra vez.",
+      "spokenText": "Ya puedo sostenerme. Quería salir sola... no podía. Gracias por ayudarme.",
       "emotion": "alivio",
-      "intention": "thank_with_boundaries",
+      "intention": "n1_tsu_a_rescue",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -351,9 +351,9 @@
           "selectedTopic": "FEEL"
         }
       },
-      "spokenText": "Me tiembla un poco una pierna. No hace falta que me mires así; puedo decirte si necesito parar.",
+      "spokenText": "Puedo apoyar la pierna. Voy a probar despacio; si necesito parar, te lo diré. Lo de la cuerda todavía no quiero contarlo.",
       "emotion": "preocupacion",
-      "intention": "answer_and_offer_choice",
+      "intention": "n1_tsu_b_feel_open",
       "presentation": {
         "preferredExpression": "sad_soft_if_validated",
         "fallbackExpression": "reset",
@@ -424,9 +424,9 @@
           "selectedOption": "F3A.TSU.B.FEEL.CHOICE.BREATH"
         }
       },
-      "spokenText": "Un momento me vendrá bien… Gracias por preguntar en vez de decidir por mí.",
+      "spokenText": "Sí. Un momento, y vuelvo a intentarlo. Gracias por darme margen.",
       "emotion": "alivio",
-      "intention": "respond_without_creating_promise",
+      "intention": "regain_agency_b_feel_breath",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -474,9 +474,9 @@
           "selectedOption": "F3A.TSU.B.FEEL.CHOICE.LATER"
         }
       },
-      "spokenText": "Sí. Prefiero hablar cuando deje de oír esa cuerda en la cabeza. No es culpa tuya.",
+      "spokenText": "Después. Ahora quiero recuperar el pulso y saber si puedo seguir. De lo otro hablaré con más calma.",
       "emotion": "neutral",
-      "intention": "respect_silence",
+      "intention": "n1_tsu_b_feel_later",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -647,9 +647,9 @@
           "selectedOption": "F3A.TSU.B.ROAD.CHOICE.UNCERTAIN"
         }
       },
-      "spokenText": "No tienes que decidirlo ahora. Compartir un camino no nos obliga a compartir todos los planes.",
+      "spokenText": "Yo sí quiero llegar a la aldea. Podemos compartir este tramo; lo que hagas después lo decides tú.",
       "emotion": "neutral",
-      "intention": "respond_without_creating_promise",
+      "intention": "n1_tsu_b_road_uncertain",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -698,9 +698,9 @@
           "hasActiveTree": false
         }
       },
-      "spokenText": "No he olvidado que te detuviste a ayudarme. Solo que no sé muy bien qué decir después de un gracias.",
+      "spokenText": "Lo del lazo… gracias otra vez. Me sale mejor fijarme por dónde piso que hablar de estas cosas.",
       "emotion": "neutral",
-      "intention": "recall_or_comment_without_reward",
+      "intention": "regain_agency_c_later_1",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -905,9 +905,9 @@
           "orderVariant": "plain"
         }
       },
-      "spokenText": "De acuerdo, espero aquí. Avísame cuando quieras continuar.",
+      "spokenText": "De acuerdo. Espero aquí.",
       "emotion": "neutral",
-      "intention": "accept_wait",
+      "intention": "n1_tsu_d_wait",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -954,9 +954,9 @@
           "orderVariant": "opinion"
         }
       },
-      "spokenText": "Puedo esperar. Aunque prefiero que no perdamos de vista por dónde seguir.",
+      "spokenText": "Puedo esperar. Aun así, prefiero que avancemos pronto; quiero dejar atrás este tramo.",
       "emotion": "preocupacion",
-      "intention": "accept_wait_and_voice_preference",
+      "intention": "n1_tsu_d_wait_opinion",
       "presentation": {
         "preferredExpression": "sad_soft_if_validated",
         "fallbackExpression": "reset",
@@ -1049,9 +1049,9 @@
           "interactionWindow": "provided_eligible"
         }
       },
-      "spokenText": "Ah… Ya puedo moverme. Has vuelto a ayudarme. Gracias. Esa vez no iba a salir sola.",
+      "spokenText": "Ya puedo moverme. No iba a salir sola de esa... Gracias. Quiero comprobar cómo me sostengo antes de seguir.",
       "emotion": "alivio",
-      "intention": "thank_after_reanimation",
+      "intention": "n1_tsu_e_revived",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -1149,9 +1149,9 @@
           "hasSuspendedConversation": true
         }
       },
-      "spokenText": "Lo que estábamos hablando puede esperar si hace falta. Si seguimos, empieza por donde lo dejamos.",
+      "spokenText": "Podemos retomar lo de antes. Veamos dónde lo dejamos.",
       "emotion": "neutral",
-      "intention": "offer_to_resume_without_repeating",
+      "intention": "n1_tsu_f_resume",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -1196,9 +1196,9 @@
           "interactionWindow": "provided_eligible"
         }
       },
-      "spokenText": "Ya está… Gracias. Oí que te acercabas y no sabía si ibas a pasar de largo. Prefiero alejarme de esta cuerda.",
+      "spokenText": "No sé cómo te llamas todavía... pero no quiero olvidar ese gesto tuyo. Gracias por soltar el lazo.",
       "emotion": "alivio",
-      "intention": "thank_with_boundaries",
+      "intention": "n1_yan_a_rescue",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -1423,9 +1423,9 @@
           "selectedTopic": "FEEL"
         }
       },
-      "spokenText": "Sigo sobresaltada. Me ayuda poder hablar, pero no quiero que confundas eso con que ya nos conocemos.",
+      "spokenText": "Estoy bien... No, mentira. Me asusté. Necesito alejarme del lazo, pero me distrae lo mucho que quiero saber de ti.",
       "emotion": "preocupacion",
-      "intention": "answer_and_offer_choice",
+      "intention": "n1_yan_b_feel_open",
       "presentation": {
         "preferredExpression": "sad_soft_if_validated",
         "fallbackExpression": "reset",
@@ -1496,9 +1496,9 @@
           "selectedOption": "F3A.YAN.B.FEEL.CHOICE.BREATH"
         }
       },
-      "spokenText": "Gracias. Quédate donde pueda verte mientras respiro; luego seguimos, si te parece.",
+      "spokenText": "Sí. Me vendrá bien quedarme un momento sin tener que fingir que ya estoy bien. Gracias por dejarme ese espacio.",
       "emotion": "alivio",
-      "intention": "respond_without_creating_promise",
+      "intention": "n1_yan_b_feel_breath",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -1546,9 +1546,9 @@
           "selectedOption": "F3A.YAN.B.FEEL.CHOICE.LATER"
         }
       },
-      "spokenText": "Sí. Prefiero escucharte con atención cuando se me pase el sobresalto, no fingir que estoy bien.",
+      "spokenText": "Después. Quiero escucharte de verdad, y ahora sigo pendiente de lo que acaba de pasar.",
       "emotion": "neutral",
-      "intention": "respect_silence",
+      "intention": "n1_yan_b_feel_later",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -1719,9 +1719,9 @@
           "selectedOption": "F3A.YAN.B.ROAD.CHOICE.UNCERTAIN"
         }
       },
-      "spokenText": "Entonces no decidamos más de lo necesario. Por ahora coincidimos en el sendero; después podemos hablarlo.",
+      "spokenText": "Entonces cuento con este tramo. Después cada uno decidirá. Prefiero saber a qué atenerme.",
       "emotion": "neutral",
-      "intention": "respond_without_creating_promise",
+      "intention": "n1_yan_b_road_uncertain",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -1770,9 +1770,9 @@
           "hasActiveTree": false
         }
       },
-      "spokenText": "Recuerdo que me escuchaste. Eso me da una razón para seguir hablando contigo, no para dejar de hacer preguntas.",
+      "spokenText": "Sigo pensando en el lazo... No, más bien en cómo lo soltaste. Lo que más se me queda es ese gesto tuyo.",
       "emotion": "neutral",
-      "intention": "recall_or_comment_without_reward",
+      "intention": "n1_yan_c_later_1",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -1977,9 +1977,9 @@
           "orderVariant": "plain"
         }
       },
-      "spokenText": "Te espero aquí. Avísame cuando vayas a continuar para que podamos coordinarnos.",
+      "spokenText": "Te espero aquí. Me gustaría que me avisaras antes de seguir; así retomamos el camino juntos.",
       "emotion": "neutral",
-      "intention": "accept_wait",
+      "intention": "attend_shared_exchange_d_wait",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -2026,9 +2026,9 @@
           "orderVariant": "opinion"
         }
       },
-      "spokenText": "Está bien. Si necesito moverme te lo diré; esperar no significa que deje de estar atenta.",
+      "spokenText": "Te espero. Preferiría seguir contigo, pero también quiero poder decirte cuándo una decisión me incomoda.",
       "emotion": "preocupacion",
-      "intention": "accept_wait_and_voice_preference",
+      "intention": "n1_yan_d_wait_opinion",
       "presentation": {
         "preferredExpression": "sad_soft_if_validated",
         "fallbackExpression": "reset",
@@ -2121,9 +2121,9 @@
           "interactionWindow": "provided_eligible"
         }
       },
-      "spokenText": "Has vuelto… Gracias. Ahora puedo mirarte sin estar luchando por levantarme. Necesito un instante.",
+      "spokenText": "Gracias... Me alivia poder moverme. Lo extraño es cuánto me alivia que sigas aquí.",
       "emotion": "alivio",
-      "intention": "thank_after_reanimation",
+      "intention": "n1_yan_e_revived",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -2221,9 +2221,9 @@
           "hasSuspendedConversation": true
         }
       },
-      "spokenText": "Me importa lo que ibas a decir. Si todavía quieres hablarlo, retomemos desde ahí; no hace falta empezar de cero.",
+      "spokenText": "Sigo pensando en lo que hablábamos. Podemos retomarlo, si todavía quieres.",
       "emotion": "neutral",
-      "intention": "offer_to_resume_without_repeating",
+      "intention": "n1_yan_f_resume",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -2268,9 +2268,9 @@
           "interactionWindow": "provided_eligible"
         }
       },
-      "spokenText": "Gracias… Ya estoy en el suelo. No sabía cuánto más podría sujetarme. Prefiero no tocar esa cuerda.",
+      "spokenText": "Gracias. Necesito ordenar lo que acaba de pasar. Primero quiero apartarme de la cuerda y luego hablar.",
       "emotion": "alivio",
-      "intention": "thank_with_boundaries",
+      "intention": "n1_shy_a_rescue",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -2495,9 +2495,9 @@
           "selectedTopic": "FEEL"
         }
       },
-      "spokenText": "Todavía me tiembla la voz. Puedo continuar, pero voy a necesitar un momento para ordenar lo que quiero decir.",
+      "spokenText": "Necesito pensarlo un momento. Puedo moverme, pero todavía me sobresalto. Prefiero responderte con calma.",
       "emotion": "preocupacion",
-      "intention": "answer_and_offer_choice",
+      "intention": "n1_shy_b_feel_open",
       "presentation": {
         "preferredExpression": "sad_soft_if_validated",
         "fallbackExpression": "reset",
@@ -2568,9 +2568,9 @@
           "selectedOption": "F3A.SHY.B.FEEL.CHOICE.BREATH"
         }
       },
-      "spokenText": "Me gustaría. No necesito que hables todo el tiempo… Con un poco de silencio me basta.",
+      "spokenText": "Sí… Me vendrá bien. Voy a quedarme callada un momento.",
       "emotion": "alivio",
-      "intention": "respond_without_creating_promise",
+      "intention": "observe_then_assert_b_feel_breath",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -2618,9 +2618,9 @@
           "selectedOption": "F3A.SHY.B.FEEL.CHOICE.LATER"
         }
       },
-      "spokenText": "Sí, después. No es que no quiera hablar contigo; ahora me cuesta encontrar las palabras.",
+      "spokenText": "Después, por favor. Ahora no quiero hablar de ello.",
       "emotion": "neutral",
-      "intention": "respect_silence",
+      "intention": "observe_then_assert_b_feel_later",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -2791,9 +2791,9 @@
           "selectedOption": "F3A.SHY.B.ROAD.CHOICE.UNCERTAIN"
         }
       },
-      "spokenText": "Está bien. No hace falta decidir el resto del viaje ahora. Yo sí quiero llegar a la aldea.",
+      "spokenText": "Yo sí quiero llegar a la aldea. Lo que haré después todavía prefiero pensarlo.",
       "emotion": "neutral",
-      "intention": "respond_without_creating_promise",
+      "intention": "n1_shy_b_road_uncertain",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -2842,9 +2842,9 @@
           "hasActiveTree": false
         }
       },
-      "spokenText": "Recuerdo cómo te acercaste a soltar la trampa. Ahora puedo hablar de ello sin quedarme mirando la cuerda.",
+      "spokenText": "El lazo me ha asustado. Quiero entender qué pasó antes de sacar conclusiones.",
       "emotion": "neutral",
-      "intention": "recall_or_comment_without_reward",
+      "intention": "n1_shy_c_later_1",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -3049,9 +3049,9 @@
           "orderVariant": "plain"
         }
       },
-      "spokenText": "De acuerdo. Me quedo aquí; avísame cuando continuemos.",
+      "spokenText": "Sí. Me quedo aquí.",
       "emotion": "neutral",
-      "intention": "accept_wait",
+      "intention": "observe_then_assert_d_wait",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",
@@ -3098,9 +3098,9 @@
           "orderVariant": "opinion"
         }
       },
-      "spokenText": "Puedo esperar. Aunque preferiría seguir cuando podamos; estar quieta me pone algo nerviosa.",
+      "spokenText": "Me quedo. Pero preferiría continuar pronto; este sitio todavía me inquieta.",
       "emotion": "preocupacion",
-      "intention": "accept_wait_and_voice_preference",
+      "intention": "observe_then_assert_d_wait_opinion",
       "presentation": {
         "preferredExpression": "sad_soft_if_validated",
         "fallbackExpression": "reset",
@@ -3193,9 +3193,9 @@
           "interactionWindow": "provided_eligible"
         }
       },
-      "spokenText": "Gracias… Ya puedo moverme. Antes no me salían las palabras. Necesito respirar un momento.",
+      "spokenText": "Gracias. Me asusté, pero pude pedir ayuda. Ahora necesito un momento antes de seguir.",
       "emotion": "alivio",
-      "intention": "thank_after_reanimation",
+      "intention": "n1_shy_e_revived",
       "presentation": {
         "preferredExpression": "relaxed_if_validated",
         "fallbackExpression": "reset",
@@ -3293,9 +3293,9 @@
           "hasSuspendedConversation": true
         }
       },
-      "spokenText": "Antes me preguntabas algo… Si quieres continuar, te escucho. No hace falta repetirlo todo.",
+      "spokenText": "Podemos volver a lo de antes. Quiero retomarlo con calma.",
       "emotion": "neutral",
-      "intention": "offer_to_resume_without_repeating",
+      "intention": "n1_shy_f_resume",
       "presentation": {
         "preferredExpression": "reset",
         "fallbackExpression": "reset",

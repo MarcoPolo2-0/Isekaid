@@ -4,3 +4,7 @@
 
 *.fbx lfs
 *.blend lfs
+
+/Documentation/Specifications/F3A_Biblioteca_v0.1.json text eol=lf
+/Documentation/Audits/F3A-N1/*.json text eol=lf
+/UnityProjectIsekaid/Assets/_Project/Resources/Dialogue/F3A.es.json text eol=lf
