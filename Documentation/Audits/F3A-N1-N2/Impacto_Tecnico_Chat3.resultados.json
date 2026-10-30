@@ -1,0 +1,335 @@
+{
+  "scope": "STATIC_TEMPORARY_SIMULATION_NOT_IMPLEMENTATION_OR_APPROVAL",
+  "inputProposalCommit": "e363576c376ac466ad6ac2824da165e3ac0e8209",
+  "mainCommit": "24cad113be5edc8ca1d44db1857a3f23209a2dd5",
+  "unityTreeUnchanged": "5bbd2d86fd8c017a705c0a85044689cb7f2e1773",
+  "hashPreflight": {
+    "patchDeclaredRawSha256": "32a90c2d0d980b84d52d6a3c4e1eb18770b7ab9fbf86082562c8ced2833835ef",
+    "localRawCRLFSha256": "32a90c2d0d980b84d52d6a3c4e1eb18770b7ab9fbf86082562c8ced2833835ef",
+    "normalizedLFAndGitSourceSha256": "e475943e9a9eaab1787277a8257d111af21c7ff8509bef5f8145b3e3fc4f214e",
+    "runtimeSourceSha256": "e475943e9a9eaab1787277a8257d111af21c7ff8509bef5f8145b3e3fc4f214e",
+    "normalizationContractMustBeResolvedBeforeN1": true
+  },
+  "recommendations": {
+    "MEJORAR": 23,
+    "ACEPTAR": 7,
+    "DESCARTAR": 3
+  },
+  "runtimeChangesApplied": 0,
+  "approvedIDsGrantedByThisAnalysis": [],
+  "selectionSimulations": [
+    {
+      "scenario": "none",
+      "changedEntries": 0,
+      "unchangedEntries": 60,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "all-30-recommended",
+      "changedEntries": 30,
+      "unchangedEntries": 30,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "discarded-urgent-noop",
+      "changedEntries": 0,
+      "unchangedEntries": 60,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "mixed-subset",
+      "changedEntries": 2,
+      "unchangedEntries": 58,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.A.RESCUE",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.B.FEEL.OPEN",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.B.FEEL.BREATH",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.B.FEEL.LATER",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.B.ROAD.UNCERTAIN",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.C.LATER_1",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.D.WAIT",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.D.WAIT_OPINION",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.E.REVIVED",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.TSU.F.RESUME",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.A.RESCUE",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.B.FEEL.OPEN",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.B.FEEL.BREATH",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.B.FEEL.LATER",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.B.ROAD.UNCERTAIN",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.C.LATER_1",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.D.WAIT",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.D.WAIT_OPINION",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.E.REVIVED",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.YAN.F.RESUME",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.A.RESCUE",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.B.FEEL.OPEN",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.B.FEEL.BREATH",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.B.FEEL.LATER",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.B.ROAD.UNCERTAIN",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.C.LATER_1",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.D.WAIT",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.D.WAIT_OPINION",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.E.REVIVED",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "single-F3A.SHY.F.RESUME",
+      "changedEntries": 1,
+      "unchangedEntries": 59,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "personality-tsundere",
+      "changedEntries": 10,
+      "unchangedEntries": 50,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "personality-yandere",
+      "changedEntries": 10,
+      "unchangedEntries": 50,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "personality-shy",
+      "changedEntries": 10,
+      "unchangedEntries": 50,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "C4-maintain-TSU-WAIT",
+      "changedEntries": 29,
+      "unchangedEntries": 31,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "field-only-spokenText",
+      "changedEntries": 1,
+      "entries": 60,
+      "routes": 18
+    },
+    {
+      "scenario": "field-only-intention",
+      "changedEntries": 1,
+      "entries": 60,
+      "routes": 18
+    }
+  ],
+  "rejectedSelections": [
+    "wrong-source-hash",
+    "unknown-ID",
+    "wildcard",
+    "duplicate-ID",
+    "forbidden-emotion",
+    "forbidden-options",
+    "stale-expected"
+  ],
+  "protectedBlobIDs": {
+    "Documentation/Specifications/F3A_Biblioteca_v0.1.json": "2931044800a500bbcefe184b15c27ae516c393e7",
+    "Documentation/Specifications/F3A_Diferenciacion_Editorial_v0.1_PROPUESTA.json": "a5449636390d577d339cc8b71fadb9dfb69031db",
+    "Documentation/GameDesignDocument_v0.7_borrador.md": "40e865562c73dc8ab17a80b03bac994a546eec7c",
+    "Documentation/DECISIONS.md": "607e8cc6b999cbe5df37f28960453bfa51e3853d",
+    "UnityProjectIsekaid/Assets/_Project/Resources/Dialogue/F3A.es.json": "85f1cde84833a6b25e667b3555f0198ee7a6253a",
+    "tools/build_f3a_runtime_content.py": "421fb1f7a9ee1b6daf95652a6cd0bab920feca14",
+    "Documentation/Specifications/F3A-N1/01_Tsundere_v0.1_PROPUESTA.md": "954d2b01d1ed1be81bcbeda7b75466467ac6e16f",
+    "Documentation/Specifications/F3A-N1/02_Yandere_v0.1_PROPUESTA.md": "f868db6b2e3cff828c1fd59e2f3874104d7fd499",
+    "Documentation/Specifications/F3A-N1/03_Dandere_v0.1_PROPUESTA.md": "529c49f1d66b45db37ac4734456dfb3ac79a23db",
+    "Documentation/Specifications/F3A-N1/04_Revision_33_v0.1.md": "32e81f3b5996124d3aef742787a64dc257efa645",
+    "Documentation/Specifications/F3A-N1/05_Parche_Editorial_v0.2_PROPUESTA.json": "ebdb2909ce9606d087472774086e354546ae7cbf",
+    "Documentation/Specifications/F3A-N1/06_Matriz_Reacciones_Actuacion_v0.1.md": "1f206359416c07b5617a4e60abd3d06846b4bd78",
+    "Documentation/Specifications/F3A-N1/07_Prueba_Ciega_Aceptacion_v0.1.md": "ce91c4e4895efd301f3c63aee04b63fa9d142c56",
+    "Documentation/Specifications/F3A-N1/07b_Muestras_Ciegas_v0.1.md": "7af94c29d1e1bb5b3b88a1dfd6af06dd8db8d92b",
+    "Documentation/Specifications/F3A-N1/08_Compatibilidad_Entrega_v0.1.md": "1424d727e0dcbe0db6fda81ab5e670596306179b",
+    "Documentation/Specifications/F3A-N1/09_Presentacion_Final_Direccion_v0.1.md": "9d1e1eb28e6171cd4b191d8e0336b33f26810b89"
+  },
+  "unityPlayModeBuildManualOrN2Executed": false,
+  "documentChecks": {
+    "passed": true,
+    "localLinksChecked": 11,
+    "protectedFiles": 16,
+    "readmeInputPrefixPreserved": true,
+    "runtimeTreeUnchanged": true
+  }
+}
